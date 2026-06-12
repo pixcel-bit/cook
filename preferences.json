@@ -1,3 +1,15 @@
 {
-  "recipes": []
+  "recipes": [
+    {
+      "id": "mqaglsjf9tom",
+      "name": "豚こまと野菜の生姜焼き",
+      "priority": false,
+      "good_count": 1,
+      "bad_count": 0,
+      "comments": [],
+      "added_at": "2026-06-12",
+      "done_count": 0,
+      "last_adopted_at": null
+    }
+  ]
 }
