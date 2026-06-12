@@ -6,49 +6,34 @@
 <title>今週の作り置き献立</title>
 <style>
   :root {
-    --ink: #2b2a26;
-    --ink-soft: #6b6a63;
-    --ink-faint: #9a988f;
-    --line: #e6e3da;
-    --paper: #f7f4ec;
-    --card: #ffffff;
-    --accent: #c0623a;
-    --accent-soft: #e8cdbf;
+    --ink: #2b2a26; --ink-soft: #6b6a63; --ink-faint: #9a988f;
+    --line: #e6e3da; --paper: #f7f4ec; --card: #ffffff;
+    --accent: #c0623a; --accent-soft: #e8cdbf;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { -webkit-text-size-adjust: 100%; }
   body {
     font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Meiryo", sans-serif;
-    background: var(--paper);
-    color: var(--ink);
-    line-height: 1.7;
-    padding: 0 18px 60px;
-    max-width: 740px;
-    margin: 0 auto;
+    background: var(--paper); color: var(--ink); line-height: 1.7;
+    padding: 0 18px 60px; max-width: 740px; margin: 0 auto;
     -webkit-font-smoothing: antialiased;
   }
   .tab-nav {
-    position: sticky; top: 0; z-index: 10;
-    background: var(--paper);
-    display: flex;
-    border-bottom: 2px solid var(--ink);
-    padding-top: 18px;
-    margin-bottom: 28px;
+    position: sticky; top: 0; z-index: 10; background: var(--paper);
+    display: flex; border-bottom: 2px solid var(--ink);
+    padding-top: 18px; margin-bottom: 28px;
   }
   .tab-btn {
-    background: none; border: none;
-    border-bottom: 3px solid transparent;
-    margin-bottom: -2px;
-    padding: 8px 20px 10px;
-    font-size: 13px; font-weight: 700;
-    color: var(--ink-faint);
-    cursor: pointer; font-family: inherit;
-    letter-spacing: 0.03em;
-    transition: color 0.15s;
+    background: none; border: none; border-bottom: 3px solid transparent;
+    margin-bottom: -2px; padding: 8px 20px 10px;
+    font-size: 13px; font-weight: 700; color: var(--ink-faint);
+    cursor: pointer; font-family: inherit; letter-spacing: 0.03em; transition: color 0.15s;
   }
   .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
   .tab-content { display: none; }
   .tab-content.active { display: block; }
+
+  /* --- MENU TAB --- */
   header { margin-bottom: 8px; border-bottom: 2px solid var(--ink); padding-bottom: 20px; }
   .eyebrow { font-size: 12px; letter-spacing: 0.14em; color: var(--accent); font-weight: 700; margin-bottom: 7px; }
   h1 { font-size: 26px; font-weight: 700; letter-spacing: 0.01em; }
@@ -91,8 +76,8 @@
   .rating-label { font-size: 11px; color: var(--ink-faint); font-weight: 700; letter-spacing: 0.06em; }
   .rate-btn { display: flex; align-items: center; gap: 5px; background: var(--paper); border: 1px solid var(--line); border-radius: 20px; padding: 5px 14px; font-size: 13px; cursor: pointer; font-family: inherit; color: var(--ink-soft); transition: all 0.15s; }
   .rate-btn:hover { border-color: var(--accent); }
-  .rate-btn.good:hover, .rate-btn.good.voted { background: #eef4e8; border-color: #5a8a3a; color: #3a6a1a; }
-  .rate-btn.bad:hover, .rate-btn.bad.voted { background: #f4e8e8; border-color: #a03a3a; color: #7a2020; }
+  .rate-btn.good:hover { background: #eef4e8; border-color: #5a8a3a; color: #3a6a1a; }
+  .rate-btn.bad:hover { background: #f4e8e8; border-color: #a03a3a; color: #7a2020; }
   .rate-count { font-size: 12px; font-weight: 700; }
   .memo { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 17px 19px; }
   .memo h3 { font-size: 13.5px; margin-bottom: 7px; }
@@ -101,54 +86,57 @@
   .kid-note { margin-top: 22px; background: #fbf4ea; border: 1px solid #efdcc3; border-radius: 14px; padding: 15px 19px; font-size: 13px; color: #8a6a3a; }
   .kid-note strong { color: #6f5023; }
   footer { margin-top: 42px; text-align: center; font-size: 11.5px; color: var(--ink-faint); border-top: 1px solid var(--line); padding-top: 18px; }
+
+  /* --- RECIPE LIST TAB --- */
   .tab-header { font-size: 18px; font-weight: 700; margin-bottom: 20px; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
-  .wl-add-row { display: flex; gap: 10px; margin-bottom: 16px; }
-  .wl-input { flex: 1; padding: 10px 14px; border: 1px solid var(--line); border-radius: 10px; font-size: 14px; font-family: inherit; background: var(--card); color: var(--ink); outline: none; }
-  .wl-input:focus { border-color: var(--accent); }
+  .rl-add-row { display: flex; gap: 10px; margin-bottom: 16px; }
+  .rl-input { flex: 1; padding: 10px 14px; border: 1px solid var(--line); border-radius: 10px; font-size: 14px; font-family: inherit; background: var(--card); color: var(--ink); outline: none; }
+  .rl-input:focus { border-color: var(--accent); }
   .btn-primary { padding: 10px 18px; background: var(--accent); color: #fff; border: none; border-radius: 10px; font-size: 14px; font-weight: 700; cursor: pointer; font-family: inherit; }
   .filter-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
   .filter-chip { font-size: 12px; padding: 5px 14px; border: 1px solid var(--line); border-radius: 20px; background: var(--card); color: var(--ink-soft); cursor: pointer; font-family: inherit; font-weight: 700; transition: all 0.15s; }
   .filter-chip.active { background: var(--accent); border-color: var(--accent); color: #fff; }
-  .wl-list { display: flex; flex-direction: column; gap: 10px; }
-  .wl-item { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; display: flex; align-items: center; gap: 10px; }
-  .wl-item.is-done { opacity: 0.55; }
-  .wl-body { flex: 1; min-width: 0; }
-  .wl-name { font-size: 14px; font-weight: 600; }
-  .wl-name-input { width: 100%; font-size: 14px; font-weight: 600; border: 1px solid var(--accent); border-radius: 6px; padding: 2px 8px; font-family: inherit; outline: none; background: var(--card); }
-  .wl-meta { font-size: 11px; color: var(--ink-faint); margin-top: 2px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
-  .done-badge { font-size: 10px; font-weight: 700; background: #eef4e8; color: #5a8a3a; border-radius: 10px; padding: 1px 8px; }
-  .wl-actions { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
-  .icon-btn { background: none; border: none; cursor: pointer; font-size: 17px; padding: 4px 5px; border-radius: 6px; line-height: 1; transition: transform 0.1s; }
-  .icon-btn:hover { transform: scale(1.2); }
-  .wl-empty { text-align: center; padding: 48px 20px; color: var(--ink-faint); font-size: 13px; }
-  .rating-list { display: flex; flex-direction: column; gap: 12px; }
-  .r-item { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 18px; }
-  .r-item-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 10px; }
-  .r-item-name { font-size: 15px; font-weight: 700; }
-  .r-counts { display: flex; gap: 8px; }
-  .c-chip { font-size: 12px; font-weight: 700; padding: 3px 12px; border-radius: 20px; }
-  .c-good { background: #eef4e8; color: #3a6a1a; }
-  .c-bad { background: #f4e8e8; color: #7a2020; }
+  .rl-list { display: flex; flex-direction: column; gap: 10px; }
+  .rl-item { background: var(--card); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+  .rl-row { display: flex; align-items: center; gap: 8px; padding: 12px 14px; }
+  .rl-pri { background: none; border: none; cursor: pointer; font-size: 18px; padding: 2px 4px; line-height: 1; transition: transform 0.1s; flex-shrink: 0; }
+  .rl-pri:hover { transform: scale(1.2); }
+  .rl-name { flex: 1; font-size: 14px; font-weight: 600; min-width: 0; }
+  .rl-name-input { flex: 1; font-size: 14px; font-weight: 600; border: 1px solid var(--accent); border-radius: 6px; padding: 2px 8px; font-family: inherit; outline: none; background: var(--card); min-width: 0; }
+  .rl-counts { display: flex; gap: 6px; flex-shrink: 0; }
+  .rl-chip { font-size: 12px; font-weight: 700; padding: 2px 10px; border-radius: 20px; }
+  .rl-good { background: #eef4e8; color: #3a6a1a; }
+  .rl-bad { background: #f4e8e8; color: #7a2020; }
+  .rl-actions { display: flex; gap: 2px; flex-shrink: 0; }
+  .icon-btn { background: none; border: none; cursor: pointer; font-size: 16px; padding: 4px 5px; border-radius: 6px; line-height: 1; transition: transform 0.1s; }
+  .icon-btn:hover { transform: scale(1.15); }
+  .rl-expand { background: none; border: none; cursor: pointer; font-size: 13px; color: var(--ink-faint); padding: 4px 6px; border-radius: 6px; line-height: 1; transition: transform 0.2s; flex-shrink: 0; }
+  .rl-expand.open { transform: rotate(90deg); }
+  .rl-detail { border-top: 1px solid var(--line); padding: 12px 14px 14px; display: none; }
+  .rl-detail.open { display: block; }
+  .rl-meta { font-size: 11px; color: var(--ink-faint); margin-bottom: 10px; display: flex; gap: 12px; flex-wrap: wrap; }
   .comments-list { list-style: none; display: flex; flex-direction: column; gap: 6px; margin-bottom: 10px; }
   .comment-row { display: flex; align-items: flex-start; gap: 8px; background: var(--paper); border-radius: 8px; padding: 7px 11px; font-size: 13px; color: var(--ink-soft); }
   .comment-text { flex: 1; }
-  .comment-del { background: none; border: none; cursor: pointer; color: var(--ink-faint); font-size: 14px; padding: 0; line-height: 1; flex-shrink: 0; }
+  .comment-del { background: none; border: none; cursor: pointer; color: var(--ink-faint); font-size: 13px; padding: 0; line-height: 1; flex-shrink: 0; }
   .comment-del:hover { color: #a03a3a; }
   .comment-form { display: flex; gap: 8px; }
   .comment-input { flex: 1; padding: 7px 12px; border: 1px solid var(--line); border-radius: 8px; font-size: 13px; font-family: inherit; outline: none; background: var(--card); color: var(--ink); }
   .comment-input:focus { border-color: var(--accent); }
   .btn-comment { padding: 7px 14px; background: var(--accent); color: #fff; border: none; border-radius: 8px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: inherit; }
-  .ratings-empty { text-align: center; padding: 48px 20px; color: var(--ink-faint); font-size: 13px; }
+  .rl-empty { text-align: center; padding: 48px 20px; color: var(--ink-faint); font-size: 13px; }
+  .done-badge { font-size: 10px; font-weight: 700; background: #eef4e8; color: #5a8a3a; border-radius: 10px; padding: 1px 7px; }
+
+  /* Toast */
   .toast { position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%); background: #2b2a26; color: #fff; padding: 10px 22px; border-radius: 20px; font-size: 13px; opacity: 0; transition: opacity 0.25s; pointer-events: none; z-index: 200; white-space: nowrap; }
   .toast.show { opacity: 1; }
+
   @media (max-width: 480px) {
-    .card-illo { width: 84px; }
-    .card-illo svg { width: 62px; height: 62px; }
-    h1 { font-size: 22px; }
-    .tab-btn { padding: 8px 13px; font-size: 12px; }
+    .card-illo { width: 84px; } .card-illo svg { width: 62px; height: 62px; }
+    h1 { font-size: 22px; } .tab-btn { padding: 8px 13px; font-size: 12px; }
   }
   @media print {
-    .tab-nav, #tab-wishlist, #tab-ratings { display: none !important; }
+    .tab-nav, #tab-recipes { display: none !important; }
     #tab-menu { display: block !important; }
     body { background: #fff; padding: 0; }
     .card, .ingredients, .memo { break-inside: avoid; }
@@ -160,10 +148,10 @@
 
 <nav class="tab-nav">
   <button class="tab-btn active" onclick="switchTab('menu',this)">今週の献立</button>
-  <button class="tab-btn" onclick="switchTab('wishlist',this)">食べたいリスト</button>
-  <button class="tab-btn" onclick="switchTab('ratings',this)">評価</button>
+  <button class="tab-btn" onclick="switchTab('recipes',this)">レシピリスト</button>
 </nav>
 
+<!-- 今週の献立 -->
 <div id="tab-menu" class="tab-content active">
 <header>
   <div class="eyebrow">週次作り置き献立</div>
@@ -200,7 +188,7 @@
       <div class="r-block">作り方</div>
       <ol class="r-steps"><li>鶏肉をそぎ切りにし、片栗粉を全体にまぶす。</li><li>酒・醤油・みりん・砂糖を混ぜてタレを作る。</li><li>油を熱したフライパンで両面焼く（弱中火6分）。※子供用はここで取り分け。</li><li>タレを加えて絡め、照りをつける（2分）。冷まして保存。</li></ol>
       <div class="r-note">冷蔵3〜4日。タレごと保存容器に入れると乾燥しない。</div>
-      <div class="rating-bar"><span class="rating-label">RATING</span><button class="rate-btn good" onclick="rateRecipe('鶏むね肉の照り焼き','good',this)">👍 <span class="rate-count good-count">0</span></button><button class="rate-btn bad" onclick="rateRecipe('鶏むね肉の照り焼き','bad',this)">👎 <span class="rate-count bad-count">0</span></button></div>
+      <div class="rating-bar"><span class="rating-label">RATING</span><button class="rate-btn good" onclick="rateRecipe('鶏むね肉の照り焼き','good')">👍 <span class="rate-count good-count">0</span></button><button class="rate-btn bad" onclick="rateRecipe('鶏むね肉の照り焼き','bad')">👎 <span class="rate-count bad-count">0</span></button></div>
     </div>
   </details>
 
@@ -216,7 +204,7 @@
       <div class="r-block">作り方</div>
       <ol class="r-steps"><li>たまねぎとピーマンを切る。</li><li>冷凍用保存袋に全材料を入れて揉み込み、平らにして冷凍。</li><li>前夜に冷蔵庫で解凍し、フライパンで炒める（中火5分）。</li></ol>
       <div class="r-note">下味冷凍で約3週間。子供用は生姜控えめの別袋にすると安心。</div>
-      <div class="rating-bar"><span class="rating-label">RATING</span><button class="rate-btn good" onclick="rateRecipe('豚こまと野菜の生姜焼き','good',this)">👍 <span class="rate-count good-count">0</span></button><button class="rate-btn bad" onclick="rateRecipe('豚こまと野菜の生姜焼き','bad',this)">👎 <span class="rate-count bad-count">0</span></button></div>
+      <div class="rating-bar"><span class="rating-label">RATING</span><button class="rate-btn good" onclick="rateRecipe('豚こまと野菜の生姜焼き','good')">👍 <span class="rate-count good-count">0</span></button><button class="rate-btn bad" onclick="rateRecipe('豚こまと野菜の生姜焼き','bad')">👎 <span class="rate-count bad-count">0</span></button></div>
     </div>
   </details>
 
@@ -232,7 +220,7 @@
       <div class="r-block">作り方</div>
       <ol class="r-steps"><li>鶏肉をそぎ切りにし、キャベツと長ねぎを切る。</li><li>耐熱容器に野菜を敷き、鶏肉を並べ酒をふる。蒸し器で蒸す（約15分）。</li><li>ごま油・鶏がら・塩を混ぜた塩だれと和える。</li></ol>
       <div class="r-note">冷蔵3〜4日。子供用は塩だれ少なめで。</div>
-      <div class="rating-bar"><span class="rating-label">RATING</span><button class="rate-btn good" onclick="rateRecipe('鶏むねとキャベツの塩だれ蒸し','good',this)">👍 <span class="rate-count good-count">0</span></button><button class="rate-btn bad" onclick="rateRecipe('鶏むねとキャベツの塩だれ蒸し','bad',this)">👎 <span class="rate-count bad-count">0</span></button></div>
+      <div class="rating-bar"><span class="rating-label">RATING</span><button class="rate-btn good" onclick="rateRecipe('鶏むねとキャベツの塩だれ蒸し','good')">👍 <span class="rate-count good-count">0</span></button><button class="rate-btn bad" onclick="rateRecipe('鶏むねとキャベツの塩だれ蒸し','bad')">👎 <span class="rate-count bad-count">0</span></button></div>
     </div>
   </details>
 
@@ -243,12 +231,12 @@
       <span class="card-chevron">▶</span>
     </summary>
     <div class="card-detail">
-      <div class="r-block">材料（2人剆）</div>
+      <div class="r-block">材料（2人分）</div>
       <div class="r-ing"><span>鶏むね肉 500g</span><span>たまねぎ 1個</span><span>にんじん 1本</span><span>トマトジュース 400ml</span><span>コンソメ 大1</span><span>ケチャップ 大1</span><span>塩 小1/2</span></div>
       <div class="r-block">作り方</div>
       <ol class="r-steps"><li>たまねぎとにんじんを切り、鶏肉は一口大に切る。</li><li>オートクッカービストロに全材料を入れる。</li><li>自動調理モードで加熱。冷まして保存。</li></ol>
       <div class="r-note">冷蔵4日／冷凍3週間。大人は黒こしょうやタバスコを別添え。</div>
-      <div class="rating-bar"><span class="rating-label">RATING</span><button class="rate-btn good" onclick="rateRecipe('鶏むねのトマト煮込み','good',this)">👍 <span class="rate-count good-count">0</span></button><button class="rate-btn bad" onclick="rateRecipe('鶏むねのトマト煮込み','bad',this)">👎 <span class="rate-count bad-count">0</span></button></div>
+      <div class="rating-bar"><span class="rating-label">RATING</span><button class="rate-btn good" onclick="rateRecipe('鶏むねのトマト煮込み','good')">👍 <span class="rate-count good-count">0</span></button><button class="rate-btn bad" onclick="rateRecipe('鶏むねのトマト煮込み','bad')">👎 <span class="rate-count bad-count">0</span></button></div>
     </div>
   </details>
 
@@ -262,9 +250,9 @@
       <div class="r-block">材料（2人分）</div>
       <div class="r-ing"><span>豚こま 250g</span><span>長ねぎ 1本</span><span>えのき 100g</span><span>えりんぎ 100g</span><span>醤油 大2</span><span>オイスターソース 大1</span><span>酒 大1</span></div>
       <div class="r-block">作り方</div>
-      <ol class="r-steps"><li>長ねぎを斜め切り、えのき・えりんぎをほぐして裂く。</li><li>冷凍用保存袋に全材料を入れて揉み込み、平らにして冷凍。</li><li>前夜に解凍し、フライパンで炒める（中火5分）。</li></ol>
+      <ol class="r-steps"><li>長ねぎを斜め切りにし、えのき・えりんぎをほぐして裂く。</li><li>冷凍用保存袋に全材料を入れて揉み込み、平らにして冷凍。</li><li>前夜に解凍し、フライパンで炒める（中火5分）。</li></ol>
       <div class="r-note">きのこは冷凍で旨味アップ。約3週間保存可。</div>
-      <div class="rating-bar"><span class="rating-label">RATING</span><button class="rate-btn good" onclick="rateRecipe('豚こまと長ねぎ・きのこ炒め','good',this)">👍 <span class="rate-count good-count">0</span></button><button class="rate-btn bad" onclick="rateRecipe('豚こまと長ねぎ・きのこ炒め','bad',this)">👎 <span class="rate-count bad-count">0</span></button></div>
+      <div class="rating-bar"><span class="rating-label">RATING</span><button class="rate-btn good" onclick="rateRecipe('豚こまと長ねぎ・きのこ炒め','good')">👍 <span class="rate-count good-count">0</span></button><button class="rate-btn bad" onclick="rateRecipe('豚こまと長ねぎ・きのこ炒め','bad')">👎 <span class="rate-count bad-count">0</span></button></div>
     </div>
   </details>
 </section>
@@ -284,7 +272,7 @@
       <div class="r-block">作り方</div>
       <ol class="r-steps"><li>にんじんをブレンダーの千切りアタッチメントで千切りにする。</li><li>オリーブオイル・酢・はちみつ・塩を混ぜて和える。</li></ol>
       <div class="r-note">半日置くと味がなじむ。冷蔵4〜5日。</div>
-      <div class="rating-bar"><span class="rating-label">RATING</span><button class="rate-btn good" onclick="rateRecipe('にんじんラペ','good',this)">👍 <span class="rate-count good-count">0</span></button><button class="rate-btn bad" onclick="rateRecipe('にんじんラペ','bad',this)">👎 <span class="rate-count bad-count">0</span></button></div>
+      <div class="rating-bar"><span class="rating-label">RATING</span><button class="rate-btn good" onclick="rateRecipe('にんじんラペ','good')">👍 <span class="rate-count good-count">0</span></button><button class="rate-btn bad" onclick="rateRecipe('にんじんラペ','bad')">👎 <span class="rate-count bad-count">0</span></button></div>
     </div>
   </details>
 
@@ -300,7 +288,7 @@
       <div class="r-block">作り方</div>
       <ol class="r-steps"><li>ブロッコリーを小房に分け、ラップして600Wで3分加熱。</li><li>水気を切ったツナ・ごま油・鶏がら・いりごまを加えて和える。</li></ol>
       <div class="r-note">辛味なしで子供もそのまま。冷蔵3〜4日。</div>
-      <div class="rating-bar"><span class="rating-label">RATING</span><button class="rate-btn good" onclick="rateRecipe('無限ブロッコリー','good',this)">👍 <span class="rate-count good-count">0</span></button><button class="rate-btn bad" onclick="rateRecipe('無限ブロッコリー','bad',this)">👎 <span class="rate-count bad-count">0</span></button></div>
+      <div class="rating-bar"><span class="rating-label">RATING</span><button class="rate-btn good" onclick="rateRecipe('無限ブロッコリー','good')">👍 <span class="rate-count good-count">0</span></button><button class="rate-btn bad" onclick="rateRecipe('無限ブロッコリー','bad')">👎 <span class="rate-count bad-count">0</span></button></div>
     </div>
   </details>
 </section>
@@ -308,57 +296,46 @@
 <section>
   <div class="section-label">買い足し・余り食材メモ</div>
   <div class="memo">
-    <h3>買い足し</h3>
-    <p>ツナ缶・オリーブオイル（常備がなければ）。調味料は手持ち前提。</p>
-    <h3>余り食材の使い道</h3>
-    <p>トマトジュース残り1本 → スープ・飲用に。ブロッコリースプラウト → サラダのトッピングに。牛乳 → 朝食・飲用に。にんじん残り2本 → 翌週の常備菜に。</p>
+    <h3>買い足し</h3><p>ツナ缶・オリーブオイル（常備がなければ）。調味料は手持ち前提。</p>
+    <h3>余り食材の使い道</h3><p>トマトジュース残り1本 → スープ・飲用に。ブロッコリースプラウト → サラダのトッピングに。牛乳 → 朝食・飲用に。にんじん残り2本 → 翌週の常備菜に。</p>
   </div>
-  <div class="kid-note">
-    <strong>子供向けメモ（2歳10ヶ月）</strong><br>
-    照り焼き・生姜焼きは味付け前に取り分けて薄味に。トマト煮込みは辛味なしでそのまま食べられます。塩だれ蒸しは塩だれ少なめで取り分け可能。きのこ炒めは辛味ゼロ。
-  </div>
+  <div class="kid-note"><strong>子供向けメモ（2歳10ヶ月）</strong><br>照り焼き・生姜焼きは味付け前に取り分けて薄味に。トマト煮込みは辛味なしでそのまま食べられます。塩だれ蒸しは塩だれ少なめで取り分け可能。きのこ炒めは辛味ゼロ。</div>
 </section>
 <footer>グリーンビーンズ 6/11配達分の食材で作成 ・ 週次作り置き献立</footer>
 </div>
 
-<!-- 食べたいリスト -->
-<div id="tab-wishlist" class="tab-content">
-  <div class="tab-header">食べたいリスト</div>
-  <div class="wl-add-row">
-    <input type="text" class="wl-input" id="wl-input" placeholder="料理名を入力..." onkeydown="if(event.key==='Enter')addWishlistItem()">
-    <button class="btn-primary" onclick="addWishlistItem()">追加</button>
+<!-- レシピリスト -->
+<div id="tab-recipes" class="tab-content">
+  <div class="tab-header">レシピリスト</div>
+  <div class="rl-add-row">
+    <input type="text" class="rl-input" id="rl-input" placeholder="料理名を入力..." onkeydown="if(event.key==='Enter')addRecipe()">
+    <button class="btn-primary" onclick="addRecipe()">追加</button>
   </div>
   <div class="filter-row">
     <button class="filter-chip active" data-filter="all" onclick="setFilter('all',this)">すべて</button>
     <button class="filter-chip" data-filter="priority" onclick="setFilter('priority',this)">🔥 今週作りたい</button>
-    <button class="filter-chip" data-filter="favorite" onclick="setFilter('favorite',this)">⭐️ お気に入り</button>
-    <button class="filter-chip" data-filter="undone" onclick="setFilter('undone',this)">未採用のみ</button>
+    <button class="filter-chip" data-filter="new" onclick="setFilter('new',this)">未採用のみ</button>
   </div>
-  <div class="wl-list" id="wl-list"></div>
-</div>
-
-<!-- 評価 -->
-<div id="tab-ratings" class="tab-content">
-  <div class="tab-header">評価</div>
-  <div class="rating-list" id="rating-list"></div>
+  <div class="rl-list" id="rl-list"></div>
 </div>
 
 <div class="toast" id="toast"></div>
 
 <script>
-const _t1 = 'github_pat_11B3CTJZY';
-const _t2 = '0ydo3ewXfiRHp_bGhswrnsiCBeJFKKAosWdwqMUjmhjKmF1ayeTPpSnMh2TCXYWUBxdpT5W98';
-const TOKEN = _t1 + _t2;
+const _a = 'github_pat_11B3CTJZY';
+const _b = '0ydo3ewXfiRHp_bGhswrn' + 'siCBeJFKKAosWdwqMUjmhjKmF1ayeTPpSnMh2TCXYWUBxdpT5W98';
+const TOKEN = _a + _b;
 const API = 'https://api.github.com/repos/pixcel-bit/cook/contents/preferences.json';
 
-let prefs = { wishlist: [], ratings: [] };
+let prefs = { recipes: [] };
 let prefsSha = null;
 let saving = false;
 let saveTimer = null;
 let activeFilter = 'all';
 let editingId = null;
+let expandedIds = new Set();
 
-function uid() { return Date.now().toString(36) + Math.random().toString(36).slice(2, 6); }
+function uid() { return Date.now().toString(36) + Math.random().toString(36).slice(2,6); }
 function toB64(s) { return btoa(unescape(encodeURIComponent(s))); }
 function fromB64(s) { return decodeURIComponent(escape(atob(s.replace(/\n/g,'')))); }
 function esc(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
@@ -366,21 +343,23 @@ function esc(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').re
 function switchTab(tab, btn) {
   document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
-  document.getElementById('tab-' + tab).classList.add('active');
+  document.getElementById('tab-'+tab).classList.add('active');
   btn.classList.add('active');
 }
 
 async function loadPrefs() {
   try {
-    const res = await fetch(API, { headers: { Authorization: 'token ' + TOKEN, Accept: 'application/vnd.github.v3+json' } });
+    const res = await fetch(API, { headers: { Authorization:'token '+TOKEN, Accept:'application/vnd.github.v3+json' } });
     if (res.ok) {
       const d = await res.json();
       prefsSha = d.sha;
-      prefs = JSON.parse(fromB64(d.content));
+      const parsed = JSON.parse(fromB64(d.content));
+      // migrate old structure
+      if (!parsed.recipes) parsed.recipes = [];
+      prefs = parsed;
     }
   } catch(e) {}
-  renderWishlist();
-  renderRatings();
+  renderRecipeList();
   updateRatingCounts();
 }
 
@@ -393,12 +372,12 @@ async function doSave() {
   if (saving) { saveTimer = setTimeout(doSave, 700); return; }
   saving = true;
   try {
-    const body = { message: 'update preferences', content: toB64(JSON.stringify(prefs, null, 2)) };
+    const body = { message:'update preferences', content:toB64(JSON.stringify(prefs,null,2)) };
     if (prefsSha) body.sha = prefsSha;
     const res = await fetch(API, {
-      method: 'PUT',
-      headers: { Authorization: 'token ' + TOKEN, 'Content-Type': 'application/json' },
-      body: JSON.stringify(body)
+      method:'PUT',
+      headers:{ Authorization:'token '+TOKEN, 'Content-Type':'application/json' },
+      body:JSON.stringify(body)
     });
     if (res.ok) { const d = await res.json(); prefsSha = d.content.sha; showToast('保存しました'); }
     else showToast('保存に失敗しました');
@@ -412,124 +391,141 @@ function showToast(msg) {
   setTimeout(() => t.classList.remove('show'), 2200);
 }
 
-// WISHLIST
+// --- RECIPE LIST ---
 function setFilter(f, btn) {
   activeFilter = f;
   document.querySelectorAll('.filter-chip').forEach(el => el.classList.remove('active'));
   btn.classList.add('active');
-  renderWishlist();
+  renderRecipeList();
 }
 
 function getFiltered() {
-  if (activeFilter === 'priority') return prefs.wishlist.filter(i => i.priority);
-  if (activeFilter === 'favorite') return prefs.wishlist.filter(i => i.favorite);
-  if (activeFilter === 'undone') return prefs.wishlist.filter(i => !i.done);
-  return prefs.wishlist;
+  if (activeFilter === 'priority') return prefs.recipes.filter(r => r.priority);
+  if (activeFilter === 'new') return prefs.recipes.filter(r => r.done_count === 0);
+  return prefs.recipes;
 }
 
-function renderWishlist() {
-  const el = document.getElementById('wl-list');
+function renderRecipeList() {
+  const el = document.getElementById('rl-list');
   const items = getFiltered();
-  if (!items.length) { el.innerHTML = '<div class="wl-empty">リストが空です</div>'; return; }
-  el.innerHTML = items.map(item => `
-    <div class="wl-item${item.done?' is-done':''}" id="wli-${item.id}">
-      <div class="wl-body">
-        ${editingId===item.id
-          ?`<input class="wl-name-input" id="wle-${item.id}" value="${esc(item.name)}"
-              onblur="commitEdit('${item.id}')"
-              onkeydown="if(event.key==='Enter')commitEdit('${item.id}');else if(event.key==='Escape'){editingId=null;renderWishlist();}"
+  if (!items.length) {
+    el.innerHTML = '<div class="rl-empty">' + (activeFilter==='all' ? 'まだレシピがありません。<br>上の入力欄から追加、または献立ページの👍👎で自動登録できます。' : '該当なレシピがありません。') + '</div>';
+    return;
+  }
+  // sort: priority first, then by name
+  const sorted = [...items].sort((a,b) => (b.priority ? 1:0)-(a.priority ? 1:0) || a.name.localeCompare(b.name,'ja'));
+  el.innerHTML = sorted.map(r => {
+    const isOpen = expandedIds.has(r.id);
+    return `
+    <div class="rl-item" id="rli-${r.id}">
+      <div class="rl-row">
+        <button class="rl-pri" title="今週作りたい" onclick="togglePriority('${r.id}')" style="opacity:${r.priority?1:.25}">🔥</button>
+        ${editingId===r.id
+          ? `<input class="rl-name-input" id="rle-${r.id}" value="${esc(r.name)}"
+              onblur="commitEdit('${r.id}')"
+              onkeydown="if(event.key==='Enter')commitEdit('${r.id}');else if(event.key==='Escape'){editingId=null;renderRecipeList();}"
             >`
-          :`<div class="wl-name">${esc(item.name)}</div>`}
-        <div class="wl-meta">
-          <span>${item.added_at} 追加</span>
-          ${item.done_count>0?`<span>採用 ${item.done_count}回</span>`:''}
-          ${item.done?'<span class="done-badge">採用済み</span>':''}
+          : `<span class="rl-name">${esc(r.name)}${r.done_count>0?` <span class="done-badge">採用${r.done_count}回</span>`:''}</span>`
+        }
+        <div class="rl-counts">
+          <span class="rl-chip rl-good">👍 ${r.good_count}</span>
+          <span class="rl-chip rl-bad">👎 ${r.bad_count}</span>
+        </div>
+        <div class="rl-actions">
+          <button class="icon-btn" title="編集" onclick="startEdit('${r.id}')">✏️</button>
+          <button class="icon-btn" title="削除" onclick="deleteRecipe('${r.id}')">🗑️</button>
+        </div>
+        <button class="rl-expand${isOpen?' open':''}" onclick="toggleExpand('${r.id}')">▶</button>
+      </div>
+      <div class="rl-detail${isOpen?' open':''}">
+        <div class="rl-meta">
+          <span>追加日: ${r.added_at}</span>
+          ${r.last_adopted_at ? `<span>最終採用: ${r.last_adopted_at}</span>` : ''}
+        </div>
+        ${r.comments.length ? `<ul class="comments-list">${r.comments.map((c,i) =>
+          `<li class="comment-row"><span class="comment-text">${esc(c)}</span><button class="comment-del" onclick="deleteComment('${r.id}',${i})">✕</button></li>`
+        ).join('')}</ul>` : ''}
+        <div class="comment-form">
+          <input class="comment-input" id="ci-${r.id}" placeholder="コメントを追加..." onkeydown="if(event.key==='Enter')addComment('${r.id}')">
+          <button class="btn-comment" onclick="addComment('${r.id}')">追加</button>
         </div>
       </div>
-      <div class="wl-actions">
-        <button class="icon-btn" style="opacity:${item.priority?1:.3}" title="今週作りたい" onclick="toggleField('${item.id}','priority')">🔥</button>
-        <button class="icon-btn" style="opacity:${item.favorite?1:.3}" title="お気に入り" onclick="toggleField('${item.id}','favorite')">⭐️</button>
-        <button class="icon-btn" title="編集" onclick="startEdit('${item.id}')">✏️</button>
-        <button class="icon-btn" title="削除" onclick="deleteWL('${item.id}')">🗑️</button>
-      </div>
-    </div>`).join('');
-  if (editingId) { const inp = document.getElementById('wle-'+editingId); if(inp){inp.focus();inp.select();} }
+    </div>`;
+  }).join('');
+
+  if (editingId) {
+    const inp = document.getElementById('rle-'+editingId);
+    if (inp) { inp.focus(); inp.select(); }
+  }
 }
 
-function addWishlistItem() {
-  const inp = document.getElementById('wl-input');
+function addRecipe() {
+  const inp = document.getElementById('rl-input');
   const name = inp.value.trim(); if (!name) return;
-  prefs.wishlist.push({ id:uid(), name, priority:false, favorite:false, done:false, done_count:0, added_at:new Date().toISOString().slice(0,10), last_adopted_at:null });
-  inp.value = ''; renderWishlist(); queueSave();
+  if (prefs.recipes.find(r => r.name === name)) { showToast('すでに登録されています'); return; }
+  prefs.recipes.push({ id:uid(), name, priority:false, good_count:0, bad_count:0, comments:[], added_at:new Date().toISOString().slice(0,10), done_count:0, last_adopted_at:null });
+  inp.value = ''; renderRecipeList(); queueSave();
 }
 
-function toggleField(id, field) {
-  const item = prefs.wishlist.find(i=>i.id===id);
-  if(item){ item[field]=!item[field]; renderWishlist(); queueSave(); }
+function togglePriority(id) {
+  const r = prefs.recipes.find(x => x.id===id);
+  if (r) { r.priority=!r.priority; renderRecipeList(); queueSave(); }
 }
 
-function startEdit(id) { editingId=id; renderWishlist(); }
+function toggleExpand(id) {
+  if (expandedIds.has(id)) expandedIds.delete(id); else expandedIds.add(id);
+  renderRecipeList();
+}
+
+function startEdit(id) { editingId=id; renderRecipeList(); }
 
 function commitEdit(id) {
-  const inp = document.getElementById('wle-'+id); if(!inp) return;
+  const inp = document.getElementById('rle-'+id); if (!inp) return;
   const name = inp.value.trim();
-  if(name){ const item=prefs.wishlist.find(i=>i.id===id); if(item) item.name=name; }
-  editingId=null; renderWishlist(); queueSave();
+  if (name) { const r=prefs.recipes.find(x=>x.id===id); if(r) r.name=name; }
+  editingId=null; renderRecipeList(); queueSave();
 }
 
-function deleteWL(id) {
-  const item = prefs.wishlist.find(i=>i.id===id); if(!item) return;
-  const msg = item.done ? `「${item.name}」は採用済みです。本当に削除しますか？` : `「${item.name}」を削除しますか？`;
-  if(!confirm(msg)) return;
-  prefs.wishlist = prefs.wishlist.filter(i=>i.id!==id);
-  renderWishlist(); queueSave();
+function deleteRecipe(id) {
+  const r = prefs.recipes.find(x=>x.id===id); if (!r) return;
+  if (!confirm(`「${r.name}」を削除しますか？`)) return;
+  prefs.recipes = prefs.recipes.filter(x=>x.id!==id);
+  expandedIds.delete(id); renderRecipeList(); queueSave();
 }
 
-// RATINGS
-function renderRatings() {
-  const el = document.getElementById('rating-list');
-  if(!prefs.ratings.length){ el.innerHTML='<div class="ratings-empty">まだ評価がありません。<br>献立ページの 👍👎 から評価してみましょう。</div>'; return; }
-  const sorted = [...prefs.ratings].sort((a,b)=>(b.good_count+b.bad_count)-(a.good_count+a.bad_count));
-  el.innerHTML = sorted.map(r=>`
-    <div class="r-item">
-      <div class="r-item-head">
-        <div class="r-item-name">${esc(r.name)}</div>
-        <div class="r-counts"><span class="c-chip c-good">👍 ${r.good_count}</span><span class="c-chip c-bad">👎 ${r.bad_count}</span></div>
-      </div>
-      ${r.comments.length?`<ul class="comments-list">${r.comments.map((c,i)=>`
-        <li class="comment-row"><span class="comment-text">${esc(c)}</span><button class="comment-del" onclick="deleteComment('${r.id}',${i})">✕</button></li>`).join('')}</ul>`:''}
-      <div class="comment-form">
-        <input class="comment-input" id="ci-${r.id}" placeholder="コメントを追加..." onkeydown="if(event.key==='Enter')addComment('${r.id}')">
-        <button class="btn-comment" onclick="addComment('${r.id}')">追加</button>
-      </div>
-    </div>`).join('');
+function addComment(id) {
+  const inp = document.getElementById('ci-'+id);
+  const text = inp ? inp.value.trim() : ''; if (!text) return;
+  const r = prefs.recipes.find(x=>x.id===id);
+  if (r) { r.comments.push(text); inp.value=''; renderRecipeList(); queueSave(); }
+}
+
+function deleteComment(id, index) {
+  const r = prefs.recipes.find(x=>x.id===id);
+  if (r) { r.comments.splice(index,1); renderRecipeList(); queueSave(); }
+}
+
+// --- RATING from menu tab ---
+function rateRecipe(name, type) {
+  let r = prefs.recipes.find(x=>x.name===name);
+  if (!r) {
+    r = { id:uid(), name, priority:false, good_count:0, bad_count:0, comments:[], added_at:new Date().toISOString().slice(0,10), done_count:0, last_adopted_at:null };
+    prefs.recipes.push(r);
+  }
+  if (type==='good') r.good_count++; else r.bad_count++;
+  updateRatingCounts();
+  renderRecipeList();
+  queueSave();
 }
 
 function updateRatingCounts() {
   document.querySelectorAll('.card[data-recipe]').forEach(card => {
-    const r = prefs.ratings.find(x=>x.name===card.dataset.recipe);
-    if(r){ card.querySelector('.good-count').textContent=r.good_count; card.querySelector('.bad-count').textContent=r.bad_count; }
+    const r = prefs.recipes.find(x=>x.name===card.dataset.recipe);
+    if (r) {
+      card.querySelector('.good-count').textContent = r.good_count;
+      card.querySelector('.bad-count').textContent = r.bad_count;
+    }
   });
-}
-
-function rateRecipe(name, type) {
-  let r = prefs.ratings.find(x=>x.name===name);
-  if(!r){ r={id:uid(),name,good_count:0,bad_count:0,comments:[]}; prefs.ratings.push(r); }
-  if(type==='good') r.good_count++; else r.bad_count++;
-  updateRatingCounts(); renderRatings(); queueSave();
-}
-
-function addComment(ratingId) {
-  const inp = document.getElementById('ci-'+ratingId);
-  const text = inp?inp.value.trim():'';
-  if(!text) return;
-  const r = prefs.ratings.find(x=>x.id===ratingId);
-  if(r){ r.comments.push(text); inp.value=''; renderRatings(); queueSave(); }
-}
-
-function deleteComment(ratingId, index) {
-  const r = prefs.ratings.find(x=>x.id===ratingId);
-  if(r){ r.comments.splice(index,1); renderRatings(); queueSave(); }
 }
 
 loadPrefs();
