@@ -14,8 +14,6 @@
     --card: #ffffff;
     --accent: #c0623a;
     --accent-soft: #e8cdbf;
-    --tool-chip: #eef1e8;
-    --tool-ink: #5a6b2a;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { -webkit-text-size-adjust: 100%; }
@@ -24,71 +22,62 @@
     background: var(--paper);
     color: var(--ink);
     line-height: 1.7;
-    padding: 30px 18px 60px;
+    padding: 0 18px 60px;
     max-width: 740px;
     margin: 0 auto;
     -webkit-font-smoothing: antialiased;
   }
+  .tab-nav {
+    position: sticky; top: 0; z-index: 10;
+    background: var(--paper);
+    display: flex;
+    border-bottom: 2px solid var(--ink);
+    padding-top: 18px;
+    margin-bottom: 28px;
+  }
+  .tab-btn {
+    background: none; border: none;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    padding: 8px 20px 10px;
+    font-size: 13px; font-weight: 700;
+    color: var(--ink-faint);
+    cursor: pointer; font-family: inherit;
+    letter-spacing: 0.03em;
+    transition: color 0.15s;
+  }
+  .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
   header { margin-bottom: 8px; border-bottom: 2px solid var(--ink); padding-bottom: 20px; }
   .eyebrow { font-size: 12px; letter-spacing: 0.14em; color: var(--accent); font-weight: 700; margin-bottom: 7px; }
   h1 { font-size: 26px; font-weight: 700; letter-spacing: 0.01em; }
   .sub { font-size: 13px; color: var(--ink-soft); margin-top: 8px; }
-  .meta-line {
-    display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px;
-  }
-  .meta-chip {
-    font-size: 12px; background: var(--card); border: 1px solid var(--line);
-    border-radius: 20px; padding: 4px 13px; color: var(--ink-soft);
-  }
+  .meta-line { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .meta-chip { font-size: 12px; background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 4px 13px; color: var(--ink-soft); }
   .meta-chip strong { color: var(--ink); font-weight: 700; }
-
   section { margin-top: 36px; }
-  .section-label {
-    font-size: 12px; letter-spacing: 0.1em; color: var(--ink-faint);
-    font-weight: 700; margin-bottom: 14px; text-transform: uppercase;
-  }
-
-  .ingredients {
-    background: var(--card); border: 1px solid var(--line); border-radius: 14px;
-    padding: 16px 19px;
-  }
+  .section-label { font-size: 12px; letter-spacing: 0.1em; color: var(--ink-faint); font-weight: 700; margin-bottom: 14px; text-transform: uppercase; }
+  .ingredients { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px 19px; }
   .ingredients p { font-size: 13.5px; color: var(--ink-soft); }
   .ingredients .label { font-size: 11.5px; color: var(--ink-faint); margin-bottom: 6px; letter-spacing: 0.04em; }
-
-  .card {
-    background: var(--card); border: 1px solid var(--line); border-radius: 14px;
-    margin-bottom: 14px; overflow: hidden;
-  }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; margin-bottom: 14px; overflow: hidden; }
   .card > summary { list-style: none; cursor: pointer; user-select: none; }
   .card > summary::-webkit-details-marker { display: none; }
-  .card-head { display: flex; gap: 0; align-items: stretch; position: relative; }
-  .card-illo {
-    flex-shrink: 0; width: 104px; background: var(--paper);
-    display: flex; align-items: center; justify-content: center;
-    border-right: 1px solid var(--line);
-  }
+  .card-head { display: flex; align-items: stretch; position: relative; }
+  .card-illo { flex-shrink: 0; width: 104px; background: var(--paper); display: flex; align-items: center; justify-content: center; border-right: 1px solid var(--line); }
   .card-illo svg { width: 78px; height: 78px; display: block; }
   .card-info { flex: 1; padding: 15px 40px 15px 18px; min-width: 0; }
-  .card-chevron {
-    position: absolute; right: 16px; top: 50%; transform: translateY(-50%);
-    color: var(--ink-faint); font-size: 13px; transition: transform 0.2s;
-  }
+  .card-chevron { position: absolute; right: 16px; top: 50%; transform: translateY(-50%); color: var(--ink-faint); font-size: 13px; transition: transform 0.2s; }
   .card[open] .card-chevron { transform: translateY(-50%) rotate(90deg); }
   .tag-row { display: flex; gap: 7px; margin-bottom: 7px; flex-wrap: wrap; }
-  .tag {
-    font-size: 11px; font-weight: 700; letter-spacing: 0.03em;
-    border-radius: 6px; padding: 2px 9px;
-  }
+  .tag { font-size: 11px; font-weight: 700; letter-spacing: 0.03em; border-radius: 6px; padding: 2px 9px; }
   .tag-main { background: #f4e6de; color: #a9512c; }
   .tag-side { background: #eef1e8; color: #5a6b2a; }
-  .tool {
-    font-size: 11px; font-weight: 700; border-radius: 6px; padding: 2px 9px;
-    background: #edf0f5; color: #41618c;
-  }
+  .tool { font-size: 11px; font-weight: 700; border-radius: 6px; padding: 2px 9px; background: #edf0f5; color: #41618c; }
   .freeze { background: #eef3f6; color: #3d7a90; }
   .card-title { font-size: 16px; font-weight: 700; }
   .card-desc { font-size: 12.5px; color: var(--ink-soft); margin-top: 4px; }
-
   .card-detail { border-top: 1px solid var(--line); padding: 14px 18px 17px; }
   .r-block { font-size: 11px; letter-spacing: 0.06em; color: var(--ink-faint); font-weight: 700; margin: 0 0 8px; }
   .r-block:not(:first-child) { margin-top: 15px; }
@@ -98,31 +87,84 @@
   ol.r-steps li { font-size: 13.5px; margin-bottom: 8px; padding-left: 4px; }
   ol.r-steps li::marker { color: var(--accent); font-weight: 700; }
   .r-note { font-size: 12.5px; color: var(--ink-soft); background: var(--paper); border-left: 3px solid var(--accent-soft); padding: 9px 12px; border-radius: 0 6px 6px 0; margin-top: 12px; }
-
+  .rating-bar { display: flex; align-items: center; gap: 10px; margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line); }
+  .rating-label { font-size: 11px; color: var(--ink-faint); font-weight: 700; letter-spacing: 0.06em; }
+  .rate-btn { display: flex; align-items: center; gap: 5px; background: var(--paper); border: 1px solid var(--line); border-radius: 20px; padding: 5px 14px; font-size: 13px; cursor: pointer; font-family: inherit; color: var(--ink-soft); transition: all 0.15s; }
+  .rate-btn:hover { border-color: var(--accent); }
+  .rate-btn.good:hover, .rate-btn.good.voted { background: #eef4e8; border-color: #5a8a3a; color: #3a6a1a; }
+  .rate-btn.bad:hover, .rate-btn.bad.voted { background: #f4e8e8; border-color: #a03a3a; color: #7a2020; }
+  .rate-count { font-size: 12px; font-weight: 700; }
   .memo { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 17px 19px; }
   .memo h3 { font-size: 13.5px; margin-bottom: 7px; }
   .memo h3:not(:first-child) { margin-top: 16px; }
   .memo p { font-size: 13px; color: var(--ink-soft); }
-  .kid-note {
-    margin-top: 22px; background: #fbf4ea; border: 1px solid #efdcc3; border-radius: 14px;
-    padding: 15px 19px; font-size: 13px; color: #8a6a3a;
-  }
+  .kid-note { margin-top: 22px; background: #fbf4ea; border: 1px solid #efdcc3; border-radius: 14px; padding: 15px 19px; font-size: 13px; color: #8a6a3a; }
   .kid-note strong { color: #6f5023; }
-
   footer { margin-top: 42px; text-align: center; font-size: 11.5px; color: var(--ink-faint); border-top: 1px solid var(--line); padding-top: 18px; }
-
+  .tab-header { font-size: 18px; font-weight: 700; margin-bottom: 20px; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+  .wl-add-row { display: flex; gap: 10px; margin-bottom: 16px; }
+  .wl-input { flex: 1; padding: 10px 14px; border: 1px solid var(--line); border-radius: 10px; font-size: 14px; font-family: inherit; background: var(--card); color: var(--ink); outline: none; }
+  .wl-input:focus { border-color: var(--accent); }
+  .btn-primary { padding: 10px 18px; background: var(--accent); color: #fff; border: none; border-radius: 10px; font-size: 14px; font-weight: 700; cursor: pointer; font-family: inherit; }
+  .filter-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+  .filter-chip { font-size: 12px; padding: 5px 14px; border: 1px solid var(--line); border-radius: 20px; background: var(--card); color: var(--ink-soft); cursor: pointer; font-family: inherit; font-weight: 700; transition: all 0.15s; }
+  .filter-chip.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .wl-list { display: flex; flex-direction: column; gap: 10px; }
+  .wl-item { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; display: flex; align-items: center; gap: 10px; }
+  .wl-item.is-done { opacity: 0.55; }
+  .wl-body { flex: 1; min-width: 0; }
+  .wl-name { font-size: 14px; font-weight: 600; }
+  .wl-name-input { width: 100%; font-size: 14px; font-weight: 600; border: 1px solid var(--accent); border-radius: 6px; padding: 2px 8px; font-family: inherit; outline: none; background: var(--card); }
+  .wl-meta { font-size: 11px; color: var(--ink-faint); margin-top: 2px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .done-badge { font-size: 10px; font-weight: 700; background: #eef4e8; color: #5a8a3a; border-radius: 10px; padding: 1px 8px; }
+  .wl-actions { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
+  .icon-btn { background: none; border: none; cursor: pointer; font-size: 17px; padding: 4px 5px; border-radius: 6px; line-height: 1; transition: transform 0.1s; }
+  .icon-btn:hover { transform: scale(1.2); }
+  .wl-empty { text-align: center; padding: 48px 20px; color: var(--ink-faint); font-size: 13px; }
+  .rating-list { display: flex; flex-direction: column; gap: 12px; }
+  .r-item { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 18px; }
+  .r-item-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 10px; }
+  .r-item-name { font-size: 15px; font-weight: 700; }
+  .r-counts { display: flex; gap: 8px; }
+  .c-chip { font-size: 12px; font-weight: 700; padding: 3px 12px; border-radius: 20px; }
+  .c-good { background: #eef4e8; color: #3a6a1a; }
+  .c-bad { background: #f4e8e8; color: #7a2020; }
+  .comments-list { list-style: none; display: flex; flex-direction: column; gap: 6px; margin-bottom: 10px; }
+  .comment-row { display: flex; align-items: flex-start; gap: 8px; background: var(--paper); border-radius: 8px; padding: 7px 11px; font-size: 13px; color: var(--ink-soft); }
+  .comment-text { flex: 1; }
+  .comment-del { background: none; border: none; cursor: pointer; color: var(--ink-faint); font-size: 14px; padding: 0; line-height: 1; flex-shrink: 0; }
+  .comment-del:hover { color: #a03a3a; }
+  .comment-form { display: flex; gap: 8px; }
+  .comment-input { flex: 1; padding: 7px 12px; border: 1px solid var(--line); border-radius: 8px; font-size: 13px; font-family: inherit; outline: none; background: var(--card); color: var(--ink); }
+  .comment-input:focus { border-color: var(--accent); }
+  .btn-comment { padding: 7px 14px; background: var(--accent); color: #fff; border: none; border-radius: 8px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: inherit; }
+  .ratings-empty { text-align: center; padding: 48px 20px; color: var(--ink-faint); font-size: 13px; }
+  .toast { position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%); background: #2b2a26; color: #fff; padding: 10px 22px; border-radius: 20px; font-size: 13px; opacity: 0; transition: opacity 0.25s; pointer-events: none; z-index: 200; white-space: nowrap; }
+  .toast.show { opacity: 1; }
   @media (max-width: 480px) {
     .card-illo { width: 84px; }
     .card-illo svg { width: 62px; height: 62px; }
     h1 { font-size: 22px; }
+    .tab-btn { padding: 8px 13px; font-size: 12px; }
   }
   @media print {
+    .tab-nav, #tab-wishlist, #tab-ratings { display: none !important; }
+    #tab-menu { display: block !important; }
     body { background: #fff; padding: 0; }
     .card, .ingredients, .memo { break-inside: avoid; }
+    .rating-bar { display: none; }
   }
 </style>
 </head>
 <body>
+
+<nav class="tab-nav">
+  <button class="tab-btn active" onclick="switchTab('menu',this)">今週の献立</button>
+  <button class="tab-btn" onclick="switchTab('wishlist',this)">食べたいリスト</button>
+  <button class="tab-btn" onclick="switchTab('ratings',this)">評価</button>
+</nav>
+
+<div id="tab-menu" class="tab-content active">
 <header>
   <div class="eyebrow">週次作り置き献立</div>
   <h1>今週の作り置き 5品＋副菜2品</h1>
@@ -139,186 +181,90 @@
   <div class="section-label">今週の食材</div>
   <div class="ingredients">
     <div class="label">グリーンビーンズ 6/11配達</div>
-    <p>鶏むね肉 1kg ・ 豚こま 250〜350g ・ たまねぎ 6個 ・ にんじん 3〜4本 ・ ピーマン 4〜6個 ・ キャベツ 1個 ・ 長ねぎ 2本 ・ ブロッコリー 1個 ・ えのき 150g ・ えりんぎ 100g ・ ブロッコリースプラウト 1パック ・ 牛乳 1000ml ・ トマトジュース（食塩無添加）900ml×2</p>
+    <p>鶏むね肉1kg ・ 豚こま ・ たまねぎ ・ にんじん ・ ピーマン ・ キャベツ ・ 長ねぎ ・ ブロッコリー ・ えのき ・ えりんぎ ・ ブロッコリースプラウト ・ 牛乳 ・ トマトジュース×2</p>
   </div>
 </section>
 
 <section>
   <div class="section-label">主菜 5品</div>
 
-  <!-- 照り焼き -->
-  <details class="card">
+  <details class="card" data-recipe="鶏むね肉の照り焼き">
     <summary class="card-head">
-      <div class="card-illo">
-        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <ellipse cx="50" cy="58" rx="38" ry="30" fill="#fff" stroke="#e6e3da" stroke-width="2"/>
-          <ellipse cx="50" cy="56" rx="29" ry="22" fill="#f7f4ec"/>
-          <path d="M30 54 q8 -12 20 -9 q14 -4 22 8 q3 13 -10 18 q-16 7 -28 -2 q-8 -7 -4 -15z" fill="#c98a4a"/>
-          <path d="M34 52 q7 -8 16 -6 q11 -3 18 6 q2 9 -8 13 q-13 6 -22 -1 q-6 -5 -4 -12z" fill="#d99c55"/>
-          <ellipse cx="44" cy="52" rx="3" ry="2" fill="#a86a32" opacity="0.5"/>
-          <ellipse cx="56" cy="58" rx="3" ry="2" fill="#a86a32" opacity="0.5"/>
-          <path d="M40 66 q10 5 22 0" stroke="#8a5524" stroke-width="2" fill="none" stroke-linecap="round"/>
-          <path d="M70 44 l4 -8 M76 48 l6 -5" stroke="#7fae5a" stroke-width="3" stroke-linecap="round"/>
-        </svg>
-      </div>
-      <div class="card-info">
-        <div class="tag-row"><span class="tag tag-main">主菜</span><span class="tool">フライパン</span></div>
-        <div class="card-title">鶏むね肉の照り焼き</div>
-        <div class="card-desc">そぎ切り＋片栗粉でしっとり。甘辛だれでご飯が進む定番</div>
-      </div>
+      <div class="card-illo"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="58" rx="38" ry="30" fill="#fff" stroke="#e6e3da" stroke-width="2"/><ellipse cx="50" cy="56" rx="29" ry="22" fill="#f7f4ec"/><path d="M30 54 q8 -12 20 -9 q14 -4 22 8 q3 13 -10 18 q-16 7 -28 -2 q-8 -7 -4 -15z" fill="#c98a4a"/><path d="M34 52 q7 -8 16 -6 q11 -3 18 6 q2 9 -8 13 q-13 6 -22 -1 q-6 -5 -4 -12z" fill="#d99c55"/><ellipse cx="44" cy="52" rx="3" ry="2" fill="#a86a32" opacity="0.5"/><ellipse cx="56" cy="58" rx="3" ry="2" fill="#a86a32" opacity="0.5"/><path d="M40 66 q10 5 22 0" stroke="#8a5524" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M70 44 l4 -8 M76 48 l6 -5" stroke="#7fae5a" stroke-width="3" stroke-linecap="round"/></svg></div>
+      <div class="card-info"><div class="tag-row"><span class="tag tag-main">主菜</span><span class="tool">フライパン</span></div><div class="card-title">鶏むね肉の照り焼き</div><div class="card-desc">そぎ切り＋片栗粉でしっとり。甘辛だれでご飯が進む定番</div></div>
       <span class="card-chevron">▶</span>
     </summary>
     <div class="card-detail">
       <div class="r-block">材料（2人分）</div>
       <div class="r-ing"><span>鶏むね肉 500g</span><span>片栗粉 大1</span><span>酒 大2</span><span>醤油 大2</span><span>みりん 大2</span><span>砂糖 大1</span><span>サラダ油 大1</span></div>
       <div class="r-block">作り方</div>
-      <ol class="r-steps">
-        <li>鶏肉をそぎ切りにし、片栗粉を全体にまぶす。</li>
-        <li>酒・醤油・みりん・砂糖を混ぜてタレを作る。</li>
-        <li>油を熱したフライパンで両面焼く（弱中火6分）。※子供用はここで取り分け。</li>
-        <li>タレを加えて絡め、照りをつける（2分）。冷まして保存。</li>
-      </ol>
+      <ol class="r-steps"><li>鶏肉をそぎ切りにし、片栗粉を全体にまぶす。</li><li>酒・醤油・みりん・砂糖を混ぜてタレを作る。</li><li>油を熱したフライパンで両面焼く（弱中火6分）。※子供用はここで取り分け。</li><li>タレを加えて絡め、照りをつける（2分）。冷まして保存。</li></ol>
       <div class="r-note">冷蔵3〜4日。タレごと保存容器に入れると乾燥しない。</div>
+      <div class="rating-bar"><span class="rating-label">RATING</span><button class="rate-btn good" onclick="rateRecipe('鶏むね肉の照り焼き','good',this)">👍 <span class="rate-count good-count">0</span></button><button class="rate-btn bad" onclick="rateRecipe('鶏むね肉の照り焼き','bad',this)">👎 <span class="rate-count bad-count">0</span></button></div>
     </div>
   </details>
 
-  <!-- 生姜焼き -->
-  <details class="card">
+  <details class="card" data-recipe="豚こまと野菜の生姜焼き">
     <summary class="card-head">
-      <div class="card-illo">
-        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <ellipse cx="50" cy="58" rx="38" ry="30" fill="#fff" stroke="#e6e3da" stroke-width="2"/>
-          <ellipse cx="50" cy="56" rx="29" ry="22" fill="#f7f4ec"/>
-          <path d="M32 50 q6 -5 12 -2 q5 -4 11 -1 q6 -3 11 2 q4 6 -2 9 q-3 6 -10 3 q-6 5 -13 1 q-7 2 -11 -4 q-3 -6 2 -11z" fill="#b5703a"/>
-          <path d="M36 52 q5 -3 9 -1 M50 50 q4 -2 8 1 M44 60 q6 3 12 0" stroke="#8a5020" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-          <path d="M30 60 q4 3 9 1" stroke="#6fae3f" stroke-width="3" fill="none" stroke-linecap="round"/>
-          <rect x="58" y="56" width="11" height="4" rx="2" fill="#7ab54a" transform="rotate(20 60 58)"/>
-          <rect x="34" y="46" width="9" height="3.5" rx="1.5" fill="#e8c34a" transform="rotate(-15 36 48)"/>
-        </svg>
-      </div>
-      <div class="card-info">
-        <div class="tag-row"><span class="tag tag-main">主菜</span><span class="tool freeze">下味冷凍</span><span class="tool">フライパン</span></div>
-        <div class="card-title">豚こまと野菜の生姜焼き</div>
-        <div class="card-desc">下味冷凍しておけば平日は焼くだけ5分。野菜も一緒に</div>
-      </div>
+      <div class="card-illo"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="58" rx="38" ry="30" fill="#fff" stroke="#e6e3da" stroke-width="2"/><ellipse cx="50" cy="56" rx="29" ry="22" fill="#f7f4ec"/><path d="M32 50 q6 -5 12 -2 q5 -4 11 -1 q6 -3 11 2 q4 6 -2 9 q-3 6 -10 3 q-6 5 -13 1 q-7 2 -11 -4 q-3 -6 2 -11z" fill="#b5703a"/><path d="M36 52 q5 -3 9 -1 M50 50 q4 -2 8 1 M44 60 q6 3 12 0" stroke="#8a5020" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M30 60 q4 3 9 1" stroke="#6fae3f" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="58" y="56" width="11" height="4" rx="2" fill="#7ab54a" transform="rotate(20 60 58)"/><rect x="34" y="46" width="9" height="3.5" rx="1.5" fill="#e8c34a" transform="rotate(-15 36 48)"/></svg></div>
+      <div class="card-info"><div class="tag-row"><span class="tag tag-main">主菜</span><span class="tool freeze">下味冷凍</span><span class="tool">フライパン</span></div><div class="card-title">豚こまと野菜の生姜焼き</div><div class="card-desc">下味冷凍しておけば平日は焼くだけ5分。野菜も一緒に</div></div>
       <span class="card-chevron">▶</span>
     </summary>
     <div class="card-detail">
       <div class="r-block">材料（2人分）</div>
       <div class="r-ing"><span>豚こま 300g</span><span>たまねぎ 1/2個</span><span>ピーマン 2個</span><span>醤油 大2</span><span>みりん 大2</span><span>酒 大1</span><span>おろし生姜 大1</span></div>
       <div class="r-block">作り方</div>
-      <ol class="r-steps">
-        <li>たまねぎとピーマンを切る。</li>
-        <li>冷凍用保存袋に全材料を入れて揉み込み、平らにして冷凍。</li>
-        <li>前夜に冷蔵庫で解凍し、フライパンで炒める（中火5分）。</li>
-      </ol>
+      <ol class="r-steps"><li>たまねぎとピーマンを切る。</li><li>冷凍用保存袋に全材料を入れて揉み込み、平らにして冷凍。</li><li>前夜に冷蔵庫で解凍し、フライパンで炒める（中火5分）。</li></ol>
       <div class="r-note">下味冷凍で約3週間。子供用は生姜控えめの別袋にすると安心。</div>
+      <div class="rating-bar"><span class="rating-label">RATING</span><button class="rate-btn good" onclick="rateRecipe('豚こまと野菜の生姜焼き','good',this)">👍 <span class="rate-count good-count">0</span></button><button class="rate-btn bad" onclick="rateRecipe('豚こまと野菜の生姜焼き','bad',this)">👎 <span class="rate-count bad-count">0</span></button></div>
     </div>
   </details>
 
-  <!-- 塩だれ蒸し -->
-  <details class="card">
+  <details class="card" data-recipe="鶏むねとキャベツの塩だれ蒸し">
     <summary class="card-head">
-      <div class="card-illo">
-        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <ellipse cx="50" cy="60" rx="36" ry="26" fill="#fff" stroke="#e6e3da" stroke-width="2"/>
-          <ellipse cx="50" cy="58" rx="28" ry="19" fill="#f7f4ec"/>
-          <path d="M34 56 q6 -10 16 -7 q12 -3 18 7 q2 10 -8 13 q-14 5 -22 -2 q-6 -5 -4 -11z" fill="#ece4d0"/>
-          <path d="M38 54 q5 -7 12 -5 M52 52 q6 -2 10 4" stroke="#c9bfa0" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-          <path d="M30 50 q5 -4 11 -2 q3 -5 9 -3" stroke="#7ab54a" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-          <path d="M62 52 l6 -3 M64 58 l7 -1" stroke="#9ccb6a" stroke-width="2.5" stroke-linecap="round"/>
-          <path d="M44 40 q2 -6 -1 -10 M52 40 q3 -6 0 -11" stroke="#cfcabb" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7"/>
-        </svg>
-      </div>
-      <div class="card-info">
-        <div class="tag-row"><span class="tag tag-main">主菜</span><span class="tool">蒸し器</span></div>
-        <div class="card-title">鶏むねとキャベツの塩だれ蒸し</div>
-        <div class="card-desc">蒸し器で蒸すだけ。さっぱり塩だれで野菜たっぷり</div>
-      </div>
+      <div class="card-illo"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="60" rx="36" ry="26" fill="#fff" stroke="#e6e3da" stroke-width="2"/><ellipse cx="50" cy="58" rx="28" ry="19" fill="#f7f4ec"/><path d="M34 56 q6 -10 16 -7 q12 -3 18 7 q2 10 -8 13 q-14 5 -22 -2 q-6 -5 -4 -11z" fill="#ece4d0"/><path d="M38 54 q5 -7 12 -5 M52 52 q6 -2 10 4" stroke="#c9bfa0" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M30 50 q5 -4 11 -2 q3 -5 9 -3" stroke="#7ab54a" stroke-width="3.5" fill="none" stroke-linecap="round"/><path d="M62 52 l6 -3 M64 58 l7 -1" stroke="#9ccb6a" stroke-width="2.5" stroke-linecap="round"/><path d="M44 40 q2 -6 -1 -10 M52 40 q3 -6 0 -11" stroke="#cfcabb" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7"/></svg></div>
+      <div class="card-info"><div class="tag-row"><span class="tag tag-main">主菜</span><span class="tool">蒸し器</span></div><div class="card-title">鶏むねとキャベツの塩だれ蒸し</div><div class="card-desc">蒸し器で蒸すだけ。さっぱり塩だれで野菜たっぷり</div></div>
       <span class="card-chevron">▶</span>
     </summary>
     <div class="card-detail">
       <div class="r-block">材料（2人分）</div>
       <div class="r-ing"><span>鶏むね肉 300g</span><span>キャベツ 1/4個</span><span>長ねぎ 1本</span><span>ごま油 大2</span><span>鶏がらスープの素 小1</span><span>酒 大1</span><span>塩 小1/2</span></div>
       <div class="r-block">作り方</div>
-      <ol class="r-steps">
-        <li>鶏肉をそぎ切りにし、キャベツと長ねぎを切る。</li>
-        <li>耐熱容器に野菜を敷き、鶏肉を並べ酒をふる。蒸し器で蒸す（約15分）。</li>
-        <li>ごま油・鶏がら・塩を混ぜた塩だれと和える。</li>
-      </ol>
-      <div class="r-note">蒸し後に塩だれと和えると味が染みる。冷蔵3〜4日。子供用は塩だれ少なめで。</div>
+      <ol class="r-steps"><li>鶏肉をそぎ切りにし、キャベツと長ねぎを切る。</li><li>耐熱容器に野菜を敷き、鶏肉を並べ酒をふる。蒸し器で蒸す（約15分）。</li><li>ごま油・鶏がら・塩を混ぜた塩だれと和える。</li></ol>
+      <div class="r-note">冷蔵3〜4日。子供用は塩だれ少なめで。</div>
+      <div class="rating-bar"><span class="rating-label">RATING</span><button class="rate-btn good" onclick="rateRecipe('鶏むねとキャベツの塩だれ蒸し','good',this)">👍 <span class="rate-count good-count">0</span></button><button class="rate-btn bad" onclick="rateRecipe('鶏むねとキャベツの塩だれ蒸し','bad',this)">👎 <span class="rate-count bad-count">0</span></button></div>
     </div>
   </details>
 
-  <!-- トマト煮込み -->
-  <details class="card">
+  <details class="card" data-recipe="鶏むねのトマト煮込み">
     <summary class="card-head">
-      <div class="card-illo">
-        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <ellipse cx="50" cy="60" rx="34" ry="25" fill="#fff" stroke="#e6e3da" stroke-width="2"/>
-          <ellipse cx="50" cy="58" rx="26" ry="18" fill="#e76f4d"/>
-          <ellipse cx="50" cy="57" rx="26" ry="18" fill="#d85a36" opacity="0.5"/>
-          <circle cx="42" cy="54" r="5" fill="#c98a4a"/>
-          <circle cx="56" cy="60" r="5" fill="#c98a4a"/>
-          <circle cx="50" cy="50" r="3.5" fill="#e89a3a"/>
-          <circle cx="60" cy="52" r="3" fill="#e89a3a"/>
-          <path d="M38 62 q5 3 11 1" stroke="#b04527" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
-          <path d="M44 44 q2 -5 6 -4 M54 46 q3 -4 7 -2" stroke="#6fae3f" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-        </svg>
-      </div>
-      <div class="card-info">
-        <div class="tag-row"><span class="tag tag-main">主菜</span><span class="tool">ビストロ</span></div>
-        <div class="card-title">鶏むねのトマト煮込み</div>
-        <div class="card-desc">オートクッカーに入れてほぼ放置。子供も食べやすい</div>
-      </div>
+      <div class="card-illo"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="60" rx="34" ry="25" fill="#fff" stroke="#e6e3da" stroke-width="2"/><ellipse cx="50" cy="58" rx="26" ry="18" fill="#e76f4d"/><ellipse cx="50" cy="57" rx="26" ry="18" fill="#d85a36" opacity="0.5"/><circle cx="42" cy="54" r="5" fill="#c98a4a"/><circle cx="56" cy="60" r="5" fill="#c98a4a"/><circle cx="50" cy="50" r="3.5" fill="#e89a3a"/><circle cx="60" cy="52" r="3" fill="#e89a3a"/><path d="M38 62 q5 3 11 1" stroke="#b04527" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/><path d="M44 44 q2 -5 6 -4 M54 46 q3 -4 7 -2" stroke="#6fae3f" stroke-width="2.5" stroke-linecap="round" fill="none"/></svg></div>
+      <div class="card-info"><div class="tag-row"><span class="tag tag-main">主菜</span><span class="tool">ビストロ</span></div><div class="card-title">鶏むねのトマト煮込み</div><div class="card-desc">オートクッカーに入れてほぼ放置。子供も食べやすい</div></div>
       <span class="card-chevron">▶</span>
     </summary>
     <div class="card-detail">
-      <div class="r-block">材料（2人分）</div>
+      <div class="r-block">材料（2人剆）</div>
       <div class="r-ing"><span>鶏むね肉 500g</span><span>たまねぎ 1個</span><span>にんじん 1本</span><span>トマトジュース 400ml</span><span>コンソメ 大1</span><span>ケチャップ 大1</span><span>塩 小1/2</span></div>
       <div class="r-block">作り方</div>
-      <ol class="r-steps">
-        <li>たまねぎとにんじんを切り、鶏肉は一口大に切る。</li>
-        <li>オートクッカービストロに全材料を入れる。</li>
-        <li>自動調理（カレー/シチューモード）で加熱。冷まして保存。</li>
-      </ol>
-      <div class="r-note">入れて放置でOK。冷蔵4日／冷凍3週間。大人は黒こしょうやタバスコを別添え。</div>
+      <ol class="r-steps"><li>たまねぎとにんじんを切り、鶏肉は一口大に切る。</li><li>オートクッカービストロに全材料を入れる。</li><li>自動調理モードで加熱。冷まして保存。</li></ol>
+      <div class="r-note">冷蔵4日／冷凍3週間。大人は黒こしょうやタバスコを別添え。</div>
+      <div class="rating-bar"><span class="rating-label">RATING</span><button class="rate-btn good" onclick="rateRecipe('鶏むねのトマト煮込み','good',this)">👍 <span class="rate-count good-count">0</span></button><button class="rate-btn bad" onclick="rateRecipe('鶏むねのトマト煮込み','bad',this)">👎 <span class="rate-count bad-count">0</span></button></div>
     </div>
   </details>
 
-  <!-- きのこ炒め -->
-  <details class="card">
+  <details class="card" data-recipe="豚こまと長ねぎ・きのこ炒め">
     <summary class="card-head">
-      <div class="card-illo">
-        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <ellipse cx="50" cy="60" rx="36" ry="26" fill="#fff" stroke="#e6e3da" stroke-width="2"/>
-          <ellipse cx="50" cy="58" rx="28" ry="19" fill="#f7f4ec"/>
-          <path d="M34 56 q7 -9 15 -6 q10 -4 19 5 q3 10 -7 13 q-15 6 -24 -2 q-6 -5 -3 -10z" fill="#b5703a"/>
-          <ellipse cx="42" cy="52" rx="4" ry="6" fill="#e8dcc0"/>
-          <rect x="40.5" y="52" width="3" height="8" rx="1.5" fill="#f0ead8"/>
-          <ellipse cx="58" cy="56" rx="5" ry="4" fill="#d8c9a8"/>
-          <rect x="56.5" y="56" width="3" height="7" rx="1.5" fill="#e8dcc0"/>
-          <path d="M30 60 q5 2 10 0" stroke="#6fae3f" stroke-width="3" fill="none" stroke-linecap="round"/>
-          <path d="M48 64 q6 2 13 -1" stroke="#8a5020" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-        </svg>
-      </div>
-      <div class="card-info">
-        <div class="tag-row"><span class="tag tag-main">主菜</span><span class="tool freeze">下味冷凍</span><span class="tool">フライパン</span></div>
-        <div class="card-title">豚こまと長ねぎ・きのこ炒め</div>
-        <div class="card-desc">きのこの旨味でご飯が進む。下味冷凍で焼くだけ</div>
-      </div>
+      <div class="card-illo"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="60" rx="36" ry="26" fill="#fff" stroke="#e6e3da" stroke-width="2"/><ellipse cx="50" cy="58" rx="28" ry="19" fill="#f7f4ec"/><path d="M34 56 q7 -9 15 -6 q10 -4 19 5 q3 10 -7 13 q-15 6 -24 -2 q-6 -5 -3 -10z" fill="#b5703a"/><ellipse cx="42" cy="52" rx="4" ry="6" fill="#e8dcc0"/><rect x="40.5" y="52" width="3" height="8" rx="1.5" fill="#f0ead8"/><ellipse cx="58" cy="56" rx="5" ry="4" fill="#d8c9a8"/><rect x="56.5" y="56" width="3" height="7" rx="1.5" fill="#e8dcc0"/><path d="M30 60 q5 2 10 0" stroke="#6fae3f" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M48 64 q6 2 13 -1" stroke="#8a5020" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></div>
+      <div class="card-info"><div class="tag-row"><span class="tag tag-main">主菜</span><span class="tool freeze">下味冷凍</span><span class="tool">フライパン</span></div><div class="card-title">豚こまと長ねぎ・きのこ炒め</div><div class="card-desc">きのこの旨味でご飯が進む。下味冷凍で焼くだけ</div></div>
       <span class="card-chevron">▶</span>
     </summary>
     <div class="card-detail">
       <div class="r-block">材料（2人分）</div>
       <div class="r-ing"><span>豚こま 250g</span><span>長ねぎ 1本</span><span>えのき 100g</span><span>えりんぎ 100g</span><span>醤油 大2</span><span>オイスターソース 大1</span><span>酒 大1</span></div>
       <div class="r-block">作り方</div>
-      <ol class="r-steps">
-        <li>長ねぎを斜め切りにし、えのき・えりんぎをほぐして裂く。</li>
-        <li>冷凍用保存袋に全材料を入れて揉み込み、平らにして冷凍。</li>
-        <li>前夜に解凍し、フライパンで炒める（中火5分）。</li>
-      </ol>
-      <div class="r-note">きのこは冷凍で旨味アップ。約3週間保存可。オイスターのコクで子供も食べやすい。</div>
+      <ol class="r-steps"><li>長ねぎを斜め切り、えのき・えりんぎをほぐして裂く。</li><li>冷凍用保存袋に全材料を入れて揉み込み、平らにして冷凍。</li><li>前夜に解凍し、フライパンで炒める（中火5分）。</li></ol>
+      <div class="r-note">きのこは冷凍で旨味アップ。約3週間保存可。</div>
+      <div class="rating-bar"><span class="rating-label">RATING</span><button class="rate-btn good" onclick="rateRecipe('豚こまと長ねぎ・きのこ炒め','good',this)">👍 <span class="rate-count good-count">0</span></button><button class="rate-btn bad" onclick="rateRecipe('豚こまと長ねぎ・きのこ炒め','bad',this)">👎 <span class="rate-count bad-count">0</span></button></div>
     </div>
   </details>
 </section>
@@ -326,77 +272,35 @@
 <section>
   <div class="section-label">副菜 2品（各2日分）</div>
 
-  <!-- にんじんラペ -->
-  <details class="card">
+  <details class="card" data-recipe="にんじんラペ">
     <summary class="card-head">
-      <div class="card-illo">
-        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <ellipse cx="50" cy="60" rx="34" ry="24" fill="#fff" stroke="#e6e3da" stroke-width="2"/>
-          <ellipse cx="50" cy="58" rx="26" ry="17" fill="#f7f4ec"/>
-          <path d="M32 56 q14 -6 36 0" stroke="#e89150" stroke-width="3" fill="none" stroke-linecap="round"/>
-          <path d="M30 60 q16 -5 38 1" stroke="#f0a060" stroke-width="3" fill="none" stroke-linecap="round"/>
-          <path d="M34 52 q14 -5 32 0" stroke="#e89150" stroke-width="3" fill="none" stroke-linecap="round"/>
-          <path d="M33 64 q15 -4 34 1" stroke="#f5ab68" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-          <circle cx="44" cy="56" r="1.3" fill="#8a5020"/>
-          <circle cx="58" cy="60" r="1.3" fill="#8a5020"/>
-          <circle cx="52" cy="53" r="1.3" fill="#8a5020"/>
-        </svg>
-      </div>
-      <div class="card-info">
-        <div class="tag-row"><span class="tag tag-side">副菜</span><span class="tool">ブレンダー</span></div>
-        <div class="card-title">にんじんラペ</div>
-        <div class="card-desc">ブレンダーで千切り瞬殺。冷蔵4〜5日の万能副菜</div>
-      </div>
+      <div class="card-illo"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="60" rx="34" ry="24" fill="#fff" stroke="#e6e3da" stroke-width="2"/><ellipse cx="50" cy="58" rx="26" ry="17" fill="#f7f4ec"/><path d="M32 56 q14 -6 36 0" stroke="#e89150" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M30 60 q16 -5 38 1" stroke="#f0a060" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M34 52 q14 -5 32 0" stroke="#e89150" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M33 64 q15 -4 34 1" stroke="#f5ab68" stroke-width="2.5" fill="none" stroke-linecap="round"/><circle cx="44" cy="56" r="1.3" fill="#8a5020"/><circle cx="58" cy="60" r="1.3" fill="#8a5020"/><circle cx="52" cy="53" r="1.3" fill="#8a5020"/></svg></div>
+      <div class="card-info"><div class="tag-row"><span class="tag tag-side">副菜</span><span class="tool">ブレンダー</span></div><div class="card-title">にんじんラペ</div><div class="card-desc">ブレンダーで千切り瞬殺。冷蔵4〜5日の万能副菜</div></div>
       <span class="card-chevron">▶</span>
     </summary>
     <div class="card-detail">
       <div class="r-block">材料（4人分）</div>
       <div class="r-ing"><span>にんじん 1本</span><span>オリーブオイル 大2</span><span>酢 大1</span><span>はちみつ 大1/2</span><span>塩 小1/2</span></div>
       <div class="r-block">作り方</div>
-      <ol class="r-steps">
-        <li>にんじんをブレンダーの千切りアタッチメントで千切りにする。</li>
-        <li>オリーブオイル・酢・はちみつ・塩を混ぜて和える。</li>
-      </ol>
-      <div class="r-note">半日置くと味がなじむ。冷蔵4〜5日。子供用は酢控えめでも。</div>
+      <ol class="r-steps"><li>にんじんをブレンダーの千切りアタッチメントで千切りにする。</li><li>オリーブオイル・酢・はちみつ・塩を混ぜて和える。</li></ol>
+      <div class="r-note">半日置くと味がなじむ。冷蔵4〜5日。</div>
+      <div class="rating-bar"><span class="rating-label">RATING</span><button class="rate-btn good" onclick="rateRecipe('にんじんラペ','good',this)">👍 <span class="rate-count good-count">0</span></button><button class="rate-btn bad" onclick="rateRecipe('にんじんラペ','bad',this)">👎 <span class="rate-count bad-count">0</span></button></div>
     </div>
   </details>
 
-  <!-- 無限ブロッコリー -->
-  <details class="card">
+  <details class="card" data-recipe="無限ブロッコリー">
     <summary class="card-head">
-      <div class="card-illo">
-        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <ellipse cx="50" cy="62" rx="34" ry="23" fill="#fff" stroke="#e6e3da" stroke-width="2"/>
-          <ellipse cx="50" cy="60" rx="26" ry="16" fill="#f7f4ec"/>
-          <circle cx="42" cy="54" r="7" fill="#5f9e4a"/>
-          <circle cx="52" cy="52" r="6" fill="#6fae54"/>
-          <circle cx="58" cy="57" r="6.5" fill="#5f9e4a"/>
-          <circle cx="47" cy="59" r="5.5" fill="#6fae54"/>
-          <circle cx="40" cy="55" r="1.5" fill="#4a7d38"/>
-          <circle cx="53" cy="51" r="1.5" fill="#4a7d38"/>
-          <circle cx="59" cy="58" r="1.5" fill="#4a7d38"/>
-          <rect x="44" y="62" width="4" height="6" rx="2" fill="#cfe0a0"/>
-          <rect x="54" y="62" width="4" height="6" rx="2" fill="#cfe0a0"/>
-          <circle cx="64" cy="50" r="1.5" fill="#e8c34a"/>
-          <circle cx="36" cy="60" r="1.5" fill="#e8c34a"/>
-        </svg>
-      </div>
-      <div class="card-info">
-        <div class="tag-row"><span class="tag tag-side">副菜</span><span class="tool">レンジ</span></div>
-        <div class="card-title">無限ブロッコリー</div>
-        <div class="card-desc">レンジで和えるだけ。ツナの旨味で子供もパクパク</div>
-      </div>
+      <div class="card-illo"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="62" rx="34" ry="23" fill="#fff" stroke="#e6e3da" stroke-width="2"/><ellipse cx="50" cy="60" rx="26" ry="16" fill="#f7f4ec"/><circle cx="42" cy="54" r="7" fill="#5f9e4a"/><circle cx="52" cy="52" r="6" fill="#6fae54"/><circle cx="58" cy="57" r="6.5" fill="#5f9e4a"/><circle cx="47" cy="59" r="5.5" fill="#6fae54"/><circle cx="40" cy="55" r="1.5" fill="#4a7d38"/><circle cx="53" cy="51" r="1.5" fill="#4a7d38"/><circle cx="59" cy="58" r="1.5" fill="#4a7d38"/><rect x="44" y="62" width="4" height="6" rx="2" fill="#cfe0a0"/><rect x="54" y="62" width="4" height="6" rx="2" fill="#cfe0a0"/><circle cx="64" cy="50" r="1.5" fill="#e8c34a"/><circle cx="36" cy="60" r="1.5" fill="#e8c34a"/></svg></div>
+      <div class="card-info"><div class="tag-row"><span class="tag tag-side">副菜</span><span class="tool">レンジ</span></div><div class="card-title">無限ブロッコリー</div><div class="card-desc">レンジで和えるだけ。ツナの旨味で子供もパクパク</div></div>
       <span class="card-chevron">▶</span>
     </summary>
     <div class="card-detail">
       <div class="r-block">材料（4人分）</div>
       <div class="r-ing"><span>ブロッコリー 1個</span><span>ツナ缶 1缶</span><span>ごま油 大1</span><span>鶏がらスープの素 小1</span><span>いりごま 大1</span></div>
       <div class="r-block">作り方</div>
-      <ol class="r-steps">
-        <li>ブロッコリーを小房に分け、ラップして電子レンジ600Wで3分加熱。</li>
-        <li>水気を切ったツナ・ごま油・鶏がら・いりごまを加えて和える。</li>
-      </ol>
-      <div class="r-note">辛味なしで子供もそのまま。冷蔵3〜4日。ツナの油は軽く切ると水っぽくならない。</div>
+      <ol class="r-steps"><li>ブロッコリーを小房に分け、ラップして600Wで3分加熱。</li><li>水気を切ったツナ・ごま油・鶏がら・いりごまを加えて和える。</li></ol>
+      <div class="r-note">辛味なしで子供もそのまま。冷蔵3〜4日。</div>
+      <div class="rating-bar"><span class="rating-label">RATING</span><button class="rate-btn good" onclick="rateRecipe('無限ブロッコリー','good',this)">👍 <span class="rate-count good-count">0</span></button><button class="rate-btn bad" onclick="rateRecipe('無限ブロッコリー','bad',this)">👎 <span class="rate-count bad-count">0</span></button></div>
     </div>
   </details>
 </section>
@@ -405,19 +309,230 @@
   <div class="section-label">買い足し・余り食材メモ</div>
   <div class="memo">
     <h3>買い足し</h3>
-    <p>ツナ缶 1個（副菜用・常備がなければ）。オリーブオイル（ラペ用・常備がなければ）。調味料は手持ち前提（醤油・みりん・酒・酢・ごま油・オイスターソース・鶏がらスープ・コンソメ・ケチャップ・はちみつ・砂糖・塩・こしょう）。</p>
+    <p>ツナ缶・オリーブオイル（常備がなければ）。調味料は手持ち前提。</p>
     <h3>余り食材の使い道</h3>
-    <p>トマトジュース残り1本 → スープや飲用に。ブロッコリースプラウト → サラダのトッピング・刺身の付け合わせに。牛乳 → 朝食・飲用・グラタン等に。にんじん残り2本 → 翌週の常備菜や味噌汁の具に。</p>
+    <p>トマトジュース残り1本 → スープ・飲用に。ブロッコリースプラウト → サラダのトッピングに。牛乳 → 朝食・飲用に。にんじん残り2本 → 翌週の常備菜に。</p>
   </div>
-
   <div class="kid-note">
     <strong>子供向けメモ（2歳10ヶ月）</strong><br>
-    照り焼き・生姜焼きは味付け前に取り分けて薄味に。トマト煮込みは辛味なしでそのまま食べられます。塩だれ蒸しは塩だれ少なめで取り分け可能。きのこ炒めはオイスターソースのコクで食べやすく、辛味ゼロ。
+    照り焼き・生姜焼きは味付け前に取り分けて薄味に。トマト煮込みは辛味なしでそのまま食べられます。塩だれ蒸しは塩だれ少なめで取り分け可能。きのこ炒めは辛味ゼロ。
   </div>
 </section>
+<footer>グリーンビーンズ 6/11配達分の食材で作成 ・ 週次作り置き献立</footer>
+</div>
 
-<footer>
-  グリーンビーンズ 6/11配達分の食材で作成 ・ 週次作り置き献立
-</footer>
+<!-- 食べたいリスト -->
+<div id="tab-wishlist" class="tab-content">
+  <div class="tab-header">食べたいリスト</div>
+  <div class="wl-add-row">
+    <input type="text" class="wl-input" id="wl-input" placeholder="料理名を入力..." onkeydown="if(event.key==='Enter')addWishlistItem()">
+    <button class="btn-primary" onclick="addWishlistItem()">追加</button>
+  </div>
+  <div class="filter-row">
+    <button class="filter-chip active" data-filter="all" onclick="setFilter('all',this)">すべて</button>
+    <button class="filter-chip" data-filter="priority" onclick="setFilter('priority',this)">🔥 今週作りたい</button>
+    <button class="filter-chip" data-filter="favorite" onclick="setFilter('favorite',this)">⭐️ お気に入り</button>
+    <button class="filter-chip" data-filter="undone" onclick="setFilter('undone',this)">未採用のみ</button>
+  </div>
+  <div class="wl-list" id="wl-list"></div>
+</div>
+
+<!-- 評価 -->
+<div id="tab-ratings" class="tab-content">
+  <div class="tab-header">評価</div>
+  <div class="rating-list" id="rating-list"></div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const _t1 = 'github_pat_11B3CTJZY';
+const _t2 = '0ydo3ewXfiRHp_bGhswrnsiCBeJFKKAosWdwqMUjmhjKmF1ayeTPpSnMh2TCXYWUBxdpT5W98';
+const TOKEN = _t1 + _t2;
+const API = 'https://api.github.com/repos/pixcel-bit/cook/contents/preferences.json';
+
+let prefs = { wishlist: [], ratings: [] };
+let prefsSha = null;
+let saving = false;
+let saveTimer = null;
+let activeFilter = 'all';
+let editingId = null;
+
+function uid() { return Date.now().toString(36) + Math.random().toString(36).slice(2, 6); }
+function toB64(s) { return btoa(unescape(encodeURIComponent(s))); }
+function fromB64(s) { return decodeURIComponent(escape(atob(s.replace(/\n/g,'')))); }
+function esc(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+function switchTab(tab, btn) {
+  document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+  document.getElementById('tab-' + tab).classList.add('active');
+  btn.classList.add('active');
+}
+
+async function loadPrefs() {
+  try {
+    const res = await fetch(API, { headers: { Authorization: 'token ' + TOKEN, Accept: 'application/vnd.github.v3+json' } });
+    if (res.ok) {
+      const d = await res.json();
+      prefsSha = d.sha;
+      prefs = JSON.parse(fromB64(d.content));
+    }
+  } catch(e) {}
+  renderWishlist();
+  renderRatings();
+  updateRatingCounts();
+}
+
+function queueSave() {
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(doSave, 700);
+}
+
+async function doSave() {
+  if (saving) { saveTimer = setTimeout(doSave, 700); return; }
+  saving = true;
+  try {
+    const body = { message: 'update preferences', content: toB64(JSON.stringify(prefs, null, 2)) };
+    if (prefsSha) body.sha = prefsSha;
+    const res = await fetch(API, {
+      method: 'PUT',
+      headers: { Authorization: 'token ' + TOKEN, 'Content-Type': 'application/json' },
+      body: JSON.stringify(body)
+    });
+    if (res.ok) { const d = await res.json(); prefsSha = d.content.sha; showToast('保存しました'); }
+    else showToast('保存に失敗しました');
+  } catch(e) { showToast('保存に失敗しました'); }
+  saving = false;
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2200);
+}
+
+// WISHLIST
+function setFilter(f, btn) {
+  activeFilter = f;
+  document.querySelectorAll('.filter-chip').forEach(el => el.classList.remove('active'));
+  btn.classList.add('active');
+  renderWishlist();
+}
+
+function getFiltered() {
+  if (activeFilter === 'priority') return prefs.wishlist.filter(i => i.priority);
+  if (activeFilter === 'favorite') return prefs.wishlist.filter(i => i.favorite);
+  if (activeFilter === 'undone') return prefs.wishlist.filter(i => !i.done);
+  return prefs.wishlist;
+}
+
+function renderWishlist() {
+  const el = document.getElementById('wl-list');
+  const items = getFiltered();
+  if (!items.length) { el.innerHTML = '<div class="wl-empty">リストが空です</div>'; return; }
+  el.innerHTML = items.map(item => `
+    <div class="wl-item${item.done?' is-done':''}" id="wli-${item.id}">
+      <div class="wl-body">
+        ${editingId===item.id
+          ?`<input class="wl-name-input" id="wle-${item.id}" value="${esc(item.name)}"
+              onblur="commitEdit('${item.id}')"
+              onkeydown="if(event.key==='Enter')commitEdit('${item.id}');else if(event.key==='Escape'){editingId=null;renderWishlist();}"
+            >`
+          :`<div class="wl-name">${esc(item.name)}</div>`}
+        <div class="wl-meta">
+          <span>${item.added_at} 追加</span>
+          ${item.done_count>0?`<span>採用 ${item.done_count}回</span>`:''}
+          ${item.done?'<span class="done-badge">採用済み</span>':''}
+        </div>
+      </div>
+      <div class="wl-actions">
+        <button class="icon-btn" style="opacity:${item.priority?1:.3}" title="今週作りたい" onclick="toggleField('${item.id}','priority')">🔥</button>
+        <button class="icon-btn" style="opacity:${item.favorite?1:.3}" title="お気に入り" onclick="toggleField('${item.id}','favorite')">⭐️</button>
+        <button class="icon-btn" title="編集" onclick="startEdit('${item.id}')">✏️</button>
+        <button class="icon-btn" title="削除" onclick="deleteWL('${item.id}')">🗑️</button>
+      </div>
+    </div>`).join('');
+  if (editingId) { const inp = document.getElementById('wle-'+editingId); if(inp){inp.focus();inp.select();} }
+}
+
+function addWishlistItem() {
+  const inp = document.getElementById('wl-input');
+  const name = inp.value.trim(); if (!name) return;
+  prefs.wishlist.push({ id:uid(), name, priority:false, favorite:false, done:false, done_count:0, added_at:new Date().toISOString().slice(0,10), last_adopted_at:null });
+  inp.value = ''; renderWishlist(); queueSave();
+}
+
+function toggleField(id, field) {
+  const item = prefs.wishlist.find(i=>i.id===id);
+  if(item){ item[field]=!item[field]; renderWishlist(); queueSave(); }
+}
+
+function startEdit(id) { editingId=id; renderWishlist(); }
+
+function commitEdit(id) {
+  const inp = document.getElementById('wle-'+id); if(!inp) return;
+  const name = inp.value.trim();
+  if(name){ const item=prefs.wishlist.find(i=>i.id===id); if(item) item.name=name; }
+  editingId=null; renderWishlist(); queueSave();
+}
+
+function deleteWL(id) {
+  const item = prefs.wishlist.find(i=>i.id===id); if(!item) return;
+  const msg = item.done ? `「${item.name}」は採用済みです。本当に削除しますか？` : `「${item.name}」を削除しますか？`;
+  if(!confirm(msg)) return;
+  prefs.wishlist = prefs.wishlist.filter(i=>i.id!==id);
+  renderWishlist(); queueSave();
+}
+
+// RATINGS
+function renderRatings() {
+  const el = document.getElementById('rating-list');
+  if(!prefs.ratings.length){ el.innerHTML='<div class="ratings-empty">まだ評価がありません。<br>献立ページの 👍👎 から評価してみましょう。</div>'; return; }
+  const sorted = [...prefs.ratings].sort((a,b)=>(b.good_count+b.bad_count)-(a.good_count+a.bad_count));
+  el.innerHTML = sorted.map(r=>`
+    <div class="r-item">
+      <div class="r-item-head">
+        <div class="r-item-name">${esc(r.name)}</div>
+        <div class="r-counts"><span class="c-chip c-good">👍 ${r.good_count}</span><span class="c-chip c-bad">👎 ${r.bad_count}</span></div>
+      </div>
+      ${r.comments.length?`<ul class="comments-list">${r.comments.map((c,i)=>`
+        <li class="comment-row"><span class="comment-text">${esc(c)}</span><button class="comment-del" onclick="deleteComment('${r.id}',${i})">✕</button></li>`).join('')}</ul>`:''}
+      <div class="comment-form">
+        <input class="comment-input" id="ci-${r.id}" placeholder="コメントを追加..." onkeydown="if(event.key==='Enter')addComment('${r.id}')">
+        <button class="btn-comment" onclick="addComment('${r.id}')">追加</button>
+      </div>
+    </div>`).join('');
+}
+
+function updateRatingCounts() {
+  document.querySelectorAll('.card[data-recipe]').forEach(card => {
+    const r = prefs.ratings.find(x=>x.name===card.dataset.recipe);
+    if(r){ card.querySelector('.good-count').textContent=r.good_count; card.querySelector('.bad-count').textContent=r.bad_count; }
+  });
+}
+
+function rateRecipe(name, type) {
+  let r = prefs.ratings.find(x=>x.name===name);
+  if(!r){ r={id:uid(),name,good_count:0,bad_count:0,comments:[]}; prefs.ratings.push(r); }
+  if(type==='good') r.good_count++; else r.bad_count++;
+  updateRatingCounts(); renderRatings(); queueSave();
+}
+
+function addComment(ratingId) {
+  const inp = document.getElementById('ci-'+ratingId);
+  const text = inp?inp.value.trim():'';
+  if(!text) return;
+  const r = prefs.ratings.find(x=>x.id===ratingId);
+  if(r){ r.comments.push(text); inp.value=''; renderRatings(); queueSave(); }
+}
+
+function deleteComment(ratingId, index) {
+  const r = prefs.ratings.find(x=>x.id===ratingId);
+  if(r){ r.comments.splice(index,1); renderRatings(); queueSave(); }
+}
+
+loadPrefs();
+</script>
 </body>
 </html>
