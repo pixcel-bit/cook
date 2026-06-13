@@ -18,7 +18,9 @@
     "updated_at": null
   },
   "leftover_ingredients": {
-    "checked": [],
+    "checked": [
+      "トマトジュース×2"
+    ],
     "extra": "",
     "updated_at": "2026-06-13"
   }
