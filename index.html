@@ -140,6 +140,8 @@
   .rl-bad { background: #f4e8e8; color: #7a2020; }
   .rl-chev { flex-shrink: 0; width: 42px; height: 64px; display: flex; align-items: center; justify-content: center; color: var(--ink-faint); font-size: 12px; transition: transform 0.2s; }
   .rl-head.open .rl-chev { transform: rotate(90deg); }
+  .rl-svg { flex-shrink: 0; width: 44px; height: 64px; display: flex; align-items: center; justify-content: center; }
+  .rl-svg svg { width: 36px; height: 36px; display: block; }
   .rl-detail { border-top: 1px solid var(--line); padding: 14px 16px 16px; display: none; }
   .rl-detail.open { display: block; }
   .rl-meta { font-size: 11px; color: var(--ink-faint); margin-bottom: 12px; display: flex; gap: 12px; flex-wrap: wrap; }
@@ -638,10 +640,12 @@ function renderRecipeList() {
   el.innerHTML = sorted.map(r => {
     const isOpen = expandedIds.has(r.id);
     const badge = r.done_count > 0 ? `<span class="done-badge">採用${r.done_count}回</span>` : '';
+    const svgHtml = RECIPE_SVGS[r.name] ? `<div class="rl-svg">${RECIPE_SVGS[r.name]}</div>` : '';
     return `
     <div class="rl-item${r.priority?' rl-priority':''}" id="rli-${r.id}">
       <div class="rl-head${isOpen?' open':''}" onclick="toggleExpand('${r.id}')">
         <button class="rl-pri" onclick="event.stopPropagation();togglePriority('${r.id}')" style="opacity:${r.priority?1:.3}" title="今週作りたい">🔥</button>
+        ${svgHtml}
         <div class="rl-body">
           ${editingId===r.id
             ? `<input class="rl-name-input" id="rle-${r.id}" value="${esc(r.name)}"
