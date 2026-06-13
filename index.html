@@ -119,46 +119,45 @@
   /* --- RECIPE LIST TAB --- */
   .tab-header { font-size: 18px; font-weight: 700; margin-bottom: 20px; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
   .rl-add-row { display: flex; gap: 10px; margin-bottom: 16px; }
-  .rl-input { flex: 1; padding: 10px 14px; border: 1px solid var(--line); border-radius: 10px; font-size: 14px; font-family: inherit; background: var(--card); color: var(--ink); outline: none; }
+  .rl-input { flex: 1; padding: 11px 14px; border: 1px solid var(--line); border-radius: 10px; font-size: 15px; font-family: inherit; background: var(--card); color: var(--ink); outline: none; }
   .rl-input:focus { border-color: var(--accent); }
-  .btn-primary { padding: 10px 18px; background: var(--accent); color: #fff; border: none; border-radius: 10px; font-size: 14px; font-weight: 700; cursor: pointer; font-family: inherit; }
+  .btn-primary { padding: 11px 20px; background: var(--accent); color: #fff; border: none; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; font-family: inherit; white-space: nowrap; }
   .filter-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
-  .filter-chip { font-size: 12px; padding: 5px 14px; border: 1px solid var(--line); border-radius: 20px; background: var(--card); color: var(--ink-soft); cursor: pointer; font-family: inherit; font-weight: 700; transition: all 0.15s; }
+  .filter-chip { font-size: 12px; padding: 6px 14px; border: 1px solid var(--line); border-radius: 20px; background: var(--card); color: var(--ink-soft); cursor: pointer; font-family: inherit; font-weight: 700; transition: all 0.15s; }
   .filter-chip.active { background: var(--accent); border-color: var(--accent); color: #fff; }
   .rl-list { display: flex; flex-direction: column; gap: 10px; }
-  .rl-item { background: var(--card); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
-  .rl-row { display: flex; align-items: center; gap: 8px; padding: 10px 14px; }
-  .rl-icon { flex-shrink: 0; width: 44px; height: 44px; background: var(--paper); border-radius: 8px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-  .rl-icon svg { width: 38px; height: 38px; display: block; }
-  .rl-pri { background: none; border: none; cursor: pointer; font-size: 18px; padding: 2px 4px; line-height: 1; transition: transform 0.1s; flex-shrink: 0; }
-  .rl-pri:hover { transform: scale(1.2); }
-  .rl-main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
-  .rl-name { font-size: 14px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .rl-name-input { width: 100%; font-size: 14px; font-weight: 600; border: 1px solid var(--accent); border-radius: 6px; padding: 2px 8px; font-family: inherit; outline: none; background: var(--card); }
-  .rl-bottom { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
-  .rl-counts { display: flex; gap: 6px; }
-  .rl-chip { font-size: 12px; font-weight: 700; padding: 2px 10px; border-radius: 20px; }
+  .rl-item { background: var(--card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+  .rl-item.rl-priority { border-left: 3px solid var(--accent); }
+  .rl-head { display: flex; align-items: center; cursor: pointer; min-height: 64px; -webkit-tap-highlight-color: transparent; user-select: none; }
+  .rl-head:active { background: var(--paper); }
+  .rl-pri { flex-shrink: 0; width: 50px; height: 64px; background: none; border: none; font-size: 20px; cursor: pointer; display: flex; align-items: center; justify-content: center; -webkit-tap-highlight-color: transparent; }
+  .rl-body { flex: 1; min-width: 0; padding: 13px 0; }
+  .rl-name { font-size: 15px; font-weight: 700; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; color: var(--ink); }
+  .rl-name-input { width: 100%; font-size: 15px; font-weight: 700; border: 1.5px solid var(--accent); border-radius: 8px; padding: 5px 10px; font-family: inherit; outline: none; background: var(--card); }
+  .rl-sub { font-size: 12px; color: var(--ink-faint); margin-top: 5px; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+  .rl-chip { font-size: 12px; font-weight: 700; padding: 2px 9px; border-radius: 20px; }
   .rl-good { background: #eef4e8; color: #3a6a1a; }
   .rl-bad { background: #f4e8e8; color: #7a2020; }
-  .rl-actions { display: flex; gap: 2px; }
-  .icon-btn { background: none; border: none; cursor: pointer; font-size: 16px; padding: 4px 5px; border-radius: 6px; line-height: 1; transition: transform 0.1s; }
-  .icon-btn:hover { transform: scale(1.15); }
-  .rl-expand { background: none; border: none; cursor: pointer; font-size: 13px; color: var(--ink-faint); padding: 4px 6px; border-radius: 6px; line-height: 1; transition: transform 0.2s; flex-shrink: 0; }
-  .rl-expand.open { transform: rotate(90deg); }
-  .rl-detail { border-top: 1px solid var(--line); padding: 12px 14px 14px; display: none; }
+  .rl-chev { flex-shrink: 0; width: 42px; height: 64px; display: flex; align-items: center; justify-content: center; color: var(--ink-faint); font-size: 12px; transition: transform 0.2s; }
+  .rl-head.open .rl-chev { transform: rotate(90deg); }
+  .rl-detail { border-top: 1px solid var(--line); padding: 14px 16px 16px; display: none; }
   .rl-detail.open { display: block; }
-  .rl-meta { font-size: 11px; color: var(--ink-faint); margin-bottom: 10px; display: flex; gap: 12px; flex-wrap: wrap; }
-  .comments-list { list-style: none; display: flex; flex-direction: column; gap: 6px; margin-bottom: 10px; }
-  .comment-row { display: flex; align-items: flex-start; gap: 8px; background: var(--paper); border-radius: 8px; padding: 7px 11px; font-size: 13px; color: var(--ink-soft); }
+  .rl-meta { font-size: 11px; color: var(--ink-faint); margin-bottom: 12px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .rl-detail-actions { display: flex; gap: 8px; margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line); }
+  .rl-act-btn { flex: 1; padding: 11px 8px; border: 1px solid var(--line); border-radius: 10px; background: var(--card); font-size: 13px; font-weight: 700; cursor: pointer; font-family: inherit; color: var(--ink-soft); text-align: center; }
+  .rl-act-btn.pri-on { background: #fff8f5; border-color: var(--accent-soft); color: var(--accent); }
+  .rl-act-btn.danger { color: #a03a3a; border-color: #f4e8e8; background: #fdf4f4; }
+  .comments-list { list-style: none; display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; }
+  .comment-row { display: flex; align-items: flex-start; gap: 8px; background: var(--paper); border-radius: 8px; padding: 8px 12px; font-size: 13px; color: var(--ink-soft); }
   .comment-text { flex: 1; }
-  .comment-del { background: none; border: none; cursor: pointer; color: var(--ink-faint); font-size: 13px; padding: 0; line-height: 1; flex-shrink: 0; }
-  .comment-del:hover { color: #a03a3a; }
+  .comment-del { background: none; border: none; cursor: pointer; color: var(--ink-faint); font-size: 13px; padding: 2px 4px; line-height: 1; flex-shrink: 0; min-width: 28px; min-height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 6px; }
+  .comment-del:active { background: #f4e8e8; color: #a03a3a; }
   .comment-form { display: flex; gap: 8px; }
-  .comment-input { flex: 1; padding: 7px 12px; border: 1px solid var(--line); border-radius: 8px; font-size: 13px; font-family: inherit; outline: none; background: var(--card); color: var(--ink); }
+  .comment-input { flex: 1; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; font-size: 14px; font-family: inherit; outline: none; background: var(--card); color: var(--ink); }
   .comment-input:focus { border-color: var(--accent); }
-  .btn-comment { padding: 7px 14px; background: var(--accent); color: #fff; border: none; border-radius: 8px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: inherit; }
+  .btn-comment { padding: 10px 16px; background: var(--accent); color: #fff; border: none; border-radius: 10px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: inherit; white-space: nowrap; }
   .rl-empty { text-align: center; padding: 48px 20px; color: var(--ink-faint); font-size: 13px; }
-  .done-badge { font-size: 10px; font-weight: 700; background: #eef4e8; color: #5a8a3a; border-radius: 10px; padding: 1px 7px; }
+  .done-badge { font-size: 10px; font-weight: 700; background: #eef4e8; color: #5a8a3a; border-radius: 10px; padding: 2px 7px; }
 
   /* Toast */
   .toast { position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%); background: #2b2a26; color: #fff; padding: 10px 22px; border-radius: 20px; font-size: 13px; opacity: 0; transition: opacity 0.25s; pointer-events: none; z-index: 200; white-space: nowrap; }
@@ -638,34 +637,27 @@ function renderRecipeList() {
   const sorted = [...items].sort((a,b) => (b.priority ? 1:0)-(a.priority ? 1:0) || a.name.localeCompare(b.name,'ja'));
   el.innerHTML = sorted.map(r => {
     const isOpen = expandedIds.has(r.id);
-    const svg = RECIPE_SVGS[r.name];
-    const iconHtml = svg ? `<div class="rl-icon">${svg}</div>` : '';
-    const badge = r.done_count > 0 ? ` <span class="done-badge">採用${r.done_count}回</span>` : '';
+    const badge = r.done_count > 0 ? `<span class="done-badge">採用${r.done_count}回</span>` : '';
     return `
-    <div class="rl-item" id="rli-${r.id}">
-      <div class="rl-row">
-        <button class="rl-pri" title="今週作りたい" onclick="togglePriority('${r.id}')" style="opacity:${r.priority?1:.25}">🔥</button>
-        ${iconHtml}
-        <div class="rl-main">
+    <div class="rl-item${r.priority?' rl-priority':''}" id="rli-${r.id}">
+      <div class="rl-head${isOpen?' open':''}" onclick="toggleExpand('${r.id}')">
+        <button class="rl-pri" onclick="event.stopPropagation();togglePriority('${r.id}')" style="opacity:${r.priority?1:.3}" title="今週作りたい">🔥</button>
+        <div class="rl-body">
           ${editingId===r.id
             ? `<input class="rl-name-input" id="rle-${r.id}" value="${esc(r.name)}"
+                onclick="event.stopPropagation()"
                 onblur="commitEdit('${r.id}')"
                 onkeydown="if(event.key==='Enter')commitEdit('${r.id}');else if(event.key==='Escape'){editingId=null;renderRecipeList();}"
               >`
-            : `<span class="rl-name">${esc(r.name)}${badge}</span>`
+            : `<div class="rl-name">${esc(r.name)}</div>`
           }
-          <div class="rl-bottom">
-            <div class="rl-counts">
-              <span class="rl-chip rl-good">👍 ${r.good_count}</span>
-              <span class="rl-chip rl-bad">👎 ${r.bad_count}</span>
-            </div>
-            <div class="rl-actions">
-              <button class="icon-btn" title="編集" onclick="startEdit('${r.id}')">✏️</button>
-              <button class="icon-btn" title="削除" onclick="deleteRecipe('${r.id}')">🗑️</button>
-            </div>
+          <div class="rl-sub">
+            <span class="rl-chip rl-good">👍 ${r.good_count}</span>
+            <span class="rl-chip rl-bad">👎 ${r.bad_count}</span>
+            ${badge}
           </div>
         </div>
-        <button class="rl-expand${isOpen?' open':''}" onclick="toggleExpand('${r.id}')">▶</button>
+        <span class="rl-chev">▶</span>
       </div>
       <div class="rl-detail${isOpen?' open':''}">
         <div class="rl-meta">
@@ -678,6 +670,11 @@ function renderRecipeList() {
         <div class="comment-form">
           <input class="comment-input" id="ci-${r.id}" placeholder="コメントを追加..." onkeydown="if(event.key==='Enter')addComment('${r.id}')">
           <button class="btn-comment" onclick="addComment('${r.id}')">追加</button>
+        </div>
+        <div class="rl-detail-actions">
+          <button class="rl-act-btn${r.priority?' pri-on':''}" onclick="togglePriority('${r.id}')">🔥 ${r.priority?'今週外す':'今週作る'}</button>
+          <button class="rl-act-btn" onclick="event.stopPropagation();startEdit('${r.id}')">✏️ 名前変更</button>
+          <button class="rl-act-btn danger" onclick="deleteRecipe('${r.id}')">🗑️ 削除</button>
         </div>
       </div>
     </div>`;
@@ -707,7 +704,7 @@ function toggleExpand(id) {
   renderRecipeList();
 }
 
-function startEdit(id) { editingId=id; renderRecipeList(); }
+function startEdit(id) { editingId=id; expandedIds.add(id); renderRecipeList(); }
 
 function commitEdit(id) {
   const inp = document.getElementById('rle-'+id); if (!inp) return;
