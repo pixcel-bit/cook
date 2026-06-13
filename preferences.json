@@ -1,4 +1,7 @@
 {
+  "family": {
+    "child_birthdate": "2023-08-01"
+  },
   "recipes": [
     {
       "id": "mqaglsjf9tom",
@@ -10,6 +13,31 @@
       "added_at": "2026-06-12",
       "done_count": 0,
       "last_adopted_at": null
+    },
+    {
+      "id": "mqbx2hlyin4u",
+      "name": "鶏むねのトマト煮込み",
+      "priority": false,
+      "good_count": 1,
+      "bad_count": 0,
+      "comments": [],
+      "added_at": "2026-06-13",
+      "done_count": 0,
+      "last_adopted_at": null
     }
-  ]
+  ],
+  "weekly_request": {
+    "moods": [],
+    "note": "",
+    "updated_at": null
+  },
+  "leftover_ingredients": {
+    "checked": [
+      "たまねぎ",
+      "にんじん",
+      "キャベツ"
+    ],
+    "extra": "",
+    "updated_at": "2026-06-13"
+  }
 }
