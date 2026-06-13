@@ -29,7 +29,9 @@
     "updated_at": null
   },
   "leftover_ingredients": {
-    "checked": [],
+    "checked": [
+      "キャベツ"
+    ],
     "extra": "",
     "updated_at": "2026-06-13"
   }
