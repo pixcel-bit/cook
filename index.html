@@ -165,6 +165,12 @@
   .toast { position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%); background: #2b2a26; color: #fff; padding: 10px 22px; border-radius: 20px; font-size: 13px; opacity: 0; transition: opacity 0.25s; pointer-events: none; z-index: 200; white-space: nowrap; }
   .toast.show { opacity: 1; }
 
+  /* Wake Lock */
+  .wakelock-btn { position: fixed; top: 14px; right: 14px; z-index: 100; background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 5px 12px; font-size: 12px; font-weight: 700; cursor: pointer; font-family: inherit; color: var(--ink-faint); display: flex; align-items: center; gap: 5px; transition: all 0.15s; -webkit-tap-highlight-color: transparent; }
+  .wakelock-btn.active { background: #fff8f0; border-color: #e8b060; color: #b07010; }
+  .wakelock-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--line); flex-shrink: 0; }
+  .wakelock-btn.active .wakelock-dot { background: #e8a020; }
+
   @media (max-width: 480px) {
     .card-illo { width: 84px; } .card-illo svg { width: 62px; height: 62px; }
     h1 { font-size: 22px; } .tab-btn { padding: 8px 13px; font-size: 12px; }
@@ -179,6 +185,10 @@
 </style>
 </head>
 <body>
+
+<button class="wakelock-btn" id="wakelock-btn" onclick="toggleWakeLock()" title="画面消灯を防ぐ">
+  <span class="wakelock-dot"></span><span id="wakelock-label">画面ON</span>
+</button>
 
 <nav class="tab-nav">
   <button class="tab-btn active" onclick="switchTab('menu',this)">今週の献立</button>
@@ -759,6 +769,59 @@ function updateRatingCounts() {
 }
 
 loadPrefs();
+
+/* --- WAKE LOCK --- */
+let wakeLock = null;
+
+async function toggleWakeLock() {
+  if (wakeLock) {
+    await wakeLock.release();
+    wakeLock = null;
+    updateWakeLockUI(false);
+    showToast('画面消灯: 解除しました');
+  } else {
+    await requestWakeLock();
+  }
+}
+
+async function requestWakeLock() {
+  if (!('wakeLock' in navigator)) {
+    showToast('このブラウザは非対応です');
+    return;
+  }
+  try {
+    wakeLock = await navigator.wakeLock.request('screen');
+    updateWakeLockUI(true);
+    showToast('画面を消灯しないようにしました');
+    wakeLock.addEventListener('release', () => {
+      wakeLock = null;
+      updateWakeLockUI(false);
+    });
+  } catch(e) {
+    showToast('Wake Lock の取得に失敗しました');
+  }
+}
+
+function updateWakeLockUI(active) {
+  const btn = document.getElementById('wakelock-btn');
+  const label = document.getElementById('wakelock-label');
+  if (active) {
+    btn.classList.add('active');
+    label.textContent = '画面ON中';
+  } else {
+    btn.classList.remove('active');
+    label.textContent = '画面ON';
+  }
+}
+
+document.addEventListener('visibilitychange', async () => {
+  if (document.visibilityState === 'visible' && !wakeLock) {
+    const btn = document.getElementById('wakelock-btn');
+    if (btn && btn.classList.contains('active')) {
+      await requestWakeLock();
+    }
+  }
+});
 </script>
 </body>
 </html>
