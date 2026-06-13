@@ -199,9 +199,9 @@
 <div id="tab-menu" class="tab-content active">
 <header>
   <div class="eyebrow">週次作り置き献立</div>
-  <h1>今週の作り置き 5品＋副菜3品</h1>
-  <div class="sub">グリーンビーンズ 6/11配達分の食材で構成。曜日は自由に組み合わせてOK。</div>
-  <div class="meta-line">
+  <h1 id="menu-h1">今週の作り置き 5品＋副菜3品</h1>
+  <div class="sub" id="menu-sub">グリーンビーンズ 6/11配達分の食材で構成。曜日は自由に組み合わせてOK。</div>
+  <div class="meta-line" id="menu-meta">
     <span class="meta-chip"><strong>主菜</strong> 5品</span>
     <span class="meta-chip"><strong>副菜</strong> 3品（各2日分）</span>
     <span class="meta-chip"><strong>作り置き目安</strong> 90〜150分</span>
@@ -213,7 +213,7 @@
   <div class="section-label">今週の食材</div>
   <details class="ing-details" id="ing-details">
     <summary>
-      <span class="ing-title">グリーンビーンズ 6/11配達</span>
+      <span class="ing-title" id="ing-delivery-title">グリーンビーンズ 6/11配達</span>
       <span class="ing-hint" id="ing-hint"></span>
       <span class="ing-chevron">▶</span>
     </summary>
@@ -227,7 +227,8 @@
   </details>
 </section>
 
-<section>
+<div id="menu-recipes">
+  <section>
   <div class="section-label">主菜 5品</div>
 
   <details class="card" data-recipe="鶏むね肉の照り焼き">
@@ -400,6 +401,7 @@
     </div>
   </details>
 </section>
+</div>
 
 <section>
   <div class="section-label">来週の献立リクエスト</div>
@@ -421,6 +423,7 @@
   </div>
 </section>
 
+<div id="menu-memo">
 <section>
   <div class="section-label">買い足しメモ</div>
   <div class="memo">
@@ -428,7 +431,8 @@
   </div>
   <div class="kid-note"><strong>子供向けメモ（2歳10ヶ月）</strong><br>照り焼き・生姜焼きは味付け前に取り分けて薄味に。トマト煮込みは辛味なしでそのまま食べられます。塩だれ蒸しは塩だれ少なめで取り分け可能。きのこ炒めは辛味ゼロ。ピーマンのおかか和えはごま油少なめで。</div>
 </section>
-<footer>グリーンビーンズ 6/11配達分の食材で作成 ・ 週次作り置き献立</footer>
+</div>
+<footer id="menu-footer">グリーンビーンズ 6/11配達分の食材で作成 ・ 週次作り置き献立</footer>
 </div>
 
 <!-- レシピリスト -->
@@ -454,22 +458,11 @@ const _b = '0ydo3ewXfiRHp_bGhswrn' + 'siCBeJFKKAosWdwqMUjmhjKmF1ayeTPpSnMh2TCXYW
 const TOKEN = _a + _b;
 const API = 'https://api.github.com/repos/pixcel-bit/cook/contents/preferences.json';
 
-const THIS_WEEK_INGREDIENTS = [
-  '鶏むね肉1kg','豚こま','たまねぎ','にんじん','ピーマン',
-  'キャベツ','長ねぎ','ブロッコリー','えのき','えりんぎ',
-  'ブロッコリースプラウト','牛乳','トマトジュース×2'
-];
+let THIS_WEEK_INGREDIENTS = [];
+let RECIPE_SVGS = {};
 
-const RECIPE_SVGS = {
-  '鶏むね肉の照り焼き': `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="58" rx="38" ry="30" fill="#fff" stroke="#e6e3da" stroke-width="2"/><ellipse cx="50" cy="56" rx="29" ry="22" fill="#f7f4ec"/><path d="M30 54 q8 -12 20 -9 q14 -4 22 8 q3 13 -10 18 q-16 7 -28 -2 q-8 -7 -4 -15z" fill="#c98a4a"/><path d="M34 52 q7 -8 16 -6 q11 -3 18 6 q2 9 -8 13 q-13 6 -22 -1 q-6 -5 -4 -12z" fill="#d99c55"/><ellipse cx="44" cy="52" rx="3" ry="2" fill="#a86a32" opacity="0.5"/><ellipse cx="56" cy="58" rx="3" ry="2" fill="#a86a32" opacity="0.5"/><path d="M40 66 q10 5 22 0" stroke="#8a5524" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M70 44 l4 -8 M76 48 l6 -5" stroke="#7fae5a" stroke-width="3" stroke-linecap="round"/></svg>`,
-  '豚こまと野菜の生姜焼き': `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="58" rx="38" ry="30" fill="#fff" stroke="#e6e3da" stroke-width="2"/><ellipse cx="50" cy="56" rx="29" ry="22" fill="#f7f4ec"/><path d="M32 50 q6 -5 12 -2 q5 -4 11 -1 q6 -3 11 2 q4 6 -2 9 q-3 6 -10 3 q-6 5 -13 1 q-7 2 -11 -4 q-3 -6 2 -11z" fill="#b5703a"/><path d="M36 52 q5 -3 9 -1 M50 50 q4 -2 8 1 M44 60 q6 3 12 0" stroke="#8a5020" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M30 60 q4 3 9 1" stroke="#6fae3f" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="58" y="56" width="11" height="4" rx="2" fill="#7ab54a" transform="rotate(20 60 58)"/><rect x="34" y="46" width="9" height="3.5" rx="1.5" fill="#e8c34a" transform="rotate(-15 36 48)"/></svg>`,
-  '鶏むねとキャベツの塩だれ蒸し': `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="60" rx="36" ry="26" fill="#fff" stroke="#e6e3da" stroke-width="2"/><ellipse cx="50" cy="58" rx="28" ry="19" fill="#f7f4ec"/><path d="M34 56 q6 -10 16 -7 q12 -3 18 7 q2 10 -8 13 q-14 5 -22 -2 q-6 -5 -4 -11z" fill="#ece4d0"/><path d="M38 54 q5 -7 12 -5 M52 52 q6 -2 10 4" stroke="#c9bfa0" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M30 50 q5 -4 11 -2 q3 -5 9 -3" stroke="#7ab54a" stroke-width="3.5" fill="none" stroke-linecap="round"/><path d="M62 52 l6 -3 M64 58 l7 -1" stroke="#9ccb6a" stroke-width="2.5" stroke-linecap="round"/><path d="M44 40 q2 -6 -1 -10 M52 40 q3 -6 0 -11" stroke="#cfcabb" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7"/></svg>`,
-  '鶏むねのトマト煮込み': `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="60" rx="34" ry="25" fill="#fff" stroke="#e6e3da" stroke-width="2"/><ellipse cx="50" cy="58" rx="26" ry="18" fill="#e76f4d"/><ellipse cx="50" cy="57" rx="26" ry="18" fill="#d85a36" opacity="0.5"/><circle cx="42" cy="54" r="5" fill="#c98a4a"/><circle cx="56" cy="60" r="5" fill="#c98a4a"/><circle cx="50" cy="50" r="3.5" fill="#e89a3a"/><circle cx="60" cy="52" r="3" fill="#e89a3a"/><path d="M38 62 q5 3 11 1" stroke="#b04527" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/><path d="M44 44 q2 -5 6 -4 M54 46 q3 -4 7 -2" stroke="#6fae3f" stroke-width="2.5" stroke-linecap="round" fill="none"/></svg>`,
-  '豚こまと長ねぎ・きのこ炒め': `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="60" rx="36" ry="26" fill="#fff" stroke="#e6e3da" stroke-width="2"/><ellipse cx="50" cy="58" rx="28" ry="19" fill="#f7f4ec"/><path d="M34 56 q7 -9 15 -6 q10 -4 19 5 q3 10 -7 13 q-15 6 -24 -2 q-6 -5 -3 -10z" fill="#b5703a"/><ellipse cx="42" cy="52" rx="4" ry="6" fill="#e8dcc0"/><rect x="40.5" y="52" width="3" height="8" rx="1.5" fill="#f0ead8"/><ellipse cx="58" cy="56" rx="5" ry="4" fill="#d8c9a8"/><rect x="56.5" y="56" width="3" height="7" rx="1.5" fill="#e8dcc0"/><path d="M30 60 q5 2 10 0" stroke="#6fae3f" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M48 64 q6 2 13 -1" stroke="#8a5020" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>`,
-  'にんじんラペ': `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="60" rx="34" ry="24" fill="#fff" stroke="#e6e3da" stroke-width="2"/><ellipse cx="50" cy="58" rx="26" ry="17" fill="#f7f4ec"/><path d="M32 56 q14 -6 36 0" stroke="#e89150" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M30 60 q16 -5 38 1" stroke="#f0a060" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M34 52 q14 -5 32 0" stroke="#e89150" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M33 64 q15 -4 34 1" stroke="#f5ab68" stroke-width="2.5" fill="none" stroke-linecap="round"/><circle cx="44" cy="56" r="1.3" fill="#8a5020"/><circle cx="58" cy="60" r="1.3" fill="#8a5020"/><circle cx="52" cy="53" r="1.3" fill="#8a5020"/></svg>`,
-  '無限ブロッコリー': `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="62" rx="34" ry="23" fill="#fff" stroke="#e6e3da" stroke-width="2"/><ellipse cx="50" cy="60" rx="26" ry="16" fill="#f7f4ec"/><circle cx="42" cy="54" r="7" fill="#5f9e4a"/><circle cx="52" cy="52" r="6" fill="#6fae54"/><circle cx="58" cy="57" r="6.5" fill="#5f9e4a"/><circle cx="47" cy="59" r="5.5" fill="#6fae54"/><circle cx="40" cy="55" r="1.5" fill="#4a7d38"/><circle cx="53" cy="51" r="1.5" fill="#4a7d38"/><circle cx="59" cy="58" r="1.5" fill="#4a7d38"/><rect x="44" y="62" width="4" height="6" rx="2" fill="#cfe0a0"/><rect x="54" y="62" width="4" height="6" rx="2" fill="#cfe0a0"/><circle cx="64" cy="50" r="1.5" fill="#e8c34a"/><circle cx="36" cy="60" r="1.5" fill="#e8c34a"/></svg>`,
-  'ピーマンのおかか和え': `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="62" rx="34" ry="23" fill="#fff" stroke="#e6e3da" stroke-width="2"/><ellipse cx="50" cy="60" rx="26" ry="16" fill="#f7f4ec"/><rect x="33" y="51" width="10" height="15" rx="4" fill="#4fa82a" transform="rotate(-12 38 58)"/><rect x="45" y="49" width="10" height="15" rx="4" fill="#64be3c" transform="rotate(4 50 56)"/><rect x="57" y="51" width="10" height="15" rx="4" fill="#4fa82a" transform="rotate(16 62 58)"/><path d="M36 60 q5 2 9 -1" stroke="#d4a86a" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.9"/><path d="M48 58 q5 1 8 -1" stroke="#c89a55" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.9"/><path d="M60 60 q4 1 7 -1" stroke="#d4a86a" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.9"/><circle cx="40" cy="54" r="1.5" fill="#90da60" opacity="0.7"/><circle cx="52" cy="52" r="1.5" fill="#90da60" opacity="0.7"/><circle cx="63" cy="55" r="1.5" fill="#90da60" opacity="0.7"/></svg>`
-};
+const MENU_URL = './menu.json';
+let menuData = null;
 
 let prefs = {
   recipes: [],
@@ -768,7 +761,140 @@ function updateRatingCounts() {
   });
 }
 
+loadMenu();
 loadPrefs();
+
+/* --- MENU DYNAMIC LOADING --- */
+async function loadMenu() {
+  try {
+    const res = await fetch(MENU_URL + '?t=' + Date.now());
+    if (res.ok) { menuData = await res.json(); renderMenu(); }
+  } catch(e) {}
+}
+
+function getChildAge() {
+  if (!prefs.family || !prefs.family.child_birthdate) return '';
+  const birth = new Date(prefs.family.child_birthdate);
+  const now = new Date();
+  let years = now.getFullYear() - birth.getFullYear();
+  let months = now.getMonth() - birth.getMonth();
+  if (months < 0) { years--; months += 12; }
+  return `${years}歳${months}ヶ月`;
+}
+
+function renderMenu() {
+  if (!menuData) return;
+
+  // Build RECIPE_SVGS for レシピリスト tab
+  RECIPE_SVGS = {};
+  [...menuData.main, ...menuData.side].forEach(r => { if (r.svg) RECIPE_SVGS[r.name] = r.svg; });
+
+  // Set ingredients list
+  if (menuData.delivery_ingredients) THIS_WEEK_INGREDIENTS = menuData.delivery_ingredients;
+
+  // Update header
+  const d = menuData.delivery_date || '';
+  const mm = d.slice(5, 7).replace(/^0/, '');
+  const dd = d.slice(8, 10).replace(/^0/, '');
+  const dateLabel = mm && dd ? `${mm}/${dd}` : d;
+  const mainCount = menuData.main.length;
+  const sideCount = menuData.side.length;
+
+  const h1El = document.getElementById('menu-h1');
+  if (h1El) h1El.textContent = `今週の作り置き ${mainCount}品＋副菜${sideCount}品`;
+
+  const subEl = document.getElementById('menu-sub');
+  if (subEl) subEl.textContent = `グリーンビーンズ ${dateLabel}配達分の食材で構成。曜日は自由に組み合わせてOK。`;
+
+  const metaEl = document.getElementById('menu-meta');
+  if (metaEl) metaEl.innerHTML = `
+    <span class="meta-chip"><strong>主菜</strong> ${mainCount}品</span>
+    <span class="meta-chip"><strong>副菜</strong> ${sideCount}品（各2日分）</span>
+    <span class="meta-chip"><strong>作り置き目安</strong> 90〜150分</span>
+    <span class="meta-chip"><strong>平日</strong> レンチン or 焼くだけ</span>`;
+
+  const ingTitle = document.getElementById('ing-delivery-title');
+  if (ingTitle) ingTitle.textContent = `グリーンビーンズ ${dateLabel}配達`;
+
+  // Render recipe cards
+  const recipesEl = document.getElementById('menu-recipes');
+  if (recipesEl) {
+    let html = '';
+    if (mainCount) {
+      html += `<section><div class="section-label">主菜 ${mainCount}品</div>`;
+      menuData.main.forEach(r => { html += renderRecipeCard(r, 'main'); });
+      html += '</section>';
+    }
+    if (sideCount) {
+      html += `<section><div class="section-label">副菜 ${sideCount}品（各2日分）</div>`;
+      menuData.side.forEach(r => { html += renderRecipeCard(r, 'side'); });
+      html += '</section>';
+    }
+    recipesEl.innerHTML = html;
+  }
+
+  // Render memo
+  const memoEl = document.getElementById('menu-memo');
+  if (memoEl) {
+    let memoHtml = '<section><div class="section-label">買い足しメモ</div><div class="memo">';
+    if (menuData.shopping_list && menuData.shopping_list.length) {
+      memoHtml += `<h3>買い足し</h3><p>${esc(menuData.shopping_list.join('・'))}。調味料は手持ち前提。</p>`;
+    }
+    if (menuData.surplus_note) {
+      memoHtml += `<h3>余り食材メモ</h3><p>${esc(menuData.surplus_note)}</p>`;
+    }
+    memoHtml += '</div>';
+    const kidNotes = [...menuData.main, ...menuData.side].filter(r => r.kid_note).map(r => `${esc(r.name)}は${esc(r.kid_note)}`);
+    if (kidNotes.length) {
+      const age = getChildAge();
+      memoHtml += `<div class="kid-note"><strong>子供向けメモ${age ? `（${age}）` : ''}</strong><br>${kidNotes.join('。')}</div>`;
+    }
+    memoHtml += '</section>';
+    memoEl.innerHTML = memoHtml;
+  }
+
+  // Update footer
+  const footerEl = document.getElementById('menu-footer');
+  if (footerEl) footerEl.textContent = `グリーンビーンズ ${dateLabel}配達分の食材で作成 ・ 週次作り置き献立`;
+
+  // Apply rating counts and re-init leftovers
+  updateRatingCounts();
+  initLeftovers();
+}
+
+function renderRecipeCard(r, type) {
+  const tagClass = type === 'main' ? 'tag-main' : 'tag-side';
+  const tagLabel = type === 'main' ? '主菜' : '副菜';
+  const freezeTag = r.freeze ? '<span class="tool freeze">下味冷凍</span>' : '';
+  const svgHtml = r.svg || '';
+  const ingredients = (r.ingredients || []).map(i => `<span>${esc(i)}</span>`).join('');
+  const steps = (r.steps || []).map(s => `<li>${esc(s)}</li>`).join('');
+  const nameEsc = esc(r.name);
+  return `
+  <details class="card" data-recipe="${nameEsc}">
+    <summary class="card-head">
+      <div class="card-illo">${svgHtml}</div>
+      <div class="card-info">
+        <div class="tag-row"><span class="tag ${tagClass}">${tagLabel}</span>${freezeTag}<span class="tool">${esc(r.tool || '')}</span></div>
+        <div class="card-title">${nameEsc}</div>
+        <div class="card-desc">${esc(r.storage_note || '')}</div>
+      </div>
+      <span class="card-chevron">▶</span>
+    </summary>
+    <div class="card-detail">
+      <div class="r-block">材料</div>
+      <div class="r-ing">${ingredients}</div>
+      <div class="r-block">作り方（${esc(r.tool || '')}）</div>
+      <ol class="r-steps">${steps}</ol>
+      <div class="r-note">${esc(r.storage_note || '')}</div>
+      <div class="rating-bar">
+        <span class="rating-label">RATING</span>
+        <button class="rate-btn good" onclick="rateRecipe('${nameEsc}','good')">👍 <span class="rate-count good-count">0</span></button>
+        <button class="rate-btn bad" onclick="rateRecipe('${nameEsc}','bad')">👎 <span class="rate-count bad-count">0</span></button>
+      </div>
+    </div>
+  </details>`;
+}
 
 /* --- WAKE LOCK --- */
 let wakeLock = null;
