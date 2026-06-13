@@ -11,5 +11,15 @@
       "done_count": 0,
       "last_adopted_at": null
     }
-  ]
+  ],
+  "weekly_request": {
+    "moods": [],
+    "note": "",
+    "updated_at": null
+  },
+  "leftover_ingredients": {
+    "checked": [],
+    "extra": "",
+    "updated_at": "2026-06-13"
+  }
 }
