@@ -132,13 +132,15 @@
   .rl-icon svg { width: 38px; height: 38px; display: block; }
   .rl-pri { background: none; border: none; cursor: pointer; font-size: 18px; padding: 2px 4px; line-height: 1; transition: transform 0.1s; flex-shrink: 0; }
   .rl-pri:hover { transform: scale(1.2); }
-  .rl-name { flex: 1; font-size: 14px; font-weight: 600; min-width: 0; }
-  .rl-name-input { flex: 1; font-size: 14px; font-weight: 600; border: 1px solid var(--accent); border-radius: 6px; padding: 2px 8px; font-family: inherit; outline: none; background: var(--card); min-width: 0; }
-  .rl-counts { display: flex; gap: 6px; flex-shrink: 0; }
+  .rl-main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+  .rl-name { font-size: 14px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .rl-name-input { width: 100%; font-size: 14px; font-weight: 600; border: 1px solid var(--accent); border-radius: 6px; padding: 2px 8px; font-family: inherit; outline: none; background: var(--card); }
+  .rl-bottom { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+  .rl-counts { display: flex; gap: 6px; }
   .rl-chip { font-size: 12px; font-weight: 700; padding: 2px 10px; border-radius: 20px; }
   .rl-good { background: #eef4e8; color: #3a6a1a; }
   .rl-bad { background: #f4e8e8; color: #7a2020; }
-  .rl-actions { display: flex; gap: 2px; flex-shrink: 0; }
+  .rl-actions { display: flex; gap: 2px; }
   .icon-btn { background: none; border: none; cursor: pointer; font-size: 16px; padding: 4px 5px; border-radius: 6px; line-height: 1; transition: transform 0.1s; }
   .icon-btn:hover { transform: scale(1.15); }
   .rl-expand { background: none; border: none; cursor: pointer; font-size: 13px; color: var(--ink-faint); padding: 4px 6px; border-radius: 6px; line-height: 1; transition: transform 0.2s; flex-shrink: 0; }
@@ -638,25 +640,30 @@ function renderRecipeList() {
     const isOpen = expandedIds.has(r.id);
     const svg = RECIPE_SVGS[r.name];
     const iconHtml = svg ? `<div class="rl-icon">${svg}</div>` : '';
+    const badge = r.done_count > 0 ? ` <span class="done-badge">採用${r.done_count}回</span>` : '';
     return `
     <div class="rl-item" id="rli-${r.id}">
       <div class="rl-row">
         <button class="rl-pri" title="今週作りたい" onclick="togglePriority('${r.id}')" style="opacity:${r.priority?1:.25}">🔥</button>
         ${iconHtml}
-        ${editingId===r.id
-          ? `<input class="rl-name-input" id="rle-${r.id}" value="${esc(r.name)}"
-              onblur="commitEdit('${r.id}')"
-              onkeydown="if(event.key==='Enter')commitEdit('${r.id}');else if(event.key==='Escape'){editingId=null;renderRecipeList();}"
-            >`
-          : `<span class="rl-name">${esc(r.name)}${r.done_count>0?` <span class="done-badge">採用${r.done_count}回</span>`:''}</span>`
-        }
-        <div class="rl-counts">
-          <span class="rl-chip rl-good">👍 ${r.good_count}</span>
-          <span class="rl-chip rl-bad">👎 ${r.bad_count}</span>
-        </div>
-        <div class="rl-actions">
-          <button class="icon-btn" title="編集" onclick="startEdit('${r.id}')">✏️</button>
-          <button class="icon-btn" title="削除" onclick="deleteRecipe('${r.id}')">🗑️</button>
+        <div class="rl-main">
+          ${editingId===r.id
+            ? `<input class="rl-name-input" id="rle-${r.id}" value="${esc(r.name)}"
+                onblur="commitEdit('${r.id}')"
+                onkeydown="if(event.key==='Enter')commitEdit('${r.id}');else if(event.key==='Escape'){editingId=null;renderRecipeList();}"
+              >`
+            : `<span class="rl-name">${esc(r.name)}${badge}</span>`
+          }
+          <div class="rl-bottom">
+            <div class="rl-counts">
+              <span class="rl-chip rl-good">👍 ${r.good_count}</span>
+              <span class="rl-chip rl-bad">👎 ${r.bad_count}</span>
+            </div>
+            <div class="rl-actions">
+              <button class="icon-btn" title="編集" onclick="startEdit('${r.id}')">✏️</button>
+              <button class="icon-btn" title="削除" onclick="deleteRecipe('${r.id}')">🗑️</button>
+            </div>
+          </div>
         </div>
         <button class="rl-expand${isOpen?' open':''}" onclick="toggleExpand('${r.id}')">▶</button>
       </div>
