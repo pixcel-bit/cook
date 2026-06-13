@@ -43,9 +43,6 @@
   .meta-chip strong { color: var(--ink); font-weight: 700; }
   section { margin-top: 36px; }
   .section-label { font-size: 12px; letter-spacing: 0.1em; color: var(--ink-faint); font-weight: 700; margin-bottom: 14px; text-transform: uppercase; }
-  .ingredients { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px 19px; }
-  .ingredients p { font-size: 13.5px; color: var(--ink-soft); }
-  .ingredients .label { font-size: 11.5px; color: var(--ink-faint); margin-bottom: 6px; letter-spacing: 0.04em; }
   .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; margin-bottom: 14px; overflow: hidden; }
   .card > summary { list-style: none; cursor: pointer; user-select: none; }
   .card > summary::-webkit-details-marker { display: none; }
@@ -86,6 +83,24 @@
   .kid-note { margin-top: 22px; background: #fbf4ea; border: 1px solid #efdcc3; border-radius: 14px; padding: 15px 19px; font-size: 13px; color: #8a6a3a; }
   .kid-note strong { color: #6f5023; }
   footer { margin-top: 42px; text-align: center; font-size: 11.5px; color: var(--ink-faint); border-top: 1px solid var(--line); padding-top: 18px; }
+
+  /* --- INGREDIENTS CHECKLIST --- */
+  .ing-details { background: var(--card); border: 1px solid var(--line); border-radius: 14px; }
+  .ing-details > summary { list-style: none; cursor: pointer; user-select: none; padding: 14px 19px; display: flex; align-items: center; gap: 10px; }
+  .ing-details > summary::-webkit-details-marker { display: none; }
+  .ing-title { font-size: 12px; color: var(--ink-faint); letter-spacing: 0.04em; flex: 1; }
+  .ing-hint { font-size: 12px; color: var(--accent); font-weight: 700; }
+  .ing-chevron { font-size: 12px; color: var(--ink-faint); transition: transform 0.2s; flex-shrink: 0; }
+  .ing-details[open] .ing-chevron { transform: rotate(90deg); }
+  .ing-body { padding: 0 19px 16px; border-top: 1px solid var(--line); }
+  .ing-checklist { display: flex; flex-wrap: wrap; gap: 8px; padding: 14px 0 14px; }
+  .ing-check-item { display: flex; align-items: center; gap: 6px; background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 5px 12px; font-size: 13px; cursor: pointer; transition: all 0.15s; }
+  .ing-check-item input[type=checkbox] { accent-color: var(--accent); width: 14px; height: 14px; cursor: pointer; flex-shrink: 0; }
+  .ing-check-item.checked { background: #fff3ee; border-color: var(--accent-soft); color: var(--accent); }
+  .ing-extra-block { border-top: 1px solid var(--line); padding-top: 12px; }
+  .ing-extra-label { font-size: 11px; color: var(--ink-faint); font-weight: 700; letter-spacing: 0.06em; margin-bottom: 8px; }
+  .ing-extra-input { width: 100%; padding: 9px 13px; border: 1px solid var(--line); border-radius: 10px; font-size: 13px; font-family: inherit; color: var(--ink); background: var(--paper); resize: none; outline: none; line-height: 1.6; }
+  .ing-extra-input:focus { border-color: var(--accent); }
 
   /* --- REQUEST SECTION --- */
   .req-card { background: var(--card); border: 2px solid var(--accent-soft); border-radius: 14px; padding: 16px 19px; }
@@ -155,7 +170,7 @@
     .tab-nav, #tab-recipes { display: none !important; }
     #tab-menu { display: block !important; }
     body { background: #fff; padding: 0; }
-    .card, .ingredients, .memo { break-inside: avoid; }
+    .card, .memo { break-inside: avoid; }
     .rating-bar { display: none; }
   }
 </style>
@@ -183,10 +198,20 @@
 
 <section>
   <div class="section-label">今週の食材</div>
-  <div class="ingredients">
-    <div class="label">グリーンビーンズ 6/11配達</div>
-    <p>鶏むね肉1kg ・ 豚こま ・ たまねぎ ・ にんじん ・ ピーマン ・ キャベツ ・ 長ねぎ ・ ブロッコリー ・ えのき ・ えりんぎ ・ ブロッコリースプラウト ・ 牛乳 ・ トマトジュース×2</p>
-  </div>
+  <details class="ing-details" id="ing-details">
+    <summary>
+      <span class="ing-title">グリーンビーンズ 6/11配達</span>
+      <span class="ing-hint" id="ing-hint"></span>
+      <span class="ing-chevron">▶</span>
+    </summary>
+    <div class="ing-body">
+      <div class="ing-checklist" id="ing-checklist"></div>
+      <div class="ing-extra-block">
+        <div class="ing-extra-label">その他の余り食材</div>
+        <textarea class="ing-extra-input" id="ing-extra" rows="2" placeholder="例：卵、豆腐、調味料など"></textarea>
+      </div>
+    </div>
+  </details>
 </section>
 
 <section>
@@ -384,10 +409,9 @@
 </section>
 
 <section>
-  <div class="section-label">買い足し・余り食材メモ</div>
+  <div class="section-label">買い足しメモ</div>
   <div class="memo">
     <h3>買い足し</h3><p>ツナ缶・かつお節・オリーブオイル（常備がなければ）。調味料は手持ち前提。</p>
-    <h3>余り食材の使い道</h3><p>トマトジュース残り1本 → スープ・飲用に。ブロッコリースプラウト → サラダのトッピングに。牛乳 → 朝食・飲用に。にんじん残り → 翌週の常備菜に。</p>
   </div>
   <div class="kid-note"><strong>子供向けメモ（2歳10ヶ月）</strong><br>照り焼き・生姜焼きは味付け前に取り分けて薄味に。トマト煮込みは辛味なしでそのまま食べられます。塩だれ蒸しは塩だれ少なめで取り分け可能。きのこ炒めは辛味ゼロ。ピーマンのおかか和えはごま油少なめで。</div>
 </section>
@@ -417,6 +441,12 @@ const _b = '0ydo3ewXfiRHp_bGhswrn' + 'siCBeJFKKAosWdwqMUjmhjKmF1ayeTPpSnMh2TCXYW
 const TOKEN = _a + _b;
 const API = 'https://api.github.com/repos/pixcel-bit/cook/contents/preferences.json';
 
+const THIS_WEEK_INGREDIENTS = [
+  '鶏むね肉1kg','豚こま','たまねぎ','にんじん','ピーマン',
+  'キャベツ','長ねぎ','ブロッコリー','えのき','えりんぎ',
+  'ブロッコリースプラウト','牛乳','トマトジュース×2'
+];
+
 const RECIPE_SVGS = {
   '鶏むね肉の照り焼き': `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="58" rx="38" ry="30" fill="#fff" stroke="#e6e3da" stroke-width="2"/><ellipse cx="50" cy="56" rx="29" ry="22" fill="#f7f4ec"/><path d="M30 54 q8 -12 20 -9 q14 -4 22 8 q3 13 -10 18 q-16 7 -28 -2 q-8 -7 -4 -15z" fill="#c98a4a"/><path d="M34 52 q7 -8 16 -6 q11 -3 18 6 q2 9 -8 13 q-13 6 -22 -1 q-6 -5 -4 -12z" fill="#d99c55"/><ellipse cx="44" cy="52" rx="3" ry="2" fill="#a86a32" opacity="0.5"/><ellipse cx="56" cy="58" rx="3" ry="2" fill="#a86a32" opacity="0.5"/><path d="M40 66 q10 5 22 0" stroke="#8a5524" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M70 44 l4 -8 M76 48 l6 -5" stroke="#7fae5a" stroke-width="3" stroke-linecap="round"/></svg>`,
   '豚こまと野菜の生姜焼き': `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="58" rx="38" ry="30" fill="#fff" stroke="#e6e3da" stroke-width="2"/><ellipse cx="50" cy="56" rx="29" ry="22" fill="#f7f4ec"/><path d="M32 50 q6 -5 12 -2 q5 -4 11 -1 q6 -3 11 2 q4 6 -2 9 q-3 6 -10 3 q-6 5 -13 1 q-7 2 -11 -4 q-3 -6 2 -11z" fill="#b5703a"/><path d="M36 52 q5 -3 9 -1 M50 50 q4 -2 8 1 M44 60 q6 3 12 0" stroke="#8a5020" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M30 60 q4 3 9 1" stroke="#6fae3f" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="58" y="56" width="11" height="4" rx="2" fill="#7ab54a" transform="rotate(20 60 58)"/><rect x="34" y="46" width="9" height="3.5" rx="1.5" fill="#e8c34a" transform="rotate(-15 36 48)"/></svg>`,
@@ -428,7 +458,11 @@ const RECIPE_SVGS = {
   'ピーマンのおかか和え': `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="62" rx="34" ry="23" fill="#fff" stroke="#e6e3da" stroke-width="2"/><ellipse cx="50" cy="60" rx="26" ry="16" fill="#f7f4ec"/><rect x="33" y="51" width="10" height="15" rx="4" fill="#4fa82a" transform="rotate(-12 38 58)"/><rect x="45" y="49" width="10" height="15" rx="4" fill="#64be3c" transform="rotate(4 50 56)"/><rect x="57" y="51" width="10" height="15" rx="4" fill="#4fa82a" transform="rotate(16 62 58)"/><path d="M36 60 q5 2 9 -1" stroke="#d4a86a" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.9"/><path d="M48 58 q5 1 8 -1" stroke="#c89a55" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.9"/><path d="M60 60 q4 1 7 -1" stroke="#d4a86a" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.9"/><circle cx="40" cy="54" r="1.5" fill="#90da60" opacity="0.7"/><circle cx="52" cy="52" r="1.5" fill="#90da60" opacity="0.7"/><circle cx="63" cy="55" r="1.5" fill="#90da60" opacity="0.7"/></svg>`
 };
 
-let prefs = { recipes: [], weekly_request: { moods: [], note: '', updated_at: null } };
+let prefs = {
+  recipes: [],
+  weekly_request: { moods: [], note: '', updated_at: null },
+  leftover_ingredients: { checked: [], extra: '', updated_at: null }
+};
 let prefsSha = null;
 let saving = false;
 let saveTimer = null;
@@ -457,12 +491,14 @@ async function loadPrefs() {
       const parsed = JSON.parse(fromB64(d.content));
       if (!parsed.recipes) parsed.recipes = [];
       if (!parsed.weekly_request) parsed.weekly_request = { moods: [], note: '', updated_at: null };
+      if (!parsed.leftover_ingredients) parsed.leftover_ingredients = { checked: [], extra: '', updated_at: null };
       prefs = parsed;
     }
   } catch(e) {}
   renderRecipeList();
   updateRatingCounts();
   initRequest();
+  initLeftovers();
 }
 
 function queueSave() {
@@ -491,6 +527,59 @@ function showToast(msg) {
   const t = document.getElementById('toast');
   t.textContent = msg; t.classList.add('show');
   setTimeout(() => t.classList.remove('show'), 2200);
+}
+
+/* --- LEFTOVER INGREDIENTS --- */
+function initLeftovers() {
+  const lf = prefs.leftover_ingredients || { checked: [], extra: '', updated_at: null };
+  const list = document.getElementById('ing-checklist');
+  list.innerHTML = THIS_WEEK_INGREDIENTS.map(name => {
+    const isChecked = lf.checked.includes(name);
+    return `<label class="ing-check-item${isChecked ? ' checked' : ''}">
+      <input type="checkbox" ${isChecked ? 'checked' : ''} onchange="onIngCheck(this,'${name}')">
+      <span>${name}</span>
+    </label>`;
+  }).join('');
+  document.getElementById('ing-extra').value = lf.extra || '';
+  document.getElementById('ing-extra').addEventListener('input', () => queueSaveLeftovers());
+  updateIngHint(lf.checked);
+}
+
+function onIngCheck(checkbox, name) {
+  checkbox.parentElement.classList.toggle('checked', checkbox.checked);
+  queueSaveLeftovers();
+}
+
+let leftoverTimer = null;
+function queueSaveLeftovers() {
+  clearTimeout(leftoverTimer);
+  leftoverTimer = setTimeout(() => {
+    const checked = THIS_WEEK_INGREDIENTS.filter(name => {
+      const labels = document.querySelectorAll('#ing-checklist .ing-check-item');
+      for (const label of labels) {
+        if (label.querySelector('span').textContent === name) {
+          return label.querySelector('input').checked;
+        }
+      }
+      return false;
+    });
+    const extra = document.getElementById('ing-extra').value.trim();
+    prefs.leftover_ingredients = { checked, extra, updated_at: new Date().toISOString().slice(0,10) };
+    updateIngHint(checked);
+    queueSave();
+  }, 500);
+}
+
+function updateIngHint(checked) {
+  const hint = document.getElementById('ing-hint');
+  if (!hint) return;
+  const extra = (document.getElementById('ing-extra') || {}).value || '';
+  const hasExtra = extra.trim().length > 0;
+  if (checked.length === 0 && !hasExtra) { hint.textContent = ''; return; }
+  let text = '';
+  if (checked.length > 0) text = `余り ${checked.length}品`;
+  if (hasExtra) text += (text ? '＋その他' : 'その他あり');
+  hint.textContent = text;
 }
 
 /* --- REQUEST SECTION --- */
