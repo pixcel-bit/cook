@@ -1,4 +1,8 @@
 {
+  "family": {
+    "child_birthdate": "2023-08-01"
+  },
+  "garden_herbs": ["大葉", "バジル"],
   "recipes": [
     {
       "id": "mqaglsjf9tom",
