@@ -15,6 +15,8 @@
 
 **routineがpushするのは `menu.json` と `preferences.json`。** index.htmlは変更しない。
 
+**ブランチ運用：`main` ブランチのみ使用。作業ブランチは作らない。**
+
 ---
 
 ## トリガー設計
