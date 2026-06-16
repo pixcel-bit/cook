@@ -97,6 +97,7 @@
   .ing-check-item { display: flex; align-items: center; gap: 6px; background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 5px 12px; font-size: 13px; cursor: pointer; transition: all 0.15s; }
   .ing-check-item input[type=checkbox] { accent-color: var(--accent); width: 14px; height: 14px; cursor: pointer; flex-shrink: 0; }
   .ing-check-item.checked { background: #fff3ee; border-color: var(--accent-soft); color: var(--accent); }
+  .ing-section-label { font-size: 11px; color: var(--ink-faint); font-weight: 700; letter-spacing: 0.06em; padding-top: 10px; }
   .ing-extra-block { border-top: 1px solid var(--line); padding-top: 12px; }
   .ing-extra-label { font-size: 11px; color: var(--ink-faint); font-weight: 700; letter-spacing: 0.06em; margin-bottom: 8px; }
   .ing-extra-input { width: 100%; padding: 9px 13px; border: 1px solid var(--line); border-radius: 10px; font-size: 13px; font-family: inherit; color: var(--ink); background: var(--paper); resize: none; outline: none; line-height: 1.6; }
@@ -218,7 +219,12 @@
       <span class="ing-chevron">▶</span>
     </summary>
     <div class="ing-body">
+      <div class="ing-section-label" id="ing-delivery-label">今週の配達</div>
       <div class="ing-checklist" id="ing-checklist"></div>
+      <div id="ing-carryover-block" style="display:none">
+        <div class="ing-section-label">先週からの持ち越し</div>
+        <div class="ing-checklist" id="ing-carryover"></div>
+      </div>
       <div class="ing-extra-block">
         <div class="ing-extra-label">その他の余り食材</div>
         <textarea class="ing-extra-input" id="ing-extra" rows="2" placeholder="例：卵、豆腐、調味料など"></textarea>
@@ -537,22 +543,41 @@ function showToast(msg) {
 
 /* --- LEFTOVER INGREDIENTS --- */
 function initLeftovers() {
-  if (!THIS_WEEK_INGREDIENTS.length) return;
+  if (!THIS_WEEK_INGREDIENTS.length && !(prefs.leftover_ingredients && prefs.leftover_ingredients.checked.length)) return;
   const lf = prefs.leftover_ingredients || { checked: [], extra: '', updated_at: null };
+
+  // 配達食材リスト
   const list = document.getElementById('ing-checklist');
   list.innerHTML = THIS_WEEK_INGREDIENTS.map(name => {
     const isChecked = lf.checked.includes(name);
     return `<label class="ing-check-item${isChecked ? ' checked' : ''}">
-      <input type="checkbox" ${isChecked ? 'checked' : ''} onchange="onIngCheck(this,'${name}')">
-      <span>${name}</span>
+      <input type="checkbox" ${isChecked ? 'checked' : ''} onchange="onIngCheck(this)">
+      <span>${esc(name)}</span>
     </label>`;
   }).join('');
+
+  // 持ち越し食材（前週チェック済みで今週の配達に含まれないもの）
+  const carryover = lf.checked.filter(name => !THIS_WEEK_INGREDIENTS.includes(name));
+  const carryoverBlock = document.getElementById('ing-carryover-block');
+  const carryoverList = document.getElementById('ing-carryover');
+  if (carryover.length > 0) {
+    carryoverList.innerHTML = carryover.map(name => {
+      return `<label class="ing-check-item checked">
+        <input type="checkbox" checked onchange="onIngCheck(this)">
+        <span>${esc(name)}</span>
+      </label>`;
+    }).join('');
+    carryoverBlock.style.display = '';
+  } else {
+    carryoverBlock.style.display = 'none';
+  }
+
   document.getElementById('ing-extra').value = lf.extra || '';
   document.getElementById('ing-extra').addEventListener('input', () => queueSaveLeftovers());
   updateIngHint(lf.checked);
 }
 
-function onIngCheck(checkbox, name) {
+function onIngCheck(checkbox) {
   checkbox.parentElement.classList.toggle('checked', checkbox.checked);
   queueSaveLeftovers();
 }
@@ -561,14 +586,11 @@ let leftoverTimer = null;
 function queueSaveLeftovers() {
   clearTimeout(leftoverTimer);
   leftoverTimer = setTimeout(() => {
-    const checked = THIS_WEEK_INGREDIENTS.filter(name => {
-      const labels = document.querySelectorAll('#ing-checklist .ing-check-item');
-      for (const label of labels) {
-        if (label.querySelector('span').textContent === name) {
-          return label.querySelector('input').checked;
-        }
+    const checked = [];
+    document.querySelectorAll('#ing-checklist .ing-check-item, #ing-carryover .ing-check-item').forEach(label => {
+      if (label.querySelector('input').checked) {
+        checked.push(label.querySelector('span').textContent);
       }
-      return false;
     });
     const extra = document.getElementById('ing-extra').value.trim();
     prefs.leftover_ingredients = { checked, extra, updated_at: new Date().toISOString().slice(0,10) };

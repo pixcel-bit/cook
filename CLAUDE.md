@@ -258,6 +258,9 @@ menu.json を生成・push した後、`preferences.json` の `recipes[]` を以
 **weekly_request のリセット：**
 - `preferences.json` の `weekly_request` を `{ moods: [], note: "", updated_at: null }` にリセット（来週分をクリア）
 
+**leftover_ingredients のリセット：**
+- `preferences.json` の `leftover_ingredients` を `{ checked: [], extra: "", updated_at: null }` にリセット（ユーザーが今週の配達食材から翌週分を新たにチェックするため）
+
 ```
 push先: pixcel-bit/cook リポジトリ main ブランチ
 ファイル: preferences.json（menu.json push後に続けて更新）
