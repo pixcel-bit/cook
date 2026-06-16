@@ -181,6 +181,7 @@
 ## 出力形式
 {
   "delivery_date": "YYYY-MM-DD",
+  "delivery_ingredients": ["正規化済み食材名1", "正規化済み食材名2"],
   "main": [
     {
       "name": "料理名",
