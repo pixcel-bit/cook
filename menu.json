@@ -1,140 +1,157 @@
 {
   "delivery_date": "2026-06-11",
   "delivery_ingredients": [
-    "鶏むね肉1kg", "豚こま", "たまねぎ", "にんじん", "ピーマン",
-    "キャベツ", "長ねぎ", "ブロッコリー", "えのき", "えりんぎ",
-    "ブロッコリースプラウト", "牛乳", "トマトジュース×2"
+    "えのき", "豚こま切れ", "トマトジュース", "たまねぎ", "にんじん",
+    "ピーマン", "ブロッコリースプラウト", "牛乳", "鶏むね肉",
+    "キャベツ", "長ねぎ", "ブロッコリー", "エリンギ"
   ],
   "main": [
     {
-      "name": "鶏むね肉の照り焼き",
-      "tool": "フライパン",
-      "freeze": false,
-      "ingredients": ["鶏むね肉 500g", "片栗粉 大1", "酒 大2", "醤油 大2", "みりん 大2", "砂糖 大1", "サラダ油 大1"],
-      "steps": [
-        "鶏肉をそぎ切りにし、片栗粉を全体にまぶす。",
-        "酒・醤油・みりん・砂糖を混ぜてタレを作る。",
-        "フライパンに油を弱中火で熱し、鶏肉を並べる。中火で片面にこんがり焼き色がつくまで3分焼く。子供用はここで取り分け。",
-        "裏返してさらに3分。余分な油をキッチンペーパーで拭いた後、タレを回し入れて弱火で30秒照りをつける。冷まして保存。"
-      ],
-      "time_minutes": 20,
-      "storage_note": "冷蔵3〜4日。タレごと保存容器に入れると乾燥しない。",
-      "kid_note": "味付け前に取り分けて薄味に。",
-      "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><ellipse cx=\"50\" cy=\"58\" rx=\"38\" ry=\"30\" fill=\"#fff\" stroke=\"#e6e3da\" stroke-width=\"2\"/><ellipse cx=\"50\" cy=\"56\" rx=\"29\" ry=\"22\" fill=\"#f7f4ec\"/><path d=\"M30 54 q8 -12 20 -9 q14 -4 22 8 q3 13 -10 18 q-16 7 -28 -2 q-8 -7 -4 -15z\" fill=\"#c98a4a\"/><path d=\"M34 52 q7 -8 16 -6 q11 -3 18 6 q2 9 -8 13 q-13 6 -22 -1 q-6 -5 -4 -12z\" fill=\"#d99c55\"/><ellipse cx=\"44\" cy=\"52\" rx=\"3\" ry=\"2\" fill=\"#a86a32\" opacity=\"0.5\"/><ellipse cx=\"56\" cy=\"58\" rx=\"3\" ry=\"2\" fill=\"#a86a32\" opacity=\"0.5\"/><path d=\"M40 66 q10 5 22 0\" stroke=\"#8a5524\" stroke-width=\"2\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M70 44 l4 -8 M76 48 l6 -5\" stroke=\"#7fae5a\" stroke-width=\"3\" stroke-linecap=\"round\"/></svg>"
-    },
-    {
-      "name": "豚こまと野菜の生姜焼き",
-      "tool": "フライパン",
-      "freeze": true,
-      "ingredients": ["豚こま 300g", "たまねぎ 1/2個", "ピーマン 2個", "醤油 大2", "みりん 大2", "酒 大1", "おろし生姜 大1"],
-      "steps": [
-        "たまねぎとピーマンを切る。",
-        "冷凍用保存袋に全材料を入れて揉み込み、平らにして冷凍。",
-        "前夜に冷蔵庫に移して解凍する。",
-        "フライパンに油少々を中火で熱し、袋の中身を全部入れる。肉と野菜をほぐしながら中火で炒める（5分）。肉の色が変わったら完成。"
-      ],
-      "time_minutes": 15,
-      "storage_note": "下味冷凍で約3週間。",
-      "kid_note": "子供用は生姜控えめの別袋にすると安心。",
-      "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><ellipse cx=\"50\" cy=\"58\" rx=\"38\" ry=\"30\" fill=\"#fff\" stroke=\"#e6e3da\" stroke-width=\"2\"/><ellipse cx=\"50\" cy=\"56\" rx=\"29\" ry=\"22\" fill=\"#f7f4ec\"/><path d=\"M32 50 q6 -5 12 -2 q5 -4 11 -1 q6 -3 11 2 q4 6 -2 9 q-3 6 -10 3 q-6 5 -13 1 q-7 2 -11 -4 q-3 -6 2 -11z\" fill=\"#b5703a\"/><path d=\"M36 52 q5 -3 9 -1 M50 50 q4 -2 8 1 M44 60 q6 3 12 0\" stroke=\"#8a5020\" stroke-width=\"1.5\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M30 60 q4 3 9 1\" stroke=\"#6fae3f\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\"/><rect x=\"58\" y=\"56\" width=\"11\" height=\"4\" rx=\"2\" fill=\"#7ab54a\" transform=\"rotate(20 60 58)\"/><rect x=\"34\" y=\"46\" width=\"9\" height=\"3.5\" rx=\"1.5\" fill=\"#e8c34a\" transform=\"rotate(-15 36 48)\"/></svg>"
-    },
-    {
-      "name": "鶏むねとキャベツの塩だれ蒸し",
-      "tool": "蒸し器",
-      "freeze": false,
-      "ingredients": ["鶏むね肉 300g", "キャベツ 1/4個", "長ねぎ 1本", "ごま油 大2", "鶏がらスープの素 小1", "酒 大1", "塩 小1/2"],
-      "steps": [
-        "鶏肉をそぎ切りにし、キャベツはざく切り、長ねぎは4cm幅に切る。",
-        "蒸し器の下段に水200mlを入れて強火にかけ、蒸気が充満するまで待つ（約3分）。",
-        "上段にキャベツと長ねぎを敷き、鶏肉を並べて酒を散らす。蓋をして中火で15分蒸す。鶏肉の中心まで火が通ったらOK。",
-        "ごま油・鶏がらスープの素・塩を混ぜた塩だれをかけて和える。"
-      ],
-      "time_minutes": 25,
-      "storage_note": "冷蔵3〜4日。",
-      "kid_note": "塩だれ少なめで取り分け可能。",
-      "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><ellipse cx=\"50\" cy=\"60\" rx=\"36\" ry=\"26\" fill=\"#fff\" stroke=\"#e6e3da\" stroke-width=\"2\"/><ellipse cx=\"50\" cy=\"58\" rx=\"28\" ry=\"19\" fill=\"#f7f4ec\"/><path d=\"M34 56 q6 -10 16 -7 q12 -3 18 7 q2 10 -8 13 q-14 5 -22 -2 q-6 -5 -4 -11z\" fill=\"#ece4d0\"/><path d=\"M38 54 q5 -7 12 -5 M52 52 q6 -2 10 4\" stroke=\"#c9bfa0\" stroke-width=\"1.5\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M30 50 q5 -4 11 -2 q3 -5 9 -3\" stroke=\"#7ab54a\" stroke-width=\"3.5\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M62 52 l6 -3 M64 58 l7 -1\" stroke=\"#9ccb6a\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><path d=\"M44 40 q2 -6 -1 -10 M52 40 q3 -6 0 -11\" stroke=\"#cfcabb\" stroke-width=\"2\" fill=\"none\" stroke-linecap=\"round\" opacity=\"0.7\"/></svg>"
-    },
-    {
-      "name": "鶏むねのトマト煮込み",
+      "name": "鶏むね肉のビストロトマト煮（バジル風味）",
       "tool": "ビストロ",
       "freeze": false,
-      "ingredients": ["鶏むね肉 500g", "たまねぎ 1個", "にんじん 1本", "トマトジュース 400ml", "コンソメ 大1", "ケチャップ 大1", "塩 小1/2"],
-      "steps": [
-        "たまねぎは薄切り、にんじんは乱切り、鶏肉は一口大（3cm角）に切る。",
-        "内鍋に全材料を入れ、蓋をする。",
-        "「圧力調理」モードを選択 → 「高圧」 → 時間を「15分」にセットしてスタート。",
-        "加圧終了後、蒸気リリースボタンを押して内圧を完全に逃がしてから蓋を開ける。冷まして保存。"
+      "ingredients": [
+        "鶏むね肉 400g", "たまねぎ 2個", "にんじん 1本",
+        "トマトジュース 900ml（1本）", "コンソメ 1個",
+        "バジル 5〜6枚", "塩・こしょう 適量"
       ],
-      "time_minutes": 25,
-      "storage_note": "冷蔵4日／冷凍3週間。大人は黒こしょうやタバスコを別添え。",
-      "kid_note": "辛味なしでそのまま食べられます。",
-      "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><ellipse cx=\"50\" cy=\"60\" rx=\"34\" ry=\"25\" fill=\"#fff\" stroke=\"#e6e3da\" stroke-width=\"2\"/><ellipse cx=\"50\" cy=\"58\" rx=\"26\" ry=\"18\" fill=\"#e76f4d\"/><ellipse cx=\"50\" cy=\"57\" rx=\"26\" ry=\"18\" fill=\"#d85a36\" opacity=\"0.5\"/><circle cx=\"42\" cy=\"54\" r=\"5\" fill=\"#c98a4a\"/><circle cx=\"56\" cy=\"60\" r=\"5\" fill=\"#c98a4a\"/><circle cx=\"50\" cy=\"50\" r=\"3.5\" fill=\"#e89a3a\"/><circle cx=\"60\" cy=\"52\" r=\"3\" fill=\"#e89a3a\"/><path d=\"M38 62 q5 3 11 1\" stroke=\"#b04527\" stroke-width=\"2\" fill=\"none\" stroke-linecap=\"round\" opacity=\"0.6\"/><path d=\"M44 44 q2 -5 6 -4 M54 46 q3 -4 7 -2\" stroke=\"#6fae3f\" stroke-width=\"2.5\" stroke-linecap=\"round\" fill=\"none\"/></svg>"
+      "steps": [
+        "鶏むね肉は一口大（約3cm）に切り塩・こしょうをまぶす。たまねぎは1cm幅くし切り、にんじんは乱切りにする",
+        "ビストロ内鍋に鶏肉・たまねぎ・にんじんを入れ、トマトジュース・コンソメを加える",
+        "ビストロにセット。高圧モード・15分で加圧スタート",
+        "加圧終了後ふたを開け、バジルをちぎり入れ塩・こしょうで味を調える",
+        "粗熱を取り保存容器へ。食べるときはレンチン2〜3分"
+      ],
+      "time_minutes": 30,
+      "storage_note": "冷蔵3日",
+      "kid_note": "辛さなし。鶏肉が柔らかく煮えて食べやすい。バジルは取り分け後に入れてもOK",
+      "svg": "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><rect width='100' height='100' fill='#f7f4ec'/><ellipse cx='50' cy='76' rx='36' ry='13' fill='#9a4828'/><ellipse cx='50' cy='71' rx='34' ry='12' fill='#c0623a'/><ellipse cx='50' cy='66' rx='31' ry='11' fill='#d4703a'/><circle cx='36' cy='61' r='7' fill='#e07838'/><circle cx='52' cy='59' r='8' fill='#cc6030'/><circle cx='65' cy='62' r='6' fill='#e07838'/><ellipse cx='40' cy='55' rx='5' ry='2.5' fill='#4a7a30' opacity='0.85'/><ellipse cx='61' cy='54' rx='4' ry='2' fill='#5a8a38' opacity='0.85'/><circle cx='44' cy='64' r='2' fill='#f09050'/><circle cx='58' cy='66' r='2.5' fill='#f09050'/><path d='M14 71 Q50 83 86 71' stroke='#7a3818' stroke-width='2.5' fill='none'/></svg>"
     },
     {
-      "name": "豚こまと長ねぎ・きのこ炒め",
-      "tool": "フライパン",
+      "name": "ヘルシオ鶏むね照り焼き（えのき添え）",
+      "tool": "ヘルシオ",
       "freeze": true,
-      "ingredients": ["豚こま 250g", "長ねぎ 1本", "えのき 100g", "えりんぎ 100g", "醤油 大2", "オイスターソース 大1", "酒 大1"],
-      "steps": [
-        "長ねぎを斜め切りにし、えのき・えりんぎをほぐして裂く。",
-        "冷凍用保存袋に全材料を入れて揉み込み、平らにして冷凍。",
-        "前夜に冷蔵庫に移して解凍する。",
-        "フライパンに油少々を中火で熱し、袋の中身を全部入れる。中火で全体をほぐしながら炒める（5分）。肉の色が変わり焼き色がついたら完成。"
+      "ingredients": [
+        "鶏むね肉 400g", "えのき 150g",
+        "醤油 大さじ2", "みりん 大さじ2", "酒 大さじ1", "はちみつ 小さじ2"
       ],
-      "time_minutes": 15,
-      "storage_note": "きのこは冷凍で旨味アップ。約3週間保存可。",
-      "kid_note": "辛味ゼロ。オイスターソースのコクで食べやすい。",
-      "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><ellipse cx=\"50\" cy=\"60\" rx=\"36\" ry=\"26\" fill=\"#fff\" stroke=\"#e6e3da\" stroke-width=\"2\"/><ellipse cx=\"50\" cy=\"58\" rx=\"28\" ry=\"19\" fill=\"#f7f4ec\"/><path d=\"M34 56 q7 -9 15 -6 q10 -4 19 5 q3 10 -7 13 q-15 6 -24 -2 q-6 -5 -3 -10z\" fill=\"#b5703a\"/><ellipse cx=\"42\" cy=\"52\" rx=\"4\" ry=\"6\" fill=\"#e8dcc0\"/><rect x=\"40.5\" y=\"52\" width=\"3\" height=\"8\" rx=\"1.5\" fill=\"#f0ead8\"/><ellipse cx=\"58\" cy=\"56\" rx=\"5\" ry=\"4\" fill=\"#d8c9a8\"/><rect x=\"56.5\" y=\"56\" width=\"3\" height=\"7\" rx=\"1.5\" fill=\"#e8dcc0\"/><path d=\"M30 60 q5 2 10 0\" stroke=\"#6fae3f\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M48 64 q6 2 13 -1\" stroke=\"#8a5020\" stroke-width=\"1.5\" fill=\"none\" stroke-linecap=\"round\"/></svg>"
+      "steps": [
+        "醤油・みりん・酒・はちみつを混ぜてタレを作る。鶏むね肉は厚みが均等になるよう切り込みを入れ、タレに30分漬ける",
+        "えのきは石突を取りバラしてヘルシオの角皿に敷き詰める",
+        "えのきの上に漬けた鶏むね肉をのせ、残りのタレをかける",
+        "ヘルシオ：250℃・ウォーターオーブン・15分焼く",
+        "食べやすい大きさに切り保存容器へ。食べるときはレンチン1〜2分"
+      ],
+      "time_minutes": 25,
+      "storage_note": "冷蔵4日 ／ タレ漬け状態で冷凍1ヶ月可",
+      "kid_note": "はちみつで甘みがあり子供向け。タレを増やして甘めにしてもOK",
+      "svg": "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><rect width='100' height='100' fill='#f7f4ec'/><ellipse cx='50' cy='78' rx='38' ry='12' fill='#b89870'/><ellipse cx='50' cy='73' rx='36' ry='11' fill='#d4b880'/><rect x='22' y='52' width='24' height='18' rx='5' fill='#b86820'/><rect x='50' y='50' width='26' height='20' rx='5' fill='#c87830'/><path d='M22 60 Q34 57 46 60' stroke='#904810' stroke-width='1.5' fill='none'/><path d='M50 58 Q63 55 76 58' stroke='#904810' stroke-width='1.5' fill='none'/><line x1='34' y1='73' x2='32' y2='65' stroke='#c0a870' stroke-width='1'/><line x1='40' y1='73' x2='39' y2='64' stroke='#c0a870' stroke-width='1'/><line x1='60' y1='73' x2='58' y2='64' stroke='#c0a870' stroke-width='1'/><line x1='66' y1='73' x2='66' y2='64' stroke='#c0a870' stroke-width='1'/></svg>"
+    },
+    {
+      "name": "蒸し鶏の大葉ねぎ塩だれ",
+      "tool": "蒸し器",
+      "freeze": false,
+      "ingredients": [
+        "鶏むね肉 200g", "長ねぎ（白い部分） 1本分",
+        "大葉 8枚", "酒 大さじ1", "塩 小さじ1/2",
+        "ごま油 大さじ1", "しょうが薄切り 2枚"
+      ],
+      "steps": [
+        "鶏むね肉に酒・塩少々をまぶし、しょうがをのせてラップでしっかり包む",
+        "蒸し器を沸騰させ、鶏肉を中火で20分蒸す（竹串を刺して透明な汁が出ればOK）",
+        "長ねぎをみじん切りにし、塩小さじ1/2・ごま油大さじ1と合わせてねぎ塩だれを作る",
+        "蒸しあがった鶏肉を1cm厚さにスライスし、大葉を敷いた保存容器に並べてだれをかける",
+        "食べるときはレンチン1分。冷製のままでもおいしい"
+      ],
+      "time_minutes": 30,
+      "storage_note": "冷蔵3日",
+      "kid_note": "ねぎ塩だれは辛さなし。子供用は取り分けてから大葉で巻いてあげると食べやすい",
+      "svg": "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><rect width='100' height='100' fill='#f7f4ec'/><ellipse cx='50' cy='76' rx='37' ry='12' fill='#b09878'/><ellipse cx='50' cy='72' rx='34' ry='10' fill='#d8caa8'/><rect x='24' y='56' width='52' height='15' rx='3' fill='#ede4cc'/><path d='M24 63 Q50 60 76 63' stroke='#c8b898' stroke-width='1' fill='none'/><ellipse cx='34' cy='50' rx='13' ry='7' fill='#4a7a30'/><ellipse cx='54' cy='49' rx='11' ry='6' fill='#5a8a38'/><ellipse cx='70' cy='51' rx='9' ry='5.5' fill='#4a7a30'/><path d='M34 43 Q34 50 34 57' stroke='#3a6020' stroke-width='2'/><path d='M54 43 Q54 50 54 57' stroke='#3a6020' stroke-width='1.5'/><ellipse cx='48' cy='55' rx='3' ry='1.5' fill='#e8d8a0' opacity='0.8'/></svg>"
+    },
+    {
+      "name": "豚こまとピーマンのオイスター炒め",
+      "tool": "フライパン",
+      "freeze": false,
+      "ingredients": [
+        "豚こま切れ 150g", "ピーマン 4個", "にんじん 1/2本",
+        "オイスターソース 大さじ1.5", "醤油 小さじ1",
+        "酒 大さじ1", "砂糖 小さじ1", "ごま油 小さじ1"
+      ],
+      "steps": [
+        "ピーマンは縦細切り、にんじんはブラウンハンドブレンダー千切りアタッチメントで千切りにする。豚こまは一口大に切る",
+        "オイスターソース・醤油・酒・砂糖を合わせてタレを作る",
+        "フライパンにサラダ油を中火で熱し、豚こまを広げて炒め8割火が通ったら端に寄せる",
+        "にんじん→ピーマンの順に加えて炒め合わせ、タレを回し入れ全体に絡める",
+        "仕上げにごま油をひとかけ。保存容器へ。食べるときはレンチン1〜2分"
+      ],
+      "time_minutes": 20,
+      "storage_note": "冷蔵3日",
+      "kid_note": "辛さなし。子供用は取り分けてからタレを加えるとよりマイルドに",
+      "svg": "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><rect width='100' height='100' fill='#f7f4ec'/><ellipse cx='50' cy='73' rx='40' ry='16' fill='#7a5030'/><ellipse cx='50' cy='67' rx='37' ry='14' fill='#9a6840'/><rect x='18' y='28' width='64' height='7' rx='3.5' fill='#c0623a'/><ellipse cx='50' cy='59' rx='33' ry='11' fill='#3a6828'/><ellipse cx='32' cy='57' rx='9' ry='5' fill='#4a7a30'/><ellipse cx='52' cy='54' rx='11' ry='5' fill='#3a6828'/><ellipse cx='70' cy='58' rx='8' ry='4.5' fill='#4a7830'/><circle cx='38' cy='61' r='4.5' fill='#e08840'/><circle cx='56' cy='62' r='5' fill='#d07030'/><circle cx='46' cy='57' r='3.5' fill='#e09050'/></svg>"
+    },
+    {
+      "name": "豚こまとキャベツの牛乳コンソメ煮",
+      "tool": "フライパン",
+      "freeze": false,
+      "ingredients": [
+        "豚こま切れ 150g", "キャベツ 1/4個", "たまねぎ 1個",
+        "牛乳 200ml", "コンソメ 1個",
+        "片栗粉 大さじ1（水大さじ2で溶く）", "塩・こしょう 適量",
+        "サラダ油 大さじ1"
+      ],
+      "steps": [
+        "キャベツはざく切り（4cm角）、たまねぎは薄切り、豚こまは一口大に切る",
+        "フライパンにサラダ油を中火で熱し、たまねぎをしんなりするまで2〜3分炒める",
+        "豚こまを加えて色が変わるまで炒め、コンソメと牛乳200mlを加えて弱火にする",
+        "キャベツを加えてふたをして5分煮る。塩・こしょうで調え、水溶き片栗粉でとろみをつける",
+        "粗熱を取り保存容器へ。食べるときはレンチン2〜3分"
+      ],
+      "time_minutes": 25,
+      "storage_note": "冷蔵3日",
+      "kid_note": "マイルドでほんのり甘い洋風煮込み。子供に食べやすい味",
+      "svg": "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><rect width='100' height='100' fill='#f7f4ec'/><ellipse cx='50' cy='76' rx='37' ry='13' fill='#c0a870'/><ellipse cx='50' cy='71' rx='34' ry='11' fill='#dcc898'/><ellipse cx='50' cy='67' rx='31' ry='10' fill='#f0e8d4'/><circle cx='35' cy='62' r='7' fill='#ede4cc'/><circle cx='52' cy='60' r='8' fill='#e8dfc8'/><circle cx='66' cy='63' r='6' fill='#ede4cc'/><ellipse cx='40' cy='56' rx='7' ry='3.5' fill='#d4c8a0' opacity='0.8'/><ellipse cx='62' cy='57' rx='6' ry='3' fill='#ccc098' opacity='0.8'/><circle cx='44' cy='65' r='3' fill='#c89870'/><circle cx='59' cy='67' r='3.5' fill='#c08860'/></svg>"
     }
   ],
   "side": [
     {
-      "name": "にんじんラペ",
-      "tool": "ブレンダー",
+      "name": "ブロッコリーとエリンギのごま塩バジル炒め",
+      "tool": "フライパン",
       "freeze": false,
-      "ingredients": ["にんじん 1本", "オリーブオイル 大2", "酢 大1", "はちみつ 大1/2", "塩 小1/2"],
-      "steps": [
-        "にんじんの皮をむき、ブレンダーに千切りアタッチメントをセットして千切りにする。（10秒程度）",
-        "大きめのボウルに移し、塩小1/2を薄くまぶして5分置いた後、水気をかたく絞る。",
-        "オリーブオイル・酢・はちみつ・塩を混ぜたドレッシングで和える。完成。"
+      "ingredients": [
+        "ブロッコリー 1個（小房に分ける）", "エリンギ 100g",
+        "バジル 5〜6枚", "ごま油 大さじ1",
+        "白すりごま 大さじ1", "塩 小さじ1/2", "こしょう 少々"
       ],
-      "time_minutes": 10,
-      "storage_note": "半日置くと味がなじむ。冷蔵4〜5日。",
-      "kid_note": "",
-      "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><ellipse cx=\"50\" cy=\"60\" rx=\"34\" ry=\"24\" fill=\"#fff\" stroke=\"#e6e3da\" stroke-width=\"2\"/><ellipse cx=\"50\" cy=\"58\" rx=\"26\" ry=\"17\" fill=\"#f7f4ec\"/><path d=\"M32 56 q14 -6 36 0\" stroke=\"#e89150\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M30 60 q16 -5 38 1\" stroke=\"#f0a060\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M34 52 q14 -5 32 0\" stroke=\"#e89150\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M33 64 q15 -4 34 1\" stroke=\"#f5ab68\" stroke-width=\"2.5\" fill=\"none\" stroke-linecap=\"round\"/><circle cx=\"44\" cy=\"56\" r=\"1.3\" fill=\"#8a5020\"/><circle cx=\"58\" cy=\"60\" r=\"1.3\" fill=\"#8a5020\"/><circle cx=\"52\" cy=\"53\" r=\"1.3\" fill=\"#8a5020\"/></svg>"
+      "steps": [
+        "ブロッコリーは小房に分け耐熱容器に入れ、水大さじ1をふりラップしてレンジ600W・2分加熱。エリンギは縦に手で割いて斜め切りにする",
+        "フライパンにごま油を中火で熱し、エリンギを2分炒める。焼き色がついたらブロッコリーを加えさらに1〜2分炒める",
+        "塩・こしょうで味を調え、バジルをちぎって加えて混ぜる。仕上げに白すりごまをふる"
+      ],
+      "time_minutes": 12,
+      "storage_note": "冷蔵4日",
+      "kid_note": "ごまの香りが食欲をそそる。バジルは子供の量を調整しても",
+      "svg": "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><rect width='100' height='100' fill='#f7f4ec'/><ellipse cx='50' cy='77' rx='38' ry='12' fill='#8a7050'/><ellipse cx='50' cy='72' rx='35' ry='10' fill='#a88a60'/><circle cx='30' cy='57' r='9' fill='#2e6025'/><circle cx='28' cy='50' r='7' fill='#3a7030'/><circle cx='38' cy='48' r='8' fill='#2e6025'/><circle cx='52' cy='54' r='9' fill='#386828'/><circle cx='62' cy='49' r='8' fill='#2e6025'/><circle cx='71' cy='56' r='7' fill='#3a7030'/><rect x='28' y='58' width='3' height='11' rx='1' fill='#1e4015'/><rect x='50' y='59' width='3' height='11' rx='1' fill='#1e4015'/><rect x='69' y='58' width='3' height='11' rx='1' fill='#1e4015'/><ellipse cx='47' cy='44' rx='6' ry='3' fill='#5a9040' opacity='0.9'/><ellipse cx='60' cy='44' rx='5' ry='2.5' fill='#5a9040' opacity='0.9'/><circle cx='57' cy='65' r='1.5' fill='#e8d890'/><circle cx='43' cy='67' r='1.5' fill='#e8d890'/></svg>"
     },
     {
-      "name": "無限ブロッコリー",
+      "name": "にんじんとブロッコリースプラウトのごま酢和え",
       "tool": "レンジ",
       "freeze": false,
-      "ingredients": ["ブロッコリー 1個", "ツナ缶 1缶", "ごま油 大1", "鶏がらスープの素 小1", "いりごま 大1"],
+      "ingredients": [
+        "にんじん 2本", "ブロッコリースプラウト 1パック",
+        "白すりごま 大さじ2", "酢 大さじ1.5",
+        "醤油 大さじ1", "砂糖 小さじ1", "ごま油 小さじ1"
+      ],
       "steps": [
-        "ブロッコリーを小房に分け、耐熱ボウルに入れて水大さじ1を回しかける。ラップをして600Wで3分加熱する。",
-        "ラップをつけたまま1分蒸らし、キッチンペーパーで水気を拭く。",
-        "汁を切ったツナ・ごま油・鶏がらスープの素・いりごまを加えて和える。"
+        "にんじんはブラウンハンドブレンダー千切りアタッチメントで千切りにし、耐熱容器に入れてレンジ600W・2分加熱。粗熱を取る",
+        "ブロッコリースプラウトは根を切り落として洗う",
+        "白すりごま・酢・醤油・砂糖・ごま油を混ぜてドレッシングを作り、にんじんとスプラウトを和えて完成"
       ],
       "time_minutes": 10,
-      "storage_note": "冷蔵3〜4日。",
-      "kid_note": "辛味なしでそのまま食べられます。",
-      "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><ellipse cx=\"50\" cy=\"62\" rx=\"34\" ry=\"23\" fill=\"#fff\" stroke=\"#e6e3da\" stroke-width=\"2\"/><ellipse cx=\"50\" cy=\"60\" rx=\"26\" ry=\"16\" fill=\"#f7f4ec\"/><circle cx=\"42\" cy=\"54\" r=\"7\" fill=\"#5f9e4a\"/><circle cx=\"52\" cy=\"52\" r=\"6\" fill=\"#6fae54\"/><circle cx=\"58\" cy=\"57\" r=\"6.5\" fill=\"#5f9e4a\"/><circle cx=\"47\" cy=\"59\" r=\"5.5\" fill=\"#6fae54\"/><circle cx=\"40\" cy=\"55\" r=\"1.5\" fill=\"#4a7d38\"/><circle cx=\"53\" cy=\"51\" r=\"1.5\" fill=\"#4a7d38\"/><circle cx=\"59\" cy=\"58\" r=\"1.5\" fill=\"#4a7d38\"/><rect x=\"44\" y=\"62\" width=\"4\" height=\"6\" rx=\"2\" fill=\"#cfe0a0\"/><rect x=\"54\" y=\"62\" width=\"4\" height=\"6\" rx=\"2\" fill=\"#cfe0a0\"/><circle cx=\"64\" cy=\"50\" r=\"1.5\" fill=\"#e8c34a\"/><circle cx=\"36\" cy=\"60\" r=\"1.5\" fill=\"#e8c34a\"/></svg>"
-    },
-    {
-      "name": "ピーマンのおかか和え",
-      "tool": "レンジ",
-      "freeze": false,
-      "ingredients": ["ピーマン 4個", "かつお節 1袋（3g）", "醤油 小2", "みりん 小1", "ごま油 小1"],
-      "steps": [
-        "ピーマンを縦半分に切り、種とヘタを取ってから細切りにする。",
-        "耐熱ボウルに入れてラップをし、600Wで2分加熱する。取り出して水気をキッチンペーパーで軽く拭く。",
-        "醤油・みりん・ごま油を回しかけ、かつお節を加えてよく和える。",
-        "粗熱が取れたら保存容器に移す。"
-      ],
-      "time_minutes": 10,
-      "storage_note": "冷蔵3〜4日。",
-      "kid_note": "ごま油を少なめに。",
-      "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><ellipse cx=\"50\" cy=\"62\" rx=\"34\" ry=\"23\" fill=\"#fff\" stroke=\"#e6e3da\" stroke-width=\"2\"/><ellipse cx=\"50\" cy=\"60\" rx=\"26\" ry=\"16\" fill=\"#f7f4ec\"/><rect x=\"33\" y=\"51\" width=\"10\" height=\"15\" rx=\"4\" fill=\"#4fa82a\" transform=\"rotate(-12 38 58)\"/><rect x=\"45\" y=\"49\" width=\"10\" height=\"15\" rx=\"4\" fill=\"#64be3c\" transform=\"rotate(4 50 56)\"/><rect x=\"57\" y=\"51\" width=\"10\" height=\"15\" rx=\"4\" fill=\"#4fa82a\" transform=\"rotate(16 62 58)\"/><path d=\"M36 60 q5 2 9 -1\" stroke=\"#d4a86a\" stroke-width=\"1.5\" fill=\"none\" stroke-linecap=\"round\" opacity=\"0.9\"/><path d=\"M48 58 q5 1 8 -1\" stroke=\"#c89a55\" stroke-width=\"1.5\" fill=\"none\" stroke-linecap=\"round\" opacity=\"0.9\"/><path d=\"M60 60 q4 1 7 -1\" stroke=\"#d4a86a\" stroke-width=\"1.5\" fill=\"none\" stroke-linecap=\"round\" opacity=\"0.9\"/><circle cx=\"40\" cy=\"54\" r=\"1.5\" fill=\"#90da60\" opacity=\"0.7\"/><circle cx=\"52\" cy=\"52\" r=\"1.5\" fill=\"#90da60\" opacity=\"0.7\"/><circle cx=\"63\" cy=\"55\" r=\"1.5\" fill=\"#90da60\" opacity=\"0.7\"/></svg>"
+      "storage_note": "冷蔵3日",
+      "kid_note": "酸味が苦手な場合は酢を半量にし砂糖を少し増やす",
+      "svg": "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><rect width='100' height='100' fill='#f7f4ec'/><ellipse cx='50' cy='76' rx='35' ry='12' fill='#c0a060'/><ellipse cx='50' cy='71' rx='32' ry='10' fill='#d8b878'/><rect x='24' y='51' width='9' height='20' rx='3' fill='#d4703a' transform='rotate(-18 28 61)'/><rect x='35' y='48' width='9' height='21' rx='3' fill='#e07840' transform='rotate(-6 39 58)'/><rect x='47' y='47' width='9' height='21' rx='3' fill='#d4703a' transform='rotate(5 51 57)'/><rect x='59' y='48' width='9' height='20' rx='3' fill='#e07840' transform='rotate(16 63 58)'/><rect x='68' y='51' width='8' height='18' rx='3' fill='#d4703a' transform='rotate(22 72 60)'/><circle cx='33' cy='44' r='2.5' fill='#5aaa48'/><circle cx='43' cy='41' r='3' fill='#4a9a40'/><circle cx='54' cy='40' r='2.5' fill='#5aaa48'/><circle cx='64' cy='42' r='2' fill='#4a9a40'/><circle cx='72' cy='45' r='2' fill='#5aaa48'/><circle cx='40' cy='65' r='1.5' fill='#e8d880' opacity='0.8'/><circle cx='55' cy='67' r='1.5' fill='#e8d880' opacity='0.8'/></svg>"
     }
   ],
-  "shopping_list": ["ツナ缶", "かつお節", "オリーブオイル（常備がなければ）"],
-  "surplus_note": "トマトジュース残り1本→スープや飲用に。ブロッコリースプラウト→サラダのトッピングに。牛乳→朝食・飲用に。にんじん残り2〜3本→翌週の常備菜や味噌汁に。"
+  "shopping_list": [],
+  "surplus_note": "トマトジュース 1本（900ml）残り：朝食ドリンク・ミネストローネのベースに。牛乳 残り約800ml：朝食・飲み物として。キャベツ 残り3/4個：炒め物・お好み焼き・サラダに。にんじん 残り分：スープ・炒め物に。たまねぎ 残り分：スープ・炒め物・サラダに。"
 }

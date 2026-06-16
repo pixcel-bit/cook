@@ -25,6 +25,83 @@
       "added_at": "2026-06-13",
       "done_count": 0,
       "last_adopted_at": null
+    },
+    {
+      "id": "rc001bistro01",
+      "name": "鶏むね肉のビストロトマト煮（バジル風味）",
+      "priority": false,
+      "good_count": 0,
+      "bad_count": 0,
+      "comments": [],
+      "added_at": "2026-06-16",
+      "done_count": 1,
+      "last_adopted_at": "2026-06-16"
+    },
+    {
+      "id": "rc002helsi02",
+      "name": "ヘルシオ鶏むね照り焼き（えのき添え）",
+      "priority": false,
+      "good_count": 0,
+      "bad_count": 0,
+      "comments": [],
+      "added_at": "2026-06-16",
+      "done_count": 1,
+      "last_adopted_at": "2026-06-16"
+    },
+    {
+      "id": "rc003steam03",
+      "name": "蒸し鶏の大葉ねぎ塩だれ",
+      "priority": false,
+      "good_count": 0,
+      "bad_count": 0,
+      "comments": [],
+      "added_at": "2026-06-16",
+      "done_count": 1,
+      "last_adopted_at": "2026-06-16"
+    },
+    {
+      "id": "rc004oystr04",
+      "name": "豚こまとピーマンのオイスター炒め",
+      "priority": false,
+      "good_count": 0,
+      "bad_count": 0,
+      "comments": [],
+      "added_at": "2026-06-16",
+      "done_count": 1,
+      "last_adopted_at": "2026-06-16"
+    },
+    {
+      "id": "rc005cream05",
+      "name": "豚こまとキャベツの牛乳コンソメ煮",
+      "priority": false,
+      "good_count": 0,
+      "bad_count": 0,
+      "comments": [],
+      "added_at": "2026-06-16",
+      "done_count": 1,
+      "last_adopted_at": "2026-06-16"
+    },
+    {
+      "id": "rc006brcli06",
+      "name": "ブロッコリーとエリンギのごま塩バジル炒め",
+      "priority": false,
+      "good_count": 0,
+      "bad_count": 0,
+      "comments": [],
+      "added_at": "2026-06-16",
+      "done_count": 1,
+      "last_adopted_at": "2026-06-16"
+    },
+    {
+      "id": "rc007gomaz07",
+      "name": "にんじんとブロッコリースプラウトのごま酢和え",
+      "priority": false,
+      "good_count": 0,
+      "bad_count": 0,
+      "comments": [],
+      "added_at": "2026-06-16",
+      "done_count": 1,
+      "last_adopted_at": "2026-06-16"
     }
   ],
   "weekly_request": {
