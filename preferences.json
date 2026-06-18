@@ -105,6 +105,17 @@
       "added_at": "2026-06-16",
       "done_count": 2,
       "last_adopted_at": "2026-06-16"
+    },
+    {
+      "id": "mqizugwmofup",
+      "name": "鶏肉のハンバーグ",
+      "priority": false,
+      "good_count": 0,
+      "bad_count": 0,
+      "comments": [],
+      "added_at": "2026-06-18",
+      "done_count": 0,
+      "last_adopted_at": null
     }
   ],
   "weekly_request": {
