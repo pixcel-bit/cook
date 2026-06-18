@@ -47,8 +47,10 @@
     "updated_at": null
   },
   "leftover_ingredients": {
-    "checked": [],
+    "checked": [
+      "にんじん"
+    ],
     "extra": "",
-    "updated_at": null
+    "updated_at": "2026-06-18"
   }
 }
