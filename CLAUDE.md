@@ -263,12 +263,10 @@ node scripts/update_prefs.js
 ```
 
 このスクリプトが以下を確実に実行する（deterministic logic）：
-- 採用レシピの `priority` を `false` にリセット
-- `done_count` を `+1` インクリメント
-- `last_adopted_at` に実行日をセット
-- 同名レシピがなければ新規追加
 - `weekly_request` を `{ moods: [], note: "", updated_at: null }` にリセット
 - `leftover_ingredients` を `{ checked: [], extra: "", updated_at: null }` にリセット
+
+**注意：`recipes[]` には触れない。** レシピリストはユーザーが👍を押したか手動登録したものだけで構成される。ルーティンが自動追加しない。
 
 ```
 push先: pixcel-bit/cook リポジトリ main ブランチ

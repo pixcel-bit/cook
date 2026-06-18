@@ -662,7 +662,7 @@ function renderRecipeList() {
     el.innerHTML = '<div class="rl-empty">' + (activeFilter==='all' ? 'まだレシピがありません。<br>上の入力欄から追加、または献立ページの👍👎で自動登録できます。' : '該当するレシピがありません。') + '</div>';
     return;
   }
-  const sorted = [...items].sort((a,b) => (b.priority ? 1:0)-(a.priority ? 1:0) || a.name.localeCompare(b.name,'ja'));
+  const sorted = [...items].sort((a,b) => (b.added_at||'').localeCompare(a.added_at||''));
   el.innerHTML = sorted.map(r => {
     const isOpen = expandedIds.has(r.id);
     const badge = r.done_count > 0 ? `<span class="done-badge">採用${r.done_count}回</span>` : '';
