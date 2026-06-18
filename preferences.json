@@ -109,7 +109,7 @@
     {
       "id": "mqizugwmofup",
       "name": "鶏肉のハンバーグ",
-      "priority": false,
+      "priority": true,
       "good_count": 0,
       "bad_count": 0,
       "comments": [],
