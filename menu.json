@@ -1,196 +1,135 @@
 {
-  "delivery_date": "2026-06-11",
-  "delivery_ingredients": [
-    "えのき",
-    "豚こま切れ",
-    "トマトジュース",
-    "たまねぎ",
-    "にんじん",
-    "ピーマン",
-    "ブロッコリースプラウト",
-    "牛乳",
-    "鶏むね肉",
-    "キャベツ",
-    "長ねぎ",
-    "ブロッコリー",
-    "エリンギ"
-  ],
+  "delivery_date": "2026-06-20",
+  "delivery_ingredients": ["ブロッコリー", "えのき", "豚こま切れ", "トマトジュース", "納豆", "焼きおにぎり", "卵", "ライスバーガー", "パン粉", "ピーマン", "牛乳", "鶏むね肉", "鶏手羽もと", "長ねぎ", "エリンギ"],
   "main": [
     {
-      "name": "鶏むね肉のビストロトマト煮（バジル風味）",
-      "tool": "ビストロ",
-      "freeze": false,
-      "ingredients": [
-        "鶏むね肉 400g",
-        "たまねぎ 2個",
-        "にんじん 1本",
-        "トマトジュース 900ml（1本）",
-        "コンソメ 1個",
-        "バジル 5〜6枚",
-        "塩・こしょう 適量"
-      ],
-      "steps": [
-        "鶏むね肉は一口大（約3cm）に切り塩・こしょうをまぶす。たまねぎは1cm幅くし切り、にんじんは乱切りにする",
-        "ビストロ内鍋に鶏肉・たまねぎ・にんじんを入れ、トマトジュース・コンソメを加える",
-        "ビストロにセット。高圧モード・15分で加圧スタート",
-        "加圧終了後ふたを開け、バジルをちぎり入れ塩・こしょうで味を調える",
-        "粗熱を取り保存容器へ。食べるときはレンチン2〜3分"
-      ],
-      "time_minutes": 30,
-      "storage_note": "冷蔵3日",
-      "kid_note": "辛さなし。鶏肉が柔らかく煮えて食べやすい。バジルは取り分け後に入れてもOK",
-      "svg": "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><defs><radialGradient id='plate' cx='38%' cy='32%' r='62%'><stop offset='0%' stop-color='#ffffff'/><stop offset='100%' stop-color='#eeeae0'/></radialGradient><radialGradient id='t1' cx='32%' cy='26%' r='70%'><stop offset='0%' stop-color='#e8643a'/><stop offset='55%' stop-color='#c0392b'/><stop offset='100%' stop-color='#7a1808'/></radialGradient><radialGradient id='t2' cx='34%' cy='28%' r='68%'><stop offset='0%' stop-color='#f0e8d0'/><stop offset='60%' stop-color='#e8d4a8'/><stop offset='100%' stop-color='#b89868'/></radialGradient><radialGradient id='tsauce' cx='40%' cy='40%' r='62%'><stop offset='0%' stop-color='#e67e22' stop-opacity='0.6'/><stop offset='100%' stop-color='#a02808' stop-opacity='0.2'/></radialGradient></defs><rect width='100' height='100' fill='#f7f4ec'/><ellipse cx='51' cy='92' rx='38' ry='6' fill='#b0aca0' opacity='0.32'/><ellipse cx='51' cy='88' rx='37' ry='7.5' fill='#ccc9c0' opacity='0.5'/><ellipse cx='50' cy='87' rx='37' ry='7.5' fill='url(#plate)' stroke='#dedad2' stroke-width='0.8'/><ellipse cx='50' cy='86' rx='30' ry='5.5' fill='#fefefd'/><path d='M17 83 Q33 76 50 77' stroke='#ffffff' stroke-width='2' fill='none' opacity='0.6' stroke-linecap='round'/><ellipse cx='50' cy='80' rx='28' ry='6.5' fill='url(#tsauce)'/><ellipse cx='48' cy='82' rx='24' ry='4.5' fill='#5a1404' opacity='0.2'/><path d='M22 78 Q28 68 42 69 Q56 68 60 78 Q56 83 42 82 Q26 83 22 78Z' fill='#7a1808'/><path d='M23 77 Q29 67 42 68 Q55 67 59 77 Q55 81 42 80 Q27 81 23 77Z' fill='url(#t1)'/><path d='M28 74 Q36 71 45 73' stroke='#5a1404' stroke-width='1.2' fill='none' opacity='0.35'/><path d='M30 71 Q37 69 45 70' stroke='#f08850' stroke-width='2.5' fill='none' opacity='0.3' stroke-linecap='round'/><path d='M52 72 Q60 62 70 63 Q78 64 79 72 Q76 77 68 77 Q58 78 52 72Z' fill='#9a7848'/><path d='M53 71 Q60 61 70 62 Q77 63 78 71 Q75 76 68 76 Q59 77 53 71Z' fill='url(#t2)'/><path d='M58 68 Q65 66 72 68' stroke='#b89058' stroke-width='1' fill='none' opacity='0.4'/><path d='M60 71 Q66 70 73 71' stroke='#fff4d8' stroke-width='2' fill='none' opacity='0.3' stroke-linecap='round'/><ellipse cx='36' cy='77' rx='5' ry='4' fill='#c0392b'/><ellipse cx='34' cy='75' rx='2' ry='1.5' fill='#f08858' opacity='0.5'/><path d='M44 64 Q40 58 44 54 Q49 58 47 64 Q45 66 44 64Z' fill='#3a8020'/><path d='M44 64 Q43 60 44 56' stroke='#2a5814' stroke-width='0.7' fill='none' opacity='0.6'/><path d='M56 62 Q52 56 57 53 Q61 57 59 63 Q57 64 56 62Z' fill='#4e9028'/><path d='M56 62 Q55 58 56 54' stroke='#2a5814' stroke-width='0.7' fill='none' opacity='0.6'/><path d='M48 60 Q45 55 49 52 Q53 55 51 61 Q49 62 48 60Z' fill='#3a7818'/><path d='M30 50 Q27 43 29 36' stroke='#bab6ac' stroke-width='1.8' fill='none' stroke-linecap='round' opacity='0.36'/><path d='M50 48 Q47 41 50 34' stroke='#bab6ac' stroke-width='1.8' fill='none' stroke-linecap='round' opacity='0.36'/><path d='M70 50 Q73 43 71 36' stroke='#bab6ac' stroke-width='1.8' fill='none' stroke-linecap='round' opacity='0.36'/></svg>"
-    },
-    {
-      "name": "ヘルシオ鶏むね照り焼き（えのき添え）",
-      "tool": "ヘルシオ",
-      "freeze": true,
-      "ingredients": [
-        "鶏むね肉 400g",
-        "えのき 150g",
-        "醤油 大さじ2",
-        "みりん 大さじ2",
-        "酒 大さじ1",
-        "はちみつ 小さじ2"
-      ],
-      "steps": [
-        "醤油・みりん・酒・はちみつを混ぜてタレを作る。鶏むね肉は厚みが均等になるよう切り込みを入れ、タレに30分漬ける",
-        "えのきは石突を取りバラしてヘルシオの角皿に敷き詰める",
-        "えのきの上に漬けた鶏むね肉をのせ、残りのタレをかける",
-        "ヘルシオ：250℃・ウォーターオーブン・15分焼く",
-        "食べやすい大きさに切り保存容器へ。食べるときはレンチン1〜2分"
-      ],
-      "time_minutes": 25,
-      "storage_note": "冷蔵4日 ／ タレ漬け状態で冷凍1ヶ月可",
-      "kid_note": "はちみつで甘みがあり子供向け。タレを増やして甘めにしてもOK",
-      "svg": "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><defs><radialGradient id='plate' cx='38%' cy='32%' r='62%'><stop offset='0%' stop-color='#ffffff'/><stop offset='100%' stop-color='#eeeae0'/></radialGradient><radialGradient id='ter1' cx='30%' cy='25%' r='70%'><stop offset='0%' stop-color='#d89030'/><stop offset='55%' stop-color='#c87820'/><stop offset='100%' stop-color='#7a4008'/></radialGradient><radialGradient id='ter2' cx='34%' cy='28%' r='66%'><stop offset='0%' stop-color='#cc8228'/><stop offset='55%' stop-color='#b06818'/><stop offset='100%' stop-color='#6a3606'/></radialGradient><radialGradient id='tglz' cx='40%' cy='40%' r='60%'><stop offset='0%' stop-color='#9a5810' stop-opacity='0.5'/><stop offset='100%' stop-color='#4a2404' stop-opacity='0.15'/></radialGradient></defs><rect width='100' height='100' fill='#f7f4ec'/><ellipse cx='51' cy='92' rx='38' ry='6' fill='#b0aca0' opacity='0.32'/><ellipse cx='51' cy='88' rx='37' ry='7.5' fill='#ccc9c0' opacity='0.5'/><ellipse cx='50' cy='87' rx='37' ry='7.5' fill='url(#plate)' stroke='#dedad2' stroke-width='0.8'/><ellipse cx='50' cy='86' rx='30' ry='5.5' fill='#fefefd'/><path d='M17 83 Q33 76 50 77' stroke='#ffffff' stroke-width='2' fill='none' opacity='0.6' stroke-linecap='round'/><path d='M26 84 Q38 81 50 82 Q62 81 70 84 Q62 87 50 86 Q34 87 26 84Z' fill='url(#tglz)'/><ellipse cx='40' cy='82' rx='20' ry='4' fill='#3a2004' opacity='0.22'/><path d='M20 78 Q26 69 40 70 Q54 69 58 78 Q54 83 40 82 Q24 83 20 78Z' fill='#5a3008'/><path d='M21 77 Q27 68 40 69 Q53 68 57 77 Q53 81 40 80 Q25 81 21 77Z' fill='#8a5410'/><path d='M22 76 Q28 67 40 68 Q52 66 56 76 Q52 80 40 79 Q26 80 22 76Z' fill='url(#ter1)'/><path d='M26 74 Q34 71 44 72 Q50 72 54 74' stroke='#4a2404' stroke-width='1.3' fill='none' opacity='0.35' stroke-linecap='round'/><path d='M27 77 Q36 74 44 75 Q51 75 55 77' stroke='#4a2404' stroke-width='0.9' fill='none' opacity='0.28' stroke-linecap='round'/><path d='M26 72 Q34 70 43 71' stroke='#d89838' stroke-width='0.8' fill='none' opacity='0.42'/><path d='M27 71 Q34 68 42 70' stroke='#f0c878' stroke-width='2.8' fill='none' opacity='0.3' stroke-linecap='round'/><path d='M40 74 Q46 65 58 65 Q68 64 71 73 Q68 78 58 78 Q46 79 40 74Z' fill='#5a3008'/><path d='M41 73 Q46 64 58 64 Q67 63 70 72 Q67 77 58 77 Q47 78 41 73Z' fill='url(#ter2)'/><path d='M45 70 Q52 67 60 68 Q66 68 69 70' stroke='#4a2404' stroke-width='1.3' fill='none' opacity='0.35' stroke-linecap='round'/><path d='M45 73 Q53 71 60 72' stroke='#4a2404' stroke-width='0.9' fill='none' opacity='0.28' stroke-linecap='round'/><path d='M46 69 Q53 67 60 68' stroke='#d89838' stroke-width='0.8' fill='none' opacity='0.4'/><path d='M46 68 Q53 65 61 67' stroke='#f0c878' stroke-width='2.6' fill='none' opacity='0.3' stroke-linecap='round'/><path d='M62 76 Q66 70 70 76' stroke='#e8e0d0' stroke-width='2' fill='none' stroke-linecap='round' opacity='0.9'/><path d='M64 78 Q68 71 72 77' stroke='#f0ebe0' stroke-width='1.6' fill='none' stroke-linecap='round' opacity='0.85'/><path d='M66 79 Q70 72 74 78' stroke='#e0d8c8' stroke-width='1.8' fill='none' stroke-linecap='round' opacity='0.8'/><circle cx='62' cy='70' r='1.4' fill='#f4efe2'/><circle cx='67' cy='70.5' r='1.4' fill='#ece6d8'/><circle cx='72' cy='71' r='1.3' fill='#f4efe2'/><path d='M28 62 Q36 58 46 61' stroke='#3a6c18' stroke-width='2.3' fill='none' stroke-linecap='round'/><path d='M31 59.5 Q40 56 50 59' stroke='#4e8224' stroke-width='1.8' fill='none' stroke-linecap='round'/><ellipse cx='37' cy='73' rx='1.5' ry='1' fill='#e4c870' transform='rotate(-20 37 73)'/><ellipse cx='48' cy='71' rx='1.5' ry='1' fill='#d8bc60' transform='rotate(15 48 71)'/><ellipse cx='54' cy='74' rx='1.3' ry='0.9' fill='#e4c870' transform='rotate(-8 54 74)'/><path d='M30 50 Q27 43 29 36' stroke='#bab6ac' stroke-width='1.8' fill='none' stroke-linecap='round' opacity='0.36'/><path d='M50 48 Q47 41 50 34' stroke='#bab6ac' stroke-width='1.8' fill='none' stroke-linecap='round' opacity='0.36'/><path d='M70 50 Q73 43 71 36' stroke='#bab6ac' stroke-width='1.8' fill='none' stroke-linecap='round' opacity='0.36'/></svg>"
-    },
-    {
-      "name": "蒸し鶏の大葉ねぎ塩だれ",
-      "tool": "蒸し器",
-      "freeze": false,
-      "ingredients": [
-        "鶏むね肉 200g",
-        "長ねぎ（白い部分） 1本分",
-        "大葉 8枚",
-        "酒 大さじ1",
-        "塩 小さじ1/2",
-        "ごま油 大さじ1",
-        "しょうが薄切り 2枚"
-      ],
-      "steps": [
-        "鶏むね肉に酒・塩少々をまぶし、しょうがをのせてラップでしっかり包む",
-        "蒸し器を沸騰させ、鶏肉を中火で20分蒸す（竹串を刺して透明な汁が出ればOK）",
-        "長ねぎをみじん切りにし、塩小さじ1/2・ごま油大さじ1と合わせてねぎ塩だれを作る",
-        "蒸しあがった鶏肉を1cm厚さにスライスし、大葉を敷いた保存容器に並べてだれをかける",
-        "食べるときはレンチン1分。冷製のままでもおいしい"
-      ],
-      "time_minutes": 30,
-      "storage_note": "冷蔵3日",
-      "kid_note": "ねぎ塩だれは辛さなし。子供用は取り分けてから大葉で巻いてあげると食べやすい",
-      "svg": "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><defs><radialGradient id='plate' cx='38%' cy='32%' r='62%'><stop offset='0%' stop-color='#ffffff'/><stop offset='100%' stop-color='#eeeae0'/></radialGradient><radialGradient id='st1' cx='32%' cy='26%' r='70%'><stop offset='0%' stop-color='#fdfaf2'/><stop offset='55%' stop-color='#f0e8d8'/><stop offset='100%' stop-color='#cdbf9c'/></radialGradient><radialGradient id='st2' cx='34%' cy='28%' r='66%'><stop offset='0%' stop-color='#faf6ec'/><stop offset='55%' stop-color='#ebe2cf'/><stop offset='100%' stop-color='#c4b694'/></radialGradient><radialGradient id='gsauce' cx='40%' cy='40%' r='60%'><stop offset='0%' stop-color='#6aa830' stop-opacity='0.7'/><stop offset='100%' stop-color='#2e5e12' stop-opacity='0.3'/></radialGradient></defs><rect width='100' height='100' fill='#f7f4ec'/><ellipse cx='51' cy='92' rx='38' ry='6' fill='#b0aca0' opacity='0.32'/><ellipse cx='51' cy='88' rx='37' ry='7.5' fill='#ccc9c0' opacity='0.5'/><ellipse cx='50' cy='87' rx='37' ry='7.5' fill='url(#plate)' stroke='#dedad2' stroke-width='0.8'/><ellipse cx='50' cy='86' rx='30' ry='5.5' fill='#fefefd'/><path d='M17 83 Q33 76 50 77' stroke='#ffffff' stroke-width='2' fill='none' opacity='0.6' stroke-linecap='round'/><ellipse cx='42' cy='82' rx='22' ry='4' fill='#8a8070' opacity='0.2'/><path d='M20 78 Q26 69 40 70 Q54 69 58 78 Q54 83 40 82 Q24 83 20 78Z' fill='#cdbf9c'/><path d='M21 77 Q27 68 40 69 Q53 68 57 77 Q53 81 40 80 Q25 81 21 77Z' fill='url(#st1)'/><path d='M26 73 Q34 70 44 72' stroke='#c8bc9c' stroke-width='1' fill='none' opacity='0.5'/><path d='M27 70 Q35 68 43 70' stroke='#fffdf6' stroke-width='2.5' fill='none' opacity='0.5' stroke-linecap='round'/><path d='M40 74 Q46 65 58 65 Q68 64 71 73 Q68 78 58 78 Q46 79 40 74Z' fill='#c4b694'/><path d='M41 73 Q46 64 58 64 Q67 63 70 72 Q67 77 58 77 Q47 78 41 73Z' fill='url(#st2)'/><path d='M45 70 Q52 68 62 69' stroke='#bfb18e' stroke-width='1' fill='none' opacity='0.5'/><path d='M46 68 Q53 66 61 68' stroke='#fffdf6' stroke-width='2.3' fill='none' opacity='0.45' stroke-linecap='round'/><path d='M28 80 Q40 77 50 79 Q60 77 68 80 Q58 84 50 83 Q40 84 28 80Z' fill='url(#gsauce)'/><path d='M30 78 Q40 76 50 78' stroke='#4e8c20' stroke-width='1' fill='none' opacity='0.6'/><path d='M48 79 Q58 77 66 79' stroke='#3a7818' stroke-width='0.9' fill='none' opacity='0.55'/><path d='M34 63 Q29 56 33 50 Q39 54 38 62 Q36 65 34 63Z' fill='#3a8020'/><path d='M34 63 Q33 57 34 51' stroke='#2a5814' stroke-width='0.7' fill='none' opacity='0.6'/><path d='M34 63 Q31 58 34 53' stroke='#5aa838' stroke-width='0.5' fill='none' opacity='0.5'/><path d='M50 60 Q46 53 51 48 Q56 53 54 61 Q52 63 50 60Z' fill='#4e9028'/><path d='M50 60 Q49 55 50 50' stroke='#2a5814' stroke-width='0.7' fill='none' opacity='0.6'/><path d='M64 64 Q60 57 65 52 Q70 57 68 64 Q66 66 64 64Z' fill='#3a7818'/><path d='M64 64 Q63 59 64 54' stroke='#2a5814' stroke-width='0.7' fill='none' opacity='0.6'/><ellipse cx='35' cy='77' rx='1.3' ry='0.9' fill='#3a6814' transform='rotate(-15 35 77)'/><ellipse cx='55' cy='75' rx='1.3' ry='0.9' fill='#4a7820' transform='rotate(12 55 75)'/><ellipse cx='46' cy='79' rx='1.2' ry='0.85' fill='#3a6814' transform='rotate(20 46 79)'/><path d='M30 50 Q27 43 29 36' stroke='#bab6ac' stroke-width='1.8' fill='none' stroke-linecap='round' opacity='0.36'/><path d='M50 48 Q47 41 50 34' stroke='#bab6ac' stroke-width='1.8' fill='none' stroke-linecap='round' opacity='0.36'/><path d='M70 50 Q73 43 71 36' stroke='#bab6ac' stroke-width='1.8' fill='none' stroke-linecap='round' opacity='0.36'/></svg>"
-    },
-    {
-      "name": "豚こまとピーマンのオイスター炒め",
+      "name": "鶏むね肉のふわふわハンバーグ",
       "tool": "フライパン",
       "freeze": false,
-      "ingredients": [
-        "豚こま切れ 150g",
-        "ピーマン 4個",
-        "にんじん 1/2本",
-        "オイスターソース 大さじ1.5",
-        "醤油 小さじ1",
-        "酒 大さじ1",
-        "砂糖 小さじ1",
-        "ごま油 小さじ1"
-      ],
+      "ingredients": ["鶏むね肉", "パン粉", "卵", "玉ねぎ", "牛乳", "長ねぎ"],
       "steps": [
-        "ピーマンは縦細切り、にんじんはブラウンハンドブレンダー千切りアタッチメントで千切りにする。豚こまは一口大に切る",
-        "オイスターソース・醤油・酒・砂糖を合わせてタレを作る",
-        "フライパンにサラダ油を中火で熱し、豚こまを広げて炒め8割火が通ったら端に寄せる",
-        "にんじん→ピーマンの順に加えて炒め合わせ、タレを回し入れ全体に絡める",
-        "仕上げにごま油をひとかけ。保存容器へ。食べるときはレンチン1〜2分"
+        "鶏むね肉はブラウンブレンダーでミンチにし、みじん切り玉ねぎ・パン粉・牛乳大さじ2・卵1個・塩こしょうを混ぜる",
+        "小判型に成形し、フライパン中火で両面2分ずつ焼く",
+        "水大さじ3を加え蓋をして弱火で6分蒸し焼きにする",
+        "醤油・みりん・酒・砂糖各大さじ1を煮絡めて照りを出す"
+      ],
+      "time_minutes": 30,
+      "storage_note": "冷蔵3日",
+      "kid_note": "子供分は照り焼きソースを絡める前に取り分け、ケチャップを添える",
+      "svg": "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><defs><radialGradient id='plate' cx='38%' cy='32%' r='62%'><stop offset='0%' stop-color='#ffffff'/><stop offset='100%' stop-color='#eeeae0'/></radialGradient><radialGradient id='h1' cx='32%' cy='26%' r='70%'><stop offset='0%' stop-color='#d99a5e'/><stop offset='55%' stop-color='#a8602e'/><stop offset='100%' stop-color='#6e3410'/></radialGradient><radialGradient id='sauce' cx='40%' cy='40%' r='60%'><stop offset='0%' stop-color='#8a4018' stop-opacity='0.55'/><stop offset='100%' stop-color='#3a1404' stop-opacity='0.15'/></radialGradient></defs><rect width='100' height='100' fill='#f7f4ec'/><ellipse cx='51' cy='92' rx='38' ry='6' fill='#b0aca0' opacity='0.32'/><ellipse cx='51' cy='88' rx='37' ry='7.5' fill='#ccc9c0' opacity='0.5'/><ellipse cx='50' cy='87' rx='37' ry='7.5' fill='url(#plate)' stroke='#dedad2' stroke-width='0.8'/><ellipse cx='50' cy='86' rx='30' ry='5.5' fill='#fefefd'/><path d='M30 84 Q40 81 50 82 Q62 81 70 84 Q63 87 50 86 Q37 87 30 84Z' fill='url(#sauce)'/><ellipse cx='49' cy='80' rx='26' ry='6' fill='#3a1404' opacity='0.2'/><path d='M24 76 Q30 62 50 62 Q70 62 76 76 Q70 83 50 83 Q30 83 24 76Z' fill='#6e3410'/><path d='M25 75 Q31 61 50 61 Q69 61 75 75 Q69 81 50 81 Q31 81 25 75Z' fill='#a8602e'/><path d='M27 73 Q33 60 50 60 Q67 60 73 73 Q67 79 50 79 Q33 79 27 73Z' fill='url(#h1)'/><path d='M32 70 Q42 66 52 67 Q62 66 68 70' stroke='#5a2c0c' stroke-width='1.2' fill='none' opacity='0.35' stroke-linecap='round'/><path d='M31 74 Q42 71 52 72 Q62 71 69 74' stroke='#5a2c0c' stroke-width='0.9' fill='none' opacity='0.3' stroke-linecap='round'/><path d='M33 68 Q43 65 53 66' stroke='#e0a868' stroke-width='0.8' fill='none' opacity='0.5'/><ellipse cx='40' cy='68' rx='6' ry='2.2' fill='#f0c890' opacity='0.3'/><path d='M27 62 Q36 58 47 61' stroke='#3a6c18' stroke-width='2.4' fill='none' stroke-linecap='round'/><path d='M30 59.5 Q40 55 50 58' stroke='#4e8224' stroke-width='1.8' fill='none' stroke-linecap='round'/><ellipse cx='62' cy='75' rx='4' ry='2.6' fill='#d83838' opacity='0.85'/><path d='M40 53 Q37 46 39 39 Q41 33 39 27' stroke='#bab6ac' stroke-width='1.8' fill='none' stroke-linecap='round' opacity='0.38'/><path d='M52 51 Q49 44 52 37 Q55 30 52 24' stroke='#bab6ac' stroke-width='1.8' fill='none' stroke-linecap='round' opacity='0.38'/><path d='M63 53 Q66 46 64 39 Q62 32 64 26' stroke='#bab6ac' stroke-width='1.8' fill='none' stroke-linecap='round' opacity='0.38'/></svg>"
+    },
+    {
+      "name": "鶏むねとブロッコリーのうま塩炒め",
+      "tool": "フライパン",
+      "freeze": false,
+      "ingredients": ["鶏むね肉", "ブロッコリー", "エリンギ", "卵"],
+      "steps": [
+        "鶏むね肉はそぎ切りにし、酒・塩・片栗粉をもみ込む",
+        "ブロッコリーは小房に、エリンギは食べやすく裂く",
+        "フライパンに油を熱し鶏肉を中火で焼き、エリンギ・ブロッコリーを加え炒める",
+        "鶏がらスープの素・塩・こしょう・ごま油で味を調え、溶き卵を回し入れて軽く炒める"
       ],
       "time_minutes": 20,
       "storage_note": "冷蔵3日",
-      "kid_note": "辛さなし。子供用は取り分けてからタレを加えるとよりマイルドに",
-      "svg": "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><defs><radialGradient id='plate' cx='38%' cy='32%' r='62%'><stop offset='0%' stop-color='#ffffff'/><stop offset='100%' stop-color='#eeeae0'/></radialGradient><radialGradient id='op1' cx='30%' cy='25%' r='70%'><stop offset='0%' stop-color='#8a5e2a'/><stop offset='55%' stop-color='#5a3a12'/><stop offset='100%' stop-color='#2a1604'/></radialGradient><radialGradient id='pep1' cx='32%' cy='28%' r='68%'><stop offset='0%' stop-color='#5aa838'/><stop offset='55%' stop-color='#3a7020'/><stop offset='100%' stop-color='#1e4810'/></radialGradient><radialGradient id='oglz' cx='40%' cy='40%' r='60%'><stop offset='0%' stop-color='#6a4818' stop-opacity='0.6'/><stop offset='100%' stop-color='#1a0e02' stop-opacity='0.25'/></radialGradient></defs><rect width='100' height='100' fill='#f7f4ec'/><ellipse cx='51' cy='92' rx='38' ry='6' fill='#b0aca0' opacity='0.32'/><ellipse cx='51' cy='88' rx='37' ry='7.5' fill='#ccc9c0' opacity='0.5'/><ellipse cx='50' cy='87' rx='37' ry='7.5' fill='url(#plate)' stroke='#dedad2' stroke-width='0.8'/><ellipse cx='50' cy='86' rx='30' ry='5.5' fill='#fefefd'/><path d='M17 83 Q33 76 50 77' stroke='#ffffff' stroke-width='2' fill='none' opacity='0.6' stroke-linecap='round'/><ellipse cx='50' cy='81' rx='28' ry='6' fill='url(#oglz)'/><path d='M24 78 Q30 70 40 71 Q48 70 50 77 Q46 81 38 81 Q28 82 24 78Z' fill='#2a1604'/><path d='M25 77 Q31 69 40 70 Q47 69 49 76 Q45 80 38 80 Q29 81 25 77Z' fill='url(#op1)'/><path d='M29 74 Q36 72 44 73' stroke='#1a0e02' stroke-width='1' fill='none' opacity='0.4'/><path d='M30 72 Q36 70 43 71' stroke='#aa7838' stroke-width='1.8' fill='none' opacity='0.4' stroke-linecap='round'/><path d='M50 79 Q56 72 64 73 Q70 72 71 78 Q67 82 60 82 Q52 82 50 79Z' fill='#2a1604'/><path d='M51 78 Q56 71 64 72 Q69 71 70 77 Q66 81 60 81 Q53 81 51 78Z' fill='url(#op1)'/><path d='M55 75 Q61 73 68 74' stroke='#aa7838' stroke-width='1.5' fill='none' opacity='0.4' stroke-linecap='round'/><path d='M34 71 Q30 65 35 61 Q41 64 40 71 Q38 73 34 71Z' fill='#1e4810'/><path d='M35 70 Q31 65 35 62 Q40 64 39 70 Q37 72 35 70Z' fill='url(#pep1)'/><path d='M36 67 Q38 64 40 67' stroke='#7ac850' stroke-width='1.4' fill='none' opacity='0.5' stroke-linecap='round'/><path d='M58 68 Q54 62 60 58 Q66 62 64 69 Q62 71 58 68Z' fill='#1e4810'/><path d='M59 67 Q55 62 60 59 Q65 62 63 68 Q61 70 59 67Z' fill='url(#pep1)'/><path d='M60 64 Q62 61 64 64' stroke='#7ac850' stroke-width='1.4' fill='none' opacity='0.5' stroke-linecap='round'/><path d='M44 75 Q40 69 46 65 Q52 69 50 76 Q48 78 44 75Z' fill='#2a5e16'/><path d='M45 74 Q42 70 46 67 Q50 69 49 75 Q47 77 45 74Z' fill='#3a7822'/><path d='M46 71 Q48 68 50 71' stroke='#6ab848' stroke-width='1.2' fill='none' opacity='0.5' stroke-linecap='round'/><ellipse cx='38' cy='78' rx='1.3' ry='0.9' fill='#e4c870' transform='rotate(-15 38 78)'/><ellipse cx='54' cy='80' rx='1.2' ry='0.85' fill='#d8bc60' transform='rotate(18 54 80)'/><ellipse cx='62' cy='78' rx='1.2' ry='0.85' fill='#e4c870' transform='rotate(-8 62 78)'/><path d='M30 50 Q27 43 29 36' stroke='#bab6ac' stroke-width='1.8' fill='none' stroke-linecap='round' opacity='0.36'/><path d='M50 48 Q47 41 50 34' stroke='#bab6ac' stroke-width='1.8' fill='none' stroke-linecap='round' opacity='0.36'/><path d='M70 50 Q73 43 71 36' stroke='#bab6ac' stroke-width='1.8' fill='none' stroke-linecap='round' opacity='0.36'/></svg>"
+      "kid_note": "薄味なので子供もそのまま食べられる。ブロッコリーは柔らかめに加熱",
+      "svg": "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><defs><radialGradient id='plate2' cx='38%' cy='32%' r='62%'><stop offset='0%' stop-color='#ffffff'/><stop offset='100%' stop-color='#eeeae0'/></radialGradient><radialGradient id='br1' cx='32%' cy='26%' r='70%'><stop offset='0%' stop-color='#5a9a30'/><stop offset='55%' stop-color='#3a7020'/><stop offset='100%' stop-color='#244a12'/></radialGradient><radialGradient id='ck1' cx='34%' cy='28%' r='66%'><stop offset='0%' stop-color='#f0e0c0'/><stop offset='100%' stop-color='#caa878'/></radialGradient></defs><rect width='100' height='100' fill='#f7f4ec'/><ellipse cx='51' cy='92' rx='38' ry='6' fill='#b0aca0' opacity='0.32'/><ellipse cx='51' cy='88' rx='37' ry='7.5' fill='#ccc9c0' opacity='0.5'/><ellipse cx='50' cy='87' rx='37' ry='7.5' fill='url(#plate2)' stroke='#dedad2' stroke-width='0.8'/><ellipse cx='50' cy='86' rx='30' ry='5.5' fill='#fefefd'/><ellipse cx='49' cy='81' rx='25' ry='5' fill='#2a3010' opacity='0.18'/><path d='M30 78 Q34 68 44 70 Q50 64 58 70 Q68 68 70 78 Q60 82 50 81 Q38 82 30 78Z' fill='#244a12'/><path d='M32 76 Q36 66 45 68 Q51 62 58 68 Q66 67 68 76 Q58 80 49 79 Q39 80 32 76Z' fill='url(#br1)'/><circle cx='40' cy='70' r='2.4' fill='#4e8a28'/><circle cx='47' cy='67' r='2.2' fill='#5a9a30'/><circle cx='55' cy='70' r='2.4' fill='#4e8a28'/><circle cx='44' cy='73' r='2' fill='#6aa838'/><path d='M34 74 Q44 70 56 72 Q64 73 67 76' stroke='#1a3a0c' stroke-width='0.8' fill='none' opacity='0.4'/><path d='M58 78 Q64 73 72 76 Q74 79 68 80 Q62 81 58 78Z' fill='url(#ck1)'/><path d='M28 79 Q34 75 41 78 Q43 81 37 82 Q30 82 28 79Z' fill='url(#ck1)'/><ellipse cx='52' cy='76' rx='3' ry='2' fill='#f2d870' opacity='0.7'/><path d='M40 56 Q37 49 39 42 Q41 36 39 30' stroke='#bab6ac' stroke-width='1.7' fill='none' stroke-linecap='round' opacity='0.36'/><path d='M52 54 Q49 47 52 40 Q55 34 52 28' stroke='#bab6ac' stroke-width='1.7' fill='none' stroke-linecap='round' opacity='0.36'/><path d='M62 56 Q65 49 63 42' stroke='#bab6ac' stroke-width='1.5' fill='none' stroke-linecap='round' opacity='0.3'/></svg>"
     },
     {
-      "name": "豚こまとキャベツの牛乳コンソメ煮",
+      "name": "手羽元と卵のさっぱり煮",
+      "tool": "ビストロ",
+      "freeze": false,
+      "ingredients": ["鶏手羽もと", "卵", "長ねぎ"],
+      "steps": [
+        "ゆで卵を作っておく。手羽元は表面を軽く焼く",
+        "ビストロに手羽元・長ねぎ・醤油大さじ3・酢大さじ3・みりん大さじ2・砂糖大さじ1・水150mlを入れる",
+        "ビストロ煮込みモード・圧力調理20分で加熱する",
+        "仕上げにゆで卵を加えて10分ほど煮汁に浸す"
+      ],
+      "time_minutes": 35,
+      "storage_note": "冷蔵4日",
+      "kid_note": "酢はまろやかになるので子供もOK。手羽元は身をほぐして取り分ける",
+      "svg": "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><defs><radialGradient id='plate3' cx='38%' cy='32%' r='62%'><stop offset='0%' stop-color='#ffffff'/><stop offset='100%' stop-color='#eeeae0'/></radialGradient><radialGradient id='tb1' cx='32%' cy='26%' r='70%'><stop offset='0%' stop-color='#c87838'/><stop offset='55%' stop-color='#9a5020'/><stop offset='100%' stop-color='#5e2c0c'/></radialGradient><radialGradient id='eg1' cx='34%' cy='28%' r='66%'><stop offset='0%' stop-color='#ffffff'/><stop offset='60%' stop-color='#f4ecdc'/><stop offset='100%' stop-color='#d8c8a8'/></radialGradient><radialGradient id='sauce3' cx='40%' cy='40%' r='60%'><stop offset='0%' stop-color='#7a3814' stop-opacity='0.5'/><stop offset='100%' stop-color='#3a1404' stop-opacity='0.15'/></radialGradient></defs><rect width='100' height='100' fill='#f7f4ec'/><ellipse cx='51' cy='92' rx='38' ry='6' fill='#b0aca0' opacity='0.32'/><ellipse cx='51' cy='88' rx='37' ry='7.5' fill='#ccc9c0' opacity='0.5'/><ellipse cx='50' cy='87' rx='37' ry='7.5' fill='url(#plate3)' stroke='#dedad2' stroke-width='0.8'/><ellipse cx='50' cy='86' rx='30' ry='5.5' fill='#fefefd'/><path d='M28 84 Q40 81 50 82 Q62 81 72 84 Q64 87 50 86 Q36 87 28 84Z' fill='url(#sauce3)'/><ellipse cx='44' cy='80' rx='20' ry='5' fill='#3a1404' opacity='0.2'/><path d='M28 76 Q32 64 44 65 Q54 64 58 74 Q56 80 44 80 Q30 80 28 76Z' fill='#5e2c0c'/><path d='M30 74 Q34 63 44 64 Q53 63 57 73 Q55 78 44 78 Q32 78 30 74Z' fill='url(#tb1)'/><ellipse cx='58' cy='66' rx='3' ry='4' fill='#f0ead8'/><path d='M34 70 Q42 66 50 68' stroke='#4a2008' stroke-width='1' fill='none' opacity='0.4'/><ellipse cx='38' cy='69' rx='5' ry='2' fill='#e0a868' opacity='0.35'/><ellipse cx='64' cy='76' rx='8' ry='7.5' fill='#c8a868' opacity='0.3'/><ellipse cx='64' cy='75' rx='7.5' ry='7' fill='url(#eg1)'/><circle cx='64' cy='75' r='3' fill='#e8b840'/><path d='M30 60 Q38 56 48 59' stroke='#3a6c18' stroke-width='2.2' fill='none' stroke-linecap='round'/><path d='M55 61 Q62 57 70 60' stroke='#4e8224' stroke-width='2' fill='none' stroke-linecap='round'/><path d='M40 54 Q37 47 39 40 Q41 34 39 28' stroke='#bab6ac' stroke-width='1.7' fill='none' stroke-linecap='round' opacity='0.36'/><path d='M52 52 Q49 45 52 38 Q55 32 52 26' stroke='#bab6ac' stroke-width='1.7' fill='none' stroke-linecap='round' opacity='0.36'/><path d='M62 54 Q65 47 63 40' stroke='#bab6ac' stroke-width='1.5' fill='none' stroke-linecap='round' opacity='0.3'/></svg>"
+    },
+    {
+      "name": "豚こまと長ねぎの甘辛炒め",
       "tool": "フライパン",
       "freeze": false,
-      "ingredients": [
-        "豚こま切れ 150g",
-        "キャベツ 1/4個",
-        "たまねぎ 1個",
-        "牛乳 200ml",
-        "コンソメ 1個",
-        "片栗粉 大さじ1（水大さじ2で溶く）",
-        "塩・こしょう 適量",
-        "サラダ油 大さじ1"
-      ],
+      "ingredients": ["豚こま切れ", "長ねぎ", "ピーマン"],
       "steps": [
-        "キャベツはざく切り（4cm角）、たまねぎは薄切り、豚こまは一口大に切る",
-        "フライパンにサラダ油を中火で熱し、たまねぎをしんなりするまで2〜3分炒める",
-        "豚こまを加えて色が変わるまで炒め、コンソメと牛乳200mlを加えて弱火にする",
-        "キャベツを加えてふたをして5分煮る。塩・こしょうで調え、水溶き片栗粉でとろみをつける",
-        "粗熱を取り保存容器へ。食べるときはレンチン2〜3分"
+        "豚こま切れに酒・片栗粉をもみ込む。長ねぎは斜め切り、ピーマンは細切り",
+        "フライパンに油を熱し豚肉を中火で炒める",
+        "長ねぎ・ピーマンを加えて炒め合わせる",
+        "醤油・みりん・酒・砂糖各大さじ1・オイスターソース小さじ1を絡める"
+      ],
+      "time_minutes": 18,
+      "storage_note": "冷蔵3日",
+      "kid_note": "甘めの味付けで子供向き。ピーマンは小さめに切ると食べやすい",
+      "svg": "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><defs><radialGradient id='plate4' cx='38%' cy='32%' r='62%'><stop offset='0%' stop-color='#ffffff'/><stop offset='100%' stop-color='#eeeae0'/></radialGradient><radialGradient id='pk1' cx='32%' cy='26%' r='70%'><stop offset='0%' stop-color='#c87044'/><stop offset='55%' stop-color='#964224'/><stop offset='100%' stop-color='#5e240c'/></radialGradient><radialGradient id='sauce4' cx='40%' cy='40%' r='60%'><stop offset='0%' stop-color='#7a3814' stop-opacity='0.5'/><stop offset='100%' stop-color='#3a1404' stop-opacity='0.15'/></radialGradient></defs><rect width='100' height='100' fill='#f7f4ec'/><ellipse cx='51' cy='92' rx='38' ry='6' fill='#b0aca0' opacity='0.32'/><ellipse cx='51' cy='88' rx='37' ry='7.5' fill='#ccc9c0' opacity='0.5'/><ellipse cx='50' cy='87' rx='37' ry='7.5' fill='url(#plate4)' stroke='#dedad2' stroke-width='0.8'/><ellipse cx='50' cy='86' rx='30' ry='5.5' fill='#fefefd'/><path d='M30 84 Q40 81 50 82 Q62 81 70 84 Q62 87 50 86 Q38 87 30 84Z' fill='url(#sauce4)'/><ellipse cx='49' cy='80' rx='24' ry='5' fill='#3a1404' opacity='0.18'/><path d='M28 76 Q34 66 44 70 Q52 64 60 70 Q70 67 72 76 Q60 81 49 80 Q36 81 28 76Z' fill='#5e240c'/><path d='M30 74 Q36 65 45 69 Q52 63 60 69 Q68 66 70 74 Q60 79 49 78 Q38 79 30 74Z' fill='url(#pk1)'/><path d='M34 71 Q44 67 54 69 Q62 70 66 73' stroke='#4a1c08' stroke-width='1' fill='none' opacity='0.4'/><ellipse cx='40' cy='70' rx='5' ry='2' fill='#e0a070' opacity='0.4'/><path d='M44 72 Q52 69 60 71' stroke='#3a8020' stroke-width='2.6' fill='none' stroke-linecap='round'/><path d='M32 73 Q38 71 44 73' stroke='#4e9028' stroke-width='2.2' fill='none' stroke-linecap='round'/><ellipse cx='56' cy='75' rx='3.5' ry='2.4' fill='#3a7a1e'/><path d='M30 61 Q38 57 48 60' stroke='#e8e4d0' stroke-width='2.4' fill='none' stroke-linecap='round' opacity='0.9'/><path d='M52 62 Q60 58 68 61' stroke='#f0ecd8' stroke-width='2' fill='none' stroke-linecap='round' opacity='0.85'/><path d='M40 54 Q37 47 39 40 Q41 34 39 28' stroke='#bab6ac' stroke-width='1.7' fill='none' stroke-linecap='round' opacity='0.36'/><path d='M52 52 Q49 45 52 38 Q55 32 52 26' stroke='#bab6ac' stroke-width='1.7' fill='none' stroke-linecap='round' opacity='0.36'/><path d='M62 54 Q65 47 63 40' stroke='#bab6ac' stroke-width='1.5' fill='none' stroke-linecap='round' opacity='0.3'/></svg>"
+    },
+    {
+      "name": "鶏むねとえのきのトマト煮込み",
+      "tool": "ビストロ",
+      "freeze": false,
+      "ingredients": ["鶏むね肉", "えのき", "トマトジュース", "玉ねぎ", "バジル"],
+      "steps": [
+        "鶏むね肉は一口大に切り塩こしょうをふる。えのきはほぐし、玉ねぎは薄切り",
+        "ビストロに鶏肉・玉ねぎ・えのき・トマトジュース200ml・コンソメ1個・砂糖小さじ1を入れる",
+        "ビストロ煮込みモード・圧力調理15分で加熱する",
+        "仕上げに塩で味を調え、ちぎったバジルを散らす"
       ],
       "time_minutes": 25,
-      "storage_note": "冷蔵3日",
-      "kid_note": "マイルドでほんのり甘い洋風煮込み。子供に食べやすい味",
-      "svg": "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><defs><radialGradient id='plate' cx='38%' cy='32%' r='62%'><stop offset='0%' stop-color='#ffffff'/><stop offset='100%' stop-color='#eeeae0'/></radialGradient><radialGradient id='milk' cx='38%' cy='30%' r='65%'><stop offset='0%' stop-color='#fdfcf6'/><stop offset='60%' stop-color='#f0ede0'/><stop offset='100%' stop-color='#d8d2bc'/></radialGradient><radialGradient id='cab' cx='32%' cy='28%' r='68%'><stop offset='0%' stop-color='#dfe8c4'/><stop offset='55%' stop-color='#bcd092'/><stop offset='100%' stop-color='#8aa858'/></radialGradient><radialGradient id='prk' cx='32%' cy='28%' r='68%'><stop offset='0%' stop-color='#e6c0a0'/><stop offset='55%' stop-color='#d4a888'/><stop offset='100%' stop-color='#a06e4e'/></radialGradient></defs><rect width='100' height='100' fill='#f7f4ec'/><ellipse cx='51' cy='92' rx='38' ry='6' fill='#b0aca0' opacity='0.32'/><ellipse cx='51' cy='88' rx='37' ry='7.5' fill='#ccc9c0' opacity='0.5'/><ellipse cx='50' cy='87' rx='37' ry='7.5' fill='url(#plate)' stroke='#dedad2' stroke-width='0.8'/><ellipse cx='50' cy='86' rx='30' ry='5.5' fill='#fefefd'/><path d='M17 83 Q33 76 50 77' stroke='#ffffff' stroke-width='2' fill='none' opacity='0.6' stroke-linecap='round'/><path d='M22 79 Q24 70 35 68 Q50 65 65 68 Q76 70 78 79 Q70 84 50 84 Q30 84 22 79Z' fill='#d8d2bc'/><path d='M23 78 Q25 70 35 68 Q50 65.5 65 68 Q75 70 77 78 Q69 83 50 83 Q31 83 23 78Z' fill='url(#milk)'/><ellipse cx='42' cy='74' rx='12' ry='5' fill='#fffefa' opacity='0.5'/><path d='M30 72 Q26 66 31 61 Q38 64 37 72 Q35 75 30 72Z' fill='#8aa858'/><path d='M31 71 Q28 66 32 62 Q37 64 36 71 Q34 74 31 71Z' fill='url(#cab)'/><path d='M32 68 Q34 65 36 68' stroke='#dde8c0' stroke-width='1.4' fill='none' opacity='0.6' stroke-linecap='round'/><path d='M30 70 Q33 67 36 69' stroke='#9ab868' stroke-width='0.8' fill='none' opacity='0.5'/><path d='M60 73 Q56 67 62 62 Q69 66 67 74 Q64 77 60 73Z' fill='#8aa858'/><path d='M61 72 Q58 67 62 63 Q67 66 66 73 Q63 76 61 72Z' fill='url(#cab)'/><path d='M62 69 Q64 66 66 69' stroke='#dde8c0' stroke-width='1.4' fill='none' opacity='0.6' stroke-linecap='round'/><path d='M44 76 Q40 71 46 67 Q52 71 50 77 Q48 79 44 76Z' fill='#a06e4e'/><path d='M45 75 Q42 71 46 68 Q50 71 49 76 Q47 78 45 75Z' fill='url(#prk)'/><path d='M46 72 Q48 70 50 72' stroke='#f0d0b0' stroke-width='1.2' fill='none' opacity='0.5' stroke-linecap='round'/><path d='M52 79 Q49 74 54 71 Q59 74 57 80 Q55 81 52 79Z' fill='#a06e4e'/><path d='M53 78 Q50 74 54 72 Q58 74 56 79 Q54 80 53 78Z' fill='url(#prk)'/><ellipse cx='38' cy='77' rx='5' ry='2.5' fill='#fffefa' opacity='0.4'/><path d='M40 64 Q37 60 41 57 Q44 60 43 64 Q42 65 40 64Z' fill='#3a7820' opacity='0.85'/><path d='M40 64 Q39 61 40 58' stroke='#2a5814' stroke-width='0.6' fill='none' opacity='0.6'/><path d='M30 52 Q27 45 30 38' stroke='#cac4ba' stroke-width='1.7' fill='none' stroke-linecap='round' opacity='0.4'/><path d='M50 50 Q47 43 50 36' stroke='#cac4ba' stroke-width='1.7' fill='none' stroke-linecap='round' opacity='0.4'/><path d='M70 52 Q73 45 70 38' stroke='#cac4ba' stroke-width='1.7' fill='none' stroke-linecap='round' opacity='0.4'/></svg>"
+      "storage_note": "冷蔵4日",
+      "kid_note": "酸味が苦手な場合は子供分に牛乳を少量加えてまろやかに",
+      "svg": "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><defs><radialGradient id='plate5' cx='38%' cy='32%' r='62%'><stop offset='0%' stop-color='#ffffff'/><stop offset='100%' stop-color='#eeeae0'/></radialGradient><radialGradient id='tm1' cx='34%' cy='28%' r='68%'><stop offset='0%' stop-color='#e06038'/><stop offset='55%' stop-color='#b83c1c'/><stop offset='100%' stop-color='#7a2208'/></radialGradient></defs><rect width='100' height='100' fill='#f7f4ec'/><ellipse cx='51' cy='92' rx='38' ry='6' fill='#b0aca0' opacity='0.32'/><ellipse cx='51' cy='88' rx='37' ry='7.5' fill='#ccc9c0' opacity='0.5'/><ellipse cx='50' cy='87' rx='37' ry='7.5' fill='url(#plate5)' stroke='#dedad2' stroke-width='0.8'/><ellipse cx='50' cy='86' rx='30' ry='5.5' fill='#fefefd'/><path d='M26 78 Q30 68 50 67 Q70 68 74 78 Q68 83 50 83 Q32 83 26 78Z' fill='#7a2208'/><path d='M28 77 Q32 67 50 66 Q68 67 72 77 Q66 81 50 81 Q34 81 28 77Z' fill='url(#tm1)'/><path d='M40 72 Q48 68 56 70 Q62 71 66 74' stroke='#5a1804' stroke-width='1' fill='none' opacity='0.35'/><path d='M44 74 Q50 71 58 73' fill='none' stroke='#e88858' stroke-width='0.8' opacity='0.5'/><path d='M36 76 Q42 73 49 75' fill='none' stroke='#3a7a1e' stroke-width='2' stroke-linecap='round' opacity='0.9'/><ellipse cx='42' cy='71' rx='4' ry='2.6' fill='#e8d8b0' opacity='0.85'/><ellipse cx='56' cy='73' rx='3.5' ry='2.4' fill='#e8d8b0' opacity='0.8'/><path d='M48 74 Q50 70 53 74' stroke='#f0ecd8' stroke-width='1.2' fill='none' opacity='0.7'/><ellipse cx='40' cy='75' rx='6' ry='2' fill='#f08858' opacity='0.3'/><ellipse cx='54' cy='71' rx='2.4' ry='1.6' fill='#3a8020'/><path d='M40 54 Q37 47 39 40 Q41 34 39 28' stroke='#bab6ac' stroke-width='1.7' fill='none' stroke-linecap='round' opacity='0.38'/><path d='M52 52 Q49 45 52 38 Q55 32 52 26' stroke='#bab6ac' stroke-width='1.7' fill='none' stroke-linecap='round' opacity='0.38'/><path d='M62 54 Q65 47 63 40 Q61 34 63 28' stroke='#bab6ac' stroke-width='1.6' fill='none' stroke-linecap='round' opacity='0.34'/></svg>"
     }
   ],
   "side": [
     {
-      "name": "ブロッコリーとエリンギのごま塩バジル炒め",
-      "tool": "フライパン",
+      "name": "ブロッコリーとエリンギのおかか和え",
+      "tool": "蒸し器",
       "freeze": false,
-      "ingredients": [
-        "ブロッコリー 1個（小房に分ける）",
-        "エリンギ 100g",
-        "バジル 5〜6枚",
-        "ごま油 大さじ1",
-        "白すりごま 大さじ1",
-        "塩 小さじ1/2",
-        "こしょう 少々"
-      ],
+      "ingredients": ["ブロッコリー", "エリンギ"],
       "steps": [
-        "ブロッコリーは小房に分け耐熱容器に入れ、水大さじ1をふりラップしてレンジ600W・2分加熱。エリンギは縦に手で割いて斜め切りにする",
-        "フライパンにごま油を中火で熱し、エリンギを2分炒める。焼き色がついたらブロッコリーを加えさらに1〜2分炒める",
-        "塩・こしょうで味を調え、バジルをちぎって加えて混ぜる。仕上げに白すりごまをふる"
+        "ブロッコリーは小房に、エリンギは食べやすく裂く",
+        "蒸し器で5〜6分蒸す",
+        "醤油小さじ2・ごま油小さじ1・かつおぶしで和える"
       ],
       "time_minutes": 12,
-      "storage_note": "冷蔵4日",
-      "kid_note": "ごまの香りが食欲をそそる。バジルは子供の量を調整しても",
-      "svg": "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><defs><radialGradient id='plate' cx='38%' cy='32%' r='62%'><stop offset='0%' stop-color='#ffffff'/><stop offset='100%' stop-color='#eeeae0'/></radialGradient><radialGradient id='br1' cx='32%' cy='26%' r='70%'><stop offset='0%' stop-color='#4ea828'/><stop offset='55%' stop-color='#2e7a18'/><stop offset='100%' stop-color='#164808'/></radialGradient><radialGradient id='br2' cx='34%' cy='28%' r='68%'><stop offset='0%' stop-color='#3a9020'/><stop offset='55%' stop-color='#246410'/><stop offset='100%' stop-color='#103806'/></radialGradient><radialGradient id='eri' cx='32%' cy='28%' r='68%'><stop offset='0%' stop-color='#f0ebe0'/><stop offset='55%' stop-color='#d8d0c0'/><stop offset='100%' stop-color='#a89e88'/></radialGradient></defs><rect width='100' height='100' fill='#f7f4ec'/><ellipse cx='51' cy='92' rx='38' ry='6' fill='#b0aca0' opacity='0.32'/><ellipse cx='51' cy='88' rx='37' ry='7.5' fill='#ccc9c0' opacity='0.5'/><ellipse cx='50' cy='87' rx='37' ry='7.5' fill='url(#plate)' stroke='#dedad2' stroke-width='0.8'/><ellipse cx='50' cy='86' rx='30' ry='5.5' fill='#fefefd'/><path d='M17 83 Q33 76 50 77' stroke='#ffffff' stroke-width='2' fill='none' opacity='0.6' stroke-linecap='round'/><ellipse cx='48' cy='82' rx='24' ry='4' fill='#103806' opacity='0.2'/><path d='M22 75 Q22 64 32 62 Q40 60 44 67 Q46 73 40 78 Q30 81 24 79 Q20 78 22 75Z' fill='#164808'/><path d='M23 74 Q23 64 32 62.5 Q39 61 43 67 Q45 72 39 77 Q30 80 25 78 Q21 77 23 74Z' fill='url(#br1)'/><circle cx='28' cy='67' r='1.6' fill='#246410' opacity='0.7'/><circle cx='33' cy='65' r='1.5' fill='#3a9020' opacity='0.7'/><circle cx='37' cy='69' r='1.6' fill='#246410' opacity='0.7'/><circle cx='31' cy='71' r='1.7' fill='#1e5810' opacity='0.7'/><path d='M30 64 Q33 61 36 64' stroke='#6ac040' stroke-width='1' fill='none' opacity='0.5'/><path d='M56 74 Q54 63 64 61 Q72 60 75 67 Q76 73 70 78 Q60 81 56 78 Q53 77 56 74Z' fill='#103806'/><path d='M57 73 Q55 63 64 61.5 Q71 60.5 74 67 Q75 72 69 77 Q60 80 57 77 Q54 76 57 73Z' fill='url(#br2)'/><circle cx='62' cy='66' r='1.6' fill='#246410' opacity='0.7'/><circle cx='67' cy='65' r='1.5' fill='#3a9020' opacity='0.7'/><circle cx='65' cy='70' r='1.7' fill='#1e5810' opacity='0.7'/><circle cx='71' cy='69' r='1.5' fill='#246410' opacity='0.7'/><path d='M42 77 Q40 71 48 69 Q55 71 53 78 Q50 81 45 80 Q41 79 42 77Z' fill='#a89e88'/><path d='M43 76 Q41 71 48 70 Q54 71 52 77 Q49 80 45 79 Q42 78 43 76Z' fill='url(#eri)'/><path d='M45 73 Q49 71 52 73' stroke='#c4bca8' stroke-width='1' fill='none' opacity='0.5'/><path d='M46 71 Q49 69 52 71' stroke='#fffdf6' stroke-width='1.8' fill='none' opacity='0.45' stroke-linecap='round'/><path d='M44 70 Q44 74 45 78' stroke='#b0a68e' stroke-width='0.7' fill='none' opacity='0.5'/><path d='M40 63 Q37 58 41 54 Q45 58 43 63 Q42 65 40 63Z' fill='#3a8020' opacity='0.9'/><path d='M40 63 Q39 59 40 55' stroke='#2a5814' stroke-width='0.6' fill='none' opacity='0.6'/><ellipse cx='38' cy='77' rx='1.3' ry='0.9' fill='#e4c870' transform='rotate(-15 38 77)'/><ellipse cx='50' cy='79' rx='1.3' ry='0.9' fill='#d8bc60' transform='rotate(18 50 79)'/><ellipse cx='62' cy='77' rx='1.2' ry='0.85' fill='#e4c870' transform='rotate(-8 62 77)'/><ellipse cx='56' cy='76' rx='1.2' ry='0.85' fill='#d8bc60' transform='rotate(10 56 76)'/><path d='M30 50 Q27 43 29 36' stroke='#bab6ac' stroke-width='1.8' fill='none' stroke-linecap='round' opacity='0.36'/><path d='M50 48 Q47 41 50 34' stroke='#bab6ac' stroke-width='1.8' fill='none' stroke-linecap='round' opacity='0.36'/><path d='M70 50 Q73 43 71 36' stroke='#bab6ac' stroke-width='1.8' fill='none' stroke-linecap='round' opacity='0.36'/></svg>"
+      "storage_note": "冷蔵3日",
+      "kid_note": "薄味なのでそのまま食べられる",
+      "svg": "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><defs><radialGradient id='plateS1' cx='38%' cy='32%' r='62%'><stop offset='0%' stop-color='#ffffff'/><stop offset='100%' stop-color='#eeeae0'/></radialGradient><radialGradient id='brS1' cx='32%' cy='26%' r='70%'><stop offset='0%' stop-color='#5a9a30'/><stop offset='55%' stop-color='#3a7020'/><stop offset='100%' stop-color='#244a12'/></radialGradient></defs><rect width='100' height='100' fill='#f7f4ec'/><ellipse cx='51' cy='92' rx='38' ry='6' fill='#b0aca0' opacity='0.32'/><ellipse cx='51' cy='88' rx='37' ry='7.5' fill='#ccc9c0' opacity='0.5'/><ellipse cx='50' cy='87' rx='37' ry='7.5' fill='url(#plateS1)' stroke='#dedad2' stroke-width='0.8'/><ellipse cx='50' cy='86' rx='30' ry='5.5' fill='#fefefd'/><ellipse cx='49' cy='81' rx='24' ry='5' fill='#2a3010' opacity='0.16'/><path d='M30 78 Q34 66 44 70 Q50 62 58 70 Q68 66 70 78 Q60 82 50 81 Q38 82 30 78Z' fill='#244a12'/><path d='M32 76 Q36 65 45 69 Q51 61 58 69 Q66 66 68 76 Q58 80 49 79 Q39 80 32 76Z' fill='url(#brS1)'/><circle cx='40' cy='69' r='2.6' fill='#4e8a28'/><circle cx='48' cy='66' r='2.4' fill='#5a9a30'/><circle cx='56' cy='69' r='2.6' fill='#4e8a28'/><circle cx='44' cy='72' r='2.2' fill='#6aa838'/><path d='M58 78 Q64 74 70 77 Q72 80 66 80 Q60 81 58 78Z' fill='#e8d8b0'/><ellipse cx='46' cy='74' rx='4' ry='2' fill='#caa050' opacity='0.6'/><ellipse cx='52' cy='76' rx='3' ry='1.6' fill='#caa050' opacity='0.5'/><path d='M42 56 Q39 49 41 42' stroke='#bab6ac' stroke-width='1.6' fill='none' stroke-linecap='round' opacity='0.34'/><path d='M54 54 Q51 47 54 40' stroke='#bab6ac' stroke-width='1.6' fill='none' stroke-linecap='round' opacity='0.34'/><path d='M62 56 Q65 49 63 43' stroke='#bab6ac' stroke-width='1.4' fill='none' stroke-linecap='round' opacity='0.3'/></svg>"
     },
     {
-      "name": "にんじんとブロッコリースプラウトのごま酢和え",
-      "tool": "レンジ",
+      "name": "ピーマンとえのきのきんぴら",
+      "tool": "フライパン",
       "freeze": false,
-      "ingredients": [
-        "にんじん 2本",
-        "ブロッコリースプラウト 1パック",
-        "白すりごま 大さじ2",
-        "酢 大さじ1.5",
-        "醤油 大さじ1",
-        "砂糖 小さじ1",
-        "ごま油 小さじ1"
-      ],
+      "ingredients": ["ピーマン", "えのき"],
       "steps": [
-        "にんじんはブラウンハンドブレンダー千切りアタッチメントで千切りにし、耐熱容器に入れてレンジ600W・2分加熱。粗熱を取る",
-        "ブロッコリースプラウトは根を切り落として洗う",
-        "白すりごま・酢・醤油・砂糖・ごま油を混ぜてドレッシングを作り、にんじんとスプラウトを和えて完成"
+        "ピーマンは細切り、えのきは石づきを取りほぐす",
+        "フライパンにごま油を熱し中火で炒める",
+        "醤油・みりん・砂糖各小さじ2を加え汁気がなくなるまで炒め、白ごまをふる"
       ],
       "time_minutes": 10,
-      "storage_note": "冷蔵3日",
-      "kid_note": "酸味が苦手な場合は酢を半量にし砂糖を少し増やす",
-      "svg": "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><defs><radialGradient id='plate' cx='38%' cy='32%' r='62%'><stop offset='0%' stop-color='#ffffff'/><stop offset='100%' stop-color='#eeeae0'/></radialGradient><radialGradient id='car1' cx='32%' cy='26%' r='70%'><stop offset='0%' stop-color='#f0944a'/><stop offset='55%' stop-color='#d47020'/><stop offset='100%' stop-color='#9a4408'/></radialGradient><radialGradient id='spr1' cx='34%' cy='28%' r='68%'><stop offset='0%' stop-color='#5aa838'/><stop offset='55%' stop-color='#3a8820'/><stop offset='100%' stop-color='#1e5810'/></radialGradient><radialGradient id='vdress' cx='40%' cy='40%' r='60%'><stop offset='0%' stop-color='#caa860' stop-opacity='0.4'/><stop offset='100%' stop-color='#8a6820' stop-opacity='0.12'/></radialGradient></defs><rect width='100' height='100' fill='#f7f4ec'/><ellipse cx='51' cy='92' rx='38' ry='6' fill='#b0aca0' opacity='0.32'/><ellipse cx='51' cy='88' rx='37' ry='7.5' fill='#ccc9c0' opacity='0.5'/><ellipse cx='50' cy='87' rx='37' ry='7.5' fill='url(#plate)' stroke='#dedad2' stroke-width='0.8'/><ellipse cx='50' cy='86' rx='30' ry='5.5' fill='#fefefd'/><path d='M17 83 Q33 76 50 77' stroke='#ffffff' stroke-width='2' fill='none' opacity='0.6' stroke-linecap='round'/><ellipse cx='48' cy='82' rx='25' ry='4.5' fill='url(#vdress)'/><ellipse cx='48' cy='83' rx='22' ry='3.5' fill='#7a5818' opacity='0.15'/><path d='M22 76 Q34 73 48 75 Q58 73 70 76' stroke='#9a4408' stroke-width='3.4' fill='none' stroke-linecap='round'/><path d='M22 76 Q34 73 48 75 Q58 73 70 76' stroke='url(#car1)' stroke-width='2.6' fill='none' stroke-linecap='round'/><path d='M24 79 Q36 76 50 78 Q60 76 72 79' stroke='#9a4408' stroke-width='3' fill='none' stroke-linecap='round'/><path d='M24 79 Q36 76 50 78 Q60 76 72 79' stroke='url(#car1)' stroke-width='2.2' fill='none' stroke-linecap='round'/><path d='M26 73 Q38 70 52 72 Q62 70 70 72' stroke='#9a4408' stroke-width='2.8' fill='none' stroke-linecap='round'/><path d='M26 73 Q38 70 52 72 Q62 70 70 72' stroke='url(#car1)' stroke-width='2' fill='none' stroke-linecap='round'/><path d='M30 74 Q40 72 50 73' stroke='#f4a860' stroke-width='0.8' fill='none' opacity='0.5'/><path d='M28 77 Q40 75 52 77' stroke='#f0945a' stroke-width='0.7' fill='none' opacity='0.45'/><path d='M34 71 Q33 64 30 58' stroke='#1e5810' stroke-width='1.4' fill='none' stroke-linecap='round'/><path d='M34 71 Q33 64 30 58' stroke='url(#spr1)' stroke-width='1' fill='none' stroke-linecap='round'/><path d='M40 70 Q41 62 38 56' stroke='#1e5810' stroke-width='1.4' fill='none' stroke-linecap='round'/><path d='M40 70 Q41 62 38 56' stroke='url(#spr1)' stroke-width='1' fill='none' stroke-linecap='round'/><path d='M46 70 Q45 62 48 56' stroke='#1e5810' stroke-width='1.4' fill='none' stroke-linecap='round'/><path d='M46 70 Q45 62 48 56' stroke='url(#spr1)' stroke-width='1' fill='none' stroke-linecap='round'/><path d='M54 71 Q56 63 53 57' stroke='#1e5810' stroke-width='1.4' fill='none' stroke-linecap='round'/><path d='M54 71 Q56 63 53 57' stroke='url(#spr1)' stroke-width='1' fill='none' stroke-linecap='round'/><path d='M60 72 Q59 64 62 58' stroke='#1e5810' stroke-width='1.4' fill='none' stroke-linecap='round'/><path d='M60 72 Q59 64 62 58' stroke='url(#spr1)' stroke-width='1' fill='none' stroke-linecap='round'/><ellipse cx='30' cy='58' rx='1.6' ry='1' fill='#cae8a0'/><ellipse cx='38' cy='56' rx='1.6' ry='1' fill='#b8e088'/><ellipse cx='48' cy='56' rx='1.6' ry='1' fill='#cae8a0'/><ellipse cx='53' cy='57' rx='1.5' ry='1' fill='#b8e088'/><ellipse cx='62' cy='58' rx='1.6' ry='1' fill='#cae8a0'/><ellipse cx='36' cy='76' rx='1.4' ry='1' fill='#efe9d6' transform='rotate(-18 36 76)'/><ellipse cx='46' cy='78' rx='1.4' ry='1' fill='#e4dcc4' transform='rotate(14 46 78)'/><ellipse cx='56' cy='76' rx='1.3' ry='0.95' fill='#efe9d6' transform='rotate(-6 56 76)'/><ellipse cx='40' cy='80' rx='1.3' ry='0.9' fill='#e4dcc4' transform='rotate(22 40 80)'/><ellipse cx='62' cy='79' rx='1.3' ry='0.9' fill='#efe9d6' transform='rotate(-10 62 79)'/><ellipse cx='30' cy='75' rx='1.2' ry='0.85' fill='#e4dcc4' transform='rotate(-14 30 75)'/></svg>"
+      "storage_note": "冷蔵4日",
+      "kid_note": "ピーマンは細めに切ると食べやすい。甘めの味付け",
+      "svg": "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><defs><radialGradient id='plateS2' cx='38%' cy='32%' r='62%'><stop offset='0%' stop-color='#ffffff'/><stop offset='100%' stop-color='#eeeae0'/></radialGradient><radialGradient id='ppS2' cx='32%' cy='26%' r='70%'><stop offset='0%' stop-color='#5a9a2e'/><stop offset='55%' stop-color='#3a721a'/><stop offset='100%' stop-color='#244a0e'/></radialGradient></defs><rect width='100' height='100' fill='#f7f4ec'/><ellipse cx='51' cy='92' rx='38' ry='6' fill='#b0aca0' opacity='0.32'/><ellipse cx='51' cy='88' rx='37' ry='7.5' fill='#ccc9c0' opacity='0.5'/><ellipse cx='50' cy='87' rx='37' ry='7.5' fill='url(#plateS2)' stroke='#dedad2' stroke-width='0.8'/><ellipse cx='50' cy='86' rx='30' ry='5.5' fill='#fefefd'/><ellipse cx='49' cy='81' rx='24' ry='5' fill='#2a3010' opacity='0.16'/><path d='M30 74 Q42 70 54 72' stroke='#244a0e' stroke-width='4' fill='none' stroke-linecap='round'/><path d='M30 74 Q42 70 54 72' stroke='url(#ppS2)' stroke-width='3' fill='none' stroke-linecap='round'/><path d='M34 78 Q46 74 60 76' stroke='#244a0e' stroke-width='4' fill='none' stroke-linecap='round'/><path d='M34 78 Q46 74 60 76' stroke='url(#ppS2)' stroke-width='3' fill='none' stroke-linecap='round'/><path d='M38 71 Q50 68 64 70' stroke='#2a520e' stroke-width='3.4' fill='none' stroke-linecap='round'/><path d='M38 71 Q50 68 64 70' stroke='#4e8a28' stroke-width='2.4' fill='none' stroke-linecap='round'/><path d='M40 76 Q52 73 62 75' stroke='#e8dcb8' stroke-width='1.6' fill='none' stroke-linecap='round'/><path d='M36 73 Q48 70 58 72' stroke='#f0ecd8' stroke-width='1.4' fill='none' stroke-linecap='round'/><circle cx='42' cy='73' r='0.9' fill='#fff'/><circle cx='50' cy='76' r='0.9' fill='#fff'/><circle cx='57' cy='72' r='0.9' fill='#fff'/><path d='M42 58 Q39 51 41 44' stroke='#bab6ac' stroke-width='1.6' fill='none' stroke-linecap='round' opacity='0.34'/><path d='M54 56 Q51 49 54 42' stroke='#bab6ac' stroke-width='1.6' fill='none' stroke-linecap='round' opacity='0.34'/></svg>"
+    },
+    {
+      "name": "ねぎ入りだし巻き卵（納豆添え）",
+      "tool": "フライパン",
+      "freeze": false,
+      "ingredients": ["卵", "納豆", "長ねぎ", "大葉"],
+      "steps": [
+        "卵3個を溶き、鶏がらスープの素小さじ1/2・水大さじ2・刻んだ長ねぎを混ぜる",
+        "卵焼き器で数回に分けて巻きながら焼く",
+        "別添えで納豆をタレと混ぜ、大葉を敷いて卵焼きに添える"
+      ],
+      "time_minutes": 15,
+      "storage_note": "冷蔵2日",
+      "kid_note": "納豆は別添え。卵焼きはだし味でそのまま食べられる",
+      "svg": "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><defs><radialGradient id='plateS3' cx='38%' cy='32%' r='62%'><stop offset='0%' stop-color='#ffffff'/><stop offset='100%' stop-color='#eeeae0'/></radialGradient><radialGradient id='egS3' cx='32%' cy='26%' r='70%'><stop offset='0%' stop-color='#f8d860'/><stop offset='55%' stop-color='#e8b830'/><stop offset='100%' stop-color='#b88810'/></radialGradient><radialGradient id='ntS3' cx='40%' cy='35%' r='65%'><stop offset='0%' stop-color='#b89858'/><stop offset='100%' stop-color='#7a5e28'/></radialGradient></defs><rect width='100' height='100' fill='#f7f4ec'/><ellipse cx='51' cy='92' rx='38' ry='6' fill='#b0aca0' opacity='0.32'/><ellipse cx='51' cy='88' rx='37' ry='7.5' fill='#ccc9c0' opacity='0.5'/><ellipse cx='50' cy='87' rx='37' ry='7.5' fill='url(#plateS3)' stroke='#dedad2' stroke-width='0.8'/><ellipse cx='50' cy='86' rx='30' ry='5.5' fill='#fefefd'/><ellipse cx='44' cy='81' rx='22' ry='4.6' fill='#3a2e08' opacity='0.16'/><path d='M26 76 Q26 66 30 66 L58 66 Q62 66 62 76 Q62 80 44 80 Q26 80 26 76Z' fill='#b88810'/><path d='M27 74 Q27 65 31 65 L57 65 Q61 65 61 74 Q61 78 44 78 Q27 78 27 74Z' fill='url(#egS3)'/><path d='M36 65 L36 78' stroke='#caa028' stroke-width='1' opacity='0.6'/><path d='M46 65 L46 78' stroke='#caa028' stroke-width='1' opacity='0.6'/><path d='M30 68 Q42 66 56 68' stroke='#fce890' stroke-width='1.2' fill='none' opacity='0.7'/><ellipse cx='34' cy='69' rx='5' ry='2' fill='#fff0b0' opacity='0.4'/><path d='M58 76 Q66 71 72 75 Q70 79 64 79 Q59 79 58 76Z' fill='#3a7a1e'/><ellipse cx='66' cy='74' rx='6' ry='3' fill='url(#ntS3)' opacity='0.85'/><path d='M62 73 Q66 72 70 74' stroke='#d8c890' stroke-width='0.6' fill='none' opacity='0.7'/><path d='M40 54 Q37 47 39 40 Q41 34 39 28' stroke='#bab6ac' stroke-width='1.7' fill='none' stroke-linecap='round' opacity='0.36'/><path d='M52 52 Q49 45 52 38 Q55 32 52 26' stroke='#bab6ac' stroke-width='1.7' fill='none' stroke-linecap='round' opacity='0.36'/></svg>"
     }
   ],
-  "shopping_list": [],
-  "surplus_note": "トマトジュース 1本（900ml）残り：朝食ドリンク・ミネストローネのベースに。牛乳 残り約800ml：朝食・飲み物として。キャベツ 残り3/4個：炒め物・お好み焼き・サラダに。にんじん 残り分：スープ・炒め物に。たまねぎ 残り分：スープ・炒め物・サラダに。"
+  "shopping_list": ["玉ねぎ", "かつおぶし", "白ごま"],
+  "surplus_note": "焼きおにぎり・ライスバーガー（冷凍）は主食として平日にレンジ加熱で活用。牛乳はハンバーグのつなぎとトマト煮込みの子供用まろやか調整に使用、余りは飲用・朝食へ。大葉・バジルは庭から適宜。"
 }
