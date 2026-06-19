@@ -47,12 +47,8 @@
     "updated_at": null
   },
   "leftover_ingredients": {
-    "checked": [
-      "たまねぎ",
-      "にんじん",
-      "キャベツ"
-    ],
+    "checked": [],
     "extra": "",
-    "updated_at": "2026-06-19"
+    "updated_at": null
   }
 }
