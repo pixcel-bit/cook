@@ -101,6 +101,10 @@
   .ing-check-item input[type=checkbox] { accent-color: var(--accent); width: 14px; height: 14px; cursor: pointer; flex-shrink: 0; }
   .ing-check-item.checked { background: #fff3ee; border-color: var(--accent-soft); color: var(--accent); }
   .ing-section-label { font-size: 11px; color: var(--ink-faint); font-weight: 700; letter-spacing: 0.06em; padding-top: 10px; }
+  .ing-add-row { display: flex; gap: 8px; margin-top: 8px; }
+  .ing-add-input { flex: 1; padding: 6px 12px; border: 1px solid var(--line); border-radius: 8px; font-size: 13px; font-family: inherit; color: var(--ink); background: var(--paper); outline: none; }
+  .ing-add-input:focus { border-color: var(--accent); }
+  .ing-add-btn { padding: 6px 14px; background: var(--accent); color: #fff; border: none; border-radius: 8px; font-size: 13px; font-family: inherit; font-weight: 700; cursor: pointer; }
   .ing-extra-block { border-top: 1px solid var(--line); padding-top: 12px; }
   .ing-extra-label { font-size: 11px; color: var(--ink-faint); font-weight: 700; letter-spacing: 0.06em; margin-bottom: 8px; }
   .ing-extra-input { width: 100%; padding: 9px 13px; border: 1px solid var(--line); border-radius: 10px; font-size: 13px; font-family: inherit; color: var(--ink); background: var(--paper); resize: none; outline: none; line-height: 1.6; }
@@ -224,13 +228,13 @@
     <div class="ing-body">
       <div class="ing-section-label" id="ing-delivery-label">今週の配達</div>
       <div class="ing-checklist" id="ing-checklist"></div>
-      <div id="ing-carryover-block" style="display:none">
-        <div class="ing-section-label">先週からの持ち越し</div>
-        <div class="ing-checklist" id="ing-carryover"></div>
-      </div>
       <div class="ing-extra-block">
-        <div class="ing-extra-label">その他の余り食材</div>
-        <textarea class="ing-extra-input" id="ing-extra" rows="2" placeholder="例：卵、豆腐、調味料など"></textarea>
+        <div class="ing-section-label">その他の食材</div>
+        <div class="ing-checklist" id="ing-extra-list"></div>
+        <div class="ing-add-row">
+          <input class="ing-add-input" id="ing-add-input" type="text" placeholder="食材名を入力">
+          <button class="ing-add-btn" onclick="addExtraIngredient()">追加</button>
+        </div>
       </div>
     </div>
   </details>
@@ -546,7 +550,6 @@ function showToast(msg) {
 
 /* --- LEFTOVER INGREDIENTS --- */
 function initLeftovers() {
-  if (!THIS_WEEK_INGREDIENTS.length && !(prefs.leftover_ingredients && prefs.leftover_ingredients.checked.length)) return;
   const lf = prefs.leftover_ingredients || { checked: [], extra: '', updated_at: null };
 
   // 配達食材リスト
@@ -559,25 +562,39 @@ function initLeftovers() {
     </label>`;
   }).join('');
 
-  // 持ち越し食材（前週チェック済みで今週の配達に含まれないもの）
-  const carryover = lf.checked.filter(name => !THIS_WEEK_INGREDIENTS.includes(name));
-  const carryoverBlock = document.getElementById('ing-carryover-block');
-  const carryoverList = document.getElementById('ing-carryover');
-  if (carryover.length > 0) {
-    carryoverList.innerHTML = carryover.map(name => {
-      return `<label class="ing-check-item checked">
-        <input type="checkbox" checked onchange="onIngCheck(this)">
-        <span>${esc(name)}</span>
-      </label>`;
-    }).join('');
-    carryoverBlock.style.display = '';
-  } else {
-    carryoverBlock.style.display = 'none';
-  }
+  // 手動追加食材（配達に含まれないもの）
+  renderExtraList();
 
-  document.getElementById('ing-extra').value = lf.extra || '';
-  document.getElementById('ing-extra').addEventListener('input', () => queueSaveLeftovers());
+  const addInput = document.getElementById('ing-add-input');
+  if (addInput) addInput.onkeydown = e => { if (e.key === 'Enter') addExtraIngredient(); };
   updateIngHint(lf.checked);
+}
+
+function renderExtraList() {
+  const lf = prefs.leftover_ingredients || { checked: [] };
+  const extras = lf.checked.filter(n => !THIS_WEEK_INGREDIENTS.includes(n));
+  document.getElementById('ing-extra-list').innerHTML = extras.map(name =>
+    `<label class="ing-check-item checked">
+      <input type="checkbox" checked onchange="onIngCheck(this)">
+      <span>${esc(name)}</span>
+    </label>`
+  ).join('');
+}
+
+function addExtraIngredient() {
+  const input = document.getElementById('ing-add-input');
+  const name = input.value.trim();
+  if (!name) return;
+  const lf = prefs.leftover_ingredients || { checked: [], extra: '', updated_at: null };
+  if (!lf.checked.includes(name)) {
+    lf.checked = [...lf.checked, name];
+    prefs.leftover_ingredients = { ...lf, updated_at: new Date().toISOString().slice(0,10) };
+    renderExtraList();
+    updateIngHint(lf.checked);
+    queueSave();
+  }
+  input.value = '';
+  input.focus();
 }
 
 function onIngCheck(checkbox) {
@@ -590,13 +607,12 @@ function queueSaveLeftovers() {
   clearTimeout(leftoverTimer);
   leftoverTimer = setTimeout(() => {
     const checked = [];
-    document.querySelectorAll('#ing-checklist .ing-check-item, #ing-carryover .ing-check-item').forEach(label => {
+    document.querySelectorAll('#ing-checklist .ing-check-item, #ing-extra-list .ing-check-item').forEach(label => {
       if (label.querySelector('input').checked) {
         checked.push(label.querySelector('span').textContent);
       }
     });
-    const extra = document.getElementById('ing-extra').value.trim();
-    prefs.leftover_ingredients = { checked, extra, updated_at: new Date().toISOString().slice(0,10) };
+    prefs.leftover_ingredients = { checked, extra: '', updated_at: new Date().toISOString().slice(0,10) };
     updateIngHint(checked);
     queueSave();
   }, 500);
@@ -605,13 +621,8 @@ function queueSaveLeftovers() {
 function updateIngHint(checked) {
   const hint = document.getElementById('ing-hint');
   if (!hint) return;
-  const extra = (document.getElementById('ing-extra') || {}).value || '';
-  const hasExtra = extra.trim().length > 0;
-  if (checked.length === 0 && !hasExtra) { hint.textContent = ''; return; }
-  let text = '';
-  if (checked.length > 0) text = `余り ${checked.length}品`;
-  if (hasExtra) text += (text ? '＋その他' : 'その他あり');
-  hint.textContent = text;
+  if (checked.length === 0) { hint.textContent = ''; return; }
+  hint.textContent = `余り ${checked.length}品`;
 }
 
 /* --- REQUEST SECTION --- */
