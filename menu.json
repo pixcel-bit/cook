@@ -6,6 +6,7 @@
     "豚こま切れ",
     "レタス",
     "トマトジュース",
+    "たまねぎドレッシング",
     "絹豆腐",
     "納豆",
     "焼きおにぎり",
@@ -14,6 +15,7 @@
     "しいたけ",
     "牛乳",
     "鶏もも肉",
+    "鶏もも角切り",
     "キャベツ",
     "長ねぎ",
     "エリンギ"
@@ -33,24 +35,41 @@
         "大葉"
       ],
       "steps": [
-        "鶏もも肉は包丁で粗みじんに叩く。たまねぎはみじん切りにしてラップしレンジ600W・2分加熱して冷ます",
-        "ボウルに鶏肉・たまねぎ・卵・牛乳大さじ1・塩こしょうを入れよく練り、6等分に成形する",
-        "フライパンに油を中火で熱し両面2〜3分ずつ焼き色をつけ、蓋をして弱火4分蒸し焼きにする",
-        "同フライパンでえのき・しいたけを炒め、だし醤油・みりん各大さじ2・水100mlを加え水溶き片栗粉でとろみをつけ和風あんにする",
-        "ハンバーグにあんをかけ大葉を添えて完成"
+        "鶏もも肉は包丁でたたいてミンチ状にする。たまねぎはみじん切りにしてレンジ600W・2分加熱して冷ます",
+        "ボウルに鶏肉・たまねぎ・卵・牛乳大さじ1・塩こしょうをよく練り、4等分に成形する",
+        "フライパンに油を中火で熱し、両面2〜3分ずつ焼き色をつけ、蓋をして弱火4分蒸し焼きにする。子供用はここで取り分け",
+        "同フライパンにえのき・しいたけを炒め、だし醤油・みりん各大さじ2・水100ml・水溶き片栗粉でとろみをつけ和風あんにする",
+        "ハンバーグにあんをかけ大葉を添えて完成。冷めてから保存容器へ"
       ],
       "time_minutes": 30,
       "storage_note": "冷蔵3日・冷凍1ヶ月（あんは別保存）",
-      "kid_note": "あんは薄味で仕上げ、大人分は食卓で醤油を足す",
-      "image": "https://images.pexels.com/photos/18405156/pexels-photo-18405156.jpeg?auto=compress&cs=tinysrgb&h=350",
-      "image_credit": {
-        "photographer": "Markus Winkler",
-        "photographer_url": "https://www.pexels.com/@markus-winkler-1430818",
-        "pexels_url": "https://www.pexels.com/photo/a-bowl-of-curry-with-rice-and-a-fried-egg-18405156/"
-      }
+      "kid_note": "あんを薄味に仕上げ、子供用は取り分けてからかける",
+      "search_keyword": "japanese chicken hamburger steak mushroom sauce",
+      "images": [
+        "https://images.pexels.com/photos/18405156/pexels-photo-18405156.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "https://images.pexels.com/photos/23106705/pexels-photo-23106705.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "https://images.pexels.com/photos/29748127/pexels-photo-29748127.jpeg?auto=compress&cs=tinysrgb&h=350"
+      ],
+      "image_credits": [
+        {
+          "photographer": "Markus Winkler",
+          "photographer_url": "https://www.pexels.com/@markus-winkler-1430818",
+          "pexels_url": "https://www.pexels.com/photo/a-bowl-of-curry-with-rice-and-a-fried-egg-18405156/"
+        },
+        {
+          "photographer": "Ali Dashti",
+          "photographer_url": "https://www.pexels.com/@ali-dashti-506667798",
+          "pexels_url": "https://www.pexels.com/photo/top-view-of-a-dish-with-meat-and-fries-23106705/"
+        },
+        {
+          "photographer": "dam i",
+          "photographer_url": "https://www.pexels.com/@dami",
+          "pexels_url": "https://www.pexels.com/photo/delicious-grilled-salmon-with-vegetables-29748127/"
+        }
+      ]
     },
     {
-      "name": "鶏もものトマト煮込み（ビストロ）",
+      "name": "鶏もものトマト煮込み",
       "tool": "ビストロ",
       "freeze": true,
       "ingredients": [
@@ -58,165 +77,270 @@
         "たまねぎ",
         "エリンギ",
         "トマトジュース",
-        "コンソメ"
+        "コンソメ",
+        "バジル"
       ],
       "steps": [
         "鶏ももはひと口大に切り塩こしょう。たまねぎはくし切り、エリンギは手で裂く",
         "ビストロ内鍋に鶏もも・たまねぎ・エリンギを入れ、トマトジュース200ml・コンソメ1個・砂糖小さじ1・塩こしょうを加える",
         "ビストロ：圧力調理・高圧・15分 → 加圧終了後10分自然放置してから蓋を開ける",
-        "蓋を開けて煮込みモードで5分煮詰め、塩こしょうで味を調えて完成"
+        "煮込みモードで5分煮詰め、塩こしょうで味を調えてバジルを散らして完成"
       ],
       "time_minutes": 35,
       "storage_note": "冷蔵4日・冷凍1ヶ月",
       "kid_note": "",
-      "image": "https://images.pexels.com/photos/29684985/pexels-photo-29684985.jpeg?auto=compress&cs=tinysrgb&h=350",
-      "image_credit": {
-        "photographer": "Kunal Lakhotia",
-        "photographer_url": "https://www.pexels.com/@kunal-lakhotia-781256899",
-        "pexels_url": "https://www.pexels.com/photo/spicy-chicken-curry-in-traditional-kadai-29684985/"
-      }
+      "search_keyword": "chicken tomato stew braised italian",
+      "images": [
+        "https://images.pexels.com/photos/29684985/pexels-photo-29684985.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "https://images.pexels.com/photos/7368041/pexels-photo-7368041.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "https://images.pexels.com/photos/15597769/pexels-photo-15597769.jpeg?auto=compress&cs=tinysrgb&h=350"
+      ],
+      "image_credits": [
+        {
+          "photographer": "Kunal Lakhotia",
+          "photographer_url": "https://www.pexels.com/@kunal-lakhotia-781256899",
+          "pexels_url": "https://www.pexels.com/photo/spicy-chicken-curry-in-traditional-kadai-29684985/"
+        },
+        {
+          "photographer": "Christina Voinova",
+          "photographer_url": "https://www.pexels.com/@christina-voinova-42707474",
+          "pexels_url": "https://www.pexels.com/photo/food-ingredients-on-brown-wooden-chopping-board-7368041/"
+        },
+        {
+          "photographer": "Amine İspir",
+          "photographer_url": "https://www.pexels.com/@amineispir",
+          "pexels_url": "https://www.pexels.com/photo/meat-on-plate-15597769/"
+        }
+      ]
     },
     {
-      "name": "てりやき豚こまボール（ビストロ）",
-      "tool": "ビストロ",
-      "freeze": true,
-      "ingredients": [
-        "豚こま切れ",
-        "たまねぎ",
-        "卵",
-        "片栗粉",
-        "醤油",
-        "みりん",
-        "砂糖"
-      ],
-      "steps": [
-        "たまねぎはみじん切りにしてレンジ600W・2分加熱して冷ます",
-        "ボウルに豚こま・たまねぎ・卵1個・片栗粉大さじ1・塩こしょうをよく混ぜ、ひと口大に丸める（12〜14個）",
-        "ビストロ内鍋に並べ、醤油・みりん各大さじ3・砂糖大さじ1・水50mlを加える",
-        "ビストロ：圧力調理・低圧・8分 → 加圧終了後すぐに蓋を開ける",
-        "煮込みモードで2〜3分煮詰めてたれにとろみをつけて完成"
-      ],
-      "time_minutes": 25,
-      "storage_note": "冷蔵4日・冷凍1ヶ月",
-      "kid_note": "",
-      "image": "https://images.pexels.com/photos/26341210/pexels-photo-26341210.jpeg?auto=compress&cs=tinysrgb&h=350",
-      "image_credit": {
-        "photographer": "Ali Dashti",
-        "photographer_url": "https://www.pexels.com/@ali-dashti-506667798",
-        "pexels_url": "https://www.pexels.com/photo/close-up-of-meat-with-a-seasoning-atop-26341210/"
-      }
-    },
-    {
-      "name": "鶏もものねぎ塩蒸し（ビストロ）",
+      "name": "豚こまとたまねぎのごまだれ煮",
       "tool": "ビストロ",
       "freeze": false,
       "ingredients": [
-        "鶏もも肉",
-        "長ねぎ",
-        "塩",
-        "ごま油",
-        "鶏がらスープの素"
-      ],
-      "steps": [
-        "鶏もも肉はフォークで数カ所刺し、塩・鶏がらスープの素小さじ1をもみ込む",
-        "ビストロ内鍋に鶏もも（皮目上）と水100mlを入れる",
-        "ビストロ：圧力調理・高圧・10分 → 加圧終了後5分自然放置してから蓋を開ける",
-        "長ねぎは斜め薄切りにしてごま油大さじ1・塩少々と合わせてねぎ塩だれを作り、切り分けた鶏肉にかけて完成"
-      ],
-      "time_minutes": 20,
-      "storage_note": "冷蔵3日（たれは別保存）",
-      "kid_note": "子供分はたれなし、または薄めのたれで",
-      "image": "https://images.pexels.com/photos/26341205/pexels-photo-26341205.jpeg?auto=compress&cs=tinysrgb&h=350",
-      "image_credit": {
-        "photographer": "Ali Dashti",
-        "photographer_url": "https://www.pexels.com/@ali-dashti-506667798",
-        "pexels_url": "https://www.pexels.com/photo/a-bowl-of-salad-with-chicken-26341205/"
-      }
-    },
-    {
-      "name": "カリッと豚こまの揚げ焼き にんにく醤油",
-      "tool": "フライパン",
-      "freeze": true,
-      "ingredients": [
         "豚こま切れ",
-        "にんにく（チューブ）",
+        "たまねぎ",
+        "長ねぎ",
         "醤油",
         "みりん",
-        "片栗粉",
-        "大葉"
+        "砂糖",
+        "ごま油",
+        "白ごま"
       ],
       "steps": [
-        "豚こまを醤油・みりん各大さじ1・にんにくチューブ1cmに漬け込み10分置く",
-        "余分なたれを軽く切り、片栗粉をまぶしてひと口大にまとめる",
-        "フライパンに油を多めに熱し、中火で両面3分ずつ揚げ焼きにする",
-        "キッチンペーパーで油を切り、大葉とともに盛り付けて完成"
+        "豚こまは大きければひと口大に切る。たまねぎはくし切り、長ねぎは3cm幅に切る",
+        "ビストロ内鍋に豚こま・たまねぎ・長ねぎを入れ、醤油・みりん各大さじ3・砂糖大さじ1・水100ml・ごま油大さじ1を加える",
+        "ビストロ：圧力調理・低圧・10分 → 加圧終了後すぐに蓋を開ける",
+        "煮込みモードで3分煮詰め、白ごまをふって完成"
       ],
-      "time_minutes": 20,
-      "storage_note": "冷蔵3日・冷凍1ヶ月",
-      "kid_note": "子供分はにんにくなしのたれで漬ける前に取り分ける",
-      "image": "https://images.pexels.com/photos/37279873/pexels-photo-37279873.jpeg?auto=compress&cs=tinysrgb&h=350",
-      "image_credit": {
-        "photographer": "Josh Eleazar",
-        "photographer_url": "https://www.pexels.com/@padrechaks",
-        "pexels_url": "https://www.pexels.com/photo/delicious-japanese-cuisine-featuring-katsudon-and-sushi-37279873/"
-      }
+      "time_minutes": 25,
+      "storage_note": "冷蔵4日",
+      "kid_note": "",
+      "search_keyword": "japanese pork sesame soy sauce braised tender",
+      "images": [
+        "https://images.pexels.com/photos/37279873/pexels-photo-37279873.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "https://images.pexels.com/photos/37279872/pexels-photo-37279872.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "https://images.pexels.com/photos/13043631/pexels-photo-13043631.jpeg?auto=compress&cs=tinysrgb&h=350"
+      ],
+      "image_credits": [
+        {
+          "photographer": "Josh Eleazar",
+          "photographer_url": "https://www.pexels.com/@padrechaks",
+          "pexels_url": "https://www.pexels.com/photo/delicious-japanese-cuisine-featuring-katsudon-and-sushi-37279873/"
+        },
+        {
+          "photographer": "Josh Eleazar",
+          "photographer_url": "https://www.pexels.com/@padrechaks",
+          "pexels_url": "https://www.pexels.com/photo/delicious-japanese-meal-bowl-with-chicken-and-sushi-37279872/"
+        },
+        {
+          "photographer": "Rin Gakusho",
+          "photographer_url": "https://www.pexels.com/@rin-gakusho-280714394",
+          "pexels_url": "https://www.pexels.com/photo/chips-and-rock-salt-in-bowls-13043631/"
+        }
+      ]
     },
     {
-      "name": "いわし缶とキャベツのさっぱり和風煮",
-      "tool": "フライパン",
+      "name": "いわし缶とキャベツのコンソメ洋風煮",
+      "tool": "ビストロ",
       "freeze": false,
       "ingredients": [
         "いわし水煮",
         "キャベツ",
-        "長ねぎ",
-        "しょうが（チューブ）",
-        "醤油",
-        "みりん"
+        "たまねぎ",
+        "トマトジュース",
+        "コンソメ"
       ],
       "steps": [
-        "キャベツはざく切り、長ねぎは2cm幅の斜め切りにする",
-        "フライパンにごま油を熱し長ねぎを中火で1分炒め、しょうがチューブ1cmを加えて香りを出す",
-        "キャベツを加えて炒め、いわし水煮を缶汁ごと加える",
-        "醤油・みりん各大さじ1・水100mlを加えて蓋をし、中火5分蒸し煮にして完成"
+        "キャベツはざく切り、たまねぎはくし切りにする。いわし缶は缶汁ごと使う",
+        "ビストロ内鍋にキャベツ・たまねぎを入れ、いわし缶・トマトジュース150ml・コンソメ1個・水100ml・塩こしょうを加える",
+        "ビストロ：圧力調理・高圧・8分 → 加圧終了後すぐに蓋を開ける",
+        "全体をよく混ぜ、塩こしょうで味を調えて完成"
       ],
-      "time_minutes": 15,
+      "time_minutes": 20,
       "storage_note": "冷蔵3日",
       "kid_note": "",
-      "image": "https://images.pexels.com/photos/20141098/pexels-photo-20141098.jpeg?auto=compress&cs=tinysrgb&h=350",
-      "image_credit": {
-        "photographer": "Ruts Vakulenko",
-        "photographer_url": "https://www.pexels.com/@ruts-vakulenko-968932474",
-        "pexels_url": "https://www.pexels.com/photo/fish-in-can-20141098/"
-      }
+      "search_keyword": "sardine cabbage tomato soup western stew",
+      "images": [
+        "https://images.pexels.com/photos/8321980/pexels-photo-8321980.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "https://images.pexels.com/photos/20141098/pexels-photo-20141098.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "https://images.pexels.com/photos/12208779/pexels-photo-12208779.jpeg?auto=compress&cs=tinysrgb&h=350"
+      ],
+      "image_credits": [
+        {
+          "photographer": "Pexels User",
+          "photographer_url": "https://www.pexels.com/@pexels-user-30668923",
+          "pexels_url": "https://www.pexels.com/photo/stew-dish-with-meat-and-chili-8321980/"
+        },
+        {
+          "photographer": "Ruts Vakulenko",
+          "photographer_url": "https://www.pexels.com/@ruts-vakulenko-968932474",
+          "pexels_url": "https://www.pexels.com/photo/fish-in-can-20141098/"
+        },
+        {
+          "photographer": "kelvin  agustinus",
+          "photographer_url": "https://www.pexels.com/@kelvinocta16",
+          "pexels_url": "https://www.pexels.com/photo/soup-in-a-bowl-12208779/"
+        }
+      ]
+    },
+    {
+      "name": "鶏もも角切りのねぎ塩蒸し",
+      "tool": "蒸し器",
+      "freeze": false,
+      "ingredients": [
+        "鶏もも角切り",
+        "長ねぎ",
+        "鶏がらスープの素",
+        "ごま油",
+        "塩",
+        "酒"
+      ],
+      "steps": [
+        "鶏もも角切りに酒大さじ1・塩少々をまぶして10分おく",
+        "耐熱皿に鶏もも・長ねぎ（斜め薄切り）を並べ、鶏がらスープの素小さじ1・ごま油小さじ1をかける",
+        "蒸し器で強火・15分蒸す",
+        "取り出してごま油少々を回しかけ、白ごまをふって完成"
+      ],
+      "time_minutes": 25,
+      "storage_note": "冷蔵3日",
+      "kid_note": "塩・ごま油は少量にして取り分け後に調整",
+      "search_keyword": "steamed chicken thigh green onion salt asian",
+      "images": [
+        "https://images.pexels.com/photos/9715157/pexels-photo-9715157.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "https://images.pexels.com/photos/772514/pexels-photo-772514.png?auto=compress&cs=tinysrgb&h=350",
+        "https://images.pexels.com/photos/90893/pexels-photo-90893.jpeg?auto=compress&cs=tinysrgb&h=350"
+      ],
+      "image_credits": [
+        {
+          "photographer": "Brandon Benedict",
+          "photographer_url": "https://www.pexels.com/@brandon-benedict-111617359",
+          "pexels_url": "https://www.pexels.com/photo/food-on-the-plate-9715157/"
+        },
+        {
+          "photographer": "Cook Eat",
+          "photographer_url": "https://www.pexels.com/@cookeat",
+          "pexels_url": "https://www.pexels.com/photo/nuts-and-vegetables-772514/"
+        },
+        {
+          "photographer": "Keegan Evans",
+          "photographer_url": "https://www.pexels.com/@keegan-evans-10986",
+          "pexels_url": "https://www.pexels.com/photo/tuna-salad-on-transparent-lunch-pack-90893/"
+        }
+      ]
+    },
+    {
+      "name": "豚こまのカリカリ揚げ焼き にんにく醤油",
+      "tool": "フライパン",
+      "freeze": true,
+      "ingredients": [
+        "豚こま切れ",
+        "片栗粉",
+        "にんにく",
+        "醤油",
+        "みりん",
+        "砂糖",
+        "大葉"
+      ],
+      "steps": [
+        "豚こまに塩こしょうをふり、片栗粉を全体にまぶす",
+        "フライパンに油を1cm深さまで入れ中火で熱し、豚こまを広げて両面カリッと揚げ焼きにする（各2〜3分）",
+        "余分な油を拭き取り、みじん切りにんにく・醤油・みりん各大さじ2・砂糖大さじ1を加えて絡める",
+        "大葉を添えて完成。冷めてから保存容器へ"
+      ],
+      "time_minutes": 20,
+      "storage_note": "冷蔵3日・冷凍2週間",
+      "kid_note": "揚げ焼き後の素揚げ状態で取り分け、薄口醤油を少量かける",
+      "search_keyword": "crispy fried pork garlic soy sauce japanese",
+      "images": [
+        "https://images.pexels.com/photos/37279873/pexels-photo-37279873.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "https://images.pexels.com/photos/28574962/pexels-photo-28574962.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "https://images.pexels.com/photos/13043631/pexels-photo-13043631.jpeg?auto=compress&cs=tinysrgb&h=350"
+      ],
+      "image_credits": [
+        {
+          "photographer": "Josh Eleazar",
+          "photographer_url": "https://www.pexels.com/@padrechaks",
+          "pexels_url": "https://www.pexels.com/photo/delicious-japanese-cuisine-featuring-katsudon-and-sushi-37279873/"
+        },
+        {
+          "photographer": "Schena Maria  Karlec",
+          "photographer_url": "https://www.pexels.com/@schena-maria-karlec-885328",
+          "pexels_url": "https://www.pexels.com/photo/close-up-of-delicious-sushi-with-sauce-drizzle-28574962/"
+        },
+        {
+          "photographer": "Rin Gakusho",
+          "photographer_url": "https://www.pexels.com/@rin-gakusho-280714394",
+          "pexels_url": "https://www.pexels.com/photo/chips-and-rock-salt-in-bowls-13043631/"
+        }
+      ]
     }
   ],
   "side": [
     {
-      "name": "しいたけとエリンギのごまマリネ",
-      "tool": "レンジ",
+      "name": "しいたけとエリンギのバジルマリネ",
+      "tool": "フライパン",
       "freeze": false,
       "ingredients": [
         "しいたけ",
         "エリンギ",
-        "ごま油",
-        "醤油",
+        "バジル",
+        "オリーブオイル",
         "酢",
-        "白ごま"
+        "塩",
+        "こしょう"
       ],
       "steps": [
-        "しいたけは石づきを除いて薄切り、エリンギは手で縦に裂く",
-        "耐熱ボウルに入れてラップし、レンジ600W・3分加熱する",
-        "熱いうちにごま油小さじ2・醤油大さじ1・酢小さじ1・白ごまを加えてよく和えて完成"
+        "しいたけは石づきを除いて薄切り、エリンギは手で裂く",
+        "フライパンにオリーブオイルを中火で熱し、きのこ類をしんなりするまで炒める（3〜4分）",
+        "酢大さじ1・塩小さじ1/2・こしょう少々・バジル（ちぎる）を加えてさっと和えて完成"
       ],
       "time_minutes": 10,
       "storage_note": "冷蔵4日",
       "kid_note": "",
-      "image": "https://images.pexels.com/photos/17559226/pexels-photo-17559226.jpeg?auto=compress&cs=tinysrgb&h=350",
-      "image_credit": {
-        "photographer": "Phat Nguy",
-        "photographer_url": "https://www.pexels.com/@phat-nguy-110224443",
-        "pexels_url": "https://www.pexels.com/photo/healthy-gourmet-lunch-17559226/"
-      }
+      "search_keyword": "mushroom basil marinade italian herbs sauteed",
+      "images": [
+        "https://images.pexels.com/photos/6147834/pexels-photo-6147834.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "https://images.pexels.com/photos/8588501/pexels-photo-8588501.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "https://images.pexels.com/photos/29631459/pexels-photo-29631459.jpeg?auto=compress&cs=tinysrgb&h=350"
+      ],
+      "image_credits": [
+        {
+          "photographer": "ROMAN ODINTSOV",
+          "photographer_url": "https://www.pexels.com/@roman-odintsov",
+          "pexels_url": "https://www.pexels.com/photo/pizza-on-wooden-surface-6147834/"
+        },
+        {
+          "photographer": "anyway_lb Baina Lazareva",
+          "photographer_url": "https://www.pexels.com/@anyway_lb-baina-lazareva-67883465",
+          "pexels_url": "https://www.pexels.com/photo/white-egg-beside-green-vegetable-on-white-ceramic-bowl-8588501/"
+        },
+        {
+          "photographer": "Kunal Lakhotia",
+          "photographer_url": "https://www.pexels.com/@kunal-lakhotia-781256899",
+          "pexels_url": "https://www.pexels.com/photo/delicious-stir-fried-vegetables-with-tofu-29631459/"
+        }
+      ]
     },
     {
       "name": "レタスとえのきのさっぱりナムル",
@@ -226,24 +350,41 @@
         "レタス",
         "えのき",
         "ごま油",
+        "鶏がらスープの素",
         "塩",
-        "醤油",
         "白ごま"
       ],
       "steps": [
-        "えのきは石づきを切り落とし半分の長さに切り、耐熱ボウルに入れてラップしレンジ600W・2分加熱して水気を切る",
-        "レタスは食べやすくちぎる",
-        "えのきとレタスをごま油小さじ2・塩小さじ1/4・醤油小さじ1・白ごまで和えて完成"
+        "えのきは石づきを除いて半分に切り、耐熱ボウルに入れてラップしレンジ600W・2分加熱する",
+        "レタスはざく切りにして水気を切り、加熱後のえのきと合わせる",
+        "ごま油大さじ1・鶏がらスープの素小さじ1・塩少々・白ごまを加えてよく和えて完成"
       ],
-      "time_minutes": 8,
-      "storage_note": "冷蔵2日",
+      "time_minutes": 10,
+      "storage_note": "冷蔵2日（レタスはなるべく早めに）",
       "kid_note": "",
-      "image": "https://images.pexels.com/photos/34318139/pexels-photo-34318139.jpeg?auto=compress&cs=tinysrgb&h=350",
-      "image_credit": {
-        "photographer": "Bia Metidieri",
-        "photographer_url": "https://www.pexels.com/@bia-metidieri-2156623321",
-        "pexels_url": "https://www.pexels.com/photo/colorful-ingredients-for-fresh-salad-preparation-34318139/"
-      }
+      "search_keyword": "lettuce enoki mushroom namul korean sesame salad",
+      "images": [
+        "https://images.pexels.com/photos/17559226/pexels-photo-17559226.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "https://images.pexels.com/photos/34318139/pexels-photo-34318139.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "https://images.pexels.com/photos/11287049/pexels-photo-11287049.jpeg?auto=compress&cs=tinysrgb&h=350"
+      ],
+      "image_credits": [
+        {
+          "photographer": "Phat Nguy",
+          "photographer_url": "https://www.pexels.com/@phat-nguy-110224443",
+          "pexels_url": "https://www.pexels.com/photo/healthy-gourmet-lunch-17559226/"
+        },
+        {
+          "photographer": "Bia Metidieri",
+          "photographer_url": "https://www.pexels.com/@bia-metidieri-2156623321",
+          "pexels_url": "https://www.pexels.com/photo/colorful-ingredients-for-fresh-salad-preparation-34318139/"
+        },
+        {
+          "photographer": "This Life's Illusions",
+          "photographer_url": "https://www.pexels.com/@this-life-s-illusions-181439769",
+          "pexels_url": "https://www.pexels.com/photo/fresh-green-lettuce-in-a-white-square-bowl-11287049/"
+        }
+      ]
     },
     {
       "name": "絹豆腐の薬味たっぷり冷奴",
@@ -253,30 +394,47 @@
         "絹豆腐",
         "長ねぎ",
         "大葉",
-        "納豆",
         "醤油",
         "ごま油"
       ],
       "steps": [
-        "絹豆腐を水切りし食べやすい大きさに切って器に盛る",
-        "長ねぎは小口切り、大葉は細切りにする",
-        "豆腐の上に長ねぎ・大葉・納豆をのせ、醤油とごま油を回しかけて完成"
+        "絹豆腐は水切りして食べやすい大きさに切る",
+        "長ねぎは小口切り、大葉はせん切りにする",
+        "豆腐を器に盛り薬味をのせ、醤油・ごま油をかけて完成"
       ],
       "time_minutes": 5,
-      "storage_note": "作りたてが美味しい（当日）",
-      "kid_note": "子供分は納豆と薄口醤油のみ。ねぎ・ごま油はお好みで",
-      "image": "https://images.pexels.com/photos/5182122/pexels-photo-5182122.jpeg?auto=compress&cs=tinysrgb&h=350",
-      "image_credit": {
-        "photographer": "Anna Tarazevich",
-        "photographer_url": "https://www.pexels.com/@anntarazevich",
-        "pexels_url": "https://www.pexels.com/photo/food-on-a-plate-5182122/"
-      }
+      "storage_note": "冷蔵2日（薬味は当日のせる）",
+      "kid_note": "醤油は少量に。薬味は好みで調整",
+      "search_keyword": "cold tofu hiyayakko japanese herb garnish",
+      "images": [
+        "https://images.pexels.com/photos/5182122/pexels-photo-5182122.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "https://images.pexels.com/photos/8743917/pexels-photo-8743917.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "https://images.pexels.com/photos/34406230/pexels-photo-34406230.jpeg?auto=compress&cs=tinysrgb&h=350"
+      ],
+      "image_credits": [
+        {
+          "photographer": "Anna Tarazevich",
+          "photographer_url": "https://www.pexels.com/@anntarazevich",
+          "pexels_url": "https://www.pexels.com/photo/food-on-a-plate-5182122/"
+        },
+        {
+          "photographer": "Farhad Ibrahimzade",
+          "photographer_url": "https://www.pexels.com/@farhad",
+          "pexels_url": "https://www.pexels.com/photo/a-plate-of-sushi-8743917/"
+        },
+        {
+          "photographer": "The_a DoTe",
+          "photographer_url": "https://www.pexels.com/@the_a-dote-2055473880",
+          "pexels_url": "https://www.pexels.com/photo/rustic-cheese-platter-with-rosemary-and-pumpkin-34406230/"
+        }
+      ]
     }
   ],
   "shopping_list": [
-    "にんにく（チューブ）",
-    "片栗粉",
-    "しょうが（チューブ）"
+    "にんにく",
+    "オリーブオイル",
+    "白ごま",
+    "片栗粉"
   ],
-  "surplus_note": "焼きおにぎりは冷凍ストックとして平日に活用。牛乳は余れば朝食や鶏ハンバーグの追加分に。鯖缶はレタスと和えてサラダにしてもよい。納豆は副菜の冷奴にも使用。"
+  "surplus_note": "納豆・焼きおにぎりはそのまま食事に活用。たまねぎドレッシングはサラダや焼き肉のたれに。鯖缶（残り食材）はみそ汁や炒め物に。牛乳は飲用または料理に活用。"
 }
