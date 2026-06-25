@@ -34,7 +34,7 @@ def fetch_unsplash(keyword: str) -> list[dict]:
     try:
         resp = requests.get(
             "https://api.unsplash.com/search/photos",
-            params={"query": keyword, "per_page": 3, "orientation": "squarish"},
+            params={"query": keyword, "per_page": 1, "orientation": "squarish"},
             headers={"Authorization": f"Client-ID {API_KEY}"},
             timeout=10,
         )
@@ -96,8 +96,8 @@ def main():
         # Reuse saved photo for liked recipes
         if name in saved_photos:
             saved = saved_photos[name]
-            recipe["images"] = [saved["url"]]
-            recipe["image_credits"] = [saved["credit"]]
+            recipe["image"] = saved["url"]
+            recipe["image_credit"] = saved["credit"]
             print(f"Reusing saved photo: {name}")
             continue
 
@@ -107,24 +107,24 @@ def main():
         results, used_keyword = fetch_unsplash_with_fallback(keyword)
 
         if results:
-            recipe["images"] = [r["url"] for r in results]
-            recipe["image_credits"] = [
-                {"photographer": r["photographer"],
-                 "photographer_url": r["photographer_url"],
-                 "unsplash_url": r["unsplash_url"]}
-                for r in results
-            ]
-            print(f"  ✓ {len(results)} photos fetched")
+            p = results[0]
+            recipe["image"] = p["url"]
+            recipe["image_credit"] = {
+                "photographer": p["photographer"],
+                "photographer_url": p["photographer_url"],
+                "unsplash_url": p["unsplash_url"],
+            }
+            print(f"  ✓ photo fetched")
 
             # Persist to prefs if this recipe is liked
             if name in prefs_by_name and prefs_by_name[name].get("good_count", 0) > 0:
-                prefs_by_name[name]["photo_url"] = results[0]["url"]
-                prefs_by_name[name]["photo_credit"] = recipe["image_credits"][0]
+                prefs_by_name[name]["photo_url"] = p["url"]
+                prefs_by_name[name]["photo_credit"] = recipe["image_credit"]
                 prefs_dirty = True
                 print(f"  → saved to preferences (good_count > 0)")
         else:
-            recipe["images"] = []
-            recipe["image_credits"] = []
+            recipe["image"] = ""
+            recipe["image_credit"] = {}
             print(f"  ✗ no images found")
 
     with open(MENU_PATH, "w", encoding="utf-8") as f:
