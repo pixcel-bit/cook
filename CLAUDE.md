@@ -213,7 +213,7 @@
       "time_minutes": 20,
       "storage_note": "冷蔵3日",
       "kid_note": "取り分けのポイント（不要なら省略）",
-      "search_keyword": "英語の料理検索キーワード（Pexels検索用。料理の見た目が伝わる具体的な英単語で）"
+      "search_keyword": "英語の料理検索キーワード（Unsplash検索用）"
     }
   ],
   "side": [
@@ -226,7 +226,7 @@
       "time_minutes": 10,
       "storage_note": "冷蔵4日",
       "kid_note": "取り分けのポイント（不要なら省略）",
-      "search_keyword": "英語の料理検索キーワード（Pexels検索用）"
+      "search_keyword": "英語の料理検索キーワード（Unsplash検索用）"
     }
   ],
   "shopping_list": ["買い足し品1", "買い足し品2"],
@@ -252,7 +252,7 @@ push先: pixcel-bit/cook リポジトリ main ブランチ
 
 index.htmlはmenu.jsonをfetchして「メニュータブ」を動的に描画する。
 
-### 料理写真の取得（Pexels）
+### 料理写真の取得（Unsplash）
 
 menu.json を生成・push した後、以下のスクリプトを実行する。
 
@@ -262,8 +262,15 @@ python3 scripts/fetch_pexels.py
 
 このスクリプトが以下を確実に実行する（deterministic logic）：
 - 各レシピに対し、`preferences.json` の `recipes[]` に `good_count > 0` かつ `photo_url` がある場合は再利用（API呼び出しなし）
-- それ以外は Pexels API で取得し、`menu.json` の `image` / `image_credit` フィールドに保存
+- それ以外は Unsplash API で `search_keyword` を使って取得し、`menu.json` の `images` / `image_credits` フィールドに保存（最大3枚）
+- 0件だった場合はキーワードを短縮して再検索（フォールバック）
 - 取得した写真について、該当レシピが `good_count > 0` なら `preferences.json` の `photo_url` / `photo_credit` にも保存（翌週以降の再利用のため）
+
+#### search_keyword の生成ルール
+- **食材名 ＋ 調理法 ＋ 料理形態** の構造にする（例：`chicken thigh tomato braised stew`）
+- 料理ジャンル名（japanese / italian / korean / asian / western など）は**使わない**
+- 料理固有名詞（hiyayakko / namul / teriyaki など）は**使わない**
+- 3〜5単語に収める
 
 ```
 push先: pixcel-bit/cook リポジトリ main ブランチ
