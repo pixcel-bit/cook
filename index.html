@@ -181,9 +181,11 @@
   .wakelock-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--line); flex-shrink: 0; }
   .wakelock-btn.active .wakelock-dot { background: #e8a020; }
 
-  .pexels-credit { font-size: 10px; color: var(--ink-faint); margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line); }
+  .pexels-credit { font-size: 10px; color: var(--ink-faint); margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line); display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
   .pexels-credit a { color: var(--ink-faint); text-decoration: none; }
   .pexels-credit a:hover { text-decoration: underline; }
+  .btn-next-photo { font-size: 11px; padding: 3px 10px; border: 1px solid var(--line); border-radius: 20px; background: var(--card); color: var(--ink-soft); cursor: pointer; font-family: inherit; font-weight: 700; white-space: nowrap; flex-shrink: 0; }
+  .btn-next-photo:hover { border-color: var(--accent); color: var(--accent); }
   @media (max-width: 480px) {
     .card-illo { width: 84px; } .card-illo svg { width: 62px; height: 62px; } .card-illo img { width: 84px; }
     h1 { font-size: 22px; } .tab-btn { padding: 8px 13px; font-size: 12px; }
@@ -479,6 +481,7 @@ const API = 'https://api.github.com/repos/pixcel-bit/cook/contents/preferences.j
 let THIS_WEEK_INGREDIENTS = [];
 let RECIPE_SVGS = {};
 let RECIPE_IMAGES = {};
+const photoIndex = {}; // recipe name → current image index
 
 const MENU_URL = './menu.json';
 let menuData = null;
@@ -830,11 +833,13 @@ function getChildAge() {
 function renderMenu() {
   if (!menuData) return;
 
-  // Build RECIPE_IMAGES for レシピリスト tab
+  // Build image lookups for レシピリスト tab
   RECIPE_SVGS = {};
+  RECIPE_IMAGES = {};
   [...menuData.main, ...menuData.side].forEach(r => {
     if (r.svg) RECIPE_SVGS[r.name] = r.svg;
-    if (r.image) RECIPE_IMAGES[r.name] = r.image;
+    const imgs = r.images && r.images.length ? r.images : (r.image ? [r.image] : []);
+    if (imgs.length) RECIPE_IMAGES[r.name] = imgs[0];
   });
 
   // Set ingredients list
@@ -910,24 +915,67 @@ function renderMenu() {
   initLeftovers();
 }
 
+function getRecipeImages(r) {
+  if (r.images && r.images.length) return r.images;
+  if (r.image) return [r.image];
+  return [];
+}
+
+function getRecipeCredits(r) {
+  if (r.image_credits && r.image_credits.length) return r.image_credits;
+  if (r.image_credit && r.image_credit.photographer) return [r.image_credit];
+  return [];
+}
+
+function nextPhoto(nameB64) {
+  const name = decodeURIComponent(escape(atob(nameB64)));
+  const r = [...(menuData.main || []), ...(menuData.side || [])].find(x => x.name === name);
+  if (!r) return;
+  const imgs = getRecipeImages(r);
+  if (imgs.length <= 1) return;
+  photoIndex[name] = ((photoIndex[name] || 0) + 1) % imgs.length;
+  const idx = photoIndex[name];
+  const imgEl = document.getElementById('photo-img-' + nameB64);
+  const btnEl = document.getElementById('photo-btn-' + nameB64);
+  const creditEl = document.getElementById('photo-credit-' + nameB64);
+  if (imgEl) imgEl.src = imgs[idx];
+  if (btnEl) btnEl.textContent = `次の写真 ${idx + 1}/${imgs.length}`;
+  const credits = getRecipeCredits(r);
+  const c = credits[idx] || credits[0];
+  if (creditEl && c && c.photographer) {
+    creditEl.innerHTML = `Photo by <a href="${c.photographer_url}" target="_blank" rel="noopener">${esc(c.photographer)}</a> on <a href="${c.pexels_url}" target="_blank" rel="noopener">Pexels</a>`;
+  }
+}
+
 function renderRecipeCard(r, type) {
   const tagClass = type === 'main' ? 'tag-main' : 'tag-side';
   const tagLabel = type === 'main' ? '主菜' : '副菜';
   const freezeTag = r.freeze ? '<span class="tool freeze">下味冷凍</span>' : '';
+  const imgs = getRecipeImages(r);
+  const credits = getRecipeCredits(r);
+  const nameEsc = esc(r.name);
+  const nameB64 = btoa(unescape(encodeURIComponent(r.name)));
+
   let illoHtml;
-  if (r.image) {
-    illoHtml = `<img src="${r.image}" alt="${esc(r.name)}" loading="lazy" onerror="this.parentElement.innerHTML='<div class=card-illo-fallback>🍽</div>'">`;
+  if (imgs.length) {
+    illoHtml = `<img id="photo-img-${nameB64}" src="${imgs[0]}" alt="${nameEsc}" loading="lazy" onerror="this.parentElement.innerHTML='<div class=card-illo-fallback>🍽</div>'">`;
   } else if (r.svg) {
     illoHtml = r.svg;
   } else {
     illoHtml = '<div class="card-illo-fallback">🍽</div>';
   }
+
   const ingredients = (r.ingredients || []).map(i => `<span>${esc(i)}</span>`).join('');
   const steps = (r.steps || []).map(s => `<li>${esc(s)}</li>`).join('');
-  const nameEsc = esc(r.name);
-  const credit = r.image_credit && r.image_credit.photographer
-    ? `<div class="pexels-credit">Photo by <a href="${r.image_credit.photographer_url}" target="_blank" rel="noopener">${esc(r.image_credit.photographer)}</a> on <a href="${r.image_credit.pexels_url}" target="_blank" rel="noopener">Pexels</a></div>`
+
+  const c0 = credits[0];
+  const creditHtml = c0 && c0.photographer
+    ? `<a href="${c0.photographer_url}" target="_blank" rel="noopener">${esc(c0.photographer)}</a> on <a href="${c0.pexels_url}" target="_blank" rel="noopener">Pexels</a>`
     : '';
+  const photoControls = imgs.length > 1
+    ? `<button id="photo-btn-${nameB64}" class="btn-next-photo" onclick="nextPhoto('${nameB64}')">次の写真 1/${imgs.length}</button>`
+    : '';
+
   return `
   <details class="card" data-recipe="${nameEsc}">
     <summary class="card-head">
@@ -950,7 +998,7 @@ function renderRecipeCard(r, type) {
         <button class="rate-btn good" onclick="rateRecipe('${nameEsc}','good')">👍 <span class="rate-count good-count">0</span></button>
         <button class="rate-btn bad" onclick="rateRecipe('${nameEsc}','bad')">👎 <span class="rate-count bad-count">0</span></button>
       </div>
-      ${credit}
+      ${creditHtml || photoControls ? `<div class="pexels-credit">${photoControls}<span id="photo-credit-${nameB64}">${creditHtml}</span></div>` : ''}
     </div>
   </details>`;
 }

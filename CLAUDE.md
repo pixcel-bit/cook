@@ -213,7 +213,7 @@
       "time_minutes": 20,
       "storage_note": "冷蔵3日",
       "kid_note": "取り分けのポイント（不要なら省略）",
-      "svg": "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'>...</svg>"
+      "search_keyword": "英語の料理検索キーワード（Pexels検索用。料理の見た目が伝わる具体的な英単語で）"
     }
   ],
   "side": [
@@ -226,35 +226,12 @@
       "time_minutes": 10,
       "storage_note": "冷蔵4日",
       "kid_note": "取り分けのポイント（不要なら省略）",
-      "svg": "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'>...</svg>"
+      "search_keyword": "英語の料理検索キーワード（Pexels検索用）"
     }
   ],
   "shopping_list": ["買い足し品1", "買い足し品2"],
   "surplus_note": "余り食材の使い道メモ"
 }
-```
-
-### SVG生成ルール
-
-- 各レシピに料理を表現するオリジナルSVGイラストを生成
-- サイズ：`viewBox="0 0 100 100"`（width/height属性は不要）
-- スタイル：温かみのある手描き風
-- カラーパレット：ベース `#f7f4ec` / アクセント `#c0623a` 系に統一
-- 著作権フリー（外部画像・実写は使わない）
-
-**必須の描画要素（以下をすべて含めること）：**
-1. **`<defs>` に `radialGradient` を定義**して皿・食材・ソースに適用する（単色塗りつぶし禁止）
-2. **皿は小さく下寄せ**（cy≈87, rx≈37, ry≈7.5）。テーブル影 → リム外周影 → 皿本体グラデーション → 内側白 → ハイライトの順で重ねる
-3. **食材を大きく描く**（y=59〜84の範囲を使い切る）。接地影（低opacity楕円）を足元に置く
-4. **食材の形は不規則な `<path>` で描く**（楕円の積み重ねのみは禁止）。暗部→中層→表面の3層で立体感を出す
-5. **テクスチャを入れる**：焼き目・繊維・スペキュラハイライト（低opacity曲線）
-6. **薬味・トッピングを添える**：ねぎ・ごま・ハーブなど料理に合わせて
-7. **湯気を3〜5本描く**（ゆらぎのある曲線、opacity 0.2〜0.4）
-
-**参考SVG（照り焼き鶏）— このクオリティを基準とすること：**
-
-```
-<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><defs><radialGradient id='plate' cx='38%' cy='32%' r='62%'><stop offset='0%' stop-color='#ffffff'/><stop offset='100%' stop-color='#eeeae0'/></radialGradient><radialGradient id='g1' cx='30%' cy='25%' r='70%'><stop offset='0%' stop-color='#e88848'/><stop offset='55%' stop-color='#c05020'/><stop offset='100%' stop-color='#7a2e08'/></radialGradient><radialGradient id='g2' cx='36%' cy='28%' r='66%'><stop offset='0%' stop-color='#e07a42'/><stop offset='50%' stop-color='#b84818'/><stop offset='100%' stop-color='#6a2406'/></radialGradient><radialGradient id='sauce' cx='40%' cy='40%' r='60%'><stop offset='0%' stop-color='#a04020' stop-opacity='0.5'/><stop offset='100%' stop-color='#4a1604' stop-opacity='0.15'/></radialGradient></defs><rect width='100' height='100' fill='#f7f4ec'/><ellipse cx='51' cy='92' rx='38' ry='6' fill='#b0aca0' opacity='0.32'/><ellipse cx='51' cy='88' rx='37' ry='7.5' fill='#ccc9c0' opacity='0.5'/><ellipse cx='50' cy='87' rx='37' ry='7.5' fill='url(#plate)' stroke='#dedad2' stroke-width='0.8'/><ellipse cx='50' cy='86' rx='30' ry='5.5' fill='#fefefd'/><path d='M17 83 Q33 76 50 77' stroke='#ffffff' stroke-width='2' fill='none' opacity='0.6' stroke-linecap='round'/><path d='M28 84 Q38 81 50 82 Q63 81 72 84 Q66 87 50 86 Q34 87 28 84Z' fill='url(#sauce)'/><ellipse cx='42' cy='83' rx='22' ry='4' fill='#3a1004' opacity='0.22'/><path d='M18 80 Q24 70 42 71 Q60 70 66 80 Q63 85 42 84 Q21 85 18 80Z' fill='#6a2808'/><path d='M19 79 Q25 69 42 70 Q59 69 65 79 Q62 83 42 82 Q22 83 19 79Z' fill='#9a3e18'/><path d='M20 77 Q27 67 42 68 Q56 66 63 77 Q60 81 42 80 Q24 81 20 77Z' fill='url(#g1)'/><path d='M23 76 Q33 72 44 73 Q54 72 61 76' stroke='#4a1604' stroke-width='1.4' fill='none' opacity='0.35' stroke-linecap='round'/><path d='M25 79 Q35 76 44 77 Q54 76 62 79' stroke='#4a1604' stroke-width='0.9' fill='none' opacity='0.28' stroke-linecap='round'/><path d='M24 75 Q33 73 43 74' stroke='#c05828' stroke-width='0.8' fill='none' opacity='0.45'/><path d='M30 73 Q40 71 52 72' stroke='#b85020' stroke-width='0.8' fill='none' opacity='0.38'/><path d='M46 71 Q54 70 61 73' stroke='#c05828' stroke-width='0.8' fill='none' opacity='0.38'/><path d='M24 74 Q31 71 39 73' stroke='#f8c090' stroke-width='3' fill='none' opacity='0.3' stroke-linecap='round'/><ellipse cx='28' cy='73' rx='5' ry='2' fill='#ffe8c8' opacity='0.28'/><ellipse cx='60' cy='77' rx='20' ry='3.5' fill='#3a1004' opacity='0.2'/><path d='M38 74 Q46 62 63 62 Q76 62 80 72 Q77 78 63 79 Q48 80 38 74Z' fill='#6a2808'/><path d='M39 73 Q47 61 63 61 Q75 61 79 71 Q76 77 63 78 Q49 79 39 73Z' fill='#9a3c18'/><path d='M40 72 Q46 59 62 59 Q73 58 77 68 Q77 74 70 76 Q62 78 53 77 Q45 77 40 72Z' fill='url(#g2)'/><path d='M43 70 Q52 65 63 65 Q70 64 75 68' stroke='#4a1604' stroke-width='1.4' fill='none' opacity='0.35' stroke-linecap='round'/><path d='M44 73 Q54 70 64 70 Q71 70 76 73' stroke='#4a1604' stroke-width='0.9' fill='none' opacity='0.28' stroke-linecap='round'/><path d='M44 70 Q54 67 63 68' stroke='#c05828' stroke-width='0.8' fill='none' opacity='0.42'/><path d='M48 67 Q58 64 67 65' stroke='#b84e20' stroke-width='0.8' fill='none' opacity='0.36'/><path d='M57 63 Q65 62 72 65' stroke='#c05828' stroke-width='0.8' fill='none' opacity='0.36'/><path d='M44 69 Q52 65 62 67' stroke='#f8c090' stroke-width='3' fill='none' opacity='0.3' stroke-linecap='round'/><ellipse cx='50' cy='66' rx='6' ry='2' fill='#ffe8c8' opacity='0.26'/><path d='M51 78 Q54 81 52 85' stroke='#7a2e08' stroke-width='1.4' fill='none' opacity='0.35' stroke-linecap='round'/><path d='M43 79 Q41 82 43 85' stroke='#8a3810' stroke-width='1' fill='none' opacity='0.25' stroke-linecap='round'/><path d='M25 62 Q34 58 45 61' stroke='#3a6c18' stroke-width='2.5' fill='none' stroke-linecap='round'/><path d='M28 59.5 Q38 55 50 58' stroke='#4e8224' stroke-width='2' fill='none' stroke-linecap='round'/><path d='M56 60 Q64 56 74 59' stroke='#3a6c18' stroke-width='2.2' fill='none' stroke-linecap='round'/><path d='M59 57.5 Q67 54 77 57' stroke='#4e8224' stroke-width='1.6' fill='none' stroke-linecap='round'/><line x1='36' y1='59' x2='37' y2='61.5' stroke='#2a5010' stroke-width='0.9' opacity='0.5'/><line x1='43' y1='58' x2='44' y2='60.5' stroke='#2a5010' stroke-width='0.9' opacity='0.5'/><line x1='65' y1='58' x2='66' y2='60.5' stroke='#2a5010' stroke-width='0.9' opacity='0.5'/><ellipse cx='38' cy='72' rx='1.6' ry='1.1' fill='#e4c870' transform='rotate(-28 38 72)'/><ellipse cx='47' cy='70' rx='1.6' ry='1.05' fill='#d8bc60' transform='rotate(12 47 70)'/><ellipse cx='57' cy='73' rx='1.4' ry='1' fill='#e4c870' transform='rotate(-12 57 73)'/><ellipse cx='43' cy='79' rx='1.5' ry='0.95' fill='#d8bc60' transform='rotate(30 43 79)'/><ellipse cx='56' cy='77' rx='1.4' ry='0.95' fill='#e4c870' transform='rotate(-6 56 77)'/><ellipse cx='66' cy='69' rx='1.3' ry='0.9' fill='#d8bc60' transform='rotate(20 66 69)'/><ellipse cx='30' cy='76' rx='1.3' ry='0.9' fill='#e4c870' transform='rotate(-18 30 76)'/><ellipse cx='70' cy='73' rx='1.2' ry='0.85' fill='#d8bc60' transform='rotate(8 70 73)'/><path d='M28 50 Q25 43 27 36 Q29 30 27 23' stroke='#bab6ac' stroke-width='1.8' fill='none' stroke-linecap='round' opacity='0.38'/><path d='M50 48 Q47 41 50 34 Q53 27 50 21' stroke='#bab6ac' stroke-width='1.8' fill='none' stroke-linecap='round' opacity='0.38'/><path d='M72 50 Q75 43 73 36 Q71 29 73 22' stroke='#bab6ac' stroke-width='1.8' fill='none' stroke-linecap='round' opacity='0.38'/><path d='M39 49 Q37 43 39 37' stroke='#c8c5bc' stroke-width='1.1' fill='none' stroke-linecap='round' opacity='0.22'/><path d='M61 49 Q63 43 61 37' stroke='#c8c5bc' stroke-width='1.1' fill='none' stroke-linecap='round' opacity='0.22'/></svg>
 ```
 
 ---
