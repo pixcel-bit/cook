@@ -275,9 +275,27 @@ push先: pixcel-bit/cook リポジトリ main ブランチ
 
 index.htmlはmenu.jsonをfetchして「メニュータブ」を動的に描画する。
 
+### 料理写真の取得（Pexels）
+
+menu.json を生成・push した後、以下のスクリプトを実行する。
+
+```
+python3 scripts/fetch_pexels.py
+```
+
+このスクリプトが以下を確実に実行する（deterministic logic）：
+- 各レシピに対し、`preferences.json` の `recipes[]` に `good_count > 0` かつ `photo_url` がある場合は再利用（API呼び出しなし）
+- それ以外は Pexels API で取得し、`menu.json` の `image` / `image_credit` フィールドに保存
+- 取得した写真について、該当レシピが `good_count > 0` なら `preferences.json` の `photo_url` / `photo_credit` にも保存（翌週以降の再利用のため）
+
+```
+push先: pixcel-bit/cook リポジトリ main ブランチ
+ファイル: menu.json（image フィールドを追記して上書き）、preferences.json（photo_url を保存した場合のみ上書き）
+```
+
 ### preferences.json の更新（採用レシピ反映）
 
-menu.json を生成・push した後、以下のスクリプトを実行して preferences.json を更新し push する。
+上記の後、以下のスクリプトを実行して preferences.json を更新し push する。
 
 ```
 node scripts/update_prefs.js
