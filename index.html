@@ -50,8 +50,10 @@
   .card > summary { list-style: none; cursor: pointer; user-select: none; }
   .card > summary::-webkit-details-marker { display: none; }
   .card-head { display: flex; align-items: stretch; position: relative; }
-  .card-illo { flex-shrink: 0; width: 104px; background: var(--paper); display: flex; align-items: center; justify-content: center; border-right: 1px solid var(--line); }
+  .card-illo { flex-shrink: 0; width: 104px; background: var(--paper); display: flex; align-items: center; justify-content: center; border-right: 1px solid var(--line); overflow: hidden; }
   .card-illo svg { width: 78px; height: 78px; display: block; }
+  .card-illo img { width: 104px; height: 100%; object-fit: cover; display: block; }
+  .card-illo .card-illo-fallback { width: 78px; height: 78px; display: flex; align-items: center; justify-content: center; font-size: 32px; color: var(--ink-faint); }
   .card-info { flex: 1; padding: 15px 40px 15px 18px; min-width: 0; }
   .card-chevron { position: absolute; right: 16px; top: 50%; transform: translateY(-50%); color: var(--ink-faint); font-size: 13px; transition: transform 0.2s; }
   .card[open] .card-chevron { transform: translateY(-50%) rotate(90deg); }
@@ -179,8 +181,11 @@
   .wakelock-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--line); flex-shrink: 0; }
   .wakelock-btn.active .wakelock-dot { background: #e8a020; }
 
+  .pexels-credit { font-size: 10px; color: var(--ink-faint); margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line); }
+  .pexels-credit a { color: var(--ink-faint); text-decoration: none; }
+  .pexels-credit a:hover { text-decoration: underline; }
   @media (max-width: 480px) {
-    .card-illo { width: 84px; } .card-illo svg { width: 62px; height: 62px; }
+    .card-illo { width: 84px; } .card-illo svg { width: 62px; height: 62px; } .card-illo img { width: 84px; }
     h1 { font-size: 22px; } .tab-btn { padding: 8px 13px; font-size: 12px; }
   }
   @media print {
@@ -473,6 +478,7 @@ const API = 'https://api.github.com/repos/pixcel-bit/cook/contents/preferences.j
 
 let THIS_WEEK_INGREDIENTS = [];
 let RECIPE_SVGS = {};
+let RECIPE_IMAGES = {};
 
 const MENU_URL = './menu.json';
 let menuData = null;
@@ -680,7 +686,9 @@ function renderRecipeList() {
   el.innerHTML = sorted.map(r => {
     const isOpen = expandedIds.has(r.id);
     const badge = r.done_count > 0 ? `<span class="done-badge">採用${r.done_count}回</span>` : '';
-    const svgHtml = RECIPE_SVGS[r.name] ? `<div class="rl-svg">${RECIPE_SVGS[r.name]}</div>` : '';
+    const svgHtml = RECIPE_IMAGES[r.name]
+      ? `<div class="rl-svg"><img src="${RECIPE_IMAGES[r.name]}" alt="${esc(r.name)}" style="width:36px;height:36px;object-fit:cover;border-radius:6px;"></div>`
+      : RECIPE_SVGS[r.name] ? `<div class="rl-svg">${RECIPE_SVGS[r.name]}</div>` : '';
     return `
     <div class="rl-item${r.priority?' rl-priority':''}" id="rli-${r.id}">
       <div class="rl-head${isOpen?' open':''}" onclick="toggleExpand('${r.id}')">
@@ -822,9 +830,12 @@ function getChildAge() {
 function renderMenu() {
   if (!menuData) return;
 
-  // Build RECIPE_SVGS for レシピリスト tab
+  // Build RECIPE_IMAGES for レシピリスト tab
   RECIPE_SVGS = {};
-  [...menuData.main, ...menuData.side].forEach(r => { if (r.svg) RECIPE_SVGS[r.name] = r.svg; });
+  [...menuData.main, ...menuData.side].forEach(r => {
+    if (r.svg) RECIPE_SVGS[r.name] = r.svg;
+    if (r.image) RECIPE_IMAGES[r.name] = r.image;
+  });
 
   // Set ingredients list
   if (menuData.delivery_ingredients) THIS_WEEK_INGREDIENTS = menuData.delivery_ingredients;
@@ -903,14 +914,24 @@ function renderRecipeCard(r, type) {
   const tagClass = type === 'main' ? 'tag-main' : 'tag-side';
   const tagLabel = type === 'main' ? '主菜' : '副菜';
   const freezeTag = r.freeze ? '<span class="tool freeze">下味冷凍</span>' : '';
-  const svgHtml = r.svg || '';
+  let illoHtml;
+  if (r.image) {
+    illoHtml = `<img src="${r.image}" alt="${esc(r.name)}" loading="lazy" onerror="this.parentElement.innerHTML='<div class=card-illo-fallback>🍽</div>'">`;
+  } else if (r.svg) {
+    illoHtml = r.svg;
+  } else {
+    illoHtml = '<div class="card-illo-fallback">🍽</div>';
+  }
   const ingredients = (r.ingredients || []).map(i => `<span>${esc(i)}</span>`).join('');
   const steps = (r.steps || []).map(s => `<li>${esc(s)}</li>`).join('');
   const nameEsc = esc(r.name);
+  const credit = r.image_credit && r.image_credit.photographer
+    ? `<div class="pexels-credit">Photo by <a href="${r.image_credit.photographer_url}" target="_blank" rel="noopener">${esc(r.image_credit.photographer)}</a> on <a href="${r.image_credit.pexels_url}" target="_blank" rel="noopener">Pexels</a></div>`
+    : '';
   return `
   <details class="card" data-recipe="${nameEsc}">
     <summary class="card-head">
-      <div class="card-illo">${svgHtml}</div>
+      <div class="card-illo">${illoHtml}</div>
       <div class="card-info">
         <div class="tag-row"><span class="tag ${tagClass}">${tagLabel}</span>${freezeTag}<span class="tool">${esc(r.tool || '')}</span></div>
         <div class="card-title">${nameEsc}</div>
@@ -929,6 +950,7 @@ function renderRecipeCard(r, type) {
         <button class="rate-btn good" onclick="rateRecipe('${nameEsc}','good')">👍 <span class="rate-count good-count">0</span></button>
         <button class="rate-btn bad" onclick="rateRecipe('${nameEsc}','bad')">👎 <span class="rate-count bad-count">0</span></button>
       </div>
+      ${credit}
     </div>
   </details>`;
 }
