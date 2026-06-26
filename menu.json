@@ -5,305 +5,165 @@
     "えのき",
     "豚こま切れ",
     "レタス",
-    "トマトジュース",
-    "たまねぎドレッシング",
     "絹豆腐",
     "納豆",
-    "焼きおにぎり",
     "卵",
     "たまねぎ",
     "しいたけ",
-    "牛乳",
     "鶏もも肉",
-    "鶏もも角切り",
+    "鶏もも肉角切り",
     "キャベツ",
     "長ねぎ",
     "エリンギ"
   ],
   "main": [
     {
-      "name": "鶏もも肉と長ねぎの中華塩煮込み",
+      "name": "鶏もも肉と長ねぎの中華風トロトロ塩煮",
       "tool": "ビストロ",
       "freeze": false,
-      "ingredients": [
-        "鶏もも肉",
-        "長ねぎ",
-        "たまねぎ",
-        "酒",
-        "塩",
-        "鶏がらスープの素",
-        "生姜",
-        "ごま油"
-      ],
+      "ingredients": ["鶏もも肉", "長ねぎ", "たまねぎ", "しょうが", "にんにく", "醤油", "酒", "ごま油", "塩"],
       "steps": [
-        "鶏もも肉は一口大に切り、長ねぎは4cm幅、たまねぎは薄切りにする",
-        "ビストロの内鍋に鶏肉・長ねぎ・たまねぎ・酒大さじ2・塩小さじ1・鶏がらスープの素小さじ2・すりおろし生姜・水150mlを入れる",
-        "ビストロ：圧力調理・高圧・10分 → 加圧終了後そのまま10分自然放置してから蓋を開ける",
-        "仕上げにごま油を回しかけ、塩で味を調える"
+        "鶏もも肉は一口大に切り、塩・酒少々で下味をつける。長ねぎは斜め切り、たまねぎは薄切り、しょうが・にんにくはみじん切り",
+        "ビストロにたまねぎ・長ねぎ・しょうが・にんにくを敷き、鶏肉を乗せ、醤油大さじ2・酒大さじ2・塩小さじ1/2・水150mlを加える",
+        "ビストロ：圧力調理・高圧・12分 → 加圧終了後10分そのまま自然放置してから蓋を開ける",
+        "ごま油小さじ1を回しかけ全体を混ぜ、粗熱が取れたら煮汁ごと保存容器に移す"
+      ],
+      "time_minutes": 35,
+      "storage_note": "冷蔵4日（煮汁ごと保存）。食べる際は電子レンジで温め直す",
+      "kid_note": "辛味なし。子供の取り分けは鶏肉を小さめに切り分けて",
+      "search_keyword": "braised chicken thigh dark soy sauce bowl"
+    },
+    {
+      "name": "鶏もも肉角切りとキャベツのトマト煮込み",
+      "tool": "ビストロ",
+      "freeze": false,
+      "ingredients": ["鶏もも肉角切り", "キャベツ", "たまねぎ", "にんにく", "トマトジュース", "バジル", "塩こしょう", "オリーブオイル"],
+      "steps": [
+        "鶏もも肉角切りに塩こしょうを振る。たまねぎはくし切り（2個）、キャベツはざく切り（1/4個）、にんにくはみじん切り",
+        "ビストロにたまねぎ・キャベツ・にんにく・鶏肉を入れ、トマトジュース200ml・塩小さじ1/2を加える",
+        "ビストロ：圧力調理・低圧・8分 → 加圧終了後すぐに蓋を開けて全体を混ぜる",
+        "庭のバジルをちぎって散らし、粗熱が取れたら汁ごと保存容器に移す"
       ],
       "time_minutes": 30,
-      "storage_note": "冷蔵4日",
-      "kid_note": "薄味で子供も食べやすい。取り分け後に大人はラー油や白こしょうを追加",
-      "search_keyword": "chicken thigh pale broth tender",
-      "image": "https://images.unsplash.com/photo-1708782342351-74f02e9a16c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxjaGlja2VuJTIwdGhpZ2glMjBwYWxlJTIwYnJvdGglMjB0ZW5kZXJ8ZW58MHwyfHx8MTc4MjQ1OTg4OXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "image_credit": {
-        "photographer": "Rimsha Noor",
-        "photographer_url": "https://unsplash.com/@rimshaj123",
-        "unsplash_url": "https://unsplash.com/photos/two-raw-chickens-on-a-plate-with-lettuce-and-pepper-_VhofEs6mmM"
-      }
+      "storage_note": "冷蔵4日（汁ごと保存）。電子レンジで温め直す",
+      "kid_note": "辛味なし。トマトの優しい酸味で子供も食べやすい",
+      "search_keyword": "chicken tomato stew chunky red sauce pot"
     },
     {
-      "name": "いわし缶とたまねぎのトマトジュース煮",
+      "name": "鯖缶とえのき・しいたけの生姜みそ煮",
       "tool": "ビストロ",
       "freeze": false,
-      "ingredients": [
-        "いわし水煮缶",
-        "たまねぎ",
-        "トマトジュース",
-        "にんにく",
-        "オリーブオイル",
-        "塩",
-        "こしょう",
-        "バジル"
-      ],
+      "ingredients": ["鯖缶", "えのき", "しいたけ", "たまねぎ", "しょうが", "味噌", "みりん", "酒", "砂糖"],
       "steps": [
-        "たまねぎは薄切りにする。にんにくはみじん切りにする",
-        "ビストロの内鍋にオリーブオイル・にんにく・たまねぎ・いわし缶（汁ごと）・トマトジュース250ml・塩こしょうを入れる",
-        "ビストロ：圧力調理・高圧・8分 → 加圧終了後5分自然放置してから蓋を開ける",
-        "バジルをちぎって加え、塩こしょうで味を調える"
+        "えのきは石づきを取り3cm長さに切る。しいたけは薄切り、たまねぎはくし切り（1個）、しょうがはせん切り",
+        "ビストロにたまねぎ・えのき・しいたけを入れ、鯖缶を汁ごと加える",
+        "味噌大さじ2・みりん大さじ2・酒大さじ2・砂糖小さじ1・水100ml・しょうがを合わせて加える",
+        "ビストロ：煮込みモード・15分 → 終了後すぐに蓋を開けて全体を混ぜ、粗熱が取れたら汁ごと保存容器に移す"
       ],
       "time_minutes": 25,
-      "storage_note": "冷蔵4日",
-      "kid_note": "子供用はバジルなしで先に取り分ける",
-      "search_keyword": "sardine red tomato sauce stewed",
-      "image": "https://images.unsplash.com/photo-1753826226786-f85aa0c41e28?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxzYXJkaW5lJTIwcmVkJTIwdG9tYXRvJTIwc2F1Y2V8ZW58MHwyfHx8MTc4MjQ1OTg5MXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "image_credit": {
-        "photographer": "Haberdoedas",
-        "photographer_url": "https://unsplash.com/@haberdoedas",
-        "unsplash_url": "https://unsplash.com/photos/a-sardines-themed-mug-is-the-central-focus-xgFmz9ImIgE"
-      }
+      "storage_note": "冷蔵4日（汁ごと保存）。電子レンジで温め直す",
+      "kid_note": "辛味なし。鯖缶の骨はほぐれているが子供の取り分け時に確認を",
+      "search_keyword": "mackerel miso simmered mushroom dark broth"
     },
     {
-      "name": "豚こまとキャベツの味噌煮込み",
-      "tool": "ビストロ",
-      "freeze": false,
-      "ingredients": [
-        "豚こま切れ",
-        "キャベツ",
-        "たまねぎ",
-        "味噌",
-        "みりん",
-        "酒",
-        "砂糖",
-        "生姜"
-      ],
-      "steps": [
-        "キャベツはざく切り、たまねぎは薄切りにする。生姜はすりおろす",
-        "ビストロの内鍋に豚こま・キャベツ・たまねぎ・味噌大さじ2・みりん大さじ2・酒大さじ1・砂糖小さじ1・すりおろし生姜・水50mlを入れてよく混ぜる",
-        "ビストロ：煮込みモード・20分 → 蓋を開けてざっと混ぜ、味を調える"
-      ],
-      "time_minutes": 30,
-      "storage_note": "冷蔵4日",
-      "kid_note": "辛味なし。子供もそのままOK",
-      "search_keyword": "pork cabbage brown miso simmered",
-      "image": "https://images.unsplash.com/photo-1762398948309-efc21c1f3764?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxwb3JrJTIwY2FiYmFnZSUyMGJyb3duJTIwbWlzb3xlbnwwfDJ8fHwxNzgyNDU5ODkyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "image_credit": {
-        "photographer": "Kouji Tsuru",
-        "photographer_url": "https://unsplash.com/@pafuxu",
-        "unsplash_url": "https://unsplash.com/photos/katsudon-in-a-blue-and-white-bowl-K4B6C8zoGxc"
-      }
-    },
-    {
-      "name": "鶏肉のハンバーグ",
-      "tool": "フライパン",
-      "freeze": true,
-      "ingredients": [
-        "鶏もも角切り",
-        "しいたけ",
-        "長ねぎ",
-        "卵",
-        "片栗粉",
-        "醤油",
-        "みりん",
-        "酒",
-        "塩",
-        "こしょう"
-      ],
-      "steps": [
-        "長ねぎ・しいたけはみじん切りにし、レンジ600W1分加熱して冷ます",
-        "鶏もも角切りをフードプロセッサーまたは包丁で粗みじんにし、ボウルに長ねぎ・しいたけ・卵1個・片栗粉大さじ1・塩こしょうと合わせてよく混ぜる",
-        "4等分にして小判型に成形し、1個ずつラップで包んで冷凍する",
-        "平日：解凍後フライパンに油を引き中火で両面に焼き色をつけ、酒大さじ2で蒸し焼き3分。醤油・みりん各大さじ1を絡める"
-      ],
-      "time_minutes": 25,
-      "storage_note": "冷凍2週間",
-      "kid_note": "やわらかく子供も食べやすい",
-      "search_keyword": "chicken patty browned pan seared",
-      "image": "https://images.unsplash.com/photo-1632071773782-f68ef6109422?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxjaGlja2VuJTIwcGF0dHklMjBicm93bmVkJTIwcGFuJTIwc2VhcmVkfGVufDB8Mnx8fDE3ODI0NTk4OTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "image_credit": {
-        "photographer": "Victor Serban",
-        "photographer_url": "https://unsplash.com/@victorserban",
-        "unsplash_url": "https://unsplash.com/photos/a-pan-filled-with-meatballs-covered-in-sauce-YBI8kyjD_K4"
-      }
-    },
-    {
-      "name": "下味冷凍 旨塩ガーリックチキン",
+      "name": "鶏肉と豆腐のふんわりハンバーグ",
       "tool": "ヘルシオ",
       "freeze": true,
-      "ingredients": [
-        "鶏もも角切り",
-        "にんにく",
-        "塩",
-        "こしょう",
-        "オリーブオイル",
-        "レモン汁",
-        "大葉またはバジル"
-      ],
+      "ingredients": ["鶏もも肉角切り", "絹豆腐", "たまねぎ", "卵", "片栗粉", "塩こしょう"],
       "steps": [
-        "鶏もも角切りにすりおろしにんにく・塩小さじ1・こしょう・オリーブオイル大さじ1・レモン汁を揉み込み、冷凍用保存袋に入れて冷凍する",
-        "平日：前日夜に冷蔵庫へ移して解凍する",
-        "ヘルシオの天板にクッキングシートを敷いて鶏肉を並べ、ヘルシオ：ウォーターオーブン220℃・20分で焼く",
-        "大葉またはバジルを添えて盛り付ける"
+        "絹豆腐1個をキッチンペーパーに包み電子レンジ600W・2分加熱して水切りする。鶏もも肉角切り1パックをブラウンハンドブレンダーでミンチ状にする",
+        "鶏ミンチ・水切り豆腐・みじん切りたまねぎ（1個）・卵1個・片栗粉大さじ1・塩こしょうをよく混ぜ合わせる",
+        "タネを8等分して楕円形に成形し、クッキングシートに並べて冷凍袋に入れて冷凍する（成形済み冷凍）",
+        "食べる日：凍ったままヘルシオ：ウォーターオーブン200℃・25分で焼いて完成"
       ],
       "time_minutes": 20,
-      "storage_note": "冷凍3週間",
-      "kid_note": "にんにくの香りで食欲増進。子供も食べやすい",
-      "search_keyword": "chicken thigh golden crispy oven",
-      "image": "https://images.unsplash.com/photo-1773620494293-e9e075dd48fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxjaGlja2VuJTIwdGhpZ2glMjBnb2xkZW4lMjBjcmlzcHklMjBvdmVufGVufDB8Mnx8fDE3ODI0NTk4OTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "image_credit": {
-        "photographer": "Omar Hakeem",
-        "photographer_url": "https://unsplash.com/@omarhakeem",
-        "unsplash_url": "https://unsplash.com/photos/fried-chicken-with-rice-vegetables-and-tomato-u1RYfBGbtCo"
-      }
+      "storage_note": "成形後冷凍3週間。焼いた後は当日中に食べること",
+      "kid_note": "辛味なし。2歳10ヶ月の子も食べやすい柔らかな食感。取り分けは小さめのタネを2〜3個分成形しておくと便利",
+      "search_keyword": "chicken tofu hamburger steak pan seared golden"
     },
     {
-      "name": "鯖缶と長ねぎの甘辛炒め",
+      "name": "豚こまとキャベツの生姜焼き下味冷凍",
       "tool": "フライパン",
-      "freeze": false,
-      "ingredients": [
-        "鯖缶",
-        "長ねぎ",
-        "生姜",
-        "醤油",
-        "みりん",
-        "酒",
-        "砂糖",
-        "ごま油",
-        "白ごま"
-      ],
+      "freeze": true,
+      "ingredients": ["豚こま切れ", "キャベツ", "長ねぎ", "しょうが", "醤油", "みりん", "酒", "砂糖"],
       "steps": [
-        "長ねぎは斜め切りにする。生姜はせん切りにする",
-        "フライパンにごま油を熱し、長ねぎと生姜を炒める",
-        "鯖缶を汁ごと加えて崩しながら炒め、醤油・みりん・酒各大さじ1・砂糖小さじ1を加えて水分を飛ばす",
-        "白ごまを振って完成"
+        "キャベツ1/2個をざく切り（4cm角）にする。長ねぎは斜め切り（1本）、しょうがはすりおろす",
+        "醤油大さじ2・みりん大さじ2・酒大さじ1・砂糖小さじ1・しょうが小さじ1を合わせ、豚こまによく揉み込む",
+        "冷凍袋に豚こま・キャベツ・長ねぎを一緒に入れて平らにし冷凍する（下味冷凍ミールキット）",
+        "食べる日：前夜から冷蔵庫で自然解凍 → フライパンに油を熱して全体に火が通るまで炒めて完成"
       ],
       "time_minutes": 15,
-      "storage_note": "冷蔵4日",
-      "kid_note": "骨がないか確認してから盛り付ける",
-      "search_keyword": "mackerel flaked dark glaze",
-      "image": "https://images.unsplash.com/photo-1739785937132-ae7360fde148?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxtYWNrZXJlbCUyMGZsYWtlZCUyMGRhcmslMjBnbGF6ZXxlbnwwfDJ8fHwxNzgyNDU5ODk2fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "image_credit": {
-        "photographer": "Mitili Mitili",
-        "photographer_url": "https://unsplash.com/@mitiliemitili",
-        "unsplash_url": "https://unsplash.com/photos/a-ball-of-black-tea-sitting-on-top-of-a-white-table-KF7mul40q7o"
-      }
+      "storage_note": "冷凍3週間。解凍後は当日中に食べること",
+      "kid_note": "辛味なし。子供の取り分けはキャベツ多め・豚肉少なめで盛り付ける",
+      "search_keyword": "pork belly ginger stir fry cabbage soy"
+    },
+    {
+      "name": "いわし水煮缶のバジルガーリック炒め煮",
+      "tool": "フライパン",
+      "freeze": false,
+      "ingredients": ["いわし水煮缶", "たまねぎ", "にんにく", "バジル", "酒", "醤油", "塩こしょう", "オリーブオイル"],
+      "steps": [
+        "たまねぎは薄切り（1個）、にんにくはみじん切り。いわし缶は汁を切っておく",
+        "フライパンにオリーブオイル小さじ2を熱し、にんにくを炒めて香りを出し、たまねぎを透き通るまで中火で炒める",
+        "いわし缶を加えて軽くほぐしながら炒め、酒大さじ1・醤油小さじ1・塩こしょうで味を調える",
+        "庭のバジルをちぎって加えてさっと混ぜ、粗熱が取れたら保存容器に移す"
+      ],
+      "time_minutes": 15,
+      "storage_note": "冷蔵4日。電子レンジで温め直すかそのまま食べられる",
+      "kid_note": "辛味なし。いわし水煮缶の骨はほぐれているのでそのまま食べられる",
+      "search_keyword": "sardine sauteed onion garlic herbs olive"
     }
   ],
   "side": [
     {
-      "name": "きのこ三種の和風マリネ",
+      "name": "えのき・エリンギ・しいたけの大葉マリネ",
       "tool": "レンジ",
       "freeze": false,
-      "ingredients": [
-        "えのき",
-        "エリンギ",
-        "しいたけ",
-        "醤油",
-        "酢",
-        "みりん",
-        "ごま油",
-        "白ごま"
-      ],
+      "ingredients": ["えのき", "エリンギ", "しいたけ", "大葉", "醤油", "酢", "みりん", "ごま油", "塩"],
       "steps": [
-        "えのきは石づきを取りほぐす。エリンギは手で裂く。しいたけは薄切りにする",
-        "耐熱ボウルに全きのこを入れラップをして600W3分加熱する",
-        "醤油大さじ2・酢大さじ1・みりん大さじ1・ごま油小さじ1を合わせてきのこに和え、白ごまを振る",
-        "冷蔵庫で30分以上おいて味をなじませる"
+        "えのきは石づきを取りほぐす（1/2袋）。エリンギは手で縦に裂く。しいたけは薄切り（1/2パック）。大葉は細切りにする",
+        "耐熱容器にきのこ類を入れラップをして電子レンジ600W・3分加熱する",
+        "熱いうちに醤油大さじ2・酢大さじ1・みりん大さじ1・ごま油小さじ1・塩少々で和えて味をなじませる",
+        "粗熱が取れたら大葉を加えて混ぜ、保存容器に入れて冷蔵庫へ"
       ],
       "time_minutes": 10,
       "storage_note": "冷蔵5日",
-      "search_keyword": "きのこ 和風マリネ",
-      "image": "https://images.unsplash.com/photo-1733139496834-0c5da2d1aa59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHwlRTMlODElOEQlRTMlODElQUUlRTMlODElOTMlMjAlRTUlOTIlOEMlRTklQTIlQTglRTMlODMlOUUlRTMlODMlQUElRTMlODMlOER8ZW58MHwyfHx8MTc4MjQ1OTg5N3ww&ixlib=rb-4.1.0&q=80&w=1080",
-      "image_credit": {
-        "photographer": "Lee Milo",
-        "photographer_url": "https://unsplash.com/@miloleetw",
-        "unsplash_url": "https://unsplash.com/photos/a-close-up-of-a-bowl-of-noodles-with-mushrooms-berwQ60f0A8"
-      }
+      "search_keyword": "mixed mushroom shiso vinegar marinated brown"
     },
     {
-      "name": "キャベツのおかか和え",
+      "name": "キャベツのごまポン酢あえ",
       "tool": "レンジ",
       "freeze": false,
-      "ingredients": [
-        "キャベツ",
-        "鰹節",
-        "醤油",
-        "ごま油",
-        "塩"
-      ],
+      "ingredients": ["キャベツ", "白ごま", "ポン酢", "ごま油"],
       "steps": [
-        "キャベツはざく切りにし、塩少々を揉み込んで5分おいて水気を絞る",
-        "耐熱ボウルにキャベツを入れラップをして600W2分加熱し、再度水気を絞る",
-        "鰹節ひとつかみ・醤油小さじ2・ごま油小さじ1を加えてよく和える"
+        "キャベツ1/4個をざく切りにし、耐熱容器に入れラップをして電子レンジ600W・3分加熱する",
+        "ザルに上げて水気をしっかり絞る",
+        "ポン酢大さじ2・ごま油小さじ1・白ごま大さじ1で和えて完成。保存容器に入れて冷蔵庫へ"
       ],
-      "time_minutes": 10,
+      "time_minutes": 8,
       "storage_note": "冷蔵4日",
-      "kid_note": "子供も食べやすいやさしい味",
-      "search_keyword": "キャベツ おかか 和え",
-      "image": "https://images.unsplash.com/photo-1583116935756-f66cd999cdbe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHwlRTMlODIlQUQlRTMlODMlQTMlRTMlODMlOTklRTMlODMlODQlMjAlRTMlODElOEElRTMlODElOEIlRTMlODElOEIlMjAlRTUlOTIlOEMlRTMlODElODh8ZW58MHwyfHx8MTc4MjQ1OTg5OHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "image_credit": {
-        "photographer": "Mockup Graphics",
-        "photographer_url": "https://unsplash.com/@mockupgraphics",
-        "unsplash_url": "https://unsplash.com/photos/green-and-white-sliced-vegetable-anuYvnFtdq4"
-      }
+      "search_keyword": "wilted cabbage sesame citrus ponzu dressed"
     },
     {
-      "name": "卵とたまねぎの甘辛そぼろ",
+      "name": "卵そぼろ",
       "tool": "フライパン",
       "freeze": false,
-      "ingredients": [
-        "卵",
-        "たまねぎ",
-        "醤油",
-        "みりん",
-        "砂糖",
-        "酒",
-        "サラダ油"
-      ],
+      "ingredients": ["卵", "砂糖", "醤油", "酒", "塩"],
       "steps": [
-        "たまねぎはみじん切りにする",
-        "フライパンに油を熱し、たまねぎを透き通るまで炒める",
-        "溶き卵を加えて、醤油・みりん各大さじ1・砂糖小さじ1・酒大さじ1を加え、箸でかき混ぜながら細かいそぼろ状になるまで炒る",
-        "冷まして保存容器に入れる"
+        "卵4個を割りほぐし、砂糖大さじ1・醤油小さじ1・酒大さじ1・塩少々を加えてよく混ぜる",
+        "小鍋またはフライパンに卵液を入れ、4〜5本の箸またはへらで絶えず混ぜながら中〜弱火で加熱する",
+        "水分が飛んでふんわりしたそぼろ状になったら火を止め、粗熱が取れたら保存容器に移す"
       ],
       "time_minutes": 10,
       "storage_note": "冷蔵4日",
-      "kid_note": "甘辛でご飯がすすむ。子供にも人気",
-      "search_keyword": "fluffy scrambled egg crumble",
-      "image": "https://images.unsplash.com/photo-1631651576049-5ffeefb88088?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxmbHVmZnklMjBzY3JhbWJsZWQlMjBlZ2clMjBjcnVtYmxlfGVufDB8Mnx8fDE3ODI0NTk4OTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "image_credit": {
-        "photographer": "Molly Keesling",
-        "photographer_url": "https://unsplash.com/@mollysuek",
-        "unsplash_url": "https://unsplash.com/photos/a-plate-of-food-on-a-wooden-table-tk6_L0jDPsk"
-      }
+      "kid_note": "子供も食べやすい定番副菜。ご飯にかけてそぼろ丼にもなる",
+      "search_keyword": "golden scrambled egg fluffy crumble soboro"
     }
   ],
   "shopping_list": [
-    "にんにく",
-    "生姜",
-    "オリーブオイル",
-    "レモン（またはレモン汁）",
-    "鰹節"
+    "ポン酢（ストックがなければ）",
+    "白ごま（ストックがなければ）",
+    "片栗粉（ストックがなければ）"
   ],
-  "surplus_note": "レタスはたまねぎドレッシングでサラダに。絹豆腐はそのまま冷奴か味噌汁に。納豆・焼きおにぎりはそのまま朝食や軽食に。牛乳はそのまま飲用または料理に適宜使用。"
+  "surplus_note": "レタス（作り置き向きではないため、その日の汁物に加えるか生で食べる）、絹豆腐 2個（1個はハンバーグに使用、残り2個はそのまま食べる）、卵 1個余り、納豆（そのまま食べる）、牛乳・焼きおにぎり・ドレッシング（そのまま使用）"
 }
