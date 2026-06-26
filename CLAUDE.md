@@ -355,10 +355,15 @@ python3 scripts/fetch_pexels.py
 - 取得した写真について、該当レシピが `good_count > 0` なら `preferences.json` の `photo_url` / `photo_credit` にも保存（翌週以降の再利用のため）
 
 #### search_keyword の生成ルール
-- **食材名 ＋ 調理法 ＋ 料理形態** の構造にする（例：`chicken thigh tomato braised stew`）
+- **食材名 ＋ 調理後の見た目・色・質感** の構造にする（例：`chicken thigh dark sauce braised`）
 - 料理ジャンル名（japanese / italian / korean / asian / western など）は**使わない**
 - 料理固有名詞（hiyayakko / namul / teriyaki など）は**使わない**
 - 3〜5単語に収める
+- **9品すべてで異なるキーワードになるよう意識する**。複数の副菜で `salad` `dressed` `sesame` `marinated` などの汎用語が重複すると同じ画像になりやすいため避ける
+- 副菜は特に視覚的な特徴を入れる（色・食感・主役食材の見た目）
+  - 例：`shredded cabbage tossed` / `sauteed brown mushroom glaze` / `golden scrambled egg onion`
+- どうしても英語で差別化しにくい副菜は**日本語キーワード**を使ってもよい
+  - 例：`きのこ 和風マリネ` / `キャベツ おかか` / `卵そぼろ`
 
 ```
 push先: pixcel-bit/cook リポジトリ main ブランチ
