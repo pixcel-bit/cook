@@ -77,17 +77,17 @@
   .r-note { font-size: 12.5px; color: var(--ink-soft); background: var(--paper); border-left: 3px solid var(--accent-soft); padding: 9px 12px; border-radius: 0 6px 6px 0; margin-top: 12px; }
   .rating-bar { display: flex; align-items: center; gap: 10px; margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line); }
   .rating-label { font-size: 11px; color: var(--ink-faint); font-weight: 700; letter-spacing: 0.06em; }
-  .card.hidden-recipe { background: none; border-color: transparent; box-shadow: none; border-radius: 8px; }
-  .card.hidden-recipe summary { display: flex; align-items: center; padding: 7px 12px; min-height: unset; }
+  .card.hidden-recipe { background: none; border-color: var(--line); box-shadow: none; border-radius: 8px; margin-bottom: 6px; }
+  .card.hidden-recipe summary { display: flex; align-items: center; padding: 5px 10px; min-height: unset; gap: 8px; }
   .card.hidden-recipe .card-illo,
   .card.hidden-recipe .card-desc,
   .card.hidden-recipe .tag-row,
   .card.hidden-recipe .card-chevron { display: none; }
-  .card.hidden-recipe .card-title { font-size: 13px; font-weight: 400; color: var(--ink-faint); }
-  .card.hidden-recipe[open] { background: none; }
+  .card.hidden-recipe .card-info { padding: 0; flex: 1; min-width: 0; }
+  .card.hidden-recipe .card-title { font-size: 12px; font-weight: 400; color: var(--ink-faint); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .card.hidden-recipe[open] .card-detail { display: none; }
-  .hide-btn { margin-left: auto; background: none; border: none; cursor: pointer; font-size: 13px; padding: 4px 6px; color: var(--ink-faint); border-radius: 6px; flex-shrink: 0; }
-  .hide-btn:hover { background: var(--paper); color: var(--ink); }
+  .hide-btn { margin-left: auto; background: none; border: 1px solid var(--line); cursor: pointer; font-size: 11px; padding: 2px 8px; color: var(--ink-faint); border-radius: 20px; flex-shrink: 0; font-family: inherit; white-space: nowrap; }
+  .hide-btn:hover { border-color: var(--accent); color: var(--ink); background: var(--paper); }
   .show-hidden-btn { font-size: 12px; background: none; border: 1px solid var(--line); border-radius: 20px; padding: 4px 12px; cursor: pointer; color: var(--ink-soft); font-family: inherit; }
   .rate-btn { display: flex; align-items: center; gap: 5px; background: var(--paper); border: 1px solid var(--line); border-radius: 20px; padding: 5px 14px; font-size: 13px; cursor: pointer; font-family: inherit; color: var(--ink-soft); transition: all 0.15s; }
   .rate-btn:hover { border-color: var(--accent); }
@@ -825,7 +825,7 @@ function applyHiddenRecipes() {
     if (collapse) card.removeAttribute('open');
     const btn = card.querySelector('.hide-btn');
     btn.title = isHidden ? '再表示する' : '非表示にする';
-    btn.textContent = isHidden ? '↩' : '✕';
+    btn.textContent = isHidden ? '再表示' : '不要';
   });
   const btn = document.getElementById('show-hidden-btn');
   if (btn) {
@@ -1014,7 +1014,7 @@ function renderRecipeCard(r, type) {
         <div class="card-title">${nameEsc}</div>
         <div class="card-desc">${esc(r.storage_note || '')}</div>
       </div>
-      <button class="hide-btn" title="非表示にする" onclick="event.preventDefault();event.stopPropagation();toggleHideRecipe('${nameEsc}')">✕</button>
+      <button class="hide-btn" title="非表示にする" onclick="event.preventDefault();event.stopPropagation();toggleHideRecipe('${nameEsc}')">不要</button>
       <span class="card-chevron">▶</span>
     </summary>
     <div class="card-detail">
