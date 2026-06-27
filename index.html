@@ -449,15 +449,7 @@
   </div>
 </section>
 
-<div id="menu-memo">
-<section>
-  <div class="section-label">買い足しメモ</div>
-  <div class="memo">
-    <h3>買い足し</h3><p>ツナ缶・かつお節・オリーブオイル（常備がなければ）。調味料は手持ち前提。</p>
-  </div>
-  <div class="kid-note"><strong>子供向けメモ（2歳10ヶ月）</strong><br>照り焼き・生姜焼きは味付け前に取り分けて薄味に。トマト煮込みは辛味なしでそのまま食べられます。塩だれ蒸しは塩だれ少なめで取り分け可能。きのこ炒めは辛味ゼロ。ピーマンのおかか和えはごま油少なめで。</div>
-</section>
-</div>
+<div id="menu-memo"></div>
 <footer id="menu-footer">グリーンビーンズ 6/11配達分の食材で作成 ・ 週次作り置き献立</footer>
 </div>
 
@@ -959,25 +951,6 @@ function renderMenu() {
     recipesEl.innerHTML = html;
   }
 
-  // Render memo
-  const memoEl = document.getElementById('menu-memo');
-  if (memoEl) {
-    let memoHtml = '<section><div class="section-label">買い足しメモ</div><div class="memo">';
-    if (menuData.shopping_list && menuData.shopping_list.length) {
-      memoHtml += `<h3>買い足し</h3><p>${esc(menuData.shopping_list.join('・'))}。調味料は手持ち前提。</p>`;
-    }
-    if (menuData.surplus_note) {
-      memoHtml += `<h3>余り食材メモ</h3><p>${esc(menuData.surplus_note)}</p>`;
-    }
-    memoHtml += '</div>';
-    const kidNotes = [...menuData.main, ...menuData.side].filter(r => r.kid_note).map(r => `${esc(r.name)}は${esc(r.kid_note)}`);
-    if (kidNotes.length) {
-      const age = getChildAge();
-      memoHtml += `<div class="kid-note"><strong>子供向けメモ${age ? `（${age}）` : ''}</strong><br>${kidNotes.join('。')}</div>`;
-    }
-    memoHtml += '</section>';
-    memoEl.innerHTML = memoHtml;
-  }
 
   // Update footer
   const footerEl = document.getElementById('menu-footer');
