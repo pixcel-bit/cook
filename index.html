@@ -77,10 +77,16 @@
   .r-note { font-size: 12.5px; color: var(--ink-soft); background: var(--paper); border-left: 3px solid var(--accent-soft); padding: 9px 12px; border-radius: 0 6px 6px 0; margin-top: 12px; }
   .rating-bar { display: flex; align-items: center; gap: 10px; margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line); }
   .rating-label { font-size: 11px; color: var(--ink-faint); font-weight: 700; letter-spacing: 0.06em; }
-  .card.hidden-recipe { opacity: 0.35; }
-  .card.hidden-recipe summary { pointer-events: none; }
-  .card.hidden-recipe .hide-btn { pointer-events: auto; }
-  .hide-btn { margin-left: auto; background: none; border: none; cursor: pointer; font-size: 15px; padding: 4px 6px; color: var(--ink-faint); border-radius: 6px; flex-shrink: 0; }
+  .card.hidden-recipe { background: none; border-color: transparent; box-shadow: none; border-radius: 8px; }
+  .card.hidden-recipe summary { display: flex; align-items: center; padding: 7px 12px; min-height: unset; }
+  .card.hidden-recipe .card-illo,
+  .card.hidden-recipe .card-desc,
+  .card.hidden-recipe .tag-row,
+  .card.hidden-recipe .card-chevron { display: none; }
+  .card.hidden-recipe .card-title { font-size: 13px; font-weight: 400; color: var(--ink-faint); }
+  .card.hidden-recipe[open] { background: none; }
+  .card.hidden-recipe[open] .card-detail { display: none; }
+  .hide-btn { margin-left: auto; background: none; border: none; cursor: pointer; font-size: 13px; padding: 4px 6px; color: var(--ink-faint); border-radius: 6px; flex-shrink: 0; }
   .hide-btn:hover { background: var(--paper); color: var(--ink); }
   .show-hidden-btn { font-size: 12px; background: none; border: 1px solid var(--line); border-radius: 20px; padding: 4px 12px; cursor: pointer; color: var(--ink-soft); font-family: inherit; }
   .rate-btn { display: flex; align-items: center; gap: 5px; background: var(--paper); border: 1px solid var(--line); border-radius: 20px; padding: 5px 14px; font-size: 13px; cursor: pointer; font-family: inherit; color: var(--ink-soft); transition: all 0.15s; }
@@ -814,9 +820,12 @@ function applyHiddenRecipes() {
   const hidden = getHiddenRecipes();
   document.querySelectorAll('.card[data-recipe]').forEach(card => {
     const isHidden = hidden.has(card.dataset.recipe);
-    card.classList.toggle('hidden-recipe', isHidden && !showingHidden);
-    card.querySelector('.hide-btn').title = isHidden ? '再表示する' : '非表示にする';
-    card.querySelector('.hide-btn').textContent = isHidden ? '↩' : '✕';
+    const collapse = isHidden && !showingHidden;
+    card.classList.toggle('hidden-recipe', collapse);
+    if (collapse) card.removeAttribute('open');
+    const btn = card.querySelector('.hide-btn');
+    btn.title = isHidden ? '再表示する' : '非表示にする';
+    btn.textContent = isHidden ? '↩' : '✕';
   });
   const btn = document.getElementById('show-hidden-btn');
   if (btn) {
