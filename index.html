@@ -803,6 +803,14 @@ function saveHiddenRecipes(set) {
   localStorage.setItem('hiddenRecipes', JSON.stringify([...set]));
 }
 
+function resetHiddenIfNewMenu(deliveryDate) {
+  const saved = localStorage.getItem('hiddenMenuDate');
+  if (saved !== deliveryDate) {
+    localStorage.removeItem('hiddenRecipes');
+    localStorage.setItem('hiddenMenuDate', deliveryDate);
+  }
+}
+
 function toggleHideRecipe(name) {
   const hidden = getHiddenRecipes();
   if (hidden.has(name)) { hidden.delete(name); } else { hidden.add(name); }
@@ -887,6 +895,9 @@ function renderMenu() {
 
   // Set ingredients list
   if (menuData.delivery_ingredients) THIS_WEEK_INGREDIENTS = menuData.delivery_ingredients;
+
+  // Reset hidden recipes if menu is new
+  resetHiddenIfNewMenu(menuData.delivery_date || '');
 
   // Update header
   const d = menuData.delivery_date || '';

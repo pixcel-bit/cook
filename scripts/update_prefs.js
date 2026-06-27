@@ -12,10 +12,11 @@ const prefs = JSON.parse(fs.readFileSync(prefsPath, 'utf8'));
 
 const today = new Date().toISOString().slice(0, 10);
 
-// Reset weekly_request only.
+// Reset weekly_request and all priority flags.
 // leftover_ingredients.checked is preserved so carried-over items remain visible next week.
 // prefs.recipes is user-curated (liked or manually added) — not auto-populated.
 prefs.weekly_request = { moods: [], note: '', updated_at: null };
+(prefs.recipes || []).forEach(r => { r.priority = false; });
 
 fs.writeFileSync(prefsPath, JSON.stringify(prefs, null, 2) + '\n');
 console.log(`updated preferences.json — resets applied (${today})`);
