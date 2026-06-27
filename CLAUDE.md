@@ -361,9 +361,7 @@ python3 scripts/fetch_pexels.py
 - 3〜5単語に収める
 - **9品すべてで異なるキーワードになるよう意識する**。複数の副菜で `salad` `dressed` `sesame` `marinated` などの汎用語が重複すると同じ画像になりやすいため避ける
 - 副菜は特に視覚的な特徴を入れる（色・食感・主役食材の見た目）
-  - 例：`shredded cabbage tossed` / `sauteed brown mushroom glaze` / `golden scrambled egg onion`
-- どうしても英語で差別化しにくい副菜は**日本語キーワード**を使ってもよい
-  - 例：`きのこ 和風マリネ` / `キャベツ おかか` / `卵そぼろ`
+  - 例：`pale green shredded cabbage tossed` / `dark brown sauteed mushroom bowl` / `fluffy scrambled egg crumble`
 
 ```
 push先: pixcel-bit/cook リポジトリ main ブランチ
