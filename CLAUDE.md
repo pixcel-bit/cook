@@ -130,70 +130,64 @@
 
 ---
 
-### クラシル検索（A〜D 方式）
+各軸を **クラシル（kurashiru.com）と白ごはん.com（sirogohan.com）の両サイト** で実施する。
+
+---
 
 **A. 主要食材を単体で検索（肉・魚）**
-- 検索例：`鶏もも肉 作り置き 人気 レシピ site:kurashiru.com`
-- 検索例：`豚こま切れ 作り置き 人気 レシピ site:kurashiru.com`
+- `鶏もも肉 作り置き 人気 レシピ site:kurashiru.com`
+- `鶏もも肉 作り置き 人気 レシピ site:sirogohan.com`
+- `豚こま切れ 作り置き 人気 レシピ site:kurashiru.com`
+- `豚こま切れ 作り置き 人気 レシピ site:sirogohan.com`
 
-**B. 食材の組み合わせで検索（肉＋野菜、野菜のみ）**
-- 検索例：`鶏もも えのき しいたけ 作り置き レシピ site:kurashiru.com`
-- 検索例：`豚こま キャベツ 長ねぎ 作り置き レシピ site:kurashiru.com`
-- 副菜向け：`えのき しいたけ エリンギ 副菜 作り置き site:kurashiru.com`
-- 副菜向け：`レタス 副菜 作り置き site:kurashiru.com`
+**B. 食材の組み合わせで検索（肉＋野菜、副菜向け野菜のみ）**
+- `鶏もも えのき しいたけ 作り置き レシピ site:kurashiru.com`
+- `鶏もも えのき しいたけ 作り置き レシピ site:sirogohan.com`
+- `豚こま キャベツ 長ねぎ 作り置き レシピ site:kurashiru.com`
+- `豚こま キャベツ 長ねぎ 作り置き レシピ site:sirogohan.com`
+- `えのき きのこ 副菜 作り置き site:kurashiru.com`
+- `えのき きのこ 副菜 作り置き site:sirogohan.com`
 
 **C. 副菜食材＋保存日数で絞る**
-- 検索例：`えのき エリンギ 副菜 冷蔵4日 site:kurashiru.com`
-- 検索例：`キャベツ 副菜 作り置き 日持ち site:kurashiru.com`
+- `えのき エリンギ 副菜 冷蔵4日 site:kurashiru.com`
+- `えのき エリンギ 副菜 冷蔵4日 site:sirogohan.com`
+- `キャベツ 副菜 作り置き 日持ち site:kurashiru.com`
+- `キャベツ 副菜 作り置き 日持ち site:sirogohan.com`
 
 **D. 下味冷凍に特化**
-- 検索例：`鶏もも 下味冷凍 site:kurashiru.com`
-- 検索例：`豚こま 下味冷凍 site:kurashiru.com`
-
----
-
-### 白ごはん.com 検索（E〜G 方式）
-
-**E. 主要食材で検索**
-- 検索例：`鶏もも 作り置き site:sirogohan.com`
-- 検索例：`豚こま 作り置き site:sirogohan.com`
-
-**F. 副菜・きのこ・野菜で検索**
-- 検索例：`えのき きのこ 副菜 作り置き site:sirogohan.com`
-- 検索例：`キャベツ 副菜 作り置き site:sirogohan.com`
-
-**G. 保存日数カテゴリで検索（サイト固有）**
-- 冷蔵5〜7日：`作り置き 冷蔵 5日 7日 site:sirogohan.com`
-- 冷凍可：`下味冷凍 冷凍 作り置き site:sirogohan.com`
-
----
-
-### ジャンル補完検索（H〜J 方式）
-
-A〜Gは食材軸のため和食候補に偏りやすい。洋・中・エスニック枠を確実に埋めるため、**今週の主要食材 × ジャンルキーワード** で追加検索する。
+- `鶏もも 下味冷凍 site:kurashiru.com`
+- `鶏もも 下味冷凍 site:sirogohan.com`
+- `豚こま 下味冷凍 site:kurashiru.com`
+- `豚こま 下味冷凍 site:sirogohan.com`
 
 **H. 洋風（今週の主要食材 × 洋風キーワード）**
-- パターン：`{今週の主要食材} {洋風キーワード} 作り置き site:kurashiru.com`
+- パターン：`{今週の主要食材} {洋風キーワード} 作り置き site:kurashiru.com / site:sirogohan.com`
 - 洋風キーワード例：`トマト煮込み` / `クリーム煮` / `バター醤油` / `ハーブ焼き` / `オーブン焼き`
 - 具体例：`鶏もも トマト煮込み 作り置き site:kurashiru.com`
+- 具体例：`鶏もも トマト煮込み 作り置き site:sirogohan.com`
 - 具体例：`豚こま クリーム煮 作り置き site:kurashiru.com`
+- 具体例：`豚こま クリーム煮 作り置き site:sirogohan.com`
 
 **I. 中華（今週の主要食材 × 中華キーワード）**
-- パターン：`{今週の主要食材} {中華キーワード} 作り置き site:kurashiru.com`
+- パターン：`{今週の主要食材} {中華キーワード} 作り置き site:kurashiru.com / site:sirogohan.com`
 - 中華キーワード例：`オイスターソース` / `豆板醤` / `甜面醤` / `中華炒め` / `ごま油炒め`
 - 具体例：`鶏もも オイスターソース 中華 作り置き site:kurashiru.com`
+- 具体例：`鶏もも オイスターソース 中華 作り置き site:sirogohan.com`
 - 具体例：`豚こま 豆板醤 作り置き site:kurashiru.com`
+- 具体例：`豚こま 豆板醤 作り置き site:sirogohan.com`
 
 **J. エスニック（今週の主要食材 × エスニックキーワード）**
-- パターン：`{今週の主要食材} {エスニックキーワード} 作り置き site:kurashiru.com`
+- パターン：`{今週の主要食材} {エスニックキーワード} 作り置き site:kurashiru.com / site:sirogohan.com`
 - エスニックキーワード例：`ナンプラー` / `コチュジャン` / `カレー粉` / `ガパオ` / `ヤンニョム`
 - 具体例：`鶏もも カレー粉 作り置き site:kurashiru.com`
+- 具体例：`鶏もも カレー粉 作り置き site:sirogohan.com`
 - 具体例：`豚こま コチュジャン 作り置き site:kurashiru.com`
+- 具体例：`豚こま コチュジャン 作り置き site:sirogohan.com`
 
 ---
 
 ### 検索の最低条件
-- A〜Jを合わせて**合計50件以上**の候補名を収集してから次に進む
+- A〜D・H〜Jを合わせて**合計50件以上**の候補名を収集してから次に進む
 - 50件未満の場合はキーワードを変えて追加検索する
 - 洋・中・エスニックそれぞれ**最低5件以上**確保できていること。不足するジャンルは H〜J の該当軸で追加検索する
 
