@@ -46,6 +46,7 @@
   .meta-chip strong { color: var(--ink); font-weight: 700; }
   section { margin-top: 36px; }
   .section-label { font-size: 12px; letter-spacing: 0.1em; color: var(--ink-faint); font-weight: 700; margin-bottom: 14px; text-transform: uppercase; }
+  .genre-label { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; color: var(--ink-mid); background: var(--surface); border-left: 3px solid var(--accent); padding: 4px 10px; margin: 18px 0 10px; }
   .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; margin-bottom: 14px; overflow: hidden; }
   .card > summary { list-style: none; cursor: pointer; user-select: none; }
   .card > summary::-webkit-details-marker { display: none; }
@@ -871,9 +872,28 @@ function renderMenu() {
   if (recipesEl) {
     let html = '';
     if (mainCount) {
-      html += `<section><div class="section-label">主菜 ${mainCount}品</div>`;
-      menuData.main.forEach(r => { html += renderRecipeCard(r, 'main'); });
-      html += '</section>';
+      const genres = ['和', '洋', '中', 'エスニック'];
+      const byGenre = {};
+      const noGenre = [];
+      menuData.main.forEach(r => {
+        const g = r.genre && genres.includes(r.genre) ? r.genre : null;
+        if (g) { (byGenre[g] = byGenre[g] || []).push(r); } else { noGenre.push(r); }
+      });
+      const hasGenres = genres.some(g => byGenre[g]);
+      if (hasGenres) {
+        html += `<section><div class="section-label">主菜 ${mainCount}品</div>`;
+        genres.forEach(g => {
+          if (!byGenre[g] || !byGenre[g].length) return;
+          html += `<div class="genre-label">${g}</div>`;
+          byGenre[g].forEach(r => { html += renderRecipeCard(r, 'main'); });
+        });
+        noGenre.forEach(r => { html += renderRecipeCard(r, 'main'); });
+        html += '</section>';
+      } else {
+        html += `<section><div class="section-label">主菜 ${mainCount}品</div>`;
+        menuData.main.forEach(r => { html += renderRecipeCard(r, 'main'); });
+        html += '</section>';
+      }
     }
     if (sideCount) {
       html += `<section><div class="section-label">副菜 ${sideCount}品（各2日分）</div>`;
