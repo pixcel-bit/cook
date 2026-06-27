@@ -1,15 +1,16 @@
 {
   "delivery_date": "2026-06-25",
   "delivery_ingredients": [
-    "いわし水煮缶",
+    "いわし（水煮）",
     "えのき",
     "豚こま切れ",
     "レタス",
-    "絹豆腐",
+    "豆腐",
     "納豆",
     "卵",
-    "たまねぎ",
+    "玉ねぎ",
     "しいたけ",
+    "牛乳",
     "鶏もも肉",
     "鶏もも肉角切り",
     "キャベツ",
@@ -18,31 +19,122 @@
   ],
   "main": [
     {
-      "name": "鶏もも肉と長ねぎの中華風トロトロ塩煮",
+      "name": "鶏もも肉と玉ねぎのさっぱり酢煮",
+      "genre": "和",
       "tool": "ビストロ",
       "freeze": false,
       "ingredients": [
         "鶏もも肉",
-        "長ねぎ",
-        "たまねぎ",
-        "しょうが",
-        "にんにく",
+        "玉ねぎ",
         "醤油",
-        "酒",
-        "ごま油",
-        "塩"
+        "酢",
+        "砂糖",
+        "みりん"
       ],
       "steps": [
-        "鶏もも肉は一口大に切り、塩・酒少々で下味をつける。長ねぎは斜め切り、たまねぎは薄切り、しょうが・にんにくはみじん切り",
-        "ビストロにたまねぎ・長ねぎ・しょうが・にんにくを敷き、鶏肉を乗せ、醤油大さじ2・酒大さじ2・塩小さじ1/2・水150mlを加える",
-        "ビストロ：圧力調理・高圧・12分 → 加圧終了後10分そのまま自然放置してから蓋を開ける",
-        "ごま油小さじ1を回しかけ全体を混ぜ、粗熱が取れたら煮汁ごと保存容器に移す"
+        "鶏もも肉600gを一口大（4〜5cm角）に切る。玉ねぎ2個（約500g）をくし形に切る",
+        "ビストロ内鍋に鶏肉・玉ねぎ・醤油大さじ5・酢大さじ3・砂糖大さじ2・みりん大さじ2・水100mlを入れてよく混ぜる",
+        "ビストロ：圧力調理・高圧・10分 → 加圧終了後10分自然放置してから蓋を開ける",
+        "蓋を開けて混ぜモードまたは弱火で5分ほど煮詰めて照りを出す",
+        "粗熱が取れたら保存容器に移して冷蔵保存"
+      ],
+      "time_minutes": 25,
+      "storage_note": "冷蔵4日",
+      "search_keyword": "chicken thigh onion sweet vinegar soy stew",
+      "image": "https://images.unsplash.com/photo-1708782344071-35ed44b849a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxjaGlja2VuJTIwdGhpZ2glMjBvbmlvbiUyMHN3ZWV0JTIwdmluZWdhciUyMHNveSUyMHN0ZXd8ZW58MHwyfHx8MTc4MjYwNDY3NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "image_credit": {
+        "photographer": "Rimsha Noor",
+        "photographer_url": "https://unsplash.com/@rimshaj123",
+        "unsplash_url": "https://unsplash.com/photos/a-bowl-of-soup-with-meat-in-it-on-a-table-y_xypS3pRYA"
+      }
+    },
+    {
+      "name": "鶏団子（成形冷凍）",
+      "genre": "和",
+      "tool": "グリル/トースター",
+      "freeze": true,
+      "ingredients": [
+        "鶏もも肉角切り",
+        "しいたけ",
+        "長ねぎ",
+        "卵",
+        "醤油",
+        "みりん",
+        "片栗粉"
+      ],
+      "steps": [
+        "鶏もも角切り肉400gをハンドブレンダーまたは包丁でミンチ状にする。しいたけ2枚（約40g）と長ねぎ1/2本をみじん切りにする",
+        "ボウルにひき肉・しいたけ・長ねぎ・卵1個・醤油大さじ1・みりん大さじ1・片栗粉大さじ2・塩少々を入れてよく練る",
+        "一口大に成形（20〜25個）し、クッキングシートを敷いたバットに並べて冷凍庫で2時間以上冷凍する",
+        "凍ったらジッパー袋に移して保存。食べる日はグリルまたはアラジントースター200℃で12〜15分焼く",
+        "照りダレ用に醤油大さじ3・みりん大さじ3・砂糖大さじ1を小鍋で煮詰めておき別添えにする"
+      ],
+      "time_minutes": 30,
+      "storage_note": "冷凍3週間",
+      "search_keyword": "chicken meatball skewer grilled glazed caramelized",
+      "image": "https://images.unsplash.com/photo-1736283236938-46741e97a016?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxjaGlja2VuJTIwbWVhdGJhbGwlMjBza2V3ZXIlMjBncmlsbGVkJTIwZ2xhemVkJTIwY2FyYW1lbGl6ZWR8ZW58MHwyfHx8MTc4MjYwNDY3Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "image_credit": {
+        "photographer": "JOSCAR RIVERO",
+        "photographer_url": "https://unsplash.com/@joscardavid",
+        "unsplash_url": "https://unsplash.com/photos/a-wooden-table-topped-with-a-plate-of-food-CfQOmlRdWnU"
+      }
+    },
+    {
+      "name": "豚こまと野菜の生姜焼き（下味冷凍）",
+      "genre": "和",
+      "tool": "フライパン",
+      "freeze": true,
+      "ingredients": [
+        "豚こま切れ",
+        "玉ねぎ",
+        "キャベツ",
+        "醤油",
+        "みりん",
+        "酒",
+        "生姜"
+      ],
+      "steps": [
+        "豚こま切れ肉250g・醤油大さじ3・みりん大さじ2・酒大さじ2・すりおろし生姜小さじ2をジッパー袋に入れてよく揉み込む",
+        "玉ねぎ1個（約200g）を薄切りにして袋に加え、空気を抜いて冷凍する",
+        "食べる日は冷蔵庫で前日から解凍し、フライパンで中火で玉ねぎとともに炒める（約8分）",
+        "火が通ったらキャベツ1/4個（約250g）をざく切りにして加え、2〜3分炒め合わせる",
+        "子供の取り分けは先に器に盛り、大人には七味唐辛子を別添えにする"
+      ],
+      "time_minutes": 20,
+      "storage_note": "冷凍3週間",
+      "search_keyword": "pork ginger stir fry cabbage shredded browned",
+      "image": "https://images.unsplash.com/photo-1613187378814-293334da5517?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxwb3JrJTIwZ2luZ2VyJTIwc3RpciUyMGZyeSUyMGNhYmJhZ2UlMjBzaHJlZGRlZHxlbnwwfDJ8fHwxNzgyNjA0Njc4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "image_credit": {
+        "photographer": "Adio Winoto",
+        "photographer_url": "https://unsplash.com/@adiowinoto",
+        "unsplash_url": "https://unsplash.com/photos/black-ceramic-bowl-with-red-handled-stainless-steel-spoon-and-fork-e5lxbih3rLw"
+      }
+    },
+    {
+      "name": "鶏ももとしいたけのトマト煮込み",
+      "genre": "洋",
+      "tool": "ビストロ",
+      "freeze": false,
+      "ingredients": [
+        "鶏もも肉",
+        "しいたけ",
+        "玉ねぎ",
+        "トマトジュース",
+        "にんにく",
+        "バジル",
+        "醤油"
+      ],
+      "steps": [
+        "鶏もも肉600gを一口大に切り、塩・こしょう少々をふる。玉ねぎ1個（約200g）をみじん切り、しいたけ1パック（100g）を薄切りにする",
+        "フライパンで鶏肉の皮面に焼き色をつける（片面3分）",
+        "ビストロ内鍋に鶏肉・玉ねぎ・しいたけ・トマトジュース400ml・醤油大さじ1・にんにく1かけ（みじん切り）・ローリエ1枚・バジル少々を入れる",
+        "ビストロ：圧力調理・高圧・15分 → 加圧終了後10分自然放置してから蓋を開ける",
+        "味を整え、バジルをちらして保存容器に移す"
       ],
       "time_minutes": 35,
-      "storage_note": "冷蔵4日（煮汁ごと保存）。食べる際は電子レンジで温め直す",
-      "kid_note": "辛味なし。子供の取り分けは鶏肉を小さめに切り分けて",
-      "search_keyword": "braised chicken thigh dark soy sauce bowl",
-      "image": "https://images.unsplash.com/photo-1676471759564-8426f19510c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxicmFpc2VkJTIwY2hpY2tlbiUyMHRoaWdoJTIwZGFya3xlbnwwfDJ8fHwxNzgyNTExOTU5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "storage_note": "冷蔵5日",
+      "search_keyword": "chicken thigh tomato braised mushroom red sauce",
+      "image": "https://images.unsplash.com/photo-1676471759564-8426f19510c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxjaGlja2VuJTIwdGhpZ2glMjB0b21hdG8lMjBicmFpc2VkJTIwbXVzaHJvb20lMjByZWQlMjBzYXVjZXxlbnwwfDJ8fHwxNzgyNjA0Njc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "image_credit": {
         "photographer": "Nima Naseri",
         "photographer_url": "https://unsplash.com/@nimanaseri",
@@ -50,122 +142,158 @@
       }
     },
     {
-      "name": "鶏もも肉角切りとキャベツのトマト煮込み",
-      "tool": "ビストロ",
+      "name": "チキンの牛乳クリーム煮",
+      "genre": "洋",
+      "tool": "フライパン",
       "freeze": false,
       "ingredients": [
         "鶏もも肉角切り",
-        "キャベツ",
-        "たまねぎ",
-        "にんにく",
-        "トマトジュース",
-        "バジル",
-        "塩こしょう",
-        "オリーブオイル"
+        "玉ねぎ",
+        "えのき",
+        "牛乳",
+        "薄力粉",
+        "バター",
+        "コンソメ"
       ],
       "steps": [
-        "鶏もも肉角切りに塩こしょうを振る。たまねぎはくし切り（2個）、キャベツはざく切り（1/4個）、にんにくはみじん切り",
-        "ビストロにたまねぎ・キャベツ・にんにく・鶏肉を入れ、トマトジュース200ml・塩小さじ1/2を加える",
-        "ビストロ：圧力調理・低圧・8分 → 加圧終了後すぐに蓋を開けて全体を混ぜる",
-        "庭のバジルをちぎって散らし、粗熱が取れたら汁ごと保存容器に移す"
+        "鶏もも角切り肉400gに塩・こしょう・薄力粉大さじ2をまぶす。玉ねぎ1個（約200g）を薄切り、えのき1袋（150g）は石づきを取りほぐす",
+        "フライパンにバター20gを溶かし、玉ねぎを中火で5分炒める",
+        "鶏肉を加えて両面を焼き（計5分）、牛乳400ml・コンソメ1個・塩こしょうを加える",
+        "えのきを加えて蓋をし、弱火で15分煮込む。とろみが足りなければ水溶き片栗粉で調整する",
+        "粗熱が取れたら保存容器に移す"
       ],
       "time_minutes": 30,
-      "storage_note": "冷蔵4日（汁ごと保存）。電子レンジで温め直す",
-      "kid_note": "辛味なし。トマトの優しい酸味で子供も食べやすい",
-      "search_keyword": "chicken tomato stew chunky red sauce pot",
-      "image": "https://images.unsplash.com/photo-1708782344490-9026aaa5eec7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxjaGlja2VuJTIwdG9tYXRvJTIwc3RldyUyMGNodW5reSUyMHJlZCUyMHNhdWNlJTIwcG90fGVufDB8Mnx8fDE3ODI1MTE5NjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "storage_note": "冷蔵4日",
+      "search_keyword": "chicken cream sauce milk stewed white mushroom bowl",
+      "image": "https://images.unsplash.com/photo-1560684352-8497838a2229?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxjaGlja2VuJTIwY3JlYW0lMjBzYXVjZSUyMG1pbGslMjBzdGV3ZWQlMjB3aGl0ZSUyMG11c2hyb29tJTIwYm93bHxlbnwwfDJ8fHwxNzgyNjA0NjgwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "image_credit": {
-        "photographer": "Rimsha Noor",
-        "photographer_url": "https://unsplash.com/@rimshaj123",
-        "unsplash_url": "https://unsplash.com/photos/a-bowl-of-chicken-curry-next-to-a-bowl-of-rice-tsQhEvzU6MQ"
+        "photographer": "Do mee",
+        "photographer_url": "https://unsplash.com/@meemeeno",
+        "unsplash_url": "https://unsplash.com/photos/clam-and-vegetable-soup-in-white-ceramic-bowl-SH8_JmrsQcw"
       }
     },
     {
-      "name": "鯖缶とえのき・しいたけの生姜みそ煮",
+      "name": "豚こまのポークケチャップ（下味冷凍）",
+      "genre": "洋",
+      "tool": "フライパン",
+      "freeze": true,
+      "ingredients": [
+        "豚こま切れ",
+        "玉ねぎ",
+        "長ねぎ",
+        "ケチャップ",
+        "ウスターソース",
+        "醤油",
+        "みりん"
+      ],
+      "steps": [
+        "豚こま切れ肉250g・ケチャップ大さじ4・ウスターソース大さじ2・醤油大さじ1・みりん大さじ1・砂糖小さじ1をジッパー袋に入れて揉み込む",
+        "玉ねぎ1個（約200g）を薄切りにして袋に加え、空気を抜いて冷凍する",
+        "食べる日は冷蔵庫で前日から解凍し、フライパンで中火で8分炒める",
+        "仕上げに長ねぎ1/2本（みじん切り）をちらし、軽く炒め合わせる",
+        "子供の取り分けは先に器に盛ってから残りを大人向けに仕上げる"
+      ],
+      "time_minutes": 15,
+      "storage_note": "冷凍3週間",
+      "search_keyword": "pork ketchup tomato sauce glazed pan fried",
+      "image": "https://images.unsplash.com/photo-1659881981676-33ab127152c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxwb3JrJTIwa2V0Y2h1cCUyMHRvbWF0byUyMHNhdWNlJTIwZ2xhemVkJTIwcGFuJTIwZnJpZWR8ZW58MHwyfHx8MTc4MjYwNDY4MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "image_credit": {
+        "photographer": "Elvira Syamsir",
+        "photographer_url": "https://unsplash.com/@vira_yanar",
+        "unsplash_url": "https://unsplash.com/photos/a-plate-of-food-89Hen-akO2Y"
+      }
+    },
+    {
+      "name": "鶏ももとキャベツの中華煮",
+      "genre": "中",
       "tool": "ビストロ",
       "freeze": false,
       "ingredients": [
-        "鯖缶",
-        "えのき",
-        "しいたけ",
-        "たまねぎ",
-        "しょうが",
-        "味噌",
-        "みりん",
-        "酒",
-        "砂糖"
+        "鶏もも肉",
+        "キャベツ",
+        "長ねぎ",
+        "オイスターソース",
+        "醤油",
+        "砂糖",
+        "ごま油",
+        "にんにく",
+        "生姜"
       ],
       "steps": [
-        "えのきは石づきを取り3cm長さに切る。しいたけは薄切り、たまねぎはくし切り（1個）、しょうがはせん切り",
-        "ビストロにたまねぎ・えのき・しいたけを入れ、鯖缶を汁ごと加える",
-        "味噌大さじ2・みりん大さじ2・酒大さじ2・砂糖小さじ1・水100ml・しょうがを合わせて加える",
-        "ビストロ：煮込みモード・15分 → 終了後すぐに蓋を開けて全体を混ぜ、粗熱が取れたら汁ごと保存容器に移す"
+        "鶏もも肉600gを一口大に切る。キャベツ1/4個（約250g）をざく切り、長ねぎ1本を斜め切り、にんにく2かけをつぶす",
+        "ビストロ内鍋に鶏肉・にんにく・生姜1かけ（薄切り）・オイスターソース大さじ3・醤油大さじ2・砂糖大さじ1・水200mlを入れる",
+        "ビストロ：圧力調理・高圧・12分 → 加圧終了後8分自然放置してから蓋を開ける",
+        "キャベツ・長ねぎを加え、蓋を開けたまま混ぜモードまたは中火で5分炒め合わせる",
+        "仕上げにごま油小さじ2をかけて保存容器に移す"
       ],
-      "time_minutes": 25,
-      "storage_note": "冷蔵4日（汁ごと保存）。電子レンジで温め直す",
-      "kid_note": "辛味なし。鯖缶の骨はほぐれているが子供の取り分け時に確認を",
-      "search_keyword": "mackerel miso simmered mushroom dark broth",
-      "image": "https://images.unsplash.com/photo-1739785937132-ae7360fde148?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxtYWNrZXJlbCUyMG1pc28lMjBzaW1tZXJlZCUyMG11c2hyb29tJTIwZGFya3xlbnwwfDJ8fHwxNzgyNTExOTYyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "time_minutes": 30,
+      "storage_note": "冷蔵4日",
+      "search_keyword": "chicken cabbage chinese braised oyster sauce dark",
+      "image": "https://images.unsplash.com/photo-1596958624142-646ebb47852a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxjaGlja2VuJTIwY2FiYmFnZSUyMGNoaW5lc2UlMjBicmFpc2VkJTIwb3lzdGVyJTIwc2F1Y2UlMjBkYXJrfGVufDB8Mnx8fDE3ODI2MDQ2ODJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "image_credit": {
-        "photographer": "Mitili Mitili",
-        "photographer_url": "https://unsplash.com/@mitiliemitili",
-        "unsplash_url": "https://unsplash.com/photos/a-ball-of-black-tea-sitting-on-top-of-a-white-table-KF7mul40q7o"
+        "photographer": "Lena Sifoo",
+        "photographer_url": "https://unsplash.com/@sifoo84",
+        "unsplash_url": "https://unsplash.com/photos/cooked-food-on-white-ceramic-bowl-P1sPPo7VArQ"
       }
     },
     {
-      "name": "鶏肉と豆腐のふんわりハンバーグ",
-      "tool": "ヘルシオ",
-      "freeze": true,
-      "ingredients": [
-        "鶏もも肉角切り",
-        "絹豆腐",
-        "たまねぎ",
-        "卵",
-        "片栗粉",
-        "塩こしょう"
-      ],
-      "steps": [
-        "絹豆腐1個をキッチンペーパーに包み電子レンジ600W・2分加熱して水切りする。鶏もも肉角切り1パックをブラウンハンドブレンダーでミンチ状にする",
-        "鶏ミンチ・水切り豆腐・みじん切りたまねぎ（1個）・卵1個・片栗粉大さじ1・塩こしょうをよく混ぜ合わせる",
-        "タネを8等分して楕円形に成形し、クッキングシートに並べて冷凍袋に入れて冷凍する（成形済み冷凍）",
-        "食べる日：凍ったままヘルシオ：ウォーターオーブン200℃・25分で焼いて完成"
-      ],
-      "time_minutes": 20,
-      "storage_note": "成形後冷凍3週間。焼いた後は当日中に食べること",
-      "kid_note": "辛味なし。2歳10ヶ月の子も食べやすい柔らかな食感。取り分けは小さめのタネを2〜3個分成形しておくと便利",
-      "search_keyword": "chicken tofu hamburger steak pan seared golden",
-      "image": "https://images.unsplash.com/photo-1630513537224-5a5c44c41b5c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxjaGlja2VuJTIwdG9mdSUyMGhhbWJ1cmdlciUyMHN0ZWFrJTIwcGFuJTIwc2VhcmVkJTIwZ29sZGVufGVufDB8Mnx8fDE3ODI1MTE5NjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "image_credit": {
-        "photographer": "David Clarke",
-        "photographer_url": "https://unsplash.com/@david_robert_clarke",
-        "unsplash_url": "https://unsplash.com/photos/white-ceramic-round-plate-with-pizza-jDiYcn1O9nE"
-      }
-    },
-    {
-      "name": "豚こまとキャベツの生姜焼き下味冷凍",
+      "name": "回鍋肉（下味冷凍）",
+      "genre": "中",
       "tool": "フライパン",
       "freeze": true,
       "ingredients": [
         "豚こま切れ",
         "キャベツ",
         "長ねぎ",
-        "しょうが",
+        "豆板醤",
+        "甜面醤",
         "醤油",
         "みりん",
-        "酒",
-        "砂糖"
+        "ごま油"
       ],
       "steps": [
-        "キャベツ1/2個をざく切り（4cm角）にする。長ねぎは斜め切り（1本）、しょうがはすりおろす",
-        "醤油大さじ2・みりん大さじ2・酒大さじ1・砂糖小さじ1・しょうが小さじ1を合わせ、豚こまによく揉み込む",
-        "冷凍袋に豚こま・キャベツ・長ねぎを一緒に入れて平らにし冷凍する（下味冷凍ミールキット）",
-        "食べる日：前夜から冷蔵庫で自然解凍 → フライパンに油を熱して全体に火が通るまで炒めて完成"
+        "豆板醤大さじ1・甜面醤大さじ2・醤油大さじ1・みりん大さじ1・ごま油小さじ1を混ぜてソースを作る",
+        "豚こま切れ肉250gにソースの半量を揉み込み、ジッパー袋に入れて冷凍する（残りのソースは小袋で別冷凍）",
+        "食べる日は冷蔵庫で前日から解凍し、フライパンに油を熱して豚肉を炒める（5分）",
+        "キャベツ1/4個（約250g）をざく切り、長ねぎ1/2本を斜め切りにして加え、3分炒める",
+        "残りのソースを加えて全体にからめる。子供の取り分けはソースを加える前に行う"
       ],
-      "time_minutes": 15,
-      "storage_note": "冷凍3週間。解凍後は当日中に食べること",
-      "kid_note": "辛味なし。子供の取り分けはキャベツ多め・豚肉少なめで盛り付ける",
-      "search_keyword": "pork belly ginger stir fry cabbage soy",
-      "image": "https://images.unsplash.com/photo-1561583953-29d04b8cf5ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxwb3JrJTIwYmVsbHklMjBnaW5nZXIlMjBzdGlyJTIwZnJ5JTIwY2FiYmFnZSUyMHNveXxlbnwwfDJ8fHwxNzgyNTExOTY0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "time_minutes": 20,
+      "storage_note": "冷凍3週間",
+      "search_keyword": "pork double cooked cabbage brown spicy stir fry",
+      "image": "https://images.unsplash.com/photo-1601226809816-b8c32440158a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxwb3JrJTIwZG91YmxlJTIwY29va2VkJTIwY2FiYmFnZSUyMGJyb3duJTIwc3BpY3klMjBzdGlyJTIwZnJ5fGVufDB8Mnx8fDE3ODI2MDQ2ODN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "image_credit": {
+        "photographer": "Carlos Fernández",
+        "photographer_url": "https://unsplash.com/@carlos_cienciayesquina",
+        "unsplash_url": "https://unsplash.com/photos/vegetable-dish-on-black-cooking-pan-w3awZjfVa6w"
+      }
+    },
+    {
+      "name": "鶏もも角切りのオイスターソース炒め",
+      "genre": "中",
+      "tool": "フライパン",
+      "freeze": false,
+      "ingredients": [
+        "鶏もも肉角切り",
+        "えのき",
+        "長ねぎ",
+        "オイスターソース",
+        "醤油",
+        "砂糖",
+        "ごま油",
+        "片栗粉"
+      ],
+      "steps": [
+        "鶏もも角切り肉400gに醤油小さじ2・片栗粉大さじ1をまぶして10分おく。えのき1袋（150g）は石づきを取りほぐす。長ねぎ1/2本を斜め薄切りにする",
+        "フライパンに油大さじ1を熱し、鶏肉を中火で焼き色がつくまで焼く（両面計8分）",
+        "えのき・長ねぎを加えて2分炒める",
+        "オイスターソース大さじ3・醤油大さじ1・砂糖小さじ1・水大さじ2を合わせて加え、全体にからめる（2分）",
+        "ごま油小さじ1を仕上げにかけて保存容器に移す"
+      ],
+      "time_minutes": 25,
+      "storage_note": "冷蔵4日",
+      "search_keyword": "chicken thigh oyster sauce scallion enoki stir fry",
+      "image": "https://images.unsplash.com/photo-1561583953-29d04b8cf5ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxjaGlja2VuJTIwdGhpZ2glMjBveXN0ZXIlMjBzYXVjZSUyMHNjYWxsaW9uJTIwZW5va2klMjBzdGlyJTIwZnJ5fGVufDB8Mnx8fDE3ODI2MDQ2ODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "image_credit": {
         "photographer": "Mutzii",
         "photographer_url": "https://unsplash.com/@mutzii",
@@ -173,41 +301,105 @@
       }
     },
     {
-      "name": "いわし水煮缶のバジルガーリック炒め煮",
-      "tool": "フライパン",
+      "name": "いわしとトマトのスパイシーカレー煮込み",
+      "genre": "エスニック",
+      "tool": "ビストロ",
       "freeze": false,
       "ingredients": [
-        "いわし水煮缶",
-        "たまねぎ",
+        "いわし（水煮）",
+        "玉ねぎ",
+        "えのき",
+        "トマトジュース",
+        "カレー粉",
         "にんにく",
-        "バジル",
-        "酒",
+        "生姜",
+        "コンソメ"
+      ],
+      "steps": [
+        "玉ねぎ3個（約750g）をみじん切りにする。にんにく2かけ・生姜1かけをすりおろす",
+        "ビストロ内鍋に玉ねぎ・にんにく・生姜・カレー粉大さじ2・トマトジュース400ml・コンソメ1個・塩小さじ1/2・水100mlを入れる",
+        "いわし水煮缶1缶（150g）を缶汁ごと加え、えのき1/2袋（約75g）を石づきを取って加える",
+        "ビストロ：煮込みモード・40分（圧力なし） → 終了後蓋を開けてスプーンでいわしをほぐしながら混ぜる",
+        "粗熱が取れたら保存容器に移す。辛味が欲しい大人はカイエンペッパーを別添えにする"
+      ],
+      "time_minutes": 50,
+      "storage_note": "冷蔵5日",
+      "search_keyword": "sardine tomato curry spiced stew golden bowl",
+      "image": "https://images.unsplash.com/photo-1626202159033-a146eeef5b50?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxzYXJkaW5lJTIwdG9tYXRvJTIwY3VycnklMjBzcGljZWQlMjBzdGV3JTIwZ29sZGVuJTIwYm93bHxlbnwwfDJ8fHwxNzgyNjA0Njg1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "image_credit": {
+        "photographer": "Farhad Ibrahimzade",
+        "photographer_url": "https://unsplash.com/@ferhadd",
+        "unsplash_url": "https://unsplash.com/photos/sliced-tomato-on-brown-wooden-plate-gzbySdvaBRY"
+      }
+    },
+    {
+      "name": "タンドリーチキン（下味冷凍・ヘルシオ）",
+      "genre": "エスニック",
+      "tool": "ヘルシオ",
+      "freeze": true,
+      "ingredients": [
+        "鶏もも肉",
+        "カレー粉",
         "醤油",
-        "塩こしょう",
+        "牛乳",
+        "にんにく",
+        "生姜",
         "オリーブオイル"
       ],
       "steps": [
-        "たまねぎは薄切り（1個）、にんにくはみじん切り。いわし缶は汁を切っておく",
-        "フライパンにオリーブオイル小さじ2を熱し、にんにくを炒めて香りを出し、たまねぎを透き通るまで中火で炒める",
-        "いわし缶を加えて軽くほぐしながら炒め、酒大さじ1・醤油小さじ1・塩こしょうで味を調える",
-        "庭のバジルをちぎって加えてさっと混ぜ、粗熱が取れたら保存容器に移す"
+        "ジッパー袋に鶏もも肉600g・カレー粉大さじ2・醤油大さじ2・牛乳大さじ3・すりおろしにんにく1かけ・すりおろし生姜1かけ・塩小さじ1/2・オリーブオイル大さじ1を入れてよく揉み込む",
+        "空気を抜いて密封し冷凍する（当日食べる場合は冷蔵で半日以上漬ける）",
+        "食べる日は冷蔵庫で前日から解凍し、ヘルシオのバットにクッキングシートを敷いて皮面を上にして並べる",
+        "ヘルシオ：ウォーターオーブン・230℃・25分焼く",
+        "竹串を刺して透明な汁が出れば焼き上がり。大葉を添えて盛り付ける"
       ],
-      "time_minutes": 15,
-      "storage_note": "冷蔵4日。電子レンジで温め直すかそのまま食べられる",
-      "kid_note": "辛味なし。いわし水煮缶の骨はほぐれているのでそのまま食べられる",
-      "search_keyword": "sardine sauteed onion garlic herbs olive",
-      "image": "https://images.unsplash.com/photo-1567460074026-7a610d9f082f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxzYXJkaW5lJTIwc2F1dGVlZCUyMG9uaW9uJTIwZ2FybGljJTIwaGVyYnMlMjBvbGl2ZXxlbnwwfDJ8fHwxNzgyNTExOTY1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "time_minutes": 35,
+      "storage_note": "冷凍3週間",
+      "search_keyword": "tandoori chicken charred spiced baked crispy golden",
+      "image": "https://images.unsplash.com/photo-1695505486442-8ad6e83d942d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHx0YW5kb29yaSUyMGNoaWNrZW4lMjBjaGFycmVkJTIwc3BpY2VkJTIwYmFrZWQlMjBjcmlzcHklMjBnb2xkZW58ZW58MHwyfHx8MTc4MjYwNDY4Nnww&ixlib=rb-4.1.0&q=80&w=1080",
       "image_credit": {
-        "photographer": "Gary Moreton-jones",
-        "photographer_url": "https://unsplash.com/@ptfoods",
-        "unsplash_url": "https://unsplash.com/photos/fish-dish-V7GTcaitu-I"
+        "photographer": "ALLAN LAINEZ",
+        "photographer_url": "https://unsplash.com/@17allansfilms",
+        "unsplash_url": "https://unsplash.com/photos/a-plate-of-food-on-a-wooden-table-nLqh0eN6UjQ"
+      }
+    },
+    {
+      "name": "豚こまプルコギ（下味冷凍）",
+      "genre": "エスニック",
+      "tool": "フライパン",
+      "freeze": true,
+      "ingredients": [
+        "豚こま切れ",
+        "玉ねぎ",
+        "長ねぎ",
+        "コチュジャン",
+        "醤油",
+        "砂糖",
+        "ごま油",
+        "にんにく"
+      ],
+      "steps": [
+        "ジッパー袋に豚こま切れ肉250g・コチュジャン大さじ2・醤油大さじ2・砂糖大さじ1・ごま油大さじ1・すりおろしにんにく1かけ・すりおろし生姜小さじ1を入れて揉み込む",
+        "玉ねぎ1個（約200g）を薄切りにして袋に加え、空気を抜いて冷凍する",
+        "食べる日は冷蔵庫で前日から解凍し、フライパンで中火で8〜10分炒める",
+        "長ねぎ1/2本（斜め切り）を加えて2分炒め合わせる",
+        "子供の取り分けは炒め始めに行い、コチュジャンは子供の分に使わないか極少量に抑える"
+      ],
+      "time_minutes": 20,
+      "storage_note": "冷凍3週間",
+      "search_keyword": "pork bulgogi sweet soy sesame caramelized stir fry",
+      "image": "https://images.unsplash.com/photo-1561583953-29d04b8cf5ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxwb3JrJTIwYnVsZ29naSUyMHN3ZWV0JTIwc295JTIwc2VzYW1lJTIwY2FyYW1lbGl6ZWQlMjBzdGlyJTIwZnJ5fGVufDB8Mnx8fDE3ODI2MDQ2ODd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "image_credit": {
+        "photographer": "Mutzii",
+        "photographer_url": "https://unsplash.com/@mutzii",
+        "unsplash_url": "https://unsplash.com/photos/cooked-meat-with-rice-EH6e_wM52is"
       }
     }
   ],
   "side": [
     {
       "name": "えのき・エリンギ・しいたけの大葉マリネ",
-      "tool": "レンジ",
+      "tool": "フライパン",
       "freeze": false,
       "ingredients": [
         "えのき",
@@ -216,20 +408,20 @@
         "大葉",
         "醤油",
         "酢",
-        "みりん",
         "ごま油",
-        "塩"
+        "砂糖"
       ],
       "steps": [
-        "えのきは石づきを取りほぐす（1/2袋）。エリンギは手で縦に裂く。しいたけは薄切り（1/2パック）。大葉は細切りにする",
-        "耐熱容器にきのこ類を入れラップをして電子レンジ600W・3分加熱する",
-        "熱いうちに醤油大さじ2・酢大さじ1・みりん大さじ1・ごま油小さじ1・塩少々で和えて味をなじませる",
-        "粗熱が取れたら大葉を加えて混ぜ、保存容器に入れて冷蔵庫へ"
+        "えのき1袋（150g）の石づきを取りほぐす。エリンギ1パック（100g）を手で食べやすく割く。しいたけ1パック（100g）を薄切りにする",
+        "フライパンを油なしで中火に熱し、きのこ類を全部入れて3〜4分炒り焼きにして水分を飛ばす",
+        "醤油大さじ2・酢大さじ2・砂糖小さじ2・ごま油大さじ1を混ぜたドレッシングをかけてよく和える",
+        "大葉5枚をせん切りにして加え、全体を混ぜて粗熱を取る",
+        "保存容器に移して冷蔵保存"
       ],
-      "time_minutes": 10,
+      "time_minutes": 15,
       "storage_note": "冷蔵5日",
-      "search_keyword": "mixed mushroom shiso vinegar marinated brown",
-      "image": "https://images.unsplash.com/photo-1739785938383-c1b22b702c3a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxtaXhlZCUyMG11c2hyb29tJTIwc2hpc28lMjB2aW5lZ2FyJTIwbWFyaW5hdGVkJTIwYnJvd258ZW58MHwyfHx8MTc4MjUxMTk2Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "search_keyword": "mushroom trio marinated shiso herb sesame dark",
+      "image": "https://images.unsplash.com/photo-1739785938383-c1b22b702c3a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxtdXNocm9vbSUyMHRyaW8lMjBtYXJpbmF0ZWQlMjBzaGlzbyUyMGhlcmIlMjBzZXNhbWUlMjBkYXJrfGVufDB8Mnx8fDE3ODI2MDQ2ODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "image_credit": {
         "photographer": "Mitili Mitili",
         "photographer_url": "https://unsplash.com/@mitiliemitili",
@@ -237,62 +429,87 @@
       }
     },
     {
-      "name": "キャベツのごまポン酢あえ",
-      "tool": "レンジ",
-      "freeze": false,
-      "ingredients": [
-        "キャベツ",
-        "白ごま",
-        "ポン酢",
-        "ごま油"
-      ],
-      "steps": [
-        "キャベツ1/4個をざく切りにし、耐熱容器に入れラップをして電子レンジ600W・3分加熱する",
-        "ザルに上げて水気をしっかり絞る",
-        "ポン酢大さじ2・ごま油小さじ1・白ごま大さじ1で和えて完成。保存容器に入れて冷蔵庫へ"
-      ],
-      "time_minutes": 8,
-      "storage_note": "冷蔵4日",
-      "search_keyword": "wilted cabbage sesame citrus ponzu dressed",
-      "image": "https://images.unsplash.com/photo-1710879405692-198aa6e79c7f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHx3aWx0ZWQlMjBjYWJiYWdlJTIwc2VzYW1lJTIwY2l0cnVzJTIwcG9uenUlMjBkcmVzc2VkfGVufDB8Mnx8fDE3ODI1MTE5Njd8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "image_credit": {
-        "photographer": "Chloe Lee",
-        "photographer_url": "https://unsplash.com/@andtilltheend",
-        "unsplash_url": "https://unsplash.com/photos/a-bowl-of-lettuce-and-other-vegetables-on-a-white-surface-ryZhvw7EDEs"
-      }
-    },
-    {
-      "name": "卵そぼろ",
-      "tool": "フライパン",
+      "name": "煮卵",
+      "tool": "鍋",
       "freeze": false,
       "ingredients": [
         "卵",
-        "砂糖",
         "醤油",
-        "酒",
-        "塩"
+        "みりん",
+        "砂糖"
       ],
       "steps": [
-        "卵4個を割りほぐし、砂糖大さじ1・醤油小さじ1・酒大さじ1・塩少々を加えてよく混ぜる",
-        "小鍋またはフライパンに卵液を入れ、4〜5本の箸またはへらで絶えず混ぜながら中〜弱火で加熱する",
-        "水分が飛んでふんわりしたそぼろ状になったら火を止め、粗熱が取れたら保存容器に移す"
+        "鍋に水を沸かし、卵5個を入れて7分ゆでた後すぐ氷水にとって殻をむく（半熟仕上げ）",
+        "醤油大さじ4・みりん大さじ2・砂糖大さじ1・水大さじ2を小鍋で一煮立ちさせ、粗熱を取る",
+        "ジッパー袋に卵とタレを入れ、空気を抜いて冷蔵庫で半日以上漬ける",
+        "食べる日に半分に切って盛り付ける"
       ],
-      "time_minutes": 10,
-      "storage_note": "冷蔵4日",
-      "kid_note": "子供も食べやすい定番副菜。ご飯にかけてそぼろ丼にもなる",
-      "search_keyword": "golden scrambled egg fluffy crumble soboro",
-      "image": "https://images.unsplash.com/photo-1631651576049-5ffeefb88088?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxnb2xkZW4lMjBzY3JhbWJsZWQlMjBlZ2clMjBmbHVmZnklMjBjcnVtYmxlJTIwc29ib3JvfGVufDB8Mnx8fDE3ODI1MTE5Njh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "time_minutes": 20,
+      "storage_note": "冷蔵5日",
+      "search_keyword": "soft boiled egg marinated amber halved cross section",
+      "image": "https://images.unsplash.com/photo-1576343123473-0e7d3a34c5da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxzb2Z0JTIwYm9pbGVkJTIwZWdnJTIwbWFyaW5hdGVkJTIwYW1iZXIlMjBoYWx2ZWQlMjBjcm9zcyUyMHNlY3Rpb258ZW58MHwyfHx8MTc4MjYwNDY4OXww&ixlib=rb-4.1.0&q=80&w=1080",
       "image_credit": {
-        "photographer": "Molly Keesling",
-        "photographer_url": "https://unsplash.com/@mollysuek",
-        "unsplash_url": "https://unsplash.com/photos/a-plate-of-food-on-a-wooden-table-tk6_L0jDPsk"
+        "photographer": "Ruben Rodriguez",
+        "photographer_url": "https://unsplash.com/@mojogroup",
+        "unsplash_url": "https://unsplash.com/photos/sliced-boiled-egg-GFZZmRbyPFQ"
+      }
+    },
+    {
+      "name": "キャベツと長ねぎの酢漬け",
+      "tool": "レンジ/和え",
+      "freeze": false,
+      "ingredients": [
+        "キャベツ",
+        "長ねぎ",
+        "酢",
+        "砂糖",
+        "塩",
+        "ごま油"
+      ],
+      "steps": [
+        "キャベツ1/4個（約250g）を千切りにし、塩小さじ1をふって10分おいてから水気をしぼる",
+        "長ねぎ1/2本を薄い斜め切りにする",
+        "酢大さじ3・砂糖大さじ1・塩少々・ごま油小さじ1を混ぜてドレッシングを作る",
+        "キャベツ・長ねぎをボウルに入れ、ドレッシングをかけてよく和える",
+        "保存容器に移して冷蔵保存（翌日以降のほうが味がなじんで美味しい）"
+      ],
+      "time_minutes": 15,
+      "storage_note": "冷蔵4日",
+      "search_keyword": "pale shredded cabbage pickled tangy sesame white",
+      "image": "https://images.unsplash.com/photo-1583116935756-f66cd999cdbe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxwYWxlJTIwc2hyZWRkZWQlMjBjYWJiYWdlJTIwcGlja2xlZCUyMHRhbmd5JTIwc2VzYW1lJTIwd2hpdGV8ZW58MHwyfHx8MTc4MjYwNDY5MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "image_credit": {
+        "photographer": "Mockup Graphics",
+        "photographer_url": "https://unsplash.com/@mockupgraphics",
+        "unsplash_url": "https://unsplash.com/photos/green-and-white-sliced-vegetable-anuYvnFtdq4"
+      }
+    },
+    {
+      "name": "玉ねぎの甘酢マリネ",
+      "tool": "レンジ/和え",
+      "freeze": false,
+      "ingredients": [
+        "玉ねぎ",
+        "酢",
+        "砂糖",
+        "塩",
+        "オリーブオイル"
+      ],
+      "steps": [
+        "玉ねぎ2個（約500g）を薄い輪切りにして水にさらす（10分）",
+        "水気をしっかりきる",
+        "酢大さじ4・砂糖大さじ2・塩小さじ1/2・オリーブオイル大さじ1を混ぜ合わせる",
+        "玉ねぎとドレッシングをよく和える",
+        "保存容器に移して冷蔵保存（1日以上おくと辛みが抜けて美味しい）"
+      ],
+      "time_minutes": 15,
+      "storage_note": "冷蔵5日",
+      "search_keyword": "sliced onion sweet vinegar pickled transparent rings",
+      "image": "https://images.unsplash.com/photo-1587049276124-b933e057e698?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxzbGljZWQlMjBvbmlvbiUyMHN3ZWV0JTIwdmluZWdhciUyMHBpY2tsZWQlMjB0cmFuc3BhcmVudCUyMHJpbmdzfGVufDB8Mnx8fDE3ODI2MDQ2OTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "image_credit": {
+        "photographer": "Mockup Graphics",
+        "photographer_url": "https://unsplash.com/@mockupgraphics",
+        "unsplash_url": "https://unsplash.com/photos/red-apple-beside-white-egg-pleChDr5d4w"
       }
     }
-  ],
-  "shopping_list": [
-    "ポン酢（ストックがなければ）",
-    "白ごま（ストックがなければ）",
-    "片栗粉（ストックがなければ）"
-  ],
-  "surplus_note": "レタス（作り置き向きではないため、その日の汁物に加えるか生で食べる）、絹豆腐 2個（1個はハンバーグに使用、残り2個はそのまま食べる）、卵 1個余り、納豆（そのまま食べる）、牛乳・焼きおにぎり・ドレッシング（そのまま使用）"
+  ]
 }

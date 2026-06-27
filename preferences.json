@@ -60,7 +60,13 @@
       "comments": [],
       "added_at": "2026-06-27",
       "done_count": 0,
-      "last_adopted_at": null
+      "last_adopted_at": null,
+      "photo_url": "https://images.unsplash.com/photo-1739785938383-c1b22b702c3a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxtdXNocm9vbSUyMHRyaW8lMjBtYXJpbmF0ZWQlMjBzaGlzbyUyMGhlcmIlMjBzZXNhbWUlMjBkYXJrfGVufDB8Mnx8fDE3ODI2MDQ2ODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "photo_credit": {
+        "photographer": "Mitili Mitili",
+        "photographer_url": "https://unsplash.com/@mitiliemitili",
+        "unsplash_url": "https://unsplash.com/photos/a-jar-of-food-sitting-on-top-of-a-green-cloth-rKV3kG4pcY8"
+      }
     }
   ],
   "weekly_request": {
