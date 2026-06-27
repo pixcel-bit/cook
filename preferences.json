@@ -69,7 +69,9 @@
     "updated_at": null
   },
   "leftover_ingredients": {
-    "checked": [],
+    "checked": [
+      "鯖缶"
+    ],
     "extra": "",
     "updated_at": "2026-06-27"
   }
