@@ -398,7 +398,7 @@ python3 scripts/fetch_pexels.py
 - 料理ジャンル名（japanese / italian / korean / asian / western など）は**使わない**
 - 料理固有名詞（hiyayakko / namul / teriyaki など）は**使わない**
 - 3〜5単語に収める
-- **9品すべてで異なるキーワードになるよう意識する**。複数の副菜で `salad` `dressed` `sesame` `marinated` などの汎用語が重複すると同じ画像になりやすいため避ける
+- **全品（主菜12品・副菜4品）すべてで異なるキーワードになるよう意識する**。複数の副菜で `salad` `dressed` `sesame` `marinated` などの汎用語が重複すると同じ画像になりやすいため避ける
 - 副菜は特に視覚的な特徴を入れる（色・食感・主役食材の見た目）
   - 例：`pale green shredded cabbage tossed` / `dark brown sauteed mushroom bowl` / `fluffy scrambled egg crumble`
 

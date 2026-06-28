@@ -34,7 +34,7 @@ def fetch_unsplash(keyword: str, exclude_urls: set | None = None) -> list[dict]:
     try:
         resp = requests.get(
             "https://api.unsplash.com/search/photos",
-            params={"query": keyword, "per_page": 5, "orientation": "squarish"},
+            params={"query": keyword, "per_page": 10, "orientation": "squarish"},
             headers={"Authorization": f"Client-ID {API_KEY}"},
             timeout=10,
         )
