@@ -67,6 +67,17 @@
         "photographer_url": "https://unsplash.com/@mitiliemitili",
         "unsplash_url": "https://unsplash.com/photos/a-jar-of-food-sitting-on-top-of-a-green-cloth-rKV3kG4pcY8"
       }
+    },
+    {
+      "id": "mqx28gmikg0d",
+      "name": "麻婆豆腐",
+      "priority": false,
+      "good_count": 0,
+      "bad_count": 0,
+      "comments": [],
+      "added_at": "2026-06-28",
+      "done_count": 0,
+      "last_adopted_at": null
     }
   ],
   "weekly_request": {
