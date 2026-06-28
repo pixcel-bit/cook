@@ -71,7 +71,7 @@
     {
       "id": "mqx28gmikg0d",
       "name": "麻婆豆腐",
-      "priority": false,
+      "priority": true,
       "good_count": 0,
       "bad_count": 0,
       "comments": [],
