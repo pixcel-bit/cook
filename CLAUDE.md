@@ -395,7 +395,10 @@ python3 scripts/fetch_pexels.py
 
 #### search_keyword の生成ルール
 - **食材名 ＋ 調理後の見た目・色・質感** の構造にする（例：`chicken thigh dark sauce braised`）
-- 料理ジャンル名（japanese / italian / korean / asian / western など）は**使わない**
+- 料理ジャンル名は原則**使わない**（`japanese` `italian` `western` などは風景・人物ノイズが入りやすいため）
+- ただし **中・エスニックジャンルは例外**：器や盛り付けの雰囲気を絞り込む効果があるため積極的に使う
+  - 中：`chinese` を加える（例：`chinese chicken braised dark clay pot`）
+  - エスニック：`indian` / `korean` / `thai` など料理の産地名を加える（例：`korean pork sweet soy sesame`、`indian spiced sardine curry`）
 - 料理固有名詞（hiyayakko / namul / teriyaki など）は**使わない**
 - 3〜5単語に収める
 - **全品（主菜12品・副菜4品）すべてで異なるキーワードになるよう意識する**。複数の副菜で `salad` `dressed` `sesame` `marinated` などの汎用語が重複すると同じ画像になりやすいため避ける
