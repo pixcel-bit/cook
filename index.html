@@ -46,7 +46,27 @@
   .meta-chip strong { color: var(--ink); font-weight: 700; }
   section { margin-top: 36px; }
   .section-label { font-size: 12px; letter-spacing: 0.1em; color: var(--ink-faint); font-weight: 700; margin-bottom: 14px; text-transform: uppercase; }
-  .genre-label { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; color: var(--ink-mid); background: var(--surface); border-left: 3px solid var(--accent); padding: 4px 10px; margin: 18px 0 10px; }
+  .genre-label {
+    display: flex; align-items: center; gap: 9px;
+    margin: 26px 0 12px; padding: 8px 14px 8px 12px;
+    font-size: 11px; font-weight: 800; letter-spacing: 0.18em;
+    color: var(--gc); border-left: 3px solid var(--gc);
+    border-radius: 0 8px 8px 0;
+    background: linear-gradient(90deg, color-mix(in srgb, var(--gc) 11%, var(--paper)) 0%, var(--paper) 70%);
+  }
+  .genre-label::before {
+    content: ''; display: block; width: 5px; height: 5px;
+    border-radius: 1px; background: var(--gc); flex-shrink: 0;
+  }
+  .genre-label::after {
+    content: ''; flex: 1; height: 1px;
+    background: linear-gradient(90deg, color-mix(in srgb, var(--gc) 30%, transparent), transparent);
+    margin-left: 4px;
+  }
+  .genre-label[data-genre="和"]      { --gc: #4a7a42; }
+  .genre-label[data-genre="洋"]      { --gc: #2e6399; }
+  .genre-label[data-genre="中"]      { --gc: #b83535; }
+  .genre-label[data-genre="エスニック"] { --gc: #9a6410; }
   .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; margin-bottom: 14px; overflow: hidden; }
   .card > summary { list-style: none; cursor: pointer; user-select: none; }
   .card > summary::-webkit-details-marker { display: none; }
@@ -940,7 +960,7 @@ function renderMenu() {
         html += `<section><div class="section-label">主菜 ${mainCount}品</div>`;
         genres.forEach(g => {
           if (!byGenre[g] || !byGenre[g].length) return;
-          html += `<div class="genre-label">${g}</div>`;
+          html += `<div class="genre-label" data-genre="${g}">${g}</div>`;
           byGenre[g].forEach(r => { html += renderRecipeCard(r, 'main'); });
         });
         noGenre.forEach(r => { html += renderRecipeCard(r, 'main'); });
