@@ -19,90 +19,59 @@
   ],
   "main": [
     {
-      "name": "鶏じゃが",
+      "name": "豚汁",
       "genre": "和",
       "tool": "ビストロ",
       "freeze": false,
       "ingredients": [
-        "鶏もも肉",
-        "玉ねぎ",
-        "しいたけ",
-        "じゃがいも",
-        "醤油",
-        "みりん",
-        "砂糖",
-        "だし"
-      ],
-      "steps": [
-        "鶏もも肉400gを一口大（3cm角）に切る。玉ねぎ2個をくし形切り、しいたけ1パック（100g）は石づきを取って半分に切る",
-        "じゃがいも4個（約600g）は皮をむいて一口大に切り、水にさらして水気を切る",
-        "ビストロの内鍋に全材料を入れ、だし400ml・醤油大さじ4・みりん大さじ4・砂糖大さじ2を加える",
-        "ビストロ：圧力調理・高圧・8分 → 加圧終了後そのまま10分自然放置してから蓋を開ける",
-        "全体をそっと混ぜて味を確認し、保存容器に煮汁ごと移す"
-      ],
-      "time_minutes": 25,
-      "storage_note": "冷蔵4日",
-      "search_keyword": "chicken potato onion soy braised dark",
-      "image": "https://images.unsplash.com/photo-1665483268663-4e76b226e632?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxjaGlja2VuJTIwcG90YXRvJTIwb25pb24lMjBzb3klMjBicmFpc2VkJTIwZGFya3xlbnwwfDJ8fHwxNzgyOTY1NzE3fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "image_credit": {
-        "photographer": "Akram Huseyn",
-        "photographer_url": "https://unsplash.com/@akramhuseyn",
-        "unsplash_url": "https://unsplash.com/photos/a-bowl-of-food-on-a-table-1gx6n1oKUY8"
-      }
-    },
-    {
-      "name": "豚こまのしぐれ煮",
-      "genre": "和",
-      "tool": "フライパン",
-      "freeze": false,
-      "ingredients": [
         "豚こま切れ",
         "えのき",
-        "しょうが",
-        "醤油",
-        "みりん",
-        "砂糖",
-        "酒"
+        "玉ねぎ",
+        "しいたけ",
+        "絹豆腐",
+        "味噌",
+        "だし",
+        "しょうが"
       ],
       "steps": [
-        "えのき1袋（150g）は石づきを取ってほぐし、しょうが1かけ（15g）は千切りにする",
-        "フライパンに豚こま切れ300gを広げ入れ、酒大さじ2・みりん大さじ3・醤油大さじ3・砂糖大さじ1・水100mlを加えて中火にかける",
-        "木べらで混ぜながら炒め煮にし、えのきとしょうがを加えてさらに炒める",
-        "煮汁がほぼなくなり肉につやが出たら火を止めて冷ます"
+        "豚こま切れ300gを一口大にまとめる。えのき1袋（150g）は石づきを取ってほぐし、玉ねぎ1個はくし形切り、しいたけ1パック（100g）は石づきを取って4等分に切る",
+        "ビストロの内鍋に豚肉・えのき・玉ねぎ・しいたけ・しょうが1かけ（薄切り）・水1000mlを入れる",
+        "ビストロ：圧力調理・高圧・5分 → 加圧終了後そのまま5分自然放置してから蓋を開ける",
+        "絹豆腐150g（2パック、当日加える分）を別にとり置く。汁を少量取り出して味噌大さじ4を溶き入れ、ひと煮立ちさせる。提供時に豆腐を加えてレンチン温め直し"
       ],
       "time_minutes": 20,
-      "storage_note": "冷蔵5日",
-      "search_keyword": "pork ginger caramelized brown soy shredded enoki",
-      "image": "https://images.unsplash.com/photo-1599314250681-8e05113e0e1b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxwb3JrJTIwZ2luZ2VyJTIwY2FyYW1lbGl6ZWQlMjBicm93biUyMHNveSUyMHNocmVkZGVkJTIwZW5va2l8ZW58MHwyfHx8MTc4Mjk2NTcxOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "storage_note": "冷蔵4日（豆腐は当日加える）",
+      "search_keyword": "pork miso soup dark cloudy broth vegetables bowl",
+      "image": "https://images.unsplash.com/photo-1735187393519-2989ddc4c32c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxwb3JrJTIwbWlzbyUyMHNvdXAlMjBkYXJrJTIwY2xvdWR5JTIwYnJvdGglMjB2ZWdldGFibGVzJTIwYm93bHxlbnwwfDJ8fHwxNzgyOTY4MDYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "image_credit": {
-        "photographer": "Matvey Smirnov",
-        "photographer_url": "https://unsplash.com/@fymg",
-        "unsplash_url": "https://unsplash.com/photos/pasta-dish-in-blue-and-white-ceramic-bowl-3KpNDvwm38U"
+        "photographer": "Kouji Tsuru",
+        "photographer_url": "https://unsplash.com/@pafuxu",
+        "unsplash_url": "https://unsplash.com/photos/a-bowl-of-soup-on-a-wooden-table-8itZfTiKDiY"
       }
     },
     {
-      "name": "鶏もも肉の味噌漬けオーブン焼き",
+      "name": "鶏もも肉の照り焼き",
       "genre": "和",
-      "tool": "ヘルシオ",
+      "tool": "フライパン",
       "freeze": true,
       "ingredients": [
         "鶏もも肉",
-        "味噌",
+        "醤油",
         "みりん",
         "砂糖",
-        "しょうが",
-        "酒"
+        "酒",
+        "しょうが"
       ],
       "steps": [
-        "鶏もも肉400gを一口大（3cm角）に切る。しょうが1かけ（15g）をすりおろす",
-        "味噌大さじ3・みりん大さじ2・砂糖大さじ1・酒大さじ2・おろしショウガをよく混ぜ合わせる",
-        "鶏肉と調味料をポリ袋に入れてよく揉み込み、空気を抜いて平らにして冷凍保存（冷凍3週間）",
-        "当日：冷蔵庫で一晩解凍後、ヘルシオのグリルモード（250℃）で15〜18分焼く。大人用はラー油を添えて提供"
+        "鶏もも肉450gを大きめの一口大に切る。しょうが1かけ（15g）をすりおろす",
+        "醤油大さじ3・みりん大さじ3・砂糖大さじ1・酒大さじ2・おろしショウガをポリ袋で混ぜ、鶏肉を加えてよく揉み込む",
+        "空気を抜いて平らにして冷凍保存（冷凍3週間）",
+        "当日：冷蔵庫で解凍後、フライパンに油なしで皮目から中火で焼く。こんがりしたら裏返し、残った漬けダレを加えて煮絡める（計12〜15分）"
       ],
       "time_minutes": 20,
       "storage_note": "冷凍3週間（解凍後当日中）",
-      "search_keyword": "chicken thigh miso glazed golden oven baked caramelized",
-      "image": "https://images.unsplash.com/photo-1561583953-29d04b8cf5ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxjaGlja2VuJTIwdGhpZ2glMjBtaXNvJTIwZ2xhemVkJTIwZ29sZGVuJTIwb3ZlbiUyMGJha2VkJTIwY2FyYW1lbGl6ZWR8ZW58MHwyfHx8MTc4Mjk2NTcyMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "search_keyword": "chicken teriyaki glazed brown caramelized pan shiny",
+      "image": "https://images.unsplash.com/photo-1561583953-29d04b8cf5ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxjaGlja2VuJTIwdGVyaXlha2klMjBnbGF6ZWQlMjBicm93biUyMGNhcmFtZWxpemVkJTIwcGFuJTIwc2hpbnl8ZW58MHwyfHx8MTc4Mjk2ODA2MXww&ixlib=rb-4.1.0&q=80&w=1080",
       "image_credit": {
         "photographer": "Mutzii",
         "photographer_url": "https://unsplash.com/@mutzii",
@@ -110,211 +79,152 @@
       }
     },
     {
-      "name": "鶏ももとエリンギのトマトジュース煮込み",
+      "name": "豚こまと玉ねぎのみそ炒め",
+      "genre": "和",
+      "tool": "フライパン",
+      "freeze": false,
+      "ingredients": [
+        "豚こま切れ",
+        "玉ねぎ",
+        "味噌",
+        "みりん",
+        "砂糖",
+        "しょうが",
+        "ごま油"
+      ],
+      "steps": [
+        "玉ねぎ2個を薄切りにし、しょうが1かけをみじん切りにする",
+        "味噌大さじ2・みりん大さじ2・砂糖小さじ2を混ぜてタレを作る",
+        "フライパンにごま油大さじ1を熱し、しょうがと玉ねぎを中火でしんなりするまで炒める",
+        "豚こま切れ350gを加えて炒め、火が通ったらタレを加えて全体に絡め、水分を飛ばす"
+      ],
+      "time_minutes": 15,
+      "storage_note": "冷蔵4日",
+      "search_keyword": "pork onion miso stir fried savory brown caramelized",
+      "image": "https://images.unsplash.com/photo-1762398948309-efc21c1f3764?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxwb3JrJTIwb25pb24lMjBtaXNvJTIwc3RpciUyMGZyaWVkJTIwc2F2b3J5JTIwYnJvd24lMjBjYXJhbWVsaXplZHxlbnwwfDJ8fHwxNzgyOTY4MDYyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "image_credit": {
+        "photographer": "Kouji Tsuru",
+        "photographer_url": "https://unsplash.com/@pafuxu",
+        "unsplash_url": "https://unsplash.com/photos/katsudon-in-a-blue-and-white-bowl-K4B6C8zoGxc"
+      }
+    },
+    {
+      "name": "豚こまとキャベツのミルク煮込み",
       "genre": "洋",
       "tool": "ビストロ",
       "freeze": false,
       "ingredients": [
-        "鶏もも肉",
-        "エリンギ",
+        "豚こま切れ",
+        "キャベツ",
         "玉ねぎ",
-        "トマトジュース",
-        "にんにく",
+        "牛乳",
         "コンソメ",
+        "にんにく",
         "塩こしょう",
-        "バジル"
+        "バター"
       ],
       "steps": [
-        "鶏もも肉450gを一口大に切り、塩こしょうで下味をつける。エリンギ2パック（200g）は縦半分に切り、玉ねぎ1個はくし形切り、にんにく3片はみじん切りにする",
-        "フライパンにオリーブオイル大さじ1を熱し、鶏肉の表面に焼き色がつくまで中火で焼く",
-        "ビストロの内鍋に鶏肉・エリンギ・玉ねぎ・にんにく・トマトジュース500ml・コンソメ2個を入れる",
-        "ビストロ：圧力調理・高圧・10分 → 加圧終了後そのまま10分自然放置してから蓋を開ける",
-        "塩こしょうで味を調え、バジルを散らして保存容器に移す"
+        "豚こま切れ350gを食べやすい大きさにまとめ、塩こしょうで下味をつける。キャベツ1/4個（約250g）はざく切り、玉ねぎ1個はくし形切り、にんにく2片はみじん切りにする",
+        "フライパンにバター10gを熱し、豚肉の表面に焼き色をつける",
+        "ビストロの内鍋に豚肉・キャベツ・玉ねぎ・にんにく・牛乳400ml・コンソメ2個を入れる",
+        "ビストロ：煮込みモード・20分 → 蓋を開けて塩こしょうで味を調え、保存容器に移す"
       ],
       "time_minutes": 30,
       "storage_note": "冷蔵4日",
-      "search_keyword": "chicken eryngii mushroom tomato juice red braised",
-      "image": "https://images.unsplash.com/photo-1731170719920-0b18effa18a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxjaGlja2VuJTIwZXJ5bmdpaSUyMG11c2hyb29tfGVufDB8Mnx8fDE3ODI5NjU3MjZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "search_keyword": "pork cabbage creamy milk braised white bowl",
+      "image": "https://images.unsplash.com/photo-1581091274253-85dd20827719?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxwb3JrJTIwY2FiYmFnZSUyMGNyZWFteSUyMG1pbGslMjBicmFpc2VkJTIwd2hpdGUlMjBib3dsfGVufDB8Mnx8fDE3ODI5NjgwNjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "image_credit": {
-        "photographer": "Rahul Himkar",
-        "photographer_url": "https://unsplash.com/@rahulhimkar",
-        "unsplash_url": "https://unsplash.com/photos/a-group-of-mushrooms-on-a-black-background-b6Mqx04ttmM"
+        "photographer": "Studio Crevettes",
+        "photographer_url": "https://unsplash.com/@louismornaud",
+        "unsplash_url": "https://unsplash.com/photos/sliced-onions-in-white-ceramic-bowl-gI53ReFqgHQ"
       }
     },
     {
-      "name": "鶏もも肉のガーリックチーズ焼き",
+      "name": "鶏もも肉とエリンギのバター醤油炒め",
       "genre": "洋",
-      "tool": "ヘルシオ",
+      "tool": "フライパン",
       "freeze": true,
       "ingredients": [
         "鶏もも肉",
-        "ミックスチーズ",
+        "エリンギ",
         "にんにく",
-        "バジル",
-        "オリーブオイル",
+        "バター",
+        "醤油",
         "塩こしょう"
       ],
       "steps": [
-        "鶏もも肉400gを一口大に切る。にんにく3片をすりおろす",
-        "鶏肉・にんにく・オリーブオイル大さじ2・塩小さじ1・こしょう少々・バジル（生10枚みじん切り）をポリ袋に入れてよく揉み込む",
-        "空気を抜いて平らにして冷凍保存（冷凍3週間）",
-        "当日：冷蔵庫で解凍後、耐熱皿に並べてミックスチーズ60gをのせ、ヘルシオのオーブンモード（230℃）で15〜18分焼く"
+        "鶏もも肉400gを一口大に切る。エリンギ2パック（200g）は縦半分に切ってから一口大に切る。にんにく2片はみじん切りにする",
+        "鶏肉・にんにく・塩小さじ1・こしょう少々・醤油小さじ2をポリ袋に入れてよく揉み込む。空気を抜いて平らにして冷凍（冷凍3週間）",
+        "当日：冷蔵庫で解凍後、バター15gを熱したフライパンでエリンギを炒める",
+        "エリンギに焼き色がついたら鶏肉を加えて中火で炒め、仕上げに醤油少々をかけ香りをつける（計10〜12分）"
       ],
       "time_minutes": 20,
-      "storage_note": "冷凍3週間（解凍後チーズをのせて当日焼く）",
-      "search_keyword": "chicken melted cheese garlic herb baked golden brown",
-      "image": "https://images.unsplash.com/photo-1645453014403-4ad5170a386c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxjaGlja2VuJTIwbWVsdGVkJTIwY2hlZXNlJTIwZ2FybGljJTIwaGVyYiUyMGJha2VkJTIwZ29sZGVufGVufDB8Mnx8fDE3ODI5NjU3Mjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "storage_note": "冷凍3週間（解凍後当日中）",
+      "search_keyword": "chicken eryngii butter soy sauce golden stir seared",
+      "image": "https://images.unsplash.com/photo-1582429058754-7af6ca025717?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxjaGlja2VuJTIwZXJ5bmdpaSUyMGJ1dHRlciUyMHNveXxlbnwwfDJ8fHwxNzgyOTY4MDY5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "image_credit": {
-        "photographer": "Some Tale",
-        "photographer_url": "https://unsplash.com/@some_tale",
-        "unsplash_url": "https://unsplash.com/photos/a-casserole-dish-with-cheese-and-parsley-lqRfdLcZm_w"
+        "photographer": "Di_An_h",
+        "photographer_url": "https://unsplash.com/@di_an_h",
+        "unsplash_url": "https://unsplash.com/photos/cooked-food-on-white-ceramic-plate-f-Y7sAUSX2M"
       }
     },
     {
-      "name": "旨塩ガーリックチキン",
+      "name": "鶏もも肉のレモンクリーム煮",
       "genre": "洋",
       "tool": "フライパン",
-      "freeze": true,
+      "freeze": false,
       "ingredients": [
         "鶏もも肉",
+        "玉ねぎ",
+        "牛乳",
+        "レモン汁",
+        "コンソメ",
         "にんにく",
-        "塩",
-        "こしょう",
-        "バター",
-        "レモン汁"
+        "塩こしょう",
+        "バター"
       ],
       "steps": [
-        "鶏もも肉350gを一口大に切る。にんにく2片をすりおろす",
-        "鶏肉・にんにく・塩小さじ1・こしょう少々・レモン汁小さじ2をポリ袋に入れて揉み込み、空気を抜いて平らにして冷凍（冷凍3週間）",
-        "当日：冷蔵庫で解凍後、バター15gを熱したフライパンで両面をこんがり焼く（中火10〜12分）",
-        "仕上げにレモン汁少々をかけて提供"
+        "鶏もも肉500gを一口大に切り、塩こしょうで下味をつける。玉ねぎ1個は薄切り、にんにく2片はみじん切りにする",
+        "フライパンにバター15gを熱し、鶏肉の表面に焼き色をつけて取り出す",
+        "同じフライパンでにんにくと玉ねぎを炒め、牛乳400ml・コンソメ1個・レモン汁大さじ2を加えて鶏肉を戻す",
+        "中火で15分煮て、とろみが出たら塩こしょうで味を調える。保存容器に煮汁ごと移す"
       ],
-      "time_minutes": 15,
-      "storage_note": "冷凍3週間（解凍後当日中）",
-      "search_keyword": "chicken butter garlic seared golden crispy pan lemon",
-      "image": "https://images.unsplash.com/photo-1710438597857-72875fcfa794?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxjaGlja2VuJTIwYnV0dGVyJTIwZ2FybGljJTIwc2VhcmVkJTIwZ29sZGVuJTIwY3Jpc3B5JTIwcGFuJTIwbGVtb258ZW58MHwyfHx8MTc4Mjk2NTczMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "time_minutes": 30,
+      "storage_note": "冷蔵4日",
+      "search_keyword": "chicken lemon cream sauce braised pale rich",
+      "image": "https://images.unsplash.com/photo-1676471759564-8426f19510c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxjaGlja2VuJTIwbGVtb24lMjBjcmVhbSUyMHNhdWNlJTIwYnJhaXNlZCUyMHBhbGV8ZW58MHwyfHx8MTc4Mjk2ODA3MXww&ixlib=rb-4.1.0&q=80&w=1080",
       "image_credit": {
-        "photographer": "Kuntal Maity",
-        "photographer_url": "https://unsplash.com/@kuntal1461",
-        "unsplash_url": "https://unsplash.com/photos/a-blue-plate-topped-with-chicken-covered-in-cilantro-aPuK5pwOBjo"
+        "photographer": "Nima Naseri",
+        "photographer_url": "https://unsplash.com/@nimanaseri",
+        "unsplash_url": "https://unsplash.com/photos/a-white-plate-topped-with-meat-and-veggies-sfb1t2-jRPo"
       }
     },
     {
-      "name": "鶏もも肉とえのきのオイスターソース煮込み",
+      "name": "鶏もも肉とキャベツの中華煮込み",
       "genre": "中",
       "tool": "ビストロ",
       "freeze": false,
       "ingredients": [
         "鶏もも肉",
-        "えのき",
-        "玉ねぎ",
-        "オイスターソース",
-        "醤油",
+        "キャベツ",
+        "しいたけ",
         "しょうが",
-        "ごま油",
-        "砂糖"
+        "にんにく",
+        "オイスターソース",
+        "鶏がらスープ",
+        "醤油",
+        "ごま油"
       ],
       "steps": [
-        "鶏もも肉450gを一口大に切る。えのき1袋（150g）は石づきを取ってほぐし、玉ねぎ1個はくし形切り、しょうが1かけはみじん切りにする",
-        "ビストロの内鍋に鶏肉・えのき・玉ねぎ・しょうが・オイスターソース大さじ3・醤油大さじ2・砂糖小さじ2・水150ml・ごま油小さじ2を入れる",
+        "鶏もも肉450gを一口大に切る。キャベツ1/4個（約250g）をざく切り、しいたけ1パック（100g）は石づきを取って4等分、しょうが1かけ・にんにく2片はみじん切りにする",
+        "ビストロの内鍋に鶏肉・キャベツ・しいたけ・しょうが・にんにく・オイスターソース大さじ3・醤油大さじ2・水300ml・鶏がらスープの素小さじ2を入れる",
         "ビストロ：圧力調理・高圧・8分 → 加圧終了後そのまま8分自然放置してから蓋を開ける",
-        "全体をよく混ぜて味を確認し、保存容器に煮汁ごと移す"
+        "全体をよく混ぜ、仕上げにごま油小さじ2をかけて保存容器に煮汁ごと移す"
       ],
       "time_minutes": 25,
       "storage_note": "冷蔵4日",
-      "search_keyword": "chinese chicken enoki oyster sauce dark braised soy",
-      "image": "https://images.unsplash.com/photo-1601226809816-b8c32440158a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxjaGluZXNlJTIwY2hpY2tlbiUyMGVub2tpJTIwb3lzdGVyJTIwc2F1Y2UlMjBkYXJrJTIwYnJhaXNlZCUyMHNveXxlbnwwfDJ8fHwxNzgyOTY1NzMyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "image_credit": {
-        "photographer": "Carlos Fernández",
-        "photographer_url": "https://unsplash.com/@carlos_cienciayesquina",
-        "unsplash_url": "https://unsplash.com/photos/vegetable-dish-on-black-cooking-pan-w3awZjfVa6w"
-      }
-    },
-    {
-      "name": "豚こまと玉ねぎの甜麺醤炒め",
-      "genre": "中",
-      "tool": "フライパン",
-      "freeze": false,
-      "ingredients": [
-        "豚こま切れ",
-        "玉ねぎ",
-        "甜麺醤",
-        "醤油",
-        "みりん",
-        "しょうが",
-        "ごま油"
-      ],
-      "steps": [
-        "豚こま切れ350gを食べやすい大きさにまとめる。玉ねぎ1個を薄切り、しょうが1かけをみじん切りにする",
-        "甜麺醤大さじ2・醤油大さじ1・みりん大さじ1を混ぜてタレを作る",
-        "フライパンにごま油大さじ1を熱し、しょうがを炒めて香りを出す。玉ねぎを加えてしんなりするまで炒める",
-        "豚肉を加えて強火で炒め、火が通ったらタレを加えて絡め、仕上げにごま油少々をかける"
-      ],
-      "time_minutes": 20,
-      "storage_note": "冷蔵4日",
-      "search_keyword": "chinese pork onion sweet bean paste stir fried dark",
-      "image": "https://images.unsplash.com/photo-1599314250681-8e05113e0e1b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxjaGluZXNlJTIwcG9yayUyMG9uaW9uJTIwc3dlZXQlMjBiZWFuJTIwcGFzdGUlMjBzdGlyJTIwZnJpZWQlMjBkYXJrfGVufDB8Mnx8fDE3ODI5NjU3MzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "image_credit": {
-        "photographer": "Matvey Smirnov",
-        "photographer_url": "https://unsplash.com/@fymg",
-        "unsplash_url": "https://unsplash.com/photos/pasta-dish-in-blue-and-white-ceramic-bowl-3KpNDvwm38U"
-      }
-    },
-    {
-      "name": "豚こまとしいたけのにんにく醤油炒め",
-      "genre": "中",
-      "tool": "フライパン",
-      "freeze": true,
-      "ingredients": [
-        "豚こま切れ",
-        "しいたけ",
-        "にんにく",
-        "醤油",
-        "ごま油",
-        "砂糖",
-        "酒"
-      ],
-      "steps": [
-        "豚こま切れ300gを一口大にまとめる。しいたけ1パック（100g）は石づきを取って薄切り、にんにく2片はみじん切りにする",
-        "醤油大さじ2・酒大さじ2・砂糖小さじ1・ごま油小さじ2・にんにくを混ぜ、豚肉としいたけをポリ袋に入れてよく揉み込む",
-        "空気を抜いて平らにして冷凍保存（冷凍3週間）",
-        "当日：冷蔵庫で解凍後、フライパンで強火にかけ、汁気が飛ぶまで炒める（7〜10分）"
-      ],
-      "time_minutes": 15,
-      "storage_note": "冷凍3週間（解凍後当日中）",
-      "search_keyword": "chinese pork shiitake garlic soy sesame dark stir",
-      "image": "https://images.unsplash.com/photo-1599314250681-8e05113e0e1b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxjaGluZXNlJTIwcG9yayUyMHNoaWl0YWtlJTIwZ2FybGljJTIwc295JTIwc2VzYW1lJTIwZGFyayUyMHN0aXJ8ZW58MHwyfHx8MTc4Mjk2NTczNXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "image_credit": {
-        "photographer": "Matvey Smirnov",
-        "photographer_url": "https://unsplash.com/@fymg",
-        "unsplash_url": "https://unsplash.com/photos/pasta-dish-in-blue-and-white-ceramic-bowl-3KpNDvwm38U"
-      }
-    },
-    {
-      "name": "豚こまとえのきのコチュジャン煮",
-      "genre": "エスニック",
-      "tool": "ビストロ",
-      "freeze": false,
-      "ingredients": [
-        "豚こま切れ",
-        "えのき",
-        "玉ねぎ",
-        "コチュジャン",
-        "醤油",
-        "みりん",
-        "しょうが",
-        "ごま油"
-      ],
-      "steps": [
-        "豚こま切れ350gを食べやすい大きさにまとめる。えのき1袋（150g）は石づきを取ってほぐし、玉ねぎ1個はくし形切り、しょうが1かけはみじん切りにする",
-        "コチュジャン大さじ1（子供用取り分け後に大さじ1追加）・醤油大さじ2・みりん大さじ2・砂糖小さじ1・ごま油小さじ2・水200mlを混ぜる",
-        "ビストロの内鍋に豚肉・えのき・玉ねぎ・しょうが・混ぜたタレを入れる",
-        "ビストロ：煮込みモード・30分 → 蓋を開けて全体をよく混ぜる。子供用を先に取り分けてから残りにコチュジャン大さじ1を加えて辛さを調整"
-      ],
-      "time_minutes": 35,
-      "storage_note": "冷蔵4日",
-      "search_keyword": "korean pork enoki gochujang braised sweet spicy red",
-      "image": "https://images.unsplash.com/photo-1613187378814-293334da5517?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxrb3JlYW4lMjBwb3JrJTIwZW5va2klMjBnb2NodWphbmclMjBicmFpc2VkJTIwc3dlZXQlMjBzcGljeSUyMHJlZHxlbnwwfDJ8fHwxNzgyOTY1NzM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "search_keyword": "chinese chicken cabbage braised ginger soy dark",
+      "image": "https://images.unsplash.com/photo-1613187378814-293334da5517?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxjaGluZXNlJTIwY2hpY2tlbiUyMGNhYmJhZ2UlMjBicmFpc2VkJTIwZ2luZ2VyJTIwc295fGVufDB8Mnx8fDE3ODI5NjgwNzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "image_credit": {
         "photographer": "Adio Winoto",
         "photographer_url": "https://unsplash.com/@adiowinoto",
@@ -322,175 +232,271 @@
       }
     },
     {
-      "name": "鶏もも肉のガパオ風炒め",
+      "name": "豚こまの黒酢炒め",
+      "genre": "中",
+      "tool": "フライパン",
+      "freeze": false,
+      "ingredients": [
+        "豚こま切れ",
+        "玉ねぎ",
+        "えのき",
+        "黒酢（または酢）",
+        "醤油",
+        "砂糖",
+        "しょうが",
+        "ごま油"
+      ],
+      "steps": [
+        "豚こま切れ350gを一口大にまとめ、片栗粉小さじ2をまぶす。玉ねぎ1個は薄切り、えのき1袋（150g）は石づきを取ってほぐす",
+        "黒酢（または酢）大さじ2・醤油大さじ2・砂糖大さじ1・水大さじ2を混ぜてタレを作る",
+        "フライパンにごま油大さじ1を熱し、豚肉を強火で炒めて焼き色をつける。玉ねぎとえのきを加えて炒める",
+        "タレを加えて全体に絡め、とろみが出たら火を止める"
+      ],
+      "time_minutes": 15,
+      "storage_note": "冷蔵4日",
+      "search_keyword": "chinese pork black vinegar sweet sour dark caramel",
+      "image": "https://images.unsplash.com/photo-1775480868396-26060a8b3e3b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxjaGluZXNlJTIwcG9yayUyMGJsYWNrJTIwdmluZWdhciUyMHN3ZWV0JTIwc291ciUyMGRhcmslMjBjYXJhbWVsfGVufDB8Mnx8fDE3ODI5NjgwNzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "image_credit": {
+        "photographer": "Bobbi Wu",
+        "photographer_url": "https://unsplash.com/@bobbiwu",
+        "unsplash_url": "https://unsplash.com/photos/abalone-served-over-rice-in-a-wooden-bowl-KqHwHUkG2qU"
+      }
+    },
+    {
+      "name": "豚こまのごま油ねぎ塩炒め",
+      "genre": "中",
+      "tool": "フライパン",
+      "freeze": true,
+      "ingredients": [
+        "豚こま切れ",
+        "レタス",
+        "にんにく",
+        "ごま油",
+        "塩",
+        "こしょう",
+        "酒"
+      ],
+      "steps": [
+        "豚こま切れ300gを一口大にまとめる。にんにく2片をすりおろす",
+        "豚肉・にんにく・ごま油大さじ1・塩小さじ1・こしょう少々・酒大さじ2をポリ袋に入れてよく揉み込み、空気を抜いて平らにして冷凍（冷凍3週間）",
+        "当日：冷蔵庫で解凍後、フライパンにごま油少々を熱して強火で炒める（5〜7分）",
+        "レタス1/3個（約100g）を食べやすい大きさにちぎって器に敷き、炒めた豚肉をのせて提供"
+      ],
+      "time_minutes": 15,
+      "storage_note": "冷凍3週間（解凍後当日中）",
+      "search_keyword": "chinese pork sesame scallion salt stir fried",
+      "image": "https://images.unsplash.com/photo-1561583953-29d04b8cf5ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxjaGluZXNlJTIwcG9yayUyMHNlc2FtZSUyMHNjYWxsaW9uJTIwc2FsdCUyMHN0aXIlMjBmcmllZHxlbnwwfDJ8fHwxNzgyOTY4MDc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "image_credit": {
+        "photographer": "Mutzii",
+        "photographer_url": "https://unsplash.com/@mutzii",
+        "unsplash_url": "https://unsplash.com/photos/cooked-meat-with-rice-EH6e_wM52is"
+      }
+    },
+    {
+      "name": "豚こまとキャベツのコチュジャン煮込み",
+      "genre": "エスニック",
+      "tool": "ビストロ",
+      "freeze": false,
+      "ingredients": [
+        "豚こま切れ",
+        "キャベツ",
+        "玉ねぎ",
+        "しいたけ",
+        "コチュジャン",
+        "醤油",
+        "みりん",
+        "しょうが",
+        "ごま油"
+      ],
+      "steps": [
+        "豚こま切れ350gを食べやすい大きさにまとめる。キャベツ1/4個（約250g）をざく切り、玉ねぎ1個はくし形切り、しいたけ1パック（100g）は石づきを取って半分に切る",
+        "コチュジャン大さじ1・醤油大さじ2・みりん大さじ2・砂糖小さじ1・ごま油小さじ2・水200mlを混ぜる",
+        "ビストロの内鍋に豚肉・キャベツ・玉ねぎ・しいたけ・しょうが（みじん切り）・混ぜたタレを入れる",
+        "ビストロ：煮込みモード・25分 → 子供用を取り分けてから残りにコチュジャン大さじ1追加して辛さを調整"
+      ],
+      "time_minutes": 30,
+      "storage_note": "冷蔵4日",
+      "search_keyword": "korean pork cabbage gochujang braised red spicy",
+      "image": "https://images.unsplash.com/photo-1630513537224-5a5c44c41b5c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxrb3JlYW4lMjBwb3JrJTIwY2FiYmFnZSUyMGdvY2h1amFuZyUyMGJyYWlzZWQlMjByZWQlMjBzcGljeXxlbnwwfDJ8fHwxNzgyOTY4MDc3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "image_credit": {
+        "photographer": "David Clarke",
+        "photographer_url": "https://unsplash.com/@david_robert_clarke",
+        "unsplash_url": "https://unsplash.com/photos/white-ceramic-round-plate-with-pizza-jDiYcn1O9nE"
+      }
+    },
+    {
+      "name": "鶏もも肉のインドカレー炒め",
+      "genre": "エスニック",
+      "tool": "フライパン",
+      "freeze": true,
+      "ingredients": [
+        "鶏もも肉",
+        "玉ねぎ",
+        "トマトジュース",
+        "カレー粉",
+        "にんにく",
+        "しょうが",
+        "塩",
+        "油"
+      ],
+      "steps": [
+        "鶏もも肉400gを一口大に切る。にんにく2片・しょうが1かけをすりおろす",
+        "カレー粉大さじ1・塩小さじ1・にんにく・しょうが・サラダ油大さじ1をポリ袋に入れて混ぜ、鶏肉を加えてよく揉み込む。空気を抜いて冷凍（冷凍3週間）",
+        "当日：冷蔵庫で解凍後、フライパンに油を熱して玉ねぎ1個（薄切り）をしんなりするまで炒める",
+        "鶏肉を加えて炒め、トマトジュース150mlを加えて5分ほど煮詰める。塩で味を調える。大人はラー油を添えて提供"
+      ],
+      "time_minutes": 25,
+      "storage_note": "冷凍3週間（解凍後当日中）",
+      "search_keyword": "indian chicken spiced curry yellow fried tomato",
+      "image": "https://images.unsplash.com/photo-1631292784640-2b24be784d5d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjBjaGlja2VuJTIwc3BpY2VkJTIwY3VycnklMjB5ZWxsb3clMjBmcmllZCUyMHRvbWF0b3xlbnwwfDJ8fHwxNzgyOTY4MDc4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "image_credit": {
+        "photographer": "Sushmita Chatterjee",
+        "photographer_url": "https://unsplash.com/@sheclicks",
+        "unsplash_url": "https://unsplash.com/photos/black-ceramic-bowl-with-vegetable-dish-Xnb826JWdDI"
+      }
+    },
+    {
+      "name": "鶏もも肉のナンプラーハーブ炒め",
       "genre": "エスニック",
       "tool": "フライパン",
       "freeze": false,
       "ingredients": [
         "鶏もも肉",
+        "エリンギ",
         "玉ねぎ",
-        "バジル",
         "ナンプラー",
-        "オイスターソース",
         "にんにく",
-        "しょうが"
+        "しょうが",
+        "バジル",
+        "大葉",
+        "砂糖"
       ],
       "steps": [
-        "鶏もも肉400gを粗みじん切りにする。玉ねぎ1個を粗みじん切り、にんにく2片・しょうが1かけをみじん切りにする",
-        "ナンプラー大さじ1・オイスターソース大さじ2・醤油大さじ1・砂糖小さじ1を合わせてタレを作る",
-        "フライパンにサラダ油大さじ1を熱し、にんにく・しょうがを炒めて香りを出す。鶏肉と玉ねぎを加えて中火で炒める",
-        "火が通ったらタレを加えてさっと炒め合わせ、仕上げにバジル（生15枚 or 乾燥小さじ1）を混ぜる。大人はラー油を添えて提供"
+        "鶏もも肉400gを粗みじん切りにする。エリンギ1パック（100g）は小口切り、玉ねぎ1個は粗みじん切り、にんにく2片・しょうが1かけはみじん切りにする",
+        "ナンプラー大さじ2・砂糖小さじ2・水大さじ2を合わせてタレを作る",
+        "フライパンにサラダ油大さじ1を熱し、にんにく・しょうがを炒めて香りを出す。鶏肉・玉ねぎ・エリンギを加えて中火で炒める",
+        "火が通ったらタレを加えて強火で炒め合わせ、仕上げにバジル10枚・大葉5枚を混ぜる"
       ],
       "time_minutes": 20,
       "storage_note": "冷蔵4日",
-      "search_keyword": "thai chicken basil fish sauce green stir fried aromatic",
-      "image": "https://images.unsplash.com/photo-1707897634981-39bcfe435268?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHx0aGFpJTIwY2hpY2tlbiUyMGJhc2lsJTIwZmlzaCUyMHNhdWNlJTIwZ3JlZW4lMjBzdGlyJTIwZnJpZWQlMjBhcm9tYXRpY3xlbnwwfDJ8fHwxNzgyOTY1NzM4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "search_keyword": "thai chicken fish sauce herb aromatic green basil",
+      "image": "https://images.unsplash.com/photo-1701567117766-80a92b19f06e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHx0aGFpJTIwY2hpY2tlbiUyMGZpc2glMjBzYXVjZSUyMGhlcmIlMjBhcm9tYXRpYyUyMGdyZWVuJTIwYmFzaWx8ZW58MHwyfHx8MTc4Mjk2ODA3OXww&ixlib=rb-4.1.0&q=80&w=1080",
       "image_credit": {
-        "photographer": "Inna Safa",
-        "photographer_url": "https://unsplash.com/@innasafa",
-        "unsplash_url": "https://unsplash.com/photos/a-white-plate-topped-with-rice-and-fried-eggs-j-SsLyBAkZ8"
-      }
-    },
-    {
-      "name": "鶏もも肉のガイヤーン風",
-      "genre": "エスニック",
-      "tool": "グリル",
-      "freeze": true,
-      "ingredients": [
-        "鶏もも肉",
-        "ナンプラー",
-        "にんにく",
-        "コリアンダーパウダー",
-        "ごま油",
-        "はちみつ",
-        "酒"
-      ],
-      "steps": [
-        "鶏もも肉350gを大きめの一口大に切る。にんにく2片をすりおろす",
-        "ナンプラー大さじ2・にんにく・コリアンダーパウダー小さじ1・ごま油小さじ2・はちみつ小さじ2・酒大さじ1をポリ袋に入れて混ぜ、鶏肉を加えてよく揉み込む",
-        "空気を抜いて平らにして冷凍保存（冷凍3週間）",
-        "当日：冷蔵庫で解凍後、グリルまたはアラジントースターで10〜13分こんがり焼く（途中1回返す）"
-      ],
-      "time_minutes": 15,
-      "storage_note": "冷凍3週間（解凍後当日中）",
-      "search_keyword": "thai grilled chicken garlic herb caramelized golden crispy",
-      "image": "https://images.unsplash.com/photo-1643886027883-1a23fe41ee2a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHx0aGFpJTIwZ3JpbGxlZCUyMGNoaWNrZW4lMjBnYXJsaWMlMjBoZXJiJTIwY2FyYW1lbGl6ZWQlMjBnb2xkZW4lMjBjcmlzcHl8ZW58MHwyfHx8MTc4Mjk2NTc0MHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "image_credit": {
-        "photographer": "Barun Ghosh",
-        "photographer_url": "https://unsplash.com/@barunghosh",
-        "unsplash_url": "https://unsplash.com/photos/a-cooked-chicken-sitting-on-top-of-a-metal-rack-7xOUEcYHMoY"
+        "photographer": "Gourmet Lenz",
+        "photographer_url": "https://unsplash.com/@gourmetlenz",
+        "unsplash_url": "https://unsplash.com/photos/a-white-plate-topped-with-meat-and-veggies-Ebt-Rn2HIac"
       }
     }
   ],
   "side": [
     {
-      "name": "えのきとエリンギの甘辛煮",
+      "name": "しいたけとエリンギのバター醤油炒め",
       "tool": "フライパン",
       "freeze": false,
       "ingredients": [
-        "えのき",
+        "しいたけ",
         "エリンギ",
+        "バター",
         "醤油",
-        "みりん",
-        "砂糖",
-        "ごま油",
-        "白ごま"
+        "にんにく",
+        "こしょう"
       ],
       "steps": [
-        "えのき1袋（150g）は石づきを取ってほぐし、エリンギ2パック（200g）は縦半分に切ってから薄切りにする",
-        "フライパンにごま油小さじ1を熱し、えのきとエリンギを中火で炒める",
-        "しんなりしたら醤油大さじ2・みりん大さじ2・砂糖小さじ1を加えて煮絡める",
-        "水分が飛んでつやが出たら火を止め、白ごまをかけて保存容器に移す"
+        "しいたけ1パック（100g）は石づきを取って薄切り、エリンギ1パック（100g）は縦半分に切ってから薄切りにする。にんにく1片はみじん切りにする",
+        "フライパンにバター15gを溶かし、にんにくを炒めて香りを出す",
+        "しいたけとエリンギを加えて中火で炒める。しんなりしたら醤油大さじ1・こしょう少々で味付けする",
+        "水分を飛ばしながら炒め、全体につやが出たら保存容器に移す"
       ],
       "time_minutes": 10,
       "storage_note": "冷蔵5日",
-      "search_keyword": "enoki eryngii mushroom caramel soy glaze dark brown bowl",
-      "image": "https://images.unsplash.com/photo-1773268110826-a03f5e08face?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxlbm9raSUyMGVyeW5naWklMjBtdXNocm9vbSUyMGNhcmFtZWwlMjBzb3klMjBnbGF6ZSUyMGRhcmt8ZW58MHwyfHx8MTc4Mjk2NTc0Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "search_keyword": "shiitake eryngii butter soy golden mushroom sauteed",
+      "image": "https://images.unsplash.com/photo-1773268110847-24373e0e2f77?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxzaGlpdGFrZSUyMGVyeW5naWklMjBidXR0ZXIlMjBzb3klMjBnb2xkZW4lMjBtdXNocm9vbXxlbnwwfDJ8fHwxNzgyOTY4MDgxfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "image_credit": {
         "photographer": "Haberdoedas",
         "photographer_url": "https://unsplash.com/@haberdoedas",
-        "unsplash_url": "https://unsplash.com/photos/cluster-of-wet-orange-mushrooms-on-dark-wood-mm5i-0woBCk"
+        "unsplash_url": "https://unsplash.com/photos/cluster-of-brown-wet-mushrooms-on-a-log-z7WKI-bjPAg"
       }
     },
     {
-      "name": "レタスと塩昆布のごま油和え",
+      "name": "キャベツとロースハムのさっぱり和え",
       "tool": "レンジ",
       "freeze": false,
       "ingredients": [
-        "レタス",
-        "塩昆布",
-        "ごま油",
-        "白ごま"
+        "キャベツ",
+        "ロースハム",
+        "酢",
+        "砂糖",
+        "塩",
+        "ごま油"
       ],
       "steps": [
-        "レタス1/2個（約200g）をひと口大にちぎる",
+        "キャベツ1/4個（約250g）を千切りにし、ロースハム70gを細切りにする",
+        "耐熱ボウルにキャベツを入れてラップをし、電子レンジ600Wで2分加熱する",
+        "粗熱が取れたら水気をよく絞り、ロースハムを加える",
+        "酢大さじ2・砂糖小さじ2・塩小さじ1/2・ごま油小さじ1を合わせてかけ、よく和えて保存容器に移す"
+      ],
+      "time_minutes": 10,
+      "storage_note": "冷蔵4日",
+      "search_keyword": "shredded cabbage ham vinegar dressed pale crisp",
+      "image": "https://images.unsplash.com/photo-1654458804670-2f4f26ab3154?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxzaHJlZGRlZCUyMGNhYmJhZ2UlMjBoYW0lMjB2aW5lZ2FyJTIwZHJlc3NlZCUyMHBhbGV8ZW58MHwyfHx8MTc4Mjk2ODA4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "image_credit": {
+        "photographer": "Some Tale",
+        "photographer_url": "https://unsplash.com/@some_tale",
+        "unsplash_url": "https://unsplash.com/photos/a-white-bowl-filled-with-coleslaw-on-top-of-a-table-2c-7wjgc4fg"
+      }
+    },
+    {
+      "name": "えのきのナムル",
+      "tool": "レンジ",
+      "freeze": false,
+      "ingredients": [
+        "えのき",
+        "ごま油",
+        "醤油",
+        "白ごま",
+        "塩"
+      ],
+      "steps": [
+        "えのき1袋（150g）は石づきを取って半分の長さに切る",
         "耐熱ボウルに入れてラップをし、電子レンジ600Wで1分30秒加熱する",
-        "粗熱が取れたら水気をよく絞り、塩昆布5g・ごま油小さじ2・白ごまを加えてよく和える",
+        "粗熱が取れたら水気を軽く絞り、ごま油大さじ1・醤油小さじ2・白ごま適量・塩少々を加えてよく和える",
         "冷めたら保存容器に入れて冷蔵保存"
       ],
       "time_minutes": 10,
       "storage_note": "冷蔵4日",
-      "search_keyword": "wilted lettuce salt kelp sesame oil pale green glossy",
-      "image": "https://images.unsplash.com/photo-1755764712150-94e89adb73e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHx3aWx0ZWQlMjBsZXR0dWNlJTIwc2FsdCUyMGtlbHAlMjBzZXNhbWUlMjBvaWwlMjBwYWxlfGVufDB8Mnx8fDE3ODI5NjU3NTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "search_keyword": "enoki mushroom sesame namul white pile glossy",
+      "image": "https://images.unsplash.com/photo-1731170719920-0b18effa18a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxlbm9raSUyMG11c2hyb29tJTIwc2VzYW1lJTIwbmFtdWwlMjB3aGl0ZSUyMHBpbGUlMjBnbG9zc3l8ZW58MHwyfHx8MTc4Mjk2ODA4NXww&ixlib=rb-4.1.0&q=80&w=1080",
       "image_credit": {
-        "photographer": "martin lea",
-        "photographer_url": "https://unsplash.com/@mlcphotography88",
-        "unsplash_url": "https://unsplash.com/photos/close-up-of-textured-brown-seaweed-with-a-blurred-background-2GRgpUxUuvE"
+        "photographer": "Rahul Himkar",
+        "photographer_url": "https://unsplash.com/@rahulhimkar",
+        "unsplash_url": "https://unsplash.com/photos/a-group-of-mushrooms-on-a-black-background-b6Mqx04ttmM"
       }
     },
     {
-      "name": "玉ねぎとしいたけのだし浸し",
+      "name": "炒り卵のそぼろ",
       "tool": "フライパン",
       "freeze": false,
       "ingredients": [
-        "玉ねぎ",
-        "しいたけ",
-        "だし",
-        "醤油",
-        "みりん"
-      ],
-      "steps": [
-        "玉ねぎ2個は薄切りにし、しいたけ1パック（100g）は石づきを取って薄切りにする",
-        "フライパンにだし300ml・醤油大さじ2・みりん大さじ2を入れて中火にかける",
-        "玉ねぎとしいたけを加えて、玉ねぎが透き通るまで7〜8分煮る",
-        "粗熱を取り、保存容器に煮汁ごと移して冷蔵保存"
-      ],
-      "time_minutes": 15,
-      "storage_note": "冷蔵4日",
-      "search_keyword": "translucent onion shiitake dashi broth simmered pale golden",
-      "image": "https://images.unsplash.com/photo-1762752894236-554f9cff2fdb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHx0cmFuc2x1Y2VudCUyMG9uaW9uJTIwc2hpaXRha2UlMjBkYXNoaSUyMGJyb3RoJTIwc2ltbWVyZWQlMjBwYWxlfGVufDB8Mnx8fDE3ODI5NjU3NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "image_credit": {
-        "photographer": "Kouji Tsuru",
-        "photographer_url": "https://unsplash.com/@pafuxu",
-        "unsplash_url": "https://unsplash.com/photos/a-steaming-bowl-of-udon-noodles-with-beef-and-tofu-FmZFV2Ba-lk"
-      }
-    },
-    {
-      "name": "ハムとチーズの厚焼き卵",
-      "tool": "フライパン",
-      "freeze": true,
-      "ingredients": [
         "卵",
-        "ロースハム",
-        "ミックスチーズ",
-        "塩",
         "砂糖",
-        "だし醤油"
+        "醤油",
+        "みりん",
+        "塩"
       ],
       "steps": [
-        "卵6個を溶き、砂糖小さじ2・塩少々・だし醤油小さじ1を加えてよく混ぜる。ロースハム70gを細かく刻んで卵液に混ぜる",
-        "卵焼き用フライパンにサラダ油を薄く引いて中火で熱し、卵液の半量を流し入れる。半熟になったらミックスチーズ30gを中央に散らして手前から巻く",
-        "残りの卵液を流し入れてさらに巻いて成形し、ラップで包んで形を整えながら冷ます",
-        "完全に冷めたら食べやすい厚さに切り、ラップで個別に包んで冷凍保存（冷凍3週間）。当日は電子レンジで解凍"
+        "卵6個を溶き、砂糖大さじ1・醤油小さじ1・みりん大さじ1・塩少々を加えてよく混ぜる",
+        "フライパンに薄く油を引いて弱中火にかけ、卵液を流し入れる",
+        "4〜5本の箸で絶えずかき混ぜながら、細かいそぼろ状になるまで炒り続ける",
+        "火を止めてバットに広げて冷ます。冷めたら保存容器に移す"
       ],
-      "time_minutes": 20,
-      "storage_note": "冷凍3週間（レンジ解凍後即食）",
-      "search_keyword": "tamagoyaki rolled egg ham cheese yellow layered slice",
-      "image": "https://images.unsplash.com/photo-1606501129419-38058bd81ddc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHx0YW1hZ295YWtpJTIwcm9sbGVkJTIwZWdnJTIwaGFtJTIwY2hlZXNlJTIweWVsbG93JTIwbGF5ZXJlZCUyMHNsaWNlfGVufDB8Mnx8fDE3ODI5NjU3NTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "time_minutes": 10,
+      "storage_note": "冷蔵4日",
+      "search_keyword": "scrambled egg crumble yellow fluffy bowl fine",
+      "image": "https://images.unsplash.com/photo-1736605407810-86c6322e1c9a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxzY3JhbWJsZWQlMjBlZ2clMjBjcnVtYmxlJTIweWVsbG93JTIwZmx1ZmZ5JTIwYm93bCUyMGZpbmV8ZW58MHwyfHx8MTc4Mjk2ODA4Nnww&ixlib=rb-4.1.0&q=80&w=1080",
       "image_credit": {
-        "photographer": "Max Griss",
-        "photographer_url": "https://unsplash.com/@grissphoto",
-        "unsplash_url": "https://unsplash.com/photos/brown-bread-on-brown-wooden-tray-stA9e5JdsYo"
+        "photographer": "Tuccera LLC",
+        "photographer_url": "https://unsplash.com/@tuccera",
+        "unsplash_url": "https://unsplash.com/photos/a-person-is-putting-an-egg-in-a-bowl-aUQAvTeKKPQ"
       }
     }
   ]
