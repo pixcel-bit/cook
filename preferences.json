@@ -54,7 +54,7 @@
     {
       "id": "mqwh8m0847l6",
       "name": "えのき・エリンギ・しいたけの大葉マリネ",
-      "priority": true,
+      "priority": false,
       "good_count": 1,
       "bad_count": 0,
       "comments": [],
@@ -71,7 +71,7 @@
     {
       "id": "mqx28gmikg0d",
       "name": "麻婆豆腐",
-      "priority": true,
+      "priority": false,
       "good_count": 0,
       "bad_count": 0,
       "comments": [],
@@ -82,7 +82,7 @@
     {
       "id": "mqxsqann0xc4",
       "name": "鶏団子（成形冷凍）",
-      "priority": true,
+      "priority": false,
       "good_count": 1,
       "bad_count": 0,
       "comments": [],
