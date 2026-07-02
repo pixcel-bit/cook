@@ -71,7 +71,7 @@
     {
       "id": "mqx28gmikg0d",
       "name": "麻婆豆腐",
-      "priority": true,
+      "priority": false,
       "good_count": 0,
       "bad_count": 0,
       "comments": [],
@@ -88,7 +88,13 @@
       "comments": [],
       "added_at": "2026-06-28",
       "done_count": 0,
-      "last_adopted_at": null
+      "last_adopted_at": null,
+      "photo_url": "https://images.unsplash.com/photo-1736283236938-46741e97a016?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxjaGlja2VuJTIwbWVhdGJhbGwlMjBza2V3ZXIlMjBncmlsbGVkJTIwZ2xhemVkJTIwY2FyYW1lbGl6ZWR8ZW58MHwyfHx8MTc4Mjk2Mzg2NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "photo_credit": {
+        "photographer": "JOSCAR RIVERO",
+        "photographer_url": "https://unsplash.com/@joscardavid",
+        "unsplash_url": "https://unsplash.com/photos/a-wooden-table-topped-with-a-plate-of-food-CfQOmlRdWnU"
+      }
     }
   ],
   "weekly_request": {
