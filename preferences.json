@@ -82,7 +82,7 @@
     {
       "id": "mqxsqann0xc4",
       "name": "鶏団子（成形冷凍）",
-      "priority": false,
+      "priority": true,
       "good_count": 1,
       "bad_count": 0,
       "comments": [],
