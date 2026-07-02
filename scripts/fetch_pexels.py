@@ -8,9 +8,11 @@ Rules:
 - After fetching, if a recipe has good_count > 0, persist photo_url back to
   preferences.json so it can be reused in future weeks.
 """
+from __future__ import annotations
 import json
 import os
 import sys
+import time
 
 try:
     import requests
@@ -31,29 +33,37 @@ PREFS_PATH = os.path.join(ROOT, "preferences.json")
 
 def fetch_unsplash(keyword: str, exclude_urls: set | None = None) -> list[dict]:
     """Return up to 5 image dicts from Unsplash (excluding already-used URLs), or [] on failure."""
-    try:
-        resp = requests.get(
-            "https://api.unsplash.com/search/photos",
-            params={"query": keyword, "per_page": 10, "orientation": "squarish"},
-            headers={"Authorization": f"Client-ID {API_KEY}"},
-            timeout=10,
-        )
-        resp.raise_for_status()
-        results = []
-        for p in resp.json().get("results", []):
-            url = p["urls"]["regular"]
-            if exclude_urls and url in exclude_urls:
+    for attempt in range(3):
+        try:
+            resp = requests.get(
+                "https://api.unsplash.com/search/photos",
+                params={"query": keyword, "per_page": 10, "orientation": "squarish"},
+                headers={"Authorization": f"Client-ID {API_KEY}"},
+                timeout=10,
+            )
+            if resp.status_code == 429:
+                wait = int(resp.headers.get("Retry-After", 60))
+                print(f"  WARN: rate limited, waiting {wait}s...", file=sys.stderr)
+                time.sleep(wait)
                 continue
-            results.append({
-                "url": url,
-                "photographer": p["user"]["name"],
-                "photographer_url": p["user"]["links"]["html"],
-                "unsplash_url": p["links"]["html"],
-            })
-        return results
-    except Exception as e:
-        print(f"  WARN: API call failed for '{keyword}': {e}", file=sys.stderr)
-        return []
+            resp.raise_for_status()
+            results = []
+            for p in resp.json().get("results", []):
+                url = p["urls"]["regular"]
+                if exclude_urls and url in exclude_urls:
+                    continue
+                results.append({
+                    "url": url,
+                    "photographer": p["user"]["name"],
+                    "photographer_url": p["user"]["links"]["html"],
+                    "unsplash_url": p["links"]["html"],
+                })
+            return results
+        except Exception as e:
+            print(f"  WARN: API call failed for '{keyword}': {e}", file=sys.stderr)
+            if attempt < 2:
+                time.sleep(2 ** attempt)
+    return []
 
 
 def fetch_unsplash_with_fallback(keyword: str, exclude_urls: set | None = None) -> tuple[list[dict], str]:
@@ -95,7 +105,6 @@ def main():
 
     for recipe in menu.get("main", []) + menu.get("side", []):
         name = recipe["name"]
-        recipe.pop("svg", None)
 
         # Reuse saved photo for liked recipes
         if name in saved_photos:

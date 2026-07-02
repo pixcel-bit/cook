@@ -523,7 +523,7 @@ let expandedIds = new Set();
 function uid() { return Date.now().toString(36) + Math.random().toString(36).slice(2,6); }
 function toB64(s) { return btoa(unescape(encodeURIComponent(s))); }
 function fromB64(s) { return decodeURIComponent(escape(atob(s.replace(/\n/g,'')))); }
-function esc(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function esc(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;'); }
 
 function switchTab(tab, btn) {
   document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
@@ -544,7 +544,7 @@ async function loadPrefs() {
       if (!parsed.leftover_ingredients) parsed.leftover_ingredients = { checked: [], extra: '', updated_at: null };
       prefs = parsed;
     }
-  } catch(e) {}
+  } catch(e) { showToast('設定の読み込みに失敗しました'); }
   renderRecipeList();
   updateRatingCounts();
   initRequest();
@@ -567,7 +567,7 @@ async function doSave() {
       headers:{ Authorization:'token '+TOKEN, 'Content-Type':'application/json' },
       body:JSON.stringify(body)
     });
-    if (res.ok) { const d = await res.json(); prefsSha = d.content.sha; showToast('保存しました'); }
+    if (res.ok) { const d = await res.json(); prefsSha = d.content.sha; }
     else showToast('保存に失敗しました');
   } catch(e) { showToast('保存に失敗しました'); }
   saving = false;
@@ -741,7 +741,7 @@ function renderRecipeList() {
           <span>追加日: ${r.added_at}</span>
           ${r.last_adopted_at ? `<span>最終採用: ${r.last_adopted_at}</span>` : ''}
         </div>
-        ${r.comments.length ? `<ul class="comments-list">${r.comments.map((c,i) =>
+        ${(r.comments || []).length ? `<ul class="comments-list">${(r.comments || []).map((c,i) =>
           `<li class="comment-row"><span class="comment-text">${esc(c)}</span><button class="comment-del" onclick="deleteComment('${r.id}',${i})">✕</button></li>`
         ).join('')}</ul>` : ''}
         <div class="comment-form">
@@ -786,7 +786,10 @@ function startEdit(id) { editingId=id; expandedIds.add(id); renderRecipeList(); 
 function commitEdit(id) {
   const inp = document.getElementById('rle-'+id); if (!inp) return;
   const name = inp.value.trim();
-  if (name) { const r=prefs.recipes.find(x=>x.id===id); if(r) r.name=name; }
+  if (name) {
+    if (prefs.recipes.find(x => x.id !== id && x.name === name)) { showToast('同名のレシピが既にあります'); return; }
+    const r=prefs.recipes.find(x=>x.id===id); if(r) r.name=name;
+  }
   editingId=null; renderRecipeList(); queueSave();
 }
 
@@ -880,26 +883,19 @@ function updateRatingCounts() {
   });
 }
 
-loadMenu();
-loadPrefs();
-
 /* --- MENU DYNAMIC LOADING --- */
 async function loadMenu() {
   try {
     const res = await fetch(MENU_URL + '?t=' + Date.now());
     if (res.ok) { menuData = await res.json(); renderMenu(); }
-  } catch(e) {}
+    else showToast('献立の読み込みに失敗しました');
+  } catch(e) { showToast('献立の読み込みに失敗しました'); }
 }
 
-function getChildAge() {
-  if (!prefs.family || !prefs.family.child_birthdate) return '';
-  const birth = new Date(prefs.family.child_birthdate);
-  const now = new Date();
-  let years = now.getFullYear() - birth.getFullYear();
-  let months = now.getMonth() - birth.getMonth();
-  if (months < 0) { years--; months += 12; }
-  return `${years}歳${months}ヶ月`;
-}
+(async () => {
+  await loadMenu();
+  loadPrefs();
+})();
 
 function renderMenu() {
   if (!menuData) return;
@@ -938,7 +934,8 @@ function renderMenu() {
     <span class="meta-chip"><strong>主菜</strong> ${mainCount}品</span>
     <span class="meta-chip"><strong>副菜</strong> ${sideCount}品（各2日分）</span>
     <span class="meta-chip"><strong>作り置き目安</strong> 90〜150分</span>
-    <span class="meta-chip"><strong>平日</strong> レンチン or 焼くだけ</span>`;
+    <span class="meta-chip"><strong>平日</strong> レンチン or 焼くだけ</span>
+    <button class="show-hidden-btn" id="show-hidden-btn" onclick="toggleShowHidden()" style="display:none">非表示を表示</button>`;
 
   const ingTitle = document.getElementById('ing-delivery-title');
   if (ingTitle) ingTitle.textContent = `グリーンビーンズ ${dateLabel}配達`;
@@ -995,7 +992,6 @@ function getRecipeImage(r) {
 }
 
 function getRecipeCredit(r) {
-  if (r.image_credits && r.image_credits[0]) return r.image_credits[0];
   if (r.image_credit && r.image_credit.photographer) return r.image_credit;
   return null;
 }

@@ -10,7 +10,7 @@
 |----------|------|---------------|
 | `CLAUDE.md` | 本仕様書。routineが参照するルール | ルール変更時のみ |
 | `preferences.json` | 可変ユーザーデータ（評価・リクエスト・残り食材・家族情報） | ユーザー操作・毎週 |
-| `menu.json` | 今週の生成レシピデータ（SVG含む） | 毎週土曜に上書き |
+| `menu.json` | 今週の生成レシピデータ（写真URL含む） | 毎週土曜に上書き |
 | `index.html` | SPAアプリ本体。menu.jsonを読み込んで表示 | 機能追加時のみ |
 
 **routineがpushするのは `menu.json` と `preferences.json`。** index.htmlは変更しない。
@@ -344,7 +344,9 @@ WebSearch で **クラシル（kurashiru.com）** と **白ごはん.com（sirog
       "steps": ["鶏もも肉300gを一口大に切る", "手順2", "手順3"],
       "time_minutes": 20,
       "storage_note": "冷蔵3日",
-      "search_keyword": "英語の料理検索キーワード（Unsplash検索用）"
+      "search_keyword": "英語の料理検索キーワード（Unsplash検索用）",
+      "image": "（fetch_pexels.pyが設定）",
+      "image_credit": {}
     }
   ],
   "side": [
@@ -356,7 +358,9 @@ WebSearch で **クラシル（kurashiru.com）** と **白ごはん.com（sirog
       "steps": ["えのき1袋（150g）を石づきを取ってほぐす", "手順2"],
       "time_minutes": 10,
       "storage_note": "冷蔵4日",
-      "search_keyword": "英語の料理検索キーワード（Unsplash検索用）"
+      "search_keyword": "英語の料理検索キーワード（Unsplash検索用）",
+      "image": "（fetch_pexels.pyが設定）",
+      "image_credit": {}
     }
   ]
 }
@@ -390,7 +394,7 @@ python3 scripts/fetch_pexels.py
 
 このスクリプトが以下を確実に実行する（deterministic logic）：
 - 各レシピに対し、`preferences.json` の `recipes[]` に `good_count > 0` かつ `photo_url` がある場合は再利用（API呼び出しなし）
-- それ以外は Unsplash API で `search_keyword` を使って取得し、`menu.json` の `images` / `image_credits` フィールドに保存（最大3枚）
+- それ以外は Unsplash API で `search_keyword` を使って取得し、`menu.json` の `image` / `image_credit` フィールドに保存
 - 0件だった場合はキーワードを短縮して再検索（フォールバック）
 - 取得した写真について、該当レシピが `good_count > 0` なら `preferences.json` の `photo_url` / `photo_credit` にも保存（翌週以降の再利用のため）
 
