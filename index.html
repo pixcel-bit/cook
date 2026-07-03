@@ -475,6 +475,9 @@
 </section>
 
 <div id="menu-memo"></div>
+<div style="text-align:center;margin-top:22px">
+  <button class="show-hidden-btn" onclick="manageToken()">🔑 保存用トークンを設定/変更</button>
+</div>
 <footer id="menu-footer">グリーンビーンズ 6/11配達分の食材で作成 ・ 週次作り置き献立</footer>
 </div>
 
@@ -496,10 +499,31 @@
 <div class="toast" id="toast"></div>
 
 <script>
-const _a = 'github_pat_11B3CTJZY';
-const _b = '0ydo3ewXfiRHp_bGhswrn' + 'siCBeJFKKAosWdwqMUjmhjKmF1ayeTPpSnMh2TCXYWUBxdpT5W98';
-const TOKEN = _a + _b;
+// 保存用トークンはソースに埋め込まず、各端末の localStorage にのみ保持する。
+// 読み取り（menu.json / preferences.json）は public リポジトリなのでトークン不要。
+// 書き込み（保存）時だけトークンを使い、未設定なら一度だけ入力を促す。
+let TOKEN = localStorage.getItem('gh_token') || '';
 const API = 'https://api.github.com/repos/pixcel-bit/cook/contents/preferences.json';
+
+function ghHeaders(extra) {
+  const h = Object.assign({ Accept: 'application/vnd.github.v3+json' }, extra || {});
+  if (TOKEN) h.Authorization = 'token ' + TOKEN;
+  return h;
+}
+async function ensureToken() {
+  if (!TOKEN) {
+    const t = (prompt('保存用のGitHubトークンを貼り付けてください。\nこの端末にのみ保存され、リポジトリには公開されません。') || '').trim();
+    if (t) { TOKEN = t; localStorage.setItem('gh_token', t); }
+  }
+  return TOKEN;
+}
+function manageToken() {
+  const t = prompt(`保存用GitHubトークン（現在: ${TOKEN ? '設定済み' : '未設定'}）\n貼り付けて更新 / 空欄のままOKでこの端末から削除:`, '');
+  if (t === null) return;
+  const v = t.trim();
+  if (v) { TOKEN = v; localStorage.setItem('gh_token', v); showToast('トークンを保存しました'); }
+  else { TOKEN = ''; localStorage.removeItem('gh_token'); showToast('トークンを削除しました'); }
+}
 
 let THIS_WEEK_INGREDIENTS = [];
 let RECIPE_SVGS = {};
@@ -534,7 +558,7 @@ function switchTab(tab, btn) {
 
 async function loadPrefs() {
   try {
-    const res = await fetch(API, { headers: { Authorization:'token '+TOKEN, Accept:'application/vnd.github.v3+json' } });
+    const res = await fetch(API, { headers: ghHeaders() });
     if (res.ok) {
       const d = await res.json();
       prefsSha = d.sha;
@@ -558,13 +582,14 @@ function queueSave() {
 
 async function doSave(opts) {
   if (saving) { saveTimer = setTimeout(() => doSave(opts), 700); return; }
+  if (!(await ensureToken())) { showToast('保存用トークンが未設定です（🔑ボタンから設定）'); return; }
   saving = true;
   try {
     const body = { message:'update preferences', content:toB64(JSON.stringify(prefs,null,2)) };
     if (prefsSha) body.sha = prefsSha;
     const res = await fetch(API, {
       method:'PUT',
-      headers:{ Authorization:'token '+TOKEN, 'Content-Type':'application/json' },
+      headers: ghHeaders({ 'Content-Type':'application/json' }),
       body:JSON.stringify(body)
     });
     if (res.ok) { const d = await res.json(); prefsSha = d.content.sha; if (!(opts && opts.silent)) showToast('保存しました'); }

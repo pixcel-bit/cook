@@ -442,4 +442,5 @@ push先: pixcel-bit/cook リポジトリ main ブランチ
 - このリポジトリは**public**のため、個人情報はCLAUDE.mdに書かない
 - 子供の生年月日は `preferences.json` の `family.child_birthdate` に保存し、ここからは参照のみ
 - GitHubトークン・APIキーはコードに直接書かない
+  - `index.html` の保存機能は、トークンをソースに埋め込まず各端末の `localStorage`（キー `gh_token`）に保持する。読み取りは public リポジトリのため認証不要。書き込み時のみトークンを使い、未設定なら🔑ボタン/初回保存時に入力を促す。**絶対にトークンを index.html へ直書きしない。**
 - pushするのは `menu.json` と `preferences.json` のみ。他ファイル・ブランチには触れない
