@@ -9,9 +9,13 @@ permissions:
   contents: read
   pages: write
   id-token: write
+# Pages allows only one in-progress deployment per environment. Queue new
+# runs and let the running one finish instead of cancelling it — cancelling
+# mid-deploy leaves a conflicting deployment that makes the next run fail fast
+# with "Deployment failed, try again later".
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 jobs:
   deploy:
     environment:
