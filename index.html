@@ -517,10 +517,19 @@ async function ensureToken() {
   }
   return TOKEN;
 }
-function manageToken() {
-  const t = prompt(`保存用GitHubトークン（現在: ${TOKEN ? '設定済み' : '未設定'}）\n貼り付けて更新 / 空欄のままOKでこの端末から削除:`, '');
+async function manageToken() {
+  if (TOKEN) {
+    try { await navigator.clipboard.writeText(TOKEN); } catch (e) {}
+  }
+  const t = prompt(
+    TOKEN
+      ? '保存用GitHubトークン（クリップボードにコピー済み）。\nそのままOKでコピーのみ / 編集して更新 / 空欄にして削除:'
+      : '保存用GitHubトークンを貼り付けてください（この端末にのみ保存されます）:',
+    TOKEN || ''
+  );
   if (t === null) return;
   const v = t.trim();
+  if (v === TOKEN) { if (TOKEN) showToast('トークンをコピーしました'); return; }
   if (v) { TOKEN = v; localStorage.setItem('gh_token', v); showToast('トークンを保存しました'); }
   else { TOKEN = ''; localStorage.removeItem('gh_token'); showToast('トークンを削除しました'); }
 }
