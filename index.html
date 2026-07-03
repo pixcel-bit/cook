@@ -921,9 +921,16 @@ function updateRatingCounts() {
 async function loadMenu() {
   try {
     const res = await fetch(MENU_URL + '?t=' + Date.now());
-    if (res.ok) { menuData = await res.json(); renderMenu(); }
-    else showToast('献立の読み込みに失敗しました');
-  } catch(e) { showToast('献立の読み込みに失敗しました'); }
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    menuData = await res.json();
+    renderMenu();
+  } catch(e) {
+    showToast('献立の読み込みに失敗しました');
+    const el = document.getElementById('menu-recipes');
+    if (el) el.innerHTML = '<div style="text-align:center;padding:48px 20px;color:var(--ink-faint);font-size:13px">献立を読み込めませんでした。<br>通信環境を確認して再読み込みしてください。</div>';
+    const h1 = document.getElementById('menu-h1');
+    if (h1) h1.textContent = '今週の献立';
+  }
 }
 
 (async () => {
