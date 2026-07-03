@@ -556,8 +556,8 @@ function queueSave() {
   saveTimer = setTimeout(doSave, 700);
 }
 
-async function doSave() {
-  if (saving) { saveTimer = setTimeout(doSave, 700); return; }
+async function doSave(opts) {
+  if (saving) { saveTimer = setTimeout(() => doSave(opts), 700); return; }
   saving = true;
   try {
     const body = { message:'update preferences', content:toB64(JSON.stringify(prefs,null,2)) };
@@ -567,7 +567,7 @@ async function doSave() {
       headers:{ Authorization:'token '+TOKEN, 'Content-Type':'application/json' },
       body:JSON.stringify(body)
     });
-    if (res.ok) { const d = await res.json(); prefsSha = d.content.sha; }
+    if (res.ok) { const d = await res.json(); prefsSha = d.content.sha; if (!(opts && opts.silent)) showToast('保存しました'); }
     else showToast('保存に失敗しました');
   } catch(e) { showToast('保存に失敗しました'); }
   saving = false;
@@ -677,7 +677,7 @@ async function saveRequest() {
   prefs.weekly_request = { moods, note, updated_at: now };
   updateReqUpdated(now);
   document.getElementById('req-card').classList.add('req-sent');
-  await doSave();
+  await doSave({ silent: true });
   showToast('リクエストを送信しました');
 }
 
@@ -712,7 +712,7 @@ function renderRecipeList() {
     const isOpen = expandedIds.has(r.id);
     const badge = r.done_count > 0 ? `<span class="done-badge">採用${r.done_count}回</span>` : '';
     const svgHtml = RECIPE_IMAGES[r.name]
-      ? `<div class="rl-svg"><img src="${RECIPE_IMAGES[r.name]}" alt="${esc(r.name)}" style="width:36px;height:36px;object-fit:cover;border-radius:6px;"></div>`
+      ? `<div class="rl-svg"><img src="${esc(RECIPE_IMAGES[r.name])}" alt="${esc(r.name)}" style="width:36px;height:36px;object-fit:cover;border-radius:6px;"></div>`
       : RECIPE_SVGS[r.name] ? `<div class="rl-svg">${RECIPE_SVGS[r.name]}</div>` : '';
     return `
     <div class="rl-item${r.priority?' rl-priority':''}" id="rli-${r.id}">
@@ -1006,7 +1006,7 @@ function renderRecipeCard(r, type) {
 
   let illoHtml;
   if (img) {
-    illoHtml = `<img src="${img}" alt="${nameEsc}" loading="lazy" onerror="this.parentElement.innerHTML='<div class=card-illo-fallback>🍽</div>'">`;
+    illoHtml = `<img src="${esc(img)}" alt="${nameEsc}" loading="lazy" onerror="this.parentElement.innerHTML='<div class=card-illo-fallback>🍽</div>'">`;
   } else if (r.svg) {
     illoHtml = r.svg;
   } else {
@@ -1017,7 +1017,7 @@ function renderRecipeCard(r, type) {
   const steps = (r.steps || []).map(s => `<li>${esc(s)}</li>`).join('');
 
   const creditHtml = credit && credit.photographer
-    ? `<div class="photo-credit">Photo by <a href="${credit.photographer_url}" target="_blank" rel="noopener">${esc(credit.photographer)}</a> on <a href="${credit.unsplash_url}" target="_blank" rel="noopener">Unsplash</a></div>`
+    ? `<div class="photo-credit">Photo by <a href="${esc(credit.photographer_url || '')}" target="_blank" rel="noopener">${esc(credit.photographer)}</a> on <a href="${esc(credit.unsplash_url || '')}" target="_blank" rel="noopener">Unsplash</a></div>`
     : '';
 
   return `
