@@ -388,6 +388,40 @@
         "photographer_url": "https://unsplash.com/@sheclicks",
         "unsplash_url": "https://unsplash.com/photos/black-ceramic-bowl-with-vegetable-dish-Xnb826JWdDI"
       }
+    },
+    {
+      "name": "鯖缶麻婆豆腐",
+      "genre": "中",
+      "tool": "ビストロ",
+      "freeze": false,
+      "ingredients": [
+        "鯖水煮缶",
+        "絹豆腐",
+        "長ねぎ",
+        "にんにく",
+        "しょうが",
+        "甜麺醤",
+        "豆板醤",
+        "醤油",
+        "鶏がらスープ",
+        "片栗粉",
+        "ごま油"
+      ],
+      "steps": [
+        "鯖水煮缶2缶（約380g）を汁ごと用意し身を粗くほぐす。長ねぎ1本をみじん切り、にんにく2片・しょうが1片をすりおろす（絹豆腐は食べる直前に加える）",
+        "ビストロの内鍋にごま油大さじ1・鯖（汁ごと）・長ねぎ・にんにく・しょうが・甜麺醤大さじ2を入れる（豆板醤は入れず、辛いのが苦手な子供に合わせ大人用に別添え）",
+        "醤油大さじ1・鶏がらスープ300mlを加え、ビストロ：煮込みモード・かき混ぜあり・15分で加熱する（圧力はかけない＝鯖の身や豆腐が崩れないため）",
+        "終了後、水溶き片栗粉（片栗粉大さじ2・水大さじ3）を回し入れ、煮込みモード・かき混ぜあり・5分でとろみをつける。※絹豆腐2丁（約600g）を2〜3cm角に切り食べる直前に加えてレンジで温め、大人は豆板醤・ラー油を別添えにする"
+      ],
+      "time_minutes": 30,
+      "storage_note": "スープ部分：冷蔵4日（豆腐は食べる直前に加える）",
+      "search_keyword": "chinese mackerel mapo tofu dark savory sauce",
+      "image": "https://images.unsplash.com/photo-1630513537224-5a5c44c41b5c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxjaGluZXNlJTIwbWFja2VyZWwlMjBtYXBvJTIwdG9mdSUyMGRhcmslMjBzYXZvcnklMjBzYXVjZXxlbnwwfDJ8fHwxNzgzMjM0MjkxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "image_credit": {
+        "photographer": "David Clarke",
+        "photographer_url": "https://unsplash.com/@david_robert_clarke",
+        "unsplash_url": "https://unsplash.com/photos/white-ceramic-round-plate-with-pizza-jDiYcn1O9nE"
+      }
     }
   ],
   "side": [
