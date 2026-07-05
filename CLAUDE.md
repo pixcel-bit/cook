@@ -402,9 +402,24 @@ push先: pixcel-bit/cook リポジトリ main ブランチ
 
 index.htmlはmenu.jsonをfetchして「メニュータブ」を動的に描画する。
 
+### お気に入りの作り方を再現（固定レシピ）
+
+menu.json を生成した後、**写真取得より前に**以下を実行する。
+
+```
+node scripts/apply_saved_recipes.js
+```
+
+このスクリプトが以下を確実に実行する（deterministic logic）：
+- `preferences.json` の `recipes[]` で `recipe`（保存済みの作り方）を持ち、かつ `recipe.lock !== false`（＝🔒固定）のレシピについて、`menu.json` 内の**同名料理**の `ingredients` / `steps` / `tool` / `genre` / `freeze` / `time_minutes` / `storage_note` / `search_keyword` を保存版でそっくり上書きする（＝毎回まったく同じ作り方で再現）
+- `recipe.lock === false`（🎲おまかせ）や `recipe` を持たないレシピは上書きしない（生成された手順のまま＝バリエーションが出る）
+- 画像は扱わない（写真は次の `fetch_pexels.py` が担当）
+
+`recipe` は、ユーザーがアプリで👍を押した時にその週の作り方（材料・手順・器具・保存日数等）がその端末から保存されるフィールド。**ルーティンは読み取るだけで `recipes[]` には書き込まない**。
+
 ### 料理写真の取得（Unsplash）
 
-menu.json を生成・push した後、以下のスクリプトを実行する。
+上記の後、以下のスクリプトを実行する。
 
 ```
 python3 scripts/fetch_pexels.py
