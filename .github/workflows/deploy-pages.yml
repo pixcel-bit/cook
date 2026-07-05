@@ -20,7 +20,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url || steps.deployment_retry1.outputs.page_url || steps.deployment_retry2.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -28,5 +28,23 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: '.'
+      # GitHub's Pages publish backend intermittently returns
+      # "Deployment failed, try again later" right after the deployment is
+      # created (~1/3 of runs, unrelated to our content). Auto-retry up to
+      # 3 times total so it self-heals instead of needing a manual re-run.
       - id: deployment
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+      - name: Wait before retry 1
+        if: steps.deployment.outcome == 'failure'
+        run: sleep 15
+      - id: deployment_retry1
+        if: steps.deployment.outcome == 'failure'
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+      - name: Wait before retry 2
+        if: steps.deployment.outcome == 'failure' && steps.deployment_retry1.outcome == 'failure'
+        run: sleep 30
+      - id: deployment_retry2
+        if: steps.deployment.outcome == 'failure' && steps.deployment_retry1.outcome == 'failure'
         uses: actions/deploy-pages@v4
