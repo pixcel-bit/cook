@@ -199,6 +199,17 @@
   .sr-steps { margin: 0; padding-left: 18px; }
   .sr-steps li { font-size: 12.5px; margin-bottom: 6px; color: var(--ink); }
   .sr-steps li::marker { color: var(--accent); font-weight: 700; }
+  .adjust-bar { margin-top: 14px; padding-top: 12px; border-top: 1px dashed var(--line); }
+  .adjust-label { font-size: 11px; font-weight: 700; color: var(--ink-faint); letter-spacing: 0.04em; margin-bottom: 8px; }
+  .adjust-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+  .adj-chip { font-size: 12px; padding: 4px 11px; border: 1px solid var(--line); border-radius: 20px; background: var(--paper); color: var(--ink-soft); cursor: pointer; font-family: inherit; }
+  .adj-chip:hover { border-color: var(--accent); color: var(--accent); }
+  .adjust-input { width: 100%; padding: 7px 12px; border: 1px solid var(--line); border-radius: 8px; font-size: 13px; font-family: inherit; background: var(--card); color: var(--ink); outline: none; }
+  .adjust-input:focus { border-color: var(--accent); }
+  .adjust-current { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 8px; }
+  .adj-current-label { font-size: 11px; color: var(--accent); font-weight: 700; }
+  .adj-cur { font-size: 12px; background: #fff3ee; border: 1px solid var(--accent-soft); color: var(--accent); border-radius: 20px; padding: 3px 4px 3px 10px; display: inline-flex; align-items: center; gap: 4px; }
+  .adj-cur-del { background: none; border: none; cursor: pointer; color: var(--accent); font-size: 12px; padding: 0 3px; line-height: 1; }
   .rl-act-btn { flex: 1; padding: 11px 8px; border: 1px solid var(--line); border-radius: 10px; background: var(--card); font-size: 13px; font-weight: 700; cursor: pointer; font-family: inherit; color: var(--ink-soft); text-align: center; }
   .rl-act-btn.pri-on { background: #fff8f5; border-color: var(--accent-soft); color: var(--accent); }
   .rl-act-btn.danger { color: #a03a3a; border-color: #f4e8e8; background: #fdf4f4; }
@@ -795,6 +806,7 @@ function renderRecipeList() {
           ${(r.recipe.ingredients || []).length ? `<div class="sr-ing">${(r.recipe.ingredients || []).map(i => `<span>${esc(i)}</span>`).join('')}</div>` : ''}
           ${(r.recipe.steps || []).length ? `<ol class="sr-steps">${(r.recipe.steps || []).map(s => `<li>${esc(s)}</li>`).join('')}</ol>` : ''}
         </div>` : ''}
+        ${renderAdjustBar(r.name, r.adjustments || [])}
         ${(r.comments || []).length ? `<ul class="comments-list">${(r.comments || []).map((c,i) =>
           `<li class="comment-row"><span class="comment-text">${esc(c)}</span><button class="comment-del" onclick="deleteComment('${r.id}',${i})">✕</button></li>`
         ).join('')}</ul>` : ''}
@@ -956,6 +968,71 @@ function captureRecipeDetail(r, name) {
     saved_at: new Date().toISOString().slice(0, 10),
     lock: prevLock !== false
   };
+  // 👍 = "this version is good": consume any adjustment requests that were
+  // actually applied to this generation (stamped in menu.json by
+  // apply_saved_recipes.js). Newer, not-yet-applied requests are kept.
+  const applied = mr.adjustments_applied || [];
+  if (Array.isArray(r.adjustments) && applied.length) {
+    r.adjustments = r.adjustments.filter(a => !applied.includes(a.text));
+  }
+}
+
+/* --- ADJUSTMENT REQUESTS (次回の味付け・作り方の調整) --- */
+const ADJUST_PRESETS = ['濃いめ', '薄め', '辛さ控えめ', '辛め', '甘さ控えめ', '汁多め', 'やわらかめ', '量多め'];
+
+function findOrCreateRecipe(name) {
+  let r = prefs.recipes.find(x => x.name === name);
+  if (!r) {
+    r = { id:uid(), name, priority:false, good_count:0, bad_count:0, comments:[], added_at:new Date().toISOString().slice(0,10), done_count:0, last_adopted_at:null };
+    prefs.recipes.push(r);
+  }
+  return r;
+}
+
+function addAdjustment(name, text) {
+  text = (text || '').trim();
+  if (!text) return;
+  const r = findOrCreateRecipe(name);
+  if (!r.adjustments) r.adjustments = [];
+  if (r.adjustments.some(a => a.text === text)) { showToast('同じ調整が既にあります'); return; }
+  r.adjustments.push({ text, created_at: new Date().toISOString().slice(0,10) });
+  queueSave();
+  showToast('次回の調整を追加：' + text);
+  updateAdjustDisplay(name);
+}
+
+function removeAdjustment(name, index) {
+  const r = prefs.recipes.find(x => x.name === name);
+  if (r && r.adjustments) { r.adjustments.splice(index, 1); queueSave(); updateAdjustDisplay(name); }
+}
+
+function renderAdjustBar(name, adjs) {
+  const ne = esc(name);
+  return `<div class="adjust-bar">
+    <div class="adjust-label">次回の調整リクエスト</div>
+    <div class="adjust-chips">${ADJUST_PRESETS.map(p => `<button class="adj-chip" onclick="event.stopPropagation();addAdjustment('${ne}','${p}')">${p}</button>`).join('')}</div>
+    <input class="adjust-input" placeholder="自由に（例：鶏肉を大きめに）" onclick="event.stopPropagation()" onkeydown="event.stopPropagation();if(event.key==='Enter'){addAdjustment('${ne}',this.value);this.value='';}">
+    <div class="adjust-current">${renderAdjustCurrent(name, adjs)}</div>
+  </div>`;
+}
+
+function renderAdjustCurrent(name, adjs) {
+  if (!adjs || !adjs.length) return '';
+  const ne = esc(name);
+  return `<span class="adj-current-label">リクエスト中：</span>` + adjs.map((a, i) =>
+    `<span class="adj-cur">${esc(a.text)}<button class="adj-cur-del" onclick="event.stopPropagation();removeAdjustment('${ne}',${i})">✕</button></span>`
+  ).join('');
+}
+
+function updateAdjustDisplay(name) {
+  const r = prefs.recipes.find(x => x.name === name);
+  const adjs = (r && r.adjustments) || [];
+  document.querySelectorAll('.card[data-recipe]').forEach(card => {
+    if (card.dataset.recipe !== name) return;
+    const el = card.querySelector('.adjust-current');
+    if (el) el.innerHTML = renderAdjustCurrent(name, adjs);
+  });
+  renderRecipeList();
 }
 
 function updateRatingCounts() {
@@ -1107,6 +1184,7 @@ function renderRecipeCard(r, type) {
 
   const ingredients = (r.ingredients || []).map(i => `<span>${esc(i)}</span>`).join('');
   const steps = (r.steps || []).map(s => `<li>${esc(s)}</li>`).join('');
+  const adjs = (prefs.recipes.find(x => x.name === r.name) || {}).adjustments || [];
 
   const creditHtml = credit && credit.photographer
     ? `<div class="photo-credit">Photo by <a href="${esc(credit.photographer_url || '')}" target="_blank" rel="noopener">${esc(credit.photographer)}</a> on <a href="${esc(credit.unsplash_url || '')}" target="_blank" rel="noopener">Unsplash</a></div>`
@@ -1135,6 +1213,7 @@ function renderRecipeCard(r, type) {
         <button class="rate-btn good" onclick="rateRecipe('${nameEsc}','good')">👍 <span class="rate-count good-count">0</span></button>
         <button class="rate-btn bad" onclick="rateRecipe('${nameEsc}','bad')">👎 <span class="rate-count bad-count">0</span></button>
       </div>
+      ${renderAdjustBar(r.name, adjs)}
       ${creditHtml}
     </div>
   </details>`;

@@ -411,11 +411,20 @@ node scripts/apply_saved_recipes.js
 ```
 
 このスクリプトが以下を確実に実行する（deterministic logic）：
-- `preferences.json` の `recipes[]` で `recipe`（保存済みの作り方）を持ち、かつ `recipe.lock !== false`（＝🔒固定）のレシピについて、`menu.json` 内の**同名料理**の `ingredients` / `steps` / `tool` / `genre` / `freeze` / `time_minutes` / `storage_note` / `search_keyword` を保存版でそっくり上書きする（＝毎回まったく同じ作り方で再現）
+- `preferences.json` の `recipes[]` で `recipe`（保存済みの作り方）を持ち、かつ `recipe.lock !== false`（＝🔒固定）**かつ調整リクエスト（`adjustments`）が空**のレシピについて、`menu.json` 内の**同名料理**の `ingredients` / `steps` / `tool` / `genre` / `freeze` / `time_minutes` / `storage_note` / `search_keyword` を保存版でそっくり上書きする（＝毎回まったく同じ作り方で再現）
 - `recipe.lock === false`（🎲おまかせ）や `recipe` を持たないレシピは上書きしない（生成された手順のまま＝バリエーションが出る）
+- **`adjustments`（次回の味付け・作り方の調整リクエスト）が非空のレシピは固定上書きをスキップし**、`menu.json` の同名料理に `adjustments_applied`（適用したリクエスト文言の配列）を記録する（アプリが👍時に消し込むため）
 - 画像は扱わない（写真は次の `fetch_pexels.py` が担当）
 
 `recipe` は、ユーザーがアプリで👍を押した時にその週の作り方（材料・手順・器具・保存日数等）がその端末から保存されるフィールド。**ルーティンは読み取るだけで `recipes[]` には書き込まない**。
+
+#### 調整リクエスト（`adjustments`）の反映
+
+`preferences.json` の `recipes[].adjustments` は、ユーザーが「次に同じ料理を作る時にこう直して」と送った要望（例：`{ "text": "濃いめ", ... }`）の配列。
+
+- **生成時、選定した料理に該当する `adjustments` があれば、その内容を手順・味付けに意味的に反映して生成する**（例：「濃いめ」→調味料を増やす、「辛さ控えめ」→辛味を減らす/別添え）。保存済み `recipe` があればそれをベースに反映する
+- この反映は字句一致ではなく**意味的な判断なのでLLM（この生成ルール）が行う**。`apply_saved_recipes.js` は反映結果を壊さないよう固定上書きをスキップし、適用済み文言を `adjustments_applied` に記録するだけ
+- 消し込みはアプリ側（👍時に `adjustments_applied` に含まれるものを削除）で行うため、**ルーティンは `adjustments` を書き換えない**
 
 ### 料理写真の取得（Unsplash）
 

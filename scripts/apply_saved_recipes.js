@@ -33,6 +33,10 @@ try {
   process.exit(1);
 }
 
+// name -> prefs recipe entry
+const byName = {};
+for (const r of prefs.recipes || []) byName[r.name] = r;
+
 // name -> saved detail, only for LOCKED favorites with real steps
 const saved = {};
 for (const r of prefs.recipes || []) {
@@ -46,16 +50,28 @@ for (const r of prefs.recipes || []) {
 const FIELDS = ["genre", "tool", "freeze", "ingredients", "steps",
                 "time_minutes", "storage_note", "search_keyword"];
 
-let n = 0;
+let reused = 0, adjusted = 0;
 for (const rec of [...(menu.main || []), ...(menu.side || [])]) {
+  const pr = byName[rec.name];
+  const adjs = pr && Array.isArray(pr.adjustments) ? pr.adjustments : [];
+
+  // Pending adjustment requests: the LLM was told to fold these into the
+  // generated steps. Do NOT overwrite with the verbatim saved version, and
+  // stamp which requests were applied so the app can consume them on 👍.
+  if (adjs.length) {
+    rec.adjustments_applied = adjs.map(a => a.text);
+    adjusted += 1;
+    console.log(`applied ${adjs.length} adjustment(s): ${rec.name}`);
+    continue;
+  }
+
   const d = saved[rec.name];
   if (!d) continue;
   for (const f of FIELDS) {
     if (d[f] !== undefined) rec[f] = d[f];
   }
-  n += 1;
+  reused += 1;
   console.log(`reused saved recipe (固定): ${rec.name}`);
 }
-
 fs.writeFileSync(menuPath, JSON.stringify(menu, null, 2));
-console.log(`apply_saved_recipes: reused ${n} locked favorite(s)`);
+console.log(`apply_saved_recipes: reused ${reused} locked favorite(s), stamped ${adjusted} with adjustments`);
