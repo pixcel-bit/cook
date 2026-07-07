@@ -172,7 +172,13 @@
         "search_keyword": "indian chicken cabbage curry soup pot spiced",
         "saved_at": "2026-07-07",
         "lock": false
-      }
+      },
+      "adjustments": [
+        {
+          "text": "もっと濃く",
+          "created_at": "2026-07-07"
+        }
+      ]
     }
   ],
   "weekly_request": {
