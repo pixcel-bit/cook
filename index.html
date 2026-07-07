@@ -978,7 +978,7 @@ function captureRecipeDetail(r, name) {
 }
 
 /* --- ADJUSTMENT REQUESTS (次回の味付け・作り方の調整) --- */
-const ADJUST_PRESETS = ['濃いめ', '薄め', '辛さ控えめ', '辛め', '甘さ控えめ', '汁多め', 'やわらかめ', '量多め'];
+const ADJUST_PRESETS = ['もっと濃く', 'もっと薄く', 'もっと辛く', '辛さ控えめ', '甘さ控えめ', '汁を多く', 'やわらかく', '量を増やす'];
 
 function findOrCreateRecipe(name) {
   let r = prefs.recipes.find(x => x.name === name);
