@@ -786,7 +786,6 @@ function renderRecipeList() {
           }
           <div class="rl-sub">
             <span class="rl-chip rl-good">👍 ${r.good_count}</span>
-            <span class="rl-chip rl-bad">👎 ${r.bad_count}</span>
             ${badge}
           </div>
         </div>
@@ -1040,7 +1039,6 @@ function updateRatingCounts() {
     const r = prefs.recipes.find(x=>x.name===card.dataset.recipe);
     if (r) {
       card.querySelector('.good-count').textContent = r.good_count;
-      card.querySelector('.bad-count').textContent = r.bad_count;
     }
   });
 }
@@ -1211,7 +1209,6 @@ function renderRecipeCard(r, type) {
       <div class="rating-bar">
         <span class="rating-label">RATING</span>
         <button class="rate-btn good" onclick="rateRecipe('${nameEsc}','good')">👍 <span class="rate-count good-count">0</span></button>
-        <button class="rate-btn bad" onclick="rateRecipe('${nameEsc}','bad')">👎 <span class="rate-count bad-count">0</span></button>
       </div>
       ${renderAdjustBar(r.name, adjs)}
       ${creditHtml}
