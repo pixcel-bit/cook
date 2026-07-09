@@ -134,6 +134,14 @@
         "search_keyword": "chinese mackerel mapo tofu dark savory sauce",
         "saved_at": "2026-07-07",
         "lock": false
+      },
+      "photo_url": "https://images.unsplash.com/photo-1630513537224-5a5c44c41b5c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxjaGluZXNlJTIwbWFja2VyZWwlMjBtYXBvJTIwdG9mdSUyMGRhcmslMjBzYXZvcnklMjBzYXVjZXxlbnwwfDJ8fHwxNzgzNTg0NDE0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "photo_credit": {
+        "photographer": "David Clarke",
+        "photographer_url": "https://unsplash.com/@david_robert_clarke",
+        "unsplash_url": "https://unsplash.com/photos/white-ceramic-round-plate-with-pizza-jDiYcn1O9nE",
+        "source": "Unsplash",
+        "license": ""
       }
     },
     {
@@ -178,7 +186,15 @@
           "text": "もっと濃く",
           "created_at": "2026-07-07"
         }
-      ]
+      ],
+      "photo_url": "https://images.unsplash.com/photo-1631292784640-2b24be784d5d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjBjaGlja2VuJTIwY2FiYmFnZSUyMGN1cnJ5JTIwc291cCUyMHBvdCUyMHNwaWNlZHxlbnwwfDJ8fHwxNzgzNTg0NDEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "photo_credit": {
+        "photographer": "Sushmita Chatterjee",
+        "photographer_url": "https://unsplash.com/@sheclicks",
+        "unsplash_url": "https://unsplash.com/photos/black-ceramic-bowl-with-vegetable-dish-Xnb826JWdDI",
+        "source": "Unsplash",
+        "license": ""
+      }
     }
   ],
   "weekly_request": {
