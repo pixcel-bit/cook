@@ -438,14 +438,15 @@
       "time_minutes": 30,
       "storage_note": "スープ部分：冷蔵4日（豆腐は食べる直前に加える）",
       "search_keyword": "chinese mackerel mapo tofu dark savory sauce",
-      "image": "https://images.unsplash.com/photo-1630513537224-5a5c44c41b5c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxjaGluZXNlJTIwbWFja2VyZWwlMjBtYXBvJTIwdG9mdSUyMGRhcmslMjBzYXZvcnklMjBzYXVjZXxlbnwwfDJ8fHwxNzgzNTg0NDE0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "image": "https://live.staticflickr.com/3532/3217081785_1da16e3297_b.jpg",
       "image_credit": {
-        "photographer": "David Clarke",
-        "photographer_url": "https://unsplash.com/@david_robert_clarke",
-        "unsplash_url": "https://unsplash.com/photos/white-ceramic-round-plate-with-pizza-jDiYcn1O9nE",
-        "source": "Unsplash",
-        "license": ""
-      }
+        "photographer": "avlxyz",
+        "photographer_url": "https://www.flickr.com/photos/10559879@N00",
+        "unsplash_url": "https://www.flickr.com/photos/10559879@N00/3217081785",
+        "source": "Openverse",
+        "license": "BY-SA 2.0"
+      },
+      "image_query_ja": "麻婆豆腐"
     }
   ],
   "side": [
