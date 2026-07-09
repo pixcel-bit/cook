@@ -16,7 +16,15 @@
       "comments": [],
       "added_at": "2026-06-12",
       "done_count": 0,
-      "last_adopted_at": null
+      "last_adopted_at": null,
+      "photo_url": "https://live.staticflickr.com/7854/44730672370_c69ee8f214_b.jpg",
+      "photo_credit": {
+        "photographer": "arty822",
+        "photographer_url": "https://www.flickr.com/photos/65642063@N04",
+        "unsplash_url": "https://www.flickr.com/photos/65642063@N04/44730672370",
+        "source": "Openverse",
+        "license": "BY-NC-SA 2.0"
+      }
     },
     {
       "id": "mqbx2hlyin4u",
@@ -27,7 +35,15 @@
       "comments": [],
       "added_at": "2026-06-13",
       "done_count": 0,
-      "last_adopted_at": null
+      "last_adopted_at": null,
+      "photo_url": "https://images.unsplash.com/photo-1708782344071-35ed44b849a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHwlRTklQjYlOEYlRTMlODIlODAlRTMlODElQUQlRTMlODElQUUlRTMlODMlODglRTMlODMlOUUlRTMlODMlODglRTclODUlQUUlRTglQkUlQkMlRTMlODElQkZ8ZW58MHwyfHx8MTc4MzU4NDYxNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "photo_credit": {
+        "photographer": "Rimsha Noor",
+        "photographer_url": "https://unsplash.com/@rimshaj123",
+        "unsplash_url": "https://unsplash.com/photos/a-bowl-of-soup-with-meat-in-it-on-a-table-y_xypS3pRYA",
+        "source": "Unsplash",
+        "license": ""
+      }
     },
     {
       "id": "mqizugwmofup",
@@ -38,7 +54,15 @@
       "comments": [],
       "added_at": "2026-06-18",
       "done_count": 0,
-      "last_adopted_at": null
+      "last_adopted_at": null,
+      "photo_url": "https://live.staticflickr.com/3803/12772702003_f83987f312_b.jpg",
+      "photo_credit": {
+        "photographer": "mah_japan",
+        "photographer_url": "https://www.flickr.com/photos/40644994@N00",
+        "unsplash_url": "https://www.flickr.com/photos/40644994@N00/12772702003",
+        "source": "Openverse",
+        "license": "BY 2.0"
+      }
     },
     {
       "id": "mqogcnfha97m",
@@ -49,7 +73,15 @@
       "comments": [],
       "added_at": "2026-06-22",
       "done_count": 0,
-      "last_adopted_at": null
+      "last_adopted_at": null,
+      "photo_url": "https://images.unsplash.com/photo-1733139496834-0c5da2d1aa59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHwlRTYlODklOEIlRTclQkUlQkQlRTUlODUlODMlRTMlODElQTglRTUlOEQlQjUlRTMlODElQUUlRTMlODElOTUlRTMlODElQTMlRTMlODElQjElRTMlODIlOEElRTclODUlQUV8ZW58MHwyfHx8MTc4MzU4NDYyMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "photo_credit": {
+        "photographer": "Lee Milo",
+        "photographer_url": "https://unsplash.com/@miloleetw",
+        "unsplash_url": "https://unsplash.com/photos/a-close-up-of-a-bowl-of-noodles-with-mushrooms-berwQ60f0A8",
+        "source": "Unsplash",
+        "license": ""
+      }
     },
     {
       "id": "mqwh8m0847l6",
@@ -77,7 +109,15 @@
       "comments": [],
       "added_at": "2026-06-28",
       "done_count": 0,
-      "last_adopted_at": null
+      "last_adopted_at": null,
+      "photo_url": "https://live.staticflickr.com/3532/3217081785_1da16e3297_b.jpg",
+      "photo_credit": {
+        "photographer": "avlxyz",
+        "photographer_url": "https://www.flickr.com/photos/10559879@N00",
+        "unsplash_url": "https://www.flickr.com/photos/10559879@N00/3217081785",
+        "source": "Openverse",
+        "license": "BY-SA 2.0"
+      }
     },
     {
       "id": "mqxsqann0xc4",
