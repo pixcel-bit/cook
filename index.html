@@ -767,8 +767,9 @@ function renderRecipeList() {
   el.innerHTML = sorted.map(r => {
     const isOpen = expandedIds.has(r.id);
     const badge = r.done_count > 0 ? `<span class="done-badge">採用${r.done_count}回</span>` : '';
-    const svgHtml = RECIPE_IMAGES[r.name]
-      ? `<div class="rl-svg"><img src="${esc(RECIPE_IMAGES[r.name])}" alt="${esc(r.name)}" style="width:36px;height:36px;object-fit:cover;border-radius:6px;"></div>`
+    const listImg = RECIPE_IMAGES[r.name] || r.photo_url || '';
+    const svgHtml = listImg
+      ? `<div class="rl-svg"><img src="${esc(listImg)}" alt="${esc(r.name)}" style="width:36px;height:36px;object-fit:cover;border-radius:6px;" onerror="this.parentElement.remove()"></div>`
       : RECIPE_SVGS[r.name] ? `<div class="rl-svg">${RECIPE_SVGS[r.name]}</div>` : '';
     return `
     <div class="rl-item${r.priority?' rl-priority':''}" id="rli-${r.id}">

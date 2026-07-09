@@ -44,16 +44,42 @@ PREFS_PATH = os.path.join(ROOT, "preferences.json")
 IMG_EXT = re.compile(r"\.(jpe?g|png|webp)$", re.I)
 
 
-def derive_ja_query(recipe: dict) -> str:
-    """Japanese search query: image_query_ja if present, else the recipe
-    name stripped of prep-style prefixes and parentheticals."""
-    q = (recipe.get("image_query_ja") or "").strip()
-    if q:
-        return q
-    name = recipe.get("name", "")
+def _clean_name(name: str) -> str:
     name = re.sub(r"[（(].*?[)）]", "", name)          # （成形冷凍） etc.
     name = re.sub(r"下味冷凍|作り置き", "", name)
     return name.strip()
+
+
+def ja_query_candidates(recipe: dict) -> list[str]:
+    """Ordered Japanese search queries, most specific first.
+
+    1. image_query_ja (string or list of up to 2 general dish names)
+    2. cleaned recipe name
+    3. dish-type tail after the last 'の' (「豚こまとエリンギのミルク煮」→「ミルク煮」)
+    """
+    cands: list[str] = []
+
+    q = recipe.get("image_query_ja")
+    if isinstance(q, list):
+        cands += [s.strip() for s in q if isinstance(s, str) and s.strip()]
+    elif isinstance(q, str) and q.strip():
+        cands.append(q.strip())
+
+    name = _clean_name(recipe.get("name", ""))
+    if name and name not in cands:
+        cands.append(name)
+
+    if "の" in name:
+        tail = name.rsplit("の", 1)[-1].strip()
+        if len(tail) >= 2 and tail not in cands:
+            cands.append(tail)
+
+    return cands
+
+
+def prefer_title_match(results: list[dict], query: str) -> list[dict]:
+    """Stable-sort results so ones whose title contains the query come first."""
+    return sorted(results, key=lambda r: 0 if query in (r.get("title") or "") else 1)
 
 
 def fetch_openverse(query: str, exclude_urls: set | None = None) -> list[dict]:
@@ -77,13 +103,14 @@ def fetch_openverse(query: str, exclude_urls: set | None = None) -> list[dict]:
             ver = p.get("license_version") or ""
             results.append({
                 "url": url,
+                "title": p.get("title") or "",
                 "photographer": p.get("creator") or "unknown",
                 "photographer_url": p.get("creator_url") or p.get("foreign_landing_url") or "",
                 "unsplash_url": p.get("foreign_landing_url") or url,
                 "source": "Openverse",
                 "license": (lic + " " + ver).strip(),
             })
-        return results
+        return prefer_title_match(results, query)
     except Exception as e:
         print(f"  WARN: Openverse failed for '{query}': {e}", file=sys.stderr)
         return []
@@ -118,13 +145,14 @@ def fetch_wikimedia(query: str, exclude_urls: set | None = None) -> list[dict]:
             artist = re.sub(r"<[^>]+>", "", (meta.get("Artist") or {}).get("value", "")).strip() or "unknown"
             results.append({
                 "url": url,
+                "title": p.get("title") or "",
                 "photographer": artist,
                 "photographer_url": info.get("descriptionurl") or "",
                 "unsplash_url": info.get("descriptionurl") or url,
                 "source": "Wikimedia Commons",
                 "license": (meta.get("LicenseShortName") or {}).get("value", ""),
             })
-        return results
+        return prefer_title_match(results, query)
     except Exception as e:
         print(f"  WARN: Wikimedia failed for '{query}': {e}", file=sys.stderr)
         return []
@@ -216,19 +244,20 @@ def main():
             print(f"Reusing saved photo: {name}")
             continue
 
-        # Tier 1–2: Japanese dish name on Openverse / Wikimedia (pinpoint),
-        # Tier 3: legacy Unsplash English keyword (aesthetic but generic).
-        ja = derive_ja_query(recipe)
+        # Tier 1–2: Japanese dish-name candidates on Openverse / Wikimedia
+        # (most specific first, relaxing stepwise), Tier 3: Unsplash fallback.
+        candidates = ja_query_candidates(recipe)
         results: list[dict] = []
-        if ja:
-            print(f"Fetching: {name} → ja:'{ja}'")
+        print(f"Fetching: {name} → ja candidates: {candidates}")
+        for ja in candidates:
             results = fetch_openverse(ja, exclude_urls=used_urls)
             if results:
-                print("  ✓ via Openverse")
-            else:
-                results = fetch_wikimedia(ja, exclude_urls=used_urls)
-                if results:
-                    print("  ✓ via Wikimedia Commons")
+                print(f"  ✓ via Openverse ('{ja}')")
+                break
+            results = fetch_wikimedia(ja, exclude_urls=used_urls)
+            if results:
+                print(f"  ✓ via Wikimedia Commons ('{ja}')")
+                break
         if not results:
             keyword = recipe.get("search_keyword") or name
             print(f"  → fallback Unsplash: '{keyword}'")
