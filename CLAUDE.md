@@ -362,7 +362,8 @@ WebSearch で **クラシル（kurashiru.com）** と **白ごはん.com（sirog
       "steps": ["鶏もも肉300gを一口大に切る", "手順2", "手順3"],
       "time_minutes": 20,
       "storage_note": "冷蔵3日",
-      "search_keyword": "英語の料理検索キーワード（Unsplash検索用）",
+      "image_query_ja": "日本語の一般料理名（Openverse/Wikimedia検索用）",
+      "search_keyword": "英語の料理検索キーワード（Unsplashフォールバック用）",
       "image": "（fetch_pexels.pyが設定）",
       "image_credit": {}
     }
@@ -376,7 +377,8 @@ WebSearch で **クラシル（kurashiru.com）** と **白ごはん.com（sirog
       "steps": ["えのき1袋（150g）を石づきを取ってほぐす", "手順2"],
       "time_minutes": 10,
       "storage_note": "冷蔵4日",
-      "search_keyword": "英語の料理検索キーワード（Unsplash検索用）",
+      "image_query_ja": "日本語の一般料理名（Openverse/Wikimedia検索用）",
+      "search_keyword": "英語の料理検索キーワード（Unsplashフォールバック用）",
       "image": "（fetch_pexels.pyが設定）",
       "image_credit": {}
     }
@@ -436,9 +438,19 @@ python3 scripts/fetch_pexels.py
 
 このスクリプトが以下を確実に実行する（deterministic logic）：
 - 各レシピに対し、`preferences.json` の `recipes[]` に `good_count > 0` かつ `photo_url` がある場合は再利用（API呼び出しなし）
-- それ以外は Unsplash API で `search_keyword` を使って取得し、`menu.json` の `image` / `image_credit` フィールドに保存
-- 0件だった場合はキーワードを短縮して再検索（フォールバック）
+- それ以外は**3段構え**で取得（映えより実物優先）：
+  1. **Openverse**（APIキー不要・CC画像）で `image_query_ja`（日本語の一般料理名）を検索
+  2. 0件なら **Wikimedia Commons**（APIキー不要）で同じ日本語名を検索
+  3. それでも0件なら従来どおり **Unsplash** で `search_keyword`（英語）を検索（短縮フォールバック付き）
+- 取得結果を `menu.json` の `image` / `image_credit`（`source`・`license` 含む）に保存
 - 取得した写真について、該当レシピが `good_count > 0` なら `preferences.json` の `photo_url` / `photo_credit` にも保存（翌週以降の再利用のため）
+
+※ Openverse / Wikimedia に到達できない環境では自動的に Unsplash にフォールバックする（機能は壊れない）。ピンポイント検索を有効にするには、実行環境のネットワーク許可リストに `api.openverse.org` と `commons.wikimedia.org` を追加しておくこと。
+
+#### image_query_ja の生成ルール
+- **日本語の一般的な料理名**を入れる（Openverse/Wikimedia検索用）
+- 独自アレンジや修飾を取り除き、**世間で通じる料理名に丸める**（例：「鯖缶麻婆豆腐」→「麻婆豆腐」、「下味冷凍 旨塩ガーリックチキン」→「鶏の塩焼き」、「豚こまのしぐれ煮」→「豚肉のしぐれ煮」）
+- 定番名が無い創作料理は、最も近い定番料理名か「主要食材＋調理法」（例：「豚肉 味噌炒め」）にする
 
 #### search_keyword の生成ルール
 - **食材名 ＋ 調理後の見た目・色・質感** の構造にする（例：`chicken thigh dark sauce braised`）
@@ -446,7 +458,7 @@ python3 scripts/fetch_pexels.py
 - ただし **中・エスニックジャンルは例外**：器や盛り付けの雰囲気を絞り込む効果があるため積極的に使う
   - 中：`chinese` を加える（例：`chinese chicken braised dark clay pot`）
   - エスニック：`indian` / `korean` / `thai` など料理の産地名を加える（例：`korean pork sweet soy sesame`、`indian spiced sardine curry`）
-- 料理固有名詞（hiyayakko / namul / teriyaki など）は**使わない**
+- 料理固有名詞は、**国際的に通じるもののみ使ってよい**（例：`mapo tofu` / `teriyaki` / `curry` / `gyoza` / `karaage`）。英語圏で通じないローマ字（hiyayakko / namul / shigureni など）は**使わない**
 - 3〜5単語に収める
 - **全品（主菜12品・副菜4品）すべてで異なるキーワードになるよう意識する**。複数の副菜で `salad` `dressed` `sesame` `marinated` などの汎用語が重複すると同じ画像になりやすいため避ける
 - 副菜は特に視覚的な特徴を入れる（色・食感・主役食材の見た目）

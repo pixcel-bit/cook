@@ -1185,7 +1185,7 @@ function renderRecipeCard(r, type) {
   const adjs = (prefs.recipes.find(x => x.name === r.name) || {}).adjustments || [];
 
   const creditHtml = credit && credit.photographer
-    ? `<div class="photo-credit">Photo by <a href="${esc(credit.photographer_url || '')}" target="_blank" rel="noopener">${esc(credit.photographer)}</a> on <a href="${esc(credit.unsplash_url || '')}" target="_blank" rel="noopener">Unsplash</a></div>`
+    ? `<div class="photo-credit">Photo by <a href="${esc(credit.photographer_url || '')}" target="_blank" rel="noopener">${esc(credit.photographer)}</a> on <a href="${esc(credit.unsplash_url || '')}" target="_blank" rel="noopener">${esc(credit.source || 'Unsplash')}</a>${credit.license ? ' (' + esc(credit.license) + ')' : ''}</div>`
     : '';
 
   return `
