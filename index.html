@@ -602,8 +602,20 @@ async function loadPrefs() {
   } catch(e) { showToast('設定の読み込みに失敗しました'); }
   renderRecipeList();
   updateRatingCounts();
+  refreshAdjustBars();
   initRequest();
   initLeftovers();
+}
+
+// Menu cards are rendered before prefs arrive (loadMenu → loadPrefs), so any
+// pending adjustment requests must be painted onto the cards afterwards.
+function refreshAdjustBars() {
+  document.querySelectorAll('.card[data-recipe]').forEach(card => {
+    const name = card.dataset.recipe;
+    const r = prefs.recipes.find(x => x.name === name);
+    const el = card.querySelector('.adjust-current');
+    if (el) el.innerHTML = renderAdjustCurrent(name, (r && r.adjustments) || []);
+  });
 }
 
 function queueSave() {
