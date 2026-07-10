@@ -85,6 +85,16 @@
   .freeze { background: #eef3f6; color: #3d7a90; }
   .card-title { font-size: 16px; font-weight: 700; }
   .card-desc { font-size: 12.5px; color: var(--ink-soft); margin-top: 4px; }
+  .storage-chips { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px; }
+  .stchip { font-size: 11.5px; font-weight: 700; border: 1px solid var(--line); border-radius: 6px; padding: 2px 8px; color: var(--ink-soft); background: var(--paper); white-space: nowrap; }
+  .stchip.rec { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .storage-box { margin-top: 12px; background: var(--paper); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; }
+  .stor-row { display: flex; align-items: center; gap: 8px; font-size: 13px; padding: 3px 0; color: var(--ink-soft); }
+  .stor-row.rec { color: var(--ink); font-weight: 700; }
+  .stor-val { margin-left: auto; }
+  .stor-row.rec .stor-val { color: var(--accent); }
+  .stor-badge { font-size: 10px; font-weight: 700; background: var(--accent); color: #fff; border-radius: 10px; padding: 1px 7px; }
+  .stor-note { font-size: 12px; color: var(--ink-soft); margin-top: 6px; padding-top: 6px; border-top: 1px dashed var(--line); }
   .card-detail { border-top: 1px solid var(--line); padding: 14px 18px 17px; }
   .r-block { font-size: 11px; letter-spacing: 0.06em; color: var(--ink-faint); font-weight: 700; margin: 0 0 8px; }
   .r-block:not(:first-child) { margin-top: 15px; }
@@ -1176,6 +1186,32 @@ function getRecipeCredit(r) {
   return null;
 }
 
+// Compact fridge/freezer badges shown under the dish name (always visible).
+// Recommended method is filled with the accent colour.
+function storageChipHtml(r) {
+  const s = r.storage;
+  if (!s) return `<div class="card-desc">${esc(r.storage_note || '')}</div>`;
+  const recFridge = s.recommended === '冷蔵';
+  return `<div class="storage-chips">
+    <span class="stchip${recFridge ? ' rec' : ''}">🧊 冷蔵${esc(s.fridge || '—')}</span>
+    <span class="stchip${!recFridge ? ' rec' : ''}">❄️ 冷凍${esc(s.freezer || '—')}</span>
+  </div>`;
+}
+
+// Full storage block in the expanded detail, with an explicit 推奨 badge.
+function storageDetailHtml(r) {
+  const s = r.storage;
+  if (!s) return r.storage_note ? `<div class="r-note">${esc(r.storage_note)}</div>` : '';
+  const row = (lbl, ico, val, isRec) =>
+    `<div class="stor-row${isRec ? ' rec' : ''}"><span class="stor-lbl">${ico} ${lbl}</span>${isRec ? '<span class="stor-badge">推奨</span>' : ''}<span class="stor-val">${esc(val || '—')}</span></div>`;
+  return `<div class="storage-box">
+    <div class="r-block">保存の目安</div>
+    ${row('冷蔵', '🧊', s.fridge, s.recommended === '冷蔵')}
+    ${row('冷凍', '❄️', s.freezer, s.recommended === '冷凍')}
+    ${s.note ? `<div class="stor-note">${esc(s.note)}</div>` : ''}
+  </div>`;
+}
+
 function renderRecipeCard(r, type) {
   const tagClass = type === 'main' ? 'tag-main' : 'tag-side';
   const tagLabel = type === 'main' ? '主菜' : '副菜';
@@ -1208,7 +1244,7 @@ function renderRecipeCard(r, type) {
       <div class="card-info">
         <div class="tag-row"><span class="tag ${tagClass}">${tagLabel}</span>${freezeTag}<span class="tool">${esc(r.tool || '')}</span></div>
         <div class="card-title">${nameEsc}</div>
-        <div class="card-desc">${esc(r.storage_note || '')}</div>
+        ${storageChipHtml(r)}
       </div>
       <button class="hide-btn" title="非表示にする" onclick="event.preventDefault();event.stopPropagation();toggleHideRecipe('${nameEsc}')">不要</button>
       <span class="card-chevron">▶</span>
@@ -1218,7 +1254,7 @@ function renderRecipeCard(r, type) {
       <div class="r-ing">${ingredients}</div>
       <div class="r-block">作り方（${esc(r.tool || '')}）</div>
       <ol class="r-steps">${steps}</ol>
-      <div class="r-note">${esc(r.storage_note || '')}</div>
+      ${storageDetailHtml(r)}
       <div class="rating-bar">
         <span class="rating-label">RATING</span>
         <button class="rate-btn good" onclick="rateRecipe('${nameEsc}','good')">👍 <span class="rate-count good-count">0</span></button>

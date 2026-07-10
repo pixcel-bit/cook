@@ -53,6 +53,12 @@
         "unsplash_url": "https://unsplash.com/photos/a-close-up-of-a-bowl-of-noodles-with-mushrooms-berwQ60f0A8",
         "source": "Unsplash",
         "license": ""
+      },
+      "storage": {
+        "recommended": "冷蔵",
+        "fridge": "4日",
+        "freezer": "不可",
+        "note": "煮汁ごと保存。卵入りのため冷凍不可。レンジで温め直す"
       }
     },
     {
@@ -90,6 +96,12 @@
         "unsplash_url": "https://www.flickr.com/photos/40157115@N05/4871082305",
         "source": "Openverse",
         "license": "BY-NC-ND 2.0"
+      },
+      "storage": {
+        "recommended": "冷蔵",
+        "fridge": "4日",
+        "freezer": "不可",
+        "note": "漬け込みで日持ち。生野菜入りのため冷凍不可"
       }
     },
     {
@@ -126,6 +138,12 @@
         "unsplash_url": "https://www.flickr.com/photos/26226522@N08/2931500571",
         "source": "Openverse",
         "license": "BY-SA 2.0"
+      },
+      "storage": {
+        "recommended": "冷蔵",
+        "fridge": "4日",
+        "freezer": "不可",
+        "note": "汁ごと保存。豆腐入りのため冷凍不可。椀に注いでレンジ"
       }
     },
     {
@@ -160,6 +178,12 @@
         "unsplash_url": "https://www.flickr.com/photos/87284921@N00/44605649620",
         "source": "Openverse",
         "license": "BY-NC-ND 2.0"
+      },
+      "storage": {
+        "recommended": "冷蔵",
+        "fridge": "4日",
+        "freezer": "3週間",
+        "note": "冷凍する場合は1食分ずつラップ。トースターで温め直すと皮が復活"
       }
     },
     {
@@ -196,6 +220,12 @@
         "unsplash_url": "https://www.flickr.com/photos/36046484@N00/319550283",
         "source": "Openverse",
         "license": "BY-NC-SA 2.0"
+      },
+      "storage": {
+        "recommended": "冷蔵",
+        "fridge": "4日",
+        "freezer": "不可",
+        "note": "汁ごと保存。牛乳が分離するため冷凍は不可"
       }
     },
     {
@@ -230,6 +260,12 @@
         "unsplash_url": "https://www.flickr.com/photos/60568024@N00/4295442002",
         "source": "Openverse",
         "license": "BY 2.0"
+      },
+      "storage": {
+        "recommended": "冷蔵",
+        "fridge": "3〜4日",
+        "freezer": "3週間",
+        "note": "冷凍可。食べる分だけレンジ解凍"
       }
     },
     {
@@ -265,6 +301,12 @@
         "unsplash_url": "https://www.flickr.com/photos/64111077@N08/16292170005",
         "source": "Openverse",
         "license": "BY-NC-ND 2.0"
+      },
+      "storage": {
+        "recommended": "冷蔵",
+        "fridge": "4日",
+        "freezer": "2週間",
+        "note": "冷凍可。解凍後は水気を軽く切る"
       }
     },
     {
@@ -301,6 +343,12 @@
         "unsplash_url": "https://www.flickr.com/photos/28012204@N03/9023425565",
         "source": "Openverse",
         "license": "BY-SA 2.0"
+      },
+      "storage": {
+        "recommended": "冷蔵",
+        "fridge": "4日",
+        "freezer": "2週間",
+        "note": "鶏は裂いて冷凍可。ごまだれは冷凍せず別保存"
       }
     },
     {
@@ -338,6 +386,12 @@
         "unsplash_url": "https://www.flickr.com/photos/65642063@N04/44730672370",
         "source": "Openverse",
         "license": "BY-NC-SA 2.0"
+      },
+      "storage": {
+        "recommended": "冷蔵",
+        "fridge": "4日",
+        "freezer": "2週間",
+        "note": "汁ごと保存。冷凍可だが解凍時に少し離水する"
       }
     },
     {
@@ -374,6 +428,12 @@
         "unsplash_url": "https://www.flickr.com/photos/7897757@N03/2440611806",
         "source": "Openverse",
         "license": "BY 2.0"
+      },
+      "storage": {
+        "recommended": "冷蔵",
+        "fridge": "4日",
+        "freezer": "3週間",
+        "note": "汁ごと保存。冷凍にもよく向く（じゃがいも不使用）"
       }
     },
     {
@@ -410,6 +470,12 @@
         "unsplash_url": "https://www.flickr.com/photos/130229276@N07/37305288896",
         "source": "Openverse",
         "license": "BY-SA 2.0"
+      },
+      "storage": {
+        "recommended": "冷蔵",
+        "fridge": "4日",
+        "freezer": "3週間",
+        "note": "そぼろ状で冷凍可。1食分ずつ小分けが便利"
       }
     },
     {
@@ -445,6 +511,12 @@
         "unsplash_url": "https://www.flickr.com/photos/40781985@N08/52046305393",
         "source": "Openverse",
         "license": "BY 2.0"
+      },
+      "storage": {
+        "recommended": "冷凍",
+        "fridge": "—",
+        "freezer": "3週間",
+        "note": "下味冷凍。前夜に冷蔵庫で解凍して焼くだけ"
       }
     }
   ],
@@ -480,6 +552,12 @@
         "unsplash_url": "https://www.flickr.com/photos/47173486@N00/10438309396",
         "source": "Openverse",
         "license": "BY 2.0"
+      },
+      "storage": {
+        "recommended": "冷蔵",
+        "fridge": "5日",
+        "freezer": "3週間",
+        "note": "冷凍可。弁当用に小分け冷凍も"
       }
     },
     {
@@ -512,6 +590,12 @@
         "unsplash_url": "https://www.flickr.com/photos/86365166@N00/3838245075",
         "source": "Openverse",
         "license": "BY 2.0"
+      },
+      "storage": {
+        "recommended": "冷蔵",
+        "fridge": "5日",
+        "freezer": "3週間",
+        "note": "冷凍可。使う分だけ取り出せる"
       }
     },
     {
@@ -543,6 +627,12 @@
         "unsplash_url": "https://www.flickr.com/photos/94637630@N00/8670538127",
         "source": "Openverse",
         "license": "BY 2.0"
+      },
+      "storage": {
+        "recommended": "冷蔵",
+        "fridge": "4日",
+        "freezer": "不可",
+        "note": "漬けたまま保存。卵のため冷凍不可"
       }
     },
     {
@@ -575,6 +665,12 @@
         "unsplash_url": "https://www.flickr.com/photos/47173486@N00/42135245244",
         "source": "Openverse",
         "license": "BY 2.0"
+      },
+      "storage": {
+        "recommended": "冷蔵",
+        "fridge": "3〜4日",
+        "freezer": "不可",
+        "note": "加熱野菜で水が出るため冷凍不可"
       }
     }
   ]

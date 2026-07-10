@@ -277,8 +277,25 @@ WebSearch で **クラシル（kurashiru.com）** と **白ごはん.com（sirog
 - 手順（3〜5ステップ）。調理器具の具体的な設定値を含めること
 - **手順の中に肉・魚はグラム数、野菜は個数または目安量を明記する**（例：「鶏もも肉300gを一口大に切る」「キャベツ1/4個（約250g）をざく切りにする」）
 - ビストロを使うレシピは「モード・圧力レベル・分数・加圧後の操作」をすべて明記
-- 保存方法・保存日数
+- 保存の目安 `storage`（構造化。下記ルール参照）
 - search_keyword（Unsplash検索用、食材＋調理法＋料理形態、3〜5語）
+
+#### storage（保存の目安）の生成ルール
+各レシピに冷蔵・冷凍**両方の日持ち目安**と**推奨側**を付与する（アプリがカードに表示する）。
+
+```json
+"storage": {
+  "recommended": "冷蔵",   // 冷蔵 または 冷凍（どちらで保存するのがおすすめか）
+  "fridge": "4日",         // 冷蔵の日持ち目安（下味冷凍など冷蔵しないものは "—"）
+  "freezer": "3週間",       // 冷凍の日持ち目安。冷凍に向かないものは "不可"
+  "note": "汁ごと保存・温め直すだけ"  // 補足（任意）
+}
+```
+
+- **冷凍に向かない → `freezer: "不可"`**：卵料理（味玉・卵とじ）、豆腐入り、生野菜・加熱野菜で水が出るもの、牛乳/生クリームで分離するもの 等
+- **下味冷凍（`freeze: true`）→ `recommended: "冷凍"`・`fridge: "—"`**、`note` に解凍方法
+- 冷凍によく向く（カレー・そぼろ・きんぴら・焼いた肉等）は現実的な週数を入れる
+- 作り置き適性4パターンと整合させる（A冷蔵4日以上／B・C冷凍／D煮汁ごと冷蔵）
 
 ---
 
@@ -361,7 +378,7 @@ WebSearch で **クラシル（kurashiru.com）** と **白ごはん.com（sirog
       "ingredients": ["食材1", "食材2"],
       "steps": ["鶏もも肉300gを一口大に切る", "手順2", "手順3"],
       "time_minutes": 20,
-      "storage_note": "冷蔵3日",
+      "storage": { "recommended": "冷蔵", "fridge": "3日", "freezer": "2週間", "note": "" },
       "image_query_ja": "日本語の一般料理名（Openverse/Wikimedia検索用）",
       "search_keyword": "英語の料理検索キーワード（Unsplashフォールバック用）",
       "image": "（fetch_pexels.pyが設定）",
@@ -376,7 +393,7 @@ WebSearch で **クラシル（kurashiru.com）** と **白ごはん.com（sirog
       "ingredients": ["食材1", "食材2"],
       "steps": ["えのき1袋（150g）を石づきを取ってほぐす", "手順2"],
       "time_minutes": 10,
-      "storage_note": "冷蔵4日",
+      "storage": { "recommended": "冷蔵", "fridge": "4日", "freezer": "不可", "note": "" },
       "image_query_ja": "日本語の一般料理名（Openverse/Wikimedia検索用）",
       "search_keyword": "英語の料理検索キーワード（Unsplashフォールバック用）",
       "image": "（fetch_pexels.pyが設定）",
