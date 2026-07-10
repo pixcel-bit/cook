@@ -48,7 +48,7 @@ for (const r of prefs.recipes || []) {
 
 // Fields copied from the saved favorite (image is handled by fetch_pexels).
 const FIELDS = ["genre", "tool", "freeze", "ingredients", "steps",
-                "time_minutes", "storage_note", "search_keyword"];
+                "time_minutes", "storage_note", "storage", "search_keyword"];
 
 let reused = 0, adjusted = 0;
 for (const rec of [...(menu.main || []), ...(menu.side || [])]) {

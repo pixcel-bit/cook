@@ -986,6 +986,7 @@ function captureRecipeDetail(r, name) {
     steps: mr.steps || [],
     time_minutes: mr.time_minutes,
     storage_note: mr.storage_note || '',
+    storage: mr.storage || null,
     search_keyword: mr.search_keyword || '',
     saved_at: new Date().toISOString().slice(0, 10),
     lock: prevLock !== false
