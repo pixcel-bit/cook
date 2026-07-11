@@ -888,7 +888,7 @@ function addToMenu(name) {
     name: r.name, genre, tool: rc.tool || '', freeze: !!rc.freeze,
     ingredients: rc.ingredients || [], steps: rc.steps || [],
     time_minutes: rc.time_minutes, storage_note: rc.storage_note || '',
-    storage: rc.storage || null,
+    storage: rc.storage || null, source_url: rc.source_url || '',
     image: r.photo_url || '', image_credit: r.photo_credit || {},
     type: ['和','洋','中','エスニック'].includes(genre) ? 'main' : 'side'
   }];
@@ -1035,8 +1035,8 @@ function rateRecipe(name, type) {
 // On 👍, save the exact cooking method of the version currently shown so the
 // favorite can be reproduced verbatim later. Preserves a prior 固定/おまかせ choice.
 function captureRecipeDetail(r, name) {
-  if (!menuData) return;
-  const mr = [...(menuData.main || []), ...(menuData.side || [])].find(x => x.name === name);
+  const pool = [...((menuData && menuData.main) || []), ...((menuData && menuData.side) || []), ...(prefs.menu_extra || [])];
+  const mr = pool.find(x => x.name === name);
   if (!mr) return;
   const prevLock = r.recipe ? r.recipe.lock : true;
   r.recipe = {
@@ -1049,6 +1049,7 @@ function captureRecipeDetail(r, name) {
     storage_note: mr.storage_note || '',
     storage: mr.storage || null,
     search_keyword: mr.search_keyword || '',
+    source_url: mr.source_url || (r.recipe && r.recipe.source_url) || '',
     saved_at: new Date().toISOString().slice(0, 10),
     lock: prevLock !== false
   };
@@ -1299,6 +1300,9 @@ function renderRecipeCard(r, type) {
   const creditHtml = credit && credit.photographer
     ? `<div class="photo-credit">Photo by <a href="${esc(credit.photographer_url || '')}" target="_blank" rel="noopener">${esc(credit.photographer)}</a> on <a href="${esc(credit.unsplash_url || '')}" target="_blank" rel="noopener">${esc(credit.source || 'Unsplash')}</a>${credit.license ? ' (' + esc(credit.license) + ')' : ''}</div>`
     : '';
+  const sourceHtml = r.source_url
+    ? `<div class="photo-credit">出典: <a href="${esc(r.source_url)}" target="_blank" rel="noopener">元レシピを見る</a></div>`
+    : '';
 
   return `
   <details class="card" data-recipe="${nameEsc}">
@@ -1323,7 +1327,7 @@ function renderRecipeCard(r, type) {
         <button class="rate-btn good" onclick="rateRecipe('${nameEsc}','good')">👍 <span class="rate-count good-count">0</span></button>
       </div>
       ${renderAdjustBar(r.name, adjs)}
-      ${creditHtml}
+      ${sourceHtml}${creditHtml}
     </div>
   </details>`;
 }
