@@ -235,6 +235,66 @@
         "source": "Unsplash",
         "license": ""
       }
+    },
+    {
+      "id": "19f5125f269a93e",
+      "name": "ささみとトマトの南蛮漬け",
+      "priority": false,
+      "good_count": 0,
+      "bad_count": 0,
+      "comments": [],
+      "added_at": "2026-07-11",
+      "done_count": 0,
+      "last_adopted_at": null,
+      "recipe": {
+        "genre": "和",
+        "tool": "フライパン",
+        "freeze": false,
+        "servings": "3人前",
+        "ingredients": [
+          "ささみ 6本",
+          "茄子 1本",
+          "ミニトマト 5個",
+          "玉ねぎ 1/4個",
+          "片栗粉 大さじ2",
+          "ごま油 適量",
+          "刻みネギ 適量",
+          "(A)水 200ml",
+          "(A)酢 大さじ2",
+          "(A)醤油 大さじ3",
+          "(A)砂糖 大さじ2",
+          "(A)しょうがチューブ 小さじ1",
+          "(A)鷹の爪 適量（無くてもOK）"
+        ],
+        "steps": [
+          "ミニトマトはヘタをとって半分に切り、玉ねぎは薄切りにして水に晒す。茄子は縦半分に切り→横3等分→さらに3等分に切る",
+          "ささみは筋を取り除き食べやすい大きさに切る。塩こしょうをふり、片栗粉をまぶしておく",
+          "保存容器に(A)【水200ml・酢大さじ2・醤油大さじ3・砂糖大さじ2・しょうがチューブ小さじ1・鷹の爪】を混ぜ合わせ、ミニトマトと水気を切った玉ねぎを漬けておく",
+          "フライパンにごま油大さじ2を中火で熱し、茄子を皮目から焼く（皮目から焼くと色よく仕上がる）。火が通ったら③の漬け汁に加える",
+          "フライパンにごま油大さじ1を中火で熱し、②のささみを焼く。火が通ったら③に漬ける",
+          "30分ほど漬け込み、刻みネギを散らしたら出来上がり"
+        ],
+        "time_minutes": 30,
+        "storage_note": "冷蔵3〜4日（漬け込むほど味がなじむ・冷凍不可）",
+        "storage": {
+          "recommended": "冷蔵",
+          "fridge": "3〜4日",
+          "freezer": "不可",
+          "note": "漬け込むほど味がなじむ。生のミニトマト入りのため冷凍不可"
+        },
+        "search_keyword": "japanese chicken tender tomato vinegar marinated nanban",
+        "saved_at": "2026-07-11",
+        "lock": true,
+        "source_url": "https://kurashiru.com/s/WspzIEjYhs8"
+      },
+      "photo_url": "https://live.staticflickr.com/65535/53192895389_ee91f00014_b.jpg",
+      "photo_credit": {
+        "photographer": "__U___",
+        "photographer_url": "https://www.flickr.com/photos/57723509@N04",
+        "unsplash_url": "https://www.flickr.com/photos/57723509@N04/53192895389",
+        "source": "Openverse",
+        "license": "BY 2.0"
+      }
     }
   ],
   "weekly_request": {
