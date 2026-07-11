@@ -23,6 +23,8 @@ const today = new Date().toISOString().slice(0, 10);
 // prefs.recipes is user-curated (liked or manually added) — not auto-populated.
 prefs.weekly_request = { moods: [], note: '', updated_at: null };
 (prefs.recipes || []).forEach(r => { r.priority = false; });
+// 「あとから追加」した料理は前週分なのでクリア（新しい献立には引き継がない）
+prefs.menu_extra = [];
 
 try {
   fs.writeFileSync(prefsPath, JSON.stringify(prefs, null, 2) + '\n');

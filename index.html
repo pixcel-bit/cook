@@ -198,6 +198,9 @@
   .rl-detail.open { display: block; }
   .rl-meta { font-size: 11px; color: var(--ink-faint); margin-bottom: 12px; display: flex; gap: 12px; flex-wrap: wrap; }
   .rl-detail-actions { display: flex; gap: 8px; margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line); }
+  .rl-menu-btn { width: 100%; margin-top: 14px; padding: 11px; border: 1px solid var(--accent); border-radius: 10px; background: #fff8f5; color: var(--accent); font-size: 13.5px; font-weight: 700; cursor: pointer; font-family: inherit; }
+  .rl-menu-btn.on { background: var(--accent); color: #fff; }
+  .rl-menu-btn:disabled { background: var(--paper); border-color: var(--line); color: var(--ink-faint); cursor: default; }
   .saved-recipe { background: var(--paper); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; margin-bottom: 12px; }
   .sr-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 8px; }
   .sr-title { font-size: 11px; font-weight: 700; color: var(--ink-faint); letter-spacing: 0.04em; }
@@ -486,6 +489,8 @@
 </section>
 </div>
 
+<div id="menu-extra"></div>
+
 <section>
   <div class="section-label">来週の献立リクエスト</div>
   <div class="req-card" id="req-card">
@@ -613,6 +618,7 @@ async function loadPrefs() {
   renderRecipeList();
   updateRatingCounts();
   refreshAdjustBars();
+  renderMenuExtras();
   initRequest();
   initLeftovers();
 }
@@ -836,6 +842,11 @@ function renderRecipeList() {
           <input class="comment-input" id="ci-${r.id}" placeholder="コメントを追加..." onkeydown="if(event.key==='Enter')addComment('${r.id}')">
           <button class="btn-comment" onclick="addComment('${r.id}')">追加</button>
         </div>
+        ${(() => { const w = isInThisWeek(r.name);
+          if (w === 'extra') return `<button class="rl-menu-btn on" onclick="event.stopPropagation();removeFromMenu('${esc(r.name)}')">🍽️ 今週の献立から外す</button>`;
+          if (w === 'menu') return `<button class="rl-menu-btn" disabled>🍽️ 今週の献立にあります</button>`;
+          return `<button class="rl-menu-btn" onclick="event.stopPropagation();addToMenu('${esc(r.name)}')">🍽️ 今週の献立に追加</button>`;
+        })()}
         <div class="rl-detail-actions">
           <button class="rl-act-btn${r.priority?' pri-on':''}" onclick="togglePriority('${r.id}')">🔥 ${r.priority?'今週外す':'今週作る'}</button>
           <button class="rl-act-btn" onclick="event.stopPropagation();startEdit('${r.id}')">✏️ 名前変更</button>
@@ -857,6 +868,56 @@ function addRecipe() {
   if (prefs.recipes.find(r => r.name === name)) { showToast('すでに登録されています'); return; }
   prefs.recipes.push({ id:uid(), name, priority:false, good_count:0, bad_count:0, comments:[], added_at:new Date().toISOString().slice(0,10), done_count:0, last_adopted_at:null });
   inp.value = ''; renderRecipeList(); queueSave();
+}
+
+/* --- 今週の献立に「あとから追加」（menu.jsonは触らず preferences.json 側に保持） --- */
+// returns 'menu'（今週の生成献立にある） / 'extra'（あとから追加済み） / null
+function isInThisWeek(name) {
+  if (menuData && [...(menuData.main || []), ...(menuData.side || [])].some(x => x.name === name)) return 'menu';
+  if ((prefs.menu_extra || []).some(x => x.name === name)) return 'extra';
+  return null;
+}
+
+function addToMenu(name) {
+  const r = prefs.recipes.find(x => x.name === name);
+  if (!r) return;
+  if (isInThisWeek(name)) { showToast('すでに今週の献立にあります'); return; }
+  const rc = r.recipe || {};
+  const genre = rc.genre || '';
+  prefs.menu_extra = [...(prefs.menu_extra || []), {
+    name: r.name, genre, tool: rc.tool || '', freeze: !!rc.freeze,
+    ingredients: rc.ingredients || [], steps: rc.steps || [],
+    time_minutes: rc.time_minutes, storage_note: rc.storage_note || '',
+    storage: rc.storage || null,
+    image: r.photo_url || '', image_credit: r.photo_credit || {},
+    type: ['和','洋','中','エスニック'].includes(genre) ? 'main' : 'side'
+  }];
+  queueSave();
+  renderMenuExtras();
+  renderRecipeList();
+  showToast('今週の献立に追加しました');
+}
+
+function removeFromMenu(name) {
+  prefs.menu_extra = (prefs.menu_extra || []).filter(x => x.name !== name);
+  queueSave();
+  renderMenuExtras();
+  renderRecipeList();
+  showToast('今週の献立から外しました');
+}
+
+function renderMenuExtras() {
+  const el = document.getElementById('menu-extra');
+  if (!el) return;
+  const extras = prefs.menu_extra || [];
+  if (!extras.length) { el.innerHTML = ''; return; }
+  let html = '<section><div class="section-label">🔖 あとから追加した料理</div>';
+  extras.forEach(it => { html += renderRecipeCard(it, it.type || 'main'); });
+  html += '</section>';
+  el.innerHTML = html;
+  updateRatingCounts();
+  applyHiddenRecipes();
+  refreshAdjustBars();
 }
 
 function togglePriority(id) {
@@ -1176,6 +1237,7 @@ function renderMenu() {
   updateRatingCounts();
   applyHiddenRecipes();
   initLeftovers();
+  renderMenuExtras();
 }
 
 function getRecipeImage(r) {

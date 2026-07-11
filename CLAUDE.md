@@ -498,6 +498,7 @@ node scripts/update_prefs.js
 このスクリプトが以下を確実に実行する（deterministic logic）：
 - `weekly_request` を `{ moods: [], note: "", updated_at: null }` にリセット
 - `recipes[]` の全エントリの `priority` を `false` にリセット
+- `menu_extra` を `[]` にリセット。`menu_extra` は、ユーザーがアプリのレシピリストから「🍽️ 今週の献立に追加」した料理（前週分）の配列。新しい献立には引き継がないためクリアする
 - `leftover_ingredients.checked` は**リセットしない**。チェック済み食材は翌週に引き継がれ、アプリの「先週の余り・手動追加」欄に表示され続ける。ユーザーが使い切ったらアプリ上でチェックを外す運用。
 
 **注意：`recipes[]` には触れない。** レシピリストはユーザーが👍を押したか手動登録したものだけで構成される。ルーティンが自動追加しない。
