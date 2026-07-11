@@ -292,10 +292,21 @@ WebSearch で **クラシル（kurashiru.com）** と **白ごはん.com（sirog
 
 ### Step 5｜手順作成
 
+**まず実レシピの「事実」を取得して忠実な土台にする。** Claudeの一般知識ででっち上げず、選定した料理（クラシル候補）のURLについて次を実行する：
+```
+python3 scripts/kurashiru_recipe.py <レシピURL>
+```
+→ `recipeIngredient`（実際の分量）・`recipeInstructions`（工程順・技法）・`recipeYield`・`totalTime` が返る。これを**分量・技法・工程順・時間の事実の根拠**として使う。
+
+**手順は必ず自分の言葉で書き起こす（重要・著作権配慮）**：
+- menu.json は**public リポジトリで公開**されるため、サイトの手順文を**そのままコピー、または語句だけ差し替えた"改変コピー"は禁止**
+- 使ってよいのは**事実**（材料・分量・加熱時間・温度・技法・工程の順序）だけ。表現（文章）は自作する
+- 出典URLは menu.json の各レシピ `source_url` に保持（既に選定段階で控えている）
+
 選定した16品（主菜12・副菜4）それぞれについて詳細を作成する：
-- 手順（3〜5ステップ）。調理器具の具体的な設定値を含めること
+- 手順（3〜5ステップ）。調理器具の具体的な設定値を含めること。**元レシピの分量・技法に忠実**にしつつ、5人前に換算する
 - **手順の中に肉・魚はグラム数、野菜は個数または目安量を明記する**（例：「鶏もも肉300gを一口大に切る」「キャベツ1/4個（約250g）をざく切りにする」）
-- ビストロを使うレシピは「モード・圧力レベル・分数・加圧後の操作」をすべて明記
+- **ビストロで作れる料理は、元レシピの技法をビストロ向けに"改変"して手順を作る**（＝我が家の器具に合わせた別物の自作手順）。元がフライパン煮込み/炒め煮などビストロで再現できるものは積極的にビストロ化し、「モード・圧力レベル・分数・加圧後の操作」をすべて明記する。ビストロに向かない料理（揚げ焼き・蒸し・オーブン焼き等）は無理にビストロ化せず、適切な器具の手順にする
 - 保存の目安 `storage`（構造化。下記ルール参照）
 - search_keyword（Unsplash検索用、食材＋調理法＋料理形態、3〜5語）
 
@@ -398,6 +409,7 @@ WebSearch で **クラシル（kurashiru.com）** と **白ごはん.com（sirog
       "steps": ["鶏もも肉300gを一口大に切る", "手順2", "手順3"],
       "time_minutes": 20,
       "storage": { "recommended": "冷蔵", "fridge": "3日", "freezer": "2週間", "note": "" },
+      "source_url": "https://www.kurashiru.com/recipes/...（出典・選定段階で控えたURL。無ければ空）",
       "image_query_ja": "日本語の一般料理名（Openverse/Wikimedia検索用）",
       "search_keyword": "英語の料理検索キーワード（Unsplashフォールバック用）",
       "image": "（fetch_pexels.pyが設定）",
@@ -413,6 +425,7 @@ WebSearch で **クラシル（kurashiru.com）** と **白ごはん.com（sirog
       "steps": ["えのき1袋（150g）を石づきを取ってほぐす", "手順2"],
       "time_minutes": 10,
       "storage": { "recommended": "冷蔵", "fridge": "4日", "freezer": "不可", "note": "" },
+      "source_url": "https://www.kurashiru.com/recipes/...（出典・選定段階で控えたURL。無ければ空）",
       "image_query_ja": "日本語の一般料理名（Openverse/Wikimedia検索用）",
       "search_keyword": "英語の料理検索キーワード（Unsplashフォールバック用）",
       "image": "（fetch_pexels.pyが設定）",
