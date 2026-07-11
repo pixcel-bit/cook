@@ -287,13 +287,10 @@
         "lock": true,
         "source_url": "https://kurashiru.com/s/WspzIEjYhs8"
       },
-      "photo_url": "https://live.staticflickr.com/65535/53192895389_ee91f00014_b.jpg",
+      "photo_url": "https://raw.githubusercontent.com/pixcel-bit/cook/main/images/sasami-tomato-nanban.jpeg",
       "photo_credit": {
-        "photographer": "__U___",
-        "photographer_url": "https://www.flickr.com/photos/57723509@N04",
-        "unsplash_url": "https://www.flickr.com/photos/57723509@N04/53192895389",
-        "source": "Openverse",
-        "license": "BY 2.0"
+        "source": "レシピ写真",
+        "license": ""
       }
     }
   ],
