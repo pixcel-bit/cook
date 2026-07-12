@@ -262,7 +262,93 @@
     .card, .memo { break-inside: avoid; }
     .rating-bar { display: none; }
   }
+
+  /* ============ THEMES ============ */
+  .theme-row { display: flex; gap: 8px; justify-content: center; align-items: center; margin-top: 24px; flex-wrap: wrap; }
+  .theme-label { font-size: 11px; color: var(--ink-faint); font-weight: 700; letter-spacing: 0.06em; }
+  .theme-chip { font-size: 12px; padding: 5px 13px; border: 1px solid var(--line); border-radius: 20px; background: var(--card); color: var(--ink-soft); cursor: pointer; font-family: inherit; font-weight: 700; }
+  .theme-chip.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+  /* --- craft（クラフトビストロ・デフォルト） --- */
+  html[data-theme="craft"] { --ink: #2f2a22; --ink-soft: #6d6656; --ink-faint: #9c9484; --line: #e3d8c2; --paper: #f4edde; --card: #fffdf6; --accent: #b04f2c; --accent-soft: #e6c4ae; }
+  [data-theme="craft"] h1, [data-theme="craft"] .tab-header, [data-theme="craft"] .card-title, [data-theme="craft"] .rl-name { font-family: "Hiragino Mincho ProN", "Yu Mincho", serif; }
+  [data-theme="craft"] h1 { font-size: 27px; }
+  [data-theme="craft"] .card { box-shadow: 0 2px 10px rgba(90,60,30,.08); }
+  [data-theme="craft"] .eyebrow { color: #45624a; }
+  [data-theme="craft"] .tag-side { background: #e8eddf; color: #45624a; }
+  [data-theme="craft"] ol.r-steps li::marker { font-family: "Hiragino Sans", sans-serif; }
+
+  /* --- night（シェフズナイト） --- */
+  html[data-theme="night"] { --ink: #efe9dc; --ink-soft: #b3ab99; --ink-faint: #7c7566; --line: #3a3730; --paper: #181713; --card: #23211b; --accent: #e0a24a; --accent-soft: #6b5124; }
+  [data-theme="night"] .card { border-color: #343128; box-shadow: 0 4px 16px rgba(0,0,0,.35); }
+  [data-theme="night"] .tag-main { background: #3d2c1c; color: #eab676; }
+  [data-theme="night"] .tag-side { background: #26301f; color: #a9c78a; }
+  [data-theme="night"] .tool { background: #252a33; color: #8fb0dc; }
+  [data-theme="night"] .freeze { background: #1e2c33; color: #7fc0d8; }
+  [data-theme="night"] .kid-note { background: #2a241a; border-color: #4a3d26; color: #d8b878; }
+  [data-theme="night"] .kid-note strong { color: #eccf92; }
+  [data-theme="night"] .rl-good, [data-theme="night"] .done-badge { background: #233020; color: #a5cf8b; }
+  [data-theme="night"] .req-sent { background: #232e1f; border-color: #3f5433; }
+  [data-theme="night"] .req-sent .req-lead { color: #a5cf8b; }
+  [data-theme="night"] .adj-cur, [data-theme="night"] .sr-lock.on { background: #33261c; border-color: #5a422e; color: #e8b184; }
+  [data-theme="night"] .adj-cur-del { color: #e8b184; }
+  [data-theme="night"] .rl-menu-btn { background: #2c2418; }
+  [data-theme="night"] .rl-act-btn.danger { background: #2e1d1d; border-color: #4a2c2c; color: #d98a8a; }
+  [data-theme="night"] .comment-del:active { background: #3a2626; color: #d98a8a; }
+  [data-theme="night"] .toast { background: #efe9dc; color: #1b1a17; }
+  [data-theme="night"] .rate-btn.good:hover { background: #233020; border-color: #5a8a3a; color: #a5cf8b; }
+  [data-theme="night"] .hide-btn:hover { background: #2a2822; }
+  [data-theme="night"] .genre-label[data-genre="和"] { --gc: #8fbf7f; }
+  [data-theme="night"] .genre-label[data-genre="洋"] { --gc: #7fa8d8; }
+  [data-theme="night"] .genre-label[data-genre="中"] { --gc: #d88a7f; }
+  [data-theme="night"] .genre-label[data-genre="エスニック"] { --gc: #d8b25f; }
+  [data-theme="night"] .btn-primary, [data-theme="night"] .btn-req-save, [data-theme="night"] .ing-add-btn,
+  [data-theme="night"] .btn-comment, [data-theme="night"] .mood-chip.active, [data-theme="night"] .filter-chip.active,
+  [data-theme="night"] .theme-chip.active, [data-theme="night"] .stchip.rec, [data-theme="night"] .stor-badge,
+  [data-theme="night"] .rl-menu-btn.on { color: #201d16; }
+
+  /* --- editorial（モダンエディトリアル） --- */
+  html[data-theme="editorial"] { --ink: #191917; --ink-soft: #565550; --ink-faint: #98968e; --line: #e6e5e0; --paper: #ffffff; --card: #ffffff; --accent: #b3402a; --accent-soft: #e8c9bf; }
+  [data-theme="editorial"] body { line-height: 1.85; }
+  [data-theme="editorial"] h1 { font-family: "Hiragino Mincho ProN", "Yu Mincho", serif; font-weight: 600; font-size: 30px; letter-spacing: 0.04em; }
+  [data-theme="editorial"] .card-title, [data-theme="editorial"] .tab-header, [data-theme="editorial"] .rl-name { font-family: "Hiragino Mincho ProN", "Yu Mincho", serif; }
+  [data-theme="editorial"] .card, [data-theme="editorial"] .rl-item, [data-theme="editorial"] .req-card,
+  [data-theme="editorial"] .ing-details, [data-theme="editorial"] .memo, [data-theme="editorial"] .saved-recipe,
+  [data-theme="editorial"] .storage-box { border-radius: 0; }
+  [data-theme="editorial"] .card { border: none; border-bottom: 1px solid #d8d7d2; }
+  [data-theme="editorial"] .card-illo { border-right: none; }
+  [data-theme="editorial"] .section-label { color: #191917; letter-spacing: 0.22em; border-bottom: 2px solid #191917; padding-bottom: 6px; }
+  [data-theme="editorial"] header { border-bottom-width: 3px; }
+  [data-theme="editorial"] .meta-chip, [data-theme="editorial"] .tag, [data-theme="editorial"] .tool,
+  [data-theme="editorial"] .stchip, [data-theme="editorial"] .btn-primary, [data-theme="editorial"] .btn-req-save,
+  [data-theme="editorial"] .ing-add-btn, [data-theme="editorial"] .btn-comment, [data-theme="editorial"] .rl-menu-btn { border-radius: 0; }
+  [data-theme="editorial"] .tag-main { background: #191917; color: #fff; }
+  [data-theme="editorial"] .tag-side { background: #fff; color: #191917; border: 1px solid #191917; }
+  [data-theme="editorial"] .tool { background: #f4f4f2; color: #565550; }
+  [data-theme="editorial"] .freeze { background: #fff; color: #3d7a90; border: 1px solid #3d7a90; }
+  [data-theme="editorial"] .genre-label { background: none; border-left: 2px solid var(--gc); border-radius: 0; }
+  [data-theme="editorial"] .genre-label::after { display: none; }
+
+  /* --- market（フレッシュマーケット） --- */
+  html[data-theme="market"] { --ink: #2b2f28; --ink-soft: #5f6a5c; --ink-faint: #93a08e; --line: #dfe6da; --paper: #fbfdf9; --card: #ffffff; --accent: #2f9e44; --accent-soft: #bfe3c6; }
+  [data-theme="market"] body { font-family: "Hiragino Maru Gothic ProN", "Hiragino Sans", "Yu Gothic UI", sans-serif; }
+  [data-theme="market"] h1 { font-weight: 800; }
+  [data-theme="market"] .card { border-radius: 20px; border-width: 2px; border-left: 7px solid #dfe6da; box-shadow: 0 3px 0 #e6ede2; }
+  [data-theme="market"] .card[data-genre="和"] { border-left-color: #3f9e4c; }
+  [data-theme="market"] .card[data-genre="洋"] { border-left-color: #3b82d8; }
+  [data-theme="market"] .card[data-genre="中"] { border-left-color: #e0483f; }
+  [data-theme="market"] .card[data-genre="エスニック"] { border-left-color: #f0a020; }
+  [data-theme="market"] .genre-label[data-genre="和"] { --gc: #3f9e4c; }
+  [data-theme="market"] .genre-label[data-genre="洋"] { --gc: #3b82d8; }
+  [data-theme="market"] .genre-label[data-genre="中"] { --gc: #e0483f; }
+  [data-theme="market"] .genre-label[data-genre="エスニック"] { --gc: #f0a020; }
+  [data-theme="market"] .tag-main { background: #ffe8e3; color: #d84b32; }
+  [data-theme="market"] .tag-side { background: #e2f3e4; color: #2f7d3a; }
+  [data-theme="market"] .rl-item, [data-theme="market"] .req-card, [data-theme="market"] .ing-details { border-radius: 20px; border-width: 2px; }
+  [data-theme="market"] .meta-chip { border-width: 2px; }
+  [data-theme="market"] .toast { background: #2f9e44; }
 </style>
+<script>try{document.documentElement.dataset.theme=localStorage.getItem('app_theme')||'craft';}catch(e){document.documentElement.dataset.theme='craft';}</script>
 </head>
 <body>
 
@@ -512,7 +598,14 @@
 </section>
 
 <div id="menu-memo"></div>
-<div style="text-align:center;margin-top:22px">
+<div class="theme-row">
+  <span class="theme-label">🎨 テーマ</span>
+  <button class="theme-chip" data-theme-btn="craft" onclick="setTheme('craft')">クラフト</button>
+  <button class="theme-chip" data-theme-btn="night" onclick="setTheme('night')">ナイト</button>
+  <button class="theme-chip" data-theme-btn="editorial" onclick="setTheme('editorial')">エディトリアル</button>
+  <button class="theme-chip" data-theme-btn="market" onclick="setTheme('market')">マーケット</button>
+</div>
+<div style="text-align:center;margin-top:14px">
   <button class="show-hidden-btn" onclick="manageToken()">🔑 保存用トークンを設定/変更</button>
 </div>
 <footer id="menu-footer">グリーンビーンズ 6/11配達分の食材で作成 ・ 週次作り置き献立</footer>
@@ -1145,6 +1238,21 @@ async function loadMenu() {
   }
 }
 
+/* --- THEME --- */
+// Theme is a per-device preference (localStorage), like hidden recipes —
+// each family member can pick their own look.
+function setTheme(t) {
+  document.documentElement.dataset.theme = t;
+  try { localStorage.setItem('app_theme', t); } catch(e) {}
+  const colors = { craft: '#b04f2c', night: '#181713', editorial: '#191917', market: '#2f9e44' };
+  const meta = document.querySelector('meta[name="theme-color"]');
+  if (meta) meta.content = colors[t] || '#c0623a';
+  document.querySelectorAll('[data-theme-btn]').forEach(b =>
+    b.classList.toggle('active', b.dataset.themeBtn === t));
+}
+
+setTheme(document.documentElement.dataset.theme || 'craft');
+
 (async () => {
   await loadMenu();
   loadPrefs();
@@ -1305,7 +1413,7 @@ function renderRecipeCard(r, type) {
     : '';
 
   return `
-  <details class="card" data-recipe="${nameEsc}">
+  <details class="card" data-recipe="${nameEsc}" data-genre="${esc(r.genre || '')}">
     <summary class="card-head">
       <div class="card-illo">${illoHtml}</div>
       <div class="card-info">
