@@ -687,6 +687,50 @@
         "source": "Wikimedia Commons",
         "license": "Public domain"
       }
+    },
+    {
+      "name": "基本の肉じゃが",
+      "genre": "和",
+      "tool": "ビストロ",
+      "freeze": false,
+      "ingredients": [
+        "豚こま切れ",
+        "じゃがいも",
+        "にんじん",
+        "玉ねぎ",
+        "醤油",
+        "みりん",
+        "酒",
+        "砂糖",
+        "和風だし"
+      ],
+      "steps": [
+        "じゃがいも5個（約600g）とにんじん1本（150g）は乱切り、玉ねぎ1個は1cm幅のくし切りにする。豚こま切れ300gは一口大に切る",
+        "ビストロの内鍋に野菜と豚肉を入れ、水200ml・醤油大さじ4・酒大さじ3・みりん大さじ3・砂糖大さじ3・和風だし小さじ2を加える",
+        "ビストロ：煮込みモード・かき混ぜあり・25分で加熱する",
+        "終了後すぐに蓋を開け、10分ほど置いて味を含ませる。煮汁ごと保存容器へ"
+      ],
+      "time_minutes": 35,
+      "storage_note": "冷蔵4日（汁ごと保存・温め直すだけ）",
+      "storage": {
+        "recommended": "冷蔵",
+        "fridge": "4日",
+        "freezer": "不可",
+        "note": "じゃがいもは冷凍で食感が変わるため不可。味が染みて2日目が美味しい。※じゃがいも・にんじん・玉ねぎは買い足し"
+      },
+      "source_url": "https://www.kurashiru.com/recipes/82b3201b-29f4-4db9-9fbb-82a1ce16d247",
+      "image_query_ja": [
+        "肉じゃが"
+      ],
+      "search_keyword": "japanese meat potato stew simmered",
+      "image": "https://live.staticflickr.com/8340/8252209292_41df6fd3fd_b.jpg",
+      "image_credit": {
+        "photographer": "Mokiko - Bohnenhase",
+        "photographer_url": "https://www.flickr.com/photos/64111077@N08",
+        "unsplash_url": "https://www.flickr.com/photos/64111077@N08/8252209292",
+        "source": "Openverse",
+        "license": "BY-NC-ND 2.0"
+      }
     }
   ],
   "side": [
