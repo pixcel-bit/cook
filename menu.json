@@ -1,384 +1,92 @@
 {
-  "delivery_date": "2026-07-11",
+  "delivery_date": "2026-07-18",
   "delivery_ingredients": [
-    "鶏もも肉",
-    "鶏むね肉",
     "豚こま切れ",
-    "手羽元",
-    "卵",
-    "絹豆腐",
-    "牛乳",
-    "味噌",
-    "カレールー（甘口）",
-    "玉ねぎ",
-    "にんじん",
+    "鶏もも肉",
+    "なす",
     "ピーマン",
     "長ねぎ",
-    "えのき",
     "エリンギ",
-    "レタス"
+    "トマトジュース",
+    "牛乳",
+    "かつお節",
+    "チリパウダー",
+    "お好みソース"
   ],
   "main": [
     {
-      "name": "手羽元と卵のさっぱり煮",
-      "genre": "和",
-      "tool": "ビストロ",
-      "freeze": false,
-      "ingredients": [
-        "手羽元",
-        "ゆで卵",
-        "しょうが",
-        "にんにく",
-        "酢",
-        "醤油",
-        "砂糖"
-      ],
-      "steps": [
-        "卵4個を固ゆでにして殻をむく。しょうが1片は薄切り、にんにく1片は潰す",
-        "ビストロの内鍋に手羽元500g・しょうが・にんにく・酢100ml・醤油100ml・砂糖大さじ4・水100mlを入れる",
-        "ビストロ：圧力調理・高圧・15分 → 加圧終了後そのまま10分自然放置してから蓋を開ける",
-        "ゆで卵を加えて煮汁に沈め、保温で10分なじませる。煮汁ごと保存容器へ"
-      ],
-      "time_minutes": 45,
-      "storage_note": "冷蔵4日（煮汁ごと・温め直すだけ）",
-      "image_query_ja": [
-        "手羽元のさっぱり煮",
-        "手羽元の煮物"
-      ],
-      "search_keyword": "chicken drumstick braised vinegar soy glossy",
-      "image": "https://images.unsplash.com/photo-1733139496834-0c5da2d1aa59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHwlRTYlODklOEIlRTclQkUlQkQlRTUlODUlODMlRTMlODElQTglRTUlOEQlQjUlRTMlODElQUUlRTMlODElOTUlRTMlODElQTMlRTMlODElQjElRTMlODIlOEElRTclODUlQUV8ZW58MHwyfHx8MTc4MzU4NDYyMHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "image_credit": {
-        "photographer": "Lee Milo",
-        "photographer_url": "https://unsplash.com/@miloleetw",
-        "unsplash_url": "https://unsplash.com/photos/a-close-up-of-a-bowl-of-noodles-with-mushrooms-berwQ60f0A8",
-        "source": "Unsplash",
-        "license": ""
-      },
-      "storage": {
-        "recommended": "冷蔵",
-        "fridge": "4日",
-        "freezer": "不可",
-        "note": "煮汁ごと保存。卵入りのため冷凍不可。レンジで温め直す"
-      }
-    },
-    {
-      "name": "鶏むね肉の南蛮漬け",
+      "name": "下味冷凍 豚の生姜焼き",
       "genre": "和",
       "tool": "フライパン",
-      "freeze": false,
-      "ingredients": [
-        "鶏むね肉",
-        "玉ねぎ",
-        "にんじん",
-        "ピーマン",
-        "片栗粉",
-        "酢",
-        "醤油",
-        "砂糖"
-      ],
-      "steps": [
-        "玉ねぎ1/2個は薄切り、にんじん1/3本（約50g）とピーマン1個は細切りにし、酢大さじ4・醤油大さじ3・砂糖大さじ2・水大さじ2を合わせた南蛮酢に漬けておく",
-        "鶏むね肉500gをそぎ切りにし、塩こしょうして片栗粉をまぶす",
-        "フライパンに油大さじ3を中火で熱し、鶏肉を揚げ焼きにする（片面3分ずつ、こんがり色づくまで）",
-        "熱いうちに南蛮酢に漬け込み、野菜と一緒に保存容器へ。半日置くと味がなじむ"
-      ],
-      "time_minutes": 25,
-      "storage_note": "冷蔵4日（漬け込みで日持ち）",
-      "image_query_ja": [
-        "鶏肉の南蛮漬け",
-        "南蛮漬け"
-      ],
-      "search_keyword": "fried chicken marinated vinegar onion carrot",
-      "image": "https://live.staticflickr.com/4095/4871082305_23f497bea4_b.jpg",
-      "image_credit": {
-        "photographer": "LingZhi(Suzuki)",
-        "photographer_url": "https://www.flickr.com/photos/40157115@N05",
-        "unsplash_url": "https://www.flickr.com/photos/40157115@N05/4871082305",
-        "source": "Openverse",
-        "license": "BY-NC-ND 2.0"
-      },
-      "storage": {
-        "recommended": "冷蔵",
-        "fridge": "4日",
-        "freezer": "不可",
-        "note": "漬け込みで日持ち。生野菜入りのため冷凍不可"
-      }
-    },
-    {
-      "name": "具だくさん豚汁",
-      "genre": "和",
-      "tool": "ビストロ",
-      "freeze": false,
+      "freeze": true,
       "ingredients": [
         "豚こま切れ",
-        "にんじん",
-        "玉ねぎ",
-        "長ねぎ",
-        "エリンギ",
-        "絹豆腐",
-        "味噌"
-      ],
-      "steps": [
-        "豚こま切れ300gは大きければ切る。にんじん1/2本（約75g）はいちょう切り、玉ねぎ1/2個はくし切り、長ねぎ1本は斜め切り、エリンギ1/2パック（50g）は短冊切り",
-        "ビストロの内鍋に豆腐と味噌以外の材料と水800mlを入れる",
-        "ビストロ：煮込みモード・かき混ぜあり・25分で加熱する",
-        "終了後すぐに蓋を開け、絹豆腐150gを角切りで加え、味噌大さじ5を溶き入れて保温5分。煮汁ごと保存",
-        "食べる時は椀に注いでレンジで温めるだけ"
-      ],
-      "time_minutes": 35,
-      "storage_note": "冷蔵4日（汁ごと保存・温め直すだけ）",
-      "image_query_ja": [
-        "豚汁"
-      ],
-      "search_keyword": "pork miso soup root vegetables bowl",
-      "image": "https://live.staticflickr.com/3026/2931500571_a4cf318c02_b.jpg",
-      "image_credit": {
-        "photographer": "[puamelia]",
-        "photographer_url": "https://www.flickr.com/photos/26226522@N08",
-        "unsplash_url": "https://www.flickr.com/photos/26226522@N08/2931500571",
-        "source": "Openverse",
-        "license": "BY-SA 2.0"
-      },
-      "storage": {
-        "recommended": "冷蔵",
-        "fridge": "4日",
-        "freezer": "不可",
-        "note": "汁ごと保存。豆腐入りのため冷凍不可。椀に注いでレンジ"
-      }
-    },
-    {
-      "name": "鶏もも肉のバジルハーブオーブン焼き",
-      "genre": "洋",
-      "tool": "ヘルシオ",
-      "freeze": false,
-      "ingredients": [
-        "鶏もも肉",
-        "バジル",
-        "にんにく",
-        "オリーブオイル",
-        "塩"
-      ],
-      "steps": [
-        "鶏もも肉300gを大きめの一口大に切り、塩小さじ1・おろしにんにく1片分・オリーブオイル大さじ2・刻んだ庭のバジル10枚をもみ込み15分置く",
-        "ヘルシオの角皿にクッキングシートを敷き、皮目を上にして並べる",
-        "ヘルシオ：オーブン220℃・予熱あり・20分焼く。皮がパリッと色づいたら完成",
-        "粗熱を取って保存容器へ。食べる時はトースターで3分温め直すと皮が復活する"
-      ],
-      "time_minutes": 40,
-      "storage_note": "冷蔵4日",
-      "image_query_ja": [
-        "鶏肉のハーブ焼き",
-        "ローストチキン"
-      ],
-      "search_keyword": "roasted chicken thigh basil herbs golden",
-      "image": "https://live.staticflickr.com/4889/44605649620_fc8c065e06_b.jpg",
-      "image_credit": {
-        "photographer": "HAMACHI!",
-        "photographer_url": "https://www.flickr.com/photos/87284921@N00",
-        "unsplash_url": "https://www.flickr.com/photos/87284921@N00/44605649620",
-        "source": "Openverse",
-        "license": "BY-NC-ND 2.0"
-      },
-      "storage": {
-        "recommended": "冷蔵",
-        "fridge": "4日",
-        "freezer": "3週間",
-        "note": "冷凍する場合は1食分ずつラップ。トースターで温め直すと皮が復活"
-      }
-    },
-    {
-      "name": "鶏もも肉とにんじんのクリームシチュー",
-      "genre": "洋",
-      "tool": "ビストロ",
-      "freeze": false,
-      "ingredients": [
-        "鶏もも肉",
-        "玉ねぎ",
-        "にんじん",
-        "牛乳",
-        "バター",
-        "小麦粉",
-        "コンソメ"
-      ],
-      "steps": [
-        "鶏もも肉250gを一口大に切り、玉ねぎ1個はくし切り、にんじん1本（約150g）は乱切りにする",
-        "ビストロの内鍋にバター20g・鶏肉・野菜・小麦粉大さじ3を入れて全体にまぶし、水300ml・コンソメ小さじ2を加える",
-        "ビストロ：煮込みモード・かき混ぜあり・20分で加熱する",
-        "終了後すぐに蓋を開けて牛乳400mlを加え、煮込みモード・かき混ぜあり・5分でとろみがつくまで煮る。塩で味を調える",
-        "食べる時はレンジで温めるだけ。大人は黒こしょうを別添えで"
-      ],
-      "time_minutes": 35,
-      "storage_note": "冷蔵4日（汁ごと保存・温め直すだけ）",
-      "image_query_ja": [
-        "クリームシチュー"
-      ],
-      "search_keyword": "creamy chicken stew white sauce carrot",
-      "image": "https://live.staticflickr.com/127/319550283_b159105620.jpg",
-      "image_credit": {
-        "photographer": "vjsakura",
-        "photographer_url": "https://www.flickr.com/photos/36046484@N00",
-        "unsplash_url": "https://www.flickr.com/photos/36046484@N00/319550283",
-        "source": "Openverse",
-        "license": "BY-NC-SA 2.0"
-      },
-      "storage": {
-        "recommended": "冷蔵",
-        "fridge": "4日",
-        "freezer": "不可",
-        "note": "汁ごと保存。牛乳が分離するため冷凍は不可"
-      }
-    },
-    {
-      "name": "鶏むね肉のピカタ",
-      "genre": "洋",
-      "tool": "フライパン",
-      "freeze": false,
-      "ingredients": [
-        "鶏むね肉",
-        "卵",
-        "小麦粉",
-        "塩",
-        "オリーブオイル"
-      ],
-      "steps": [
-        "鶏むね肉300gを1cm厚のそぎ切りにし、塩小さじ1/2をふって小麦粉を薄くまぶす",
-        "卵1個を溶いて衣にする（好みで粉チーズ大さじ1を混ぜても）",
-        "フライパンにオリーブオイル大さじ1を弱めの中火で熱し、卵液にくぐらせた鶏肉を並べて片面2分半ずつ、ふんわり黄色く焼く",
-        "粗熱を取って保存。食べる時はレンジ600Wで1分半。ケチャップを別添えにすると子供が食べやすい"
-      ],
-      "time_minutes": 20,
-      "storage_note": "冷蔵3〜4日",
-      "image_query_ja": [
-        "鶏肉のピカタ",
-        "ピカタ"
-      ],
-      "search_keyword": "chicken cutlet egg coating pan fried yellow",
-      "image": "https://live.staticflickr.com/4015/4295442002_3482f53e07_b.jpg",
-      "image_credit": {
-        "photographer": "neco",
-        "photographer_url": "https://www.flickr.com/photos/60568024@N00",
-        "unsplash_url": "https://www.flickr.com/photos/60568024@N00/4295442002",
-        "source": "Openverse",
-        "license": "BY 2.0"
-      },
-      "storage": {
-        "recommended": "冷蔵",
-        "fridge": "3〜4日",
-        "freezer": "3週間",
-        "note": "冷凍可。食べる分だけレンジ解凍"
-      }
-    },
-    {
-      "name": "鶏むね肉とピーマンの青椒肉絲風",
-      "genre": "中",
-      "tool": "フライパン",
-      "freeze": false,
-      "ingredients": [
-        "鶏むね肉",
-        "ピーマン",
-        "エリンギ",
-        "片栗粉",
-        "オイスターソース",
+        "おろししょうが",
         "醤油",
-        "酒"
-      ],
-      "steps": [
-        "鶏むね肉300gを細切りにし、酒大さじ1・片栗粉大さじ1をもみ込む。ピーマン3個とエリンギ1/2パック（50g）も細切りにする",
-        "オイスターソース大さじ2・醤油大さじ1・酒大さじ1・砂糖小さじ1を合わせておく",
-        "フライパンにごま油大さじ1を強めの中火で熱し、鶏肉を2分炒めて色が変わったらピーマンとエリンギを加えて2分炒める",
-        "合わせ調味料を回し入れ、全体に絡めて1分。粗熱を取って保存容器へ"
-      ],
-      "time_minutes": 20,
-      "storage_note": "冷蔵4日",
-      "image_query_ja": [
-        "青椒肉絲"
-      ],
-      "search_keyword": "chinese shredded chicken green pepper stir fry",
-      "image": "https://live.staticflickr.com/7564/16292170005_56d5f9dbbb_b.jpg",
-      "image_credit": {
-        "photographer": "Mokiko - Bohnenhase",
-        "photographer_url": "https://www.flickr.com/photos/64111077@N08",
-        "unsplash_url": "https://www.flickr.com/photos/64111077@N08/16292170005",
-        "source": "Openverse",
-        "license": "BY-NC-ND 2.0"
-      },
-      "storage": {
-        "recommended": "冷蔵",
-        "fridge": "4日",
-        "freezer": "2週間",
-        "note": "冷凍可。解凍後は水気を軽く切る"
-      }
-    },
-    {
-      "name": "蒸し鶏のバンバンジー風ごまだれ",
-      "genre": "中",
-      "tool": "蒸し器",
-      "freeze": false,
-      "ingredients": [
-        "鶏むね肉",
-        "長ねぎ",
-        "しょうが",
-        "白ねりごま",
-        "醤油",
-        "酢",
-        "砂糖"
-      ],
-      "steps": [
-        "鶏むね肉500gに塩小さじ1・酒大さじ2をもみ込み、長ねぎの青い部分としょうが薄切り2枚をのせる",
-        "蒸し器の下段に水を入れて強火にかけ、蒸気が上がったら鶏肉を入れて中火で18分蒸す。火を止めてそのまま10分置き余熱で火を通す",
-        "白ねりごま大さじ3・醤油大さじ2・酢大さじ1・砂糖大さじ1・蒸し汁大さじ2を混ぜてごまだれを作る",
-        "鶏肉は粗熱が取れたら手で裂き、たれは別容器で保存。食べる直前にたれをかける（大人はラー油を追加）"
-      ],
-      "time_minutes": 40,
-      "storage_note": "冷蔵4日（たれ別保存）",
-      "image_query_ja": [
-        "バンバンジー",
-        "よだれ鶏"
-      ],
-      "search_keyword": "chinese steamed chicken sesame sauce sliced",
-      "image": "https://live.staticflickr.com/2815/9023425565_3e5943abff_b.jpg",
-      "image_credit": {
-        "photographer": "dreamcat115",
-        "photographer_url": "https://www.flickr.com/photos/28012204@N03",
-        "unsplash_url": "https://www.flickr.com/photos/28012204@N03/9023425565",
-        "source": "Openverse",
-        "license": "BY-SA 2.0"
-      },
-      "storage": {
-        "recommended": "冷蔵",
-        "fridge": "4日",
-        "freezer": "2週間",
-        "note": "鶏は裂いて冷凍可。ごまだれは冷凍せず別保存"
-      }
-    },
-    {
-      "name": "鶏むね肉とえのきの中華うま煮",
-      "genre": "中",
-      "tool": "ビストロ",
-      "freeze": false,
-      "ingredients": [
-        "鶏むね肉",
-        "えのき",
-        "長ねぎ",
-        "オイスターソース",
-        "鶏がらスープの素",
-        "片栗粉",
+        "砂糖",
+        "酒",
         "ごま油"
       ],
       "steps": [
-        "鶏むね肉400gをそぎ切りにし、酒大さじ1をもみ込む。えのき1/2袋（75g）は石づきを取ってほぐし、長ねぎ1/2本は斜め切り",
-        "ビストロの内鍋に鶏肉・えのき・長ねぎ・オイスターソース大さじ2・鶏がらスープの素小さじ2・水300mlを入れる",
-        "ビストロ：煮込みモード・かき混ぜあり・15分で加熱する",
-        "終了後、水溶き片栗粉（片栗粉大さじ1.5・水大さじ3）を回し入れ、煮込みモード・かき混ぜあり・5分でとろみをつける。仕上げにごま油小さじ1",
-        "食べる時はレンジで温めるだけ"
+        "冷凍用保存袋におろししょうが大さじ2・醤油大さじ2.5・砂糖大さじ1.5・酒大さじ1.5を入れて混ぜる",
+        "豚こま切れ200gを加えてよくもみ込み、平らにならして空気を抜き冷凍する",
+        "前夜に冷蔵庫へ移して解凍する",
+        "フライパンにごま油大さじ1を中火で熱し、袋の中身をほぐしながら8〜10分、肉に火が通り照りが出るまで炒める"
       ],
-      "time_minutes": 30,
-      "storage_note": "冷蔵4日（汁ごと保存・温め直すだけ）",
+      "time_minutes": 15,
+      "storage_note": "下味冷凍3週間（解凍して焼くだけ）",
+      "storage": {
+        "recommended": "冷凍",
+        "fridge": "—",
+        "freezer": "3週間",
+        "note": "前夜に冷蔵庫で解凍して焼くだけ"
+      },
+      "source_url": "https://www.kurashiru.com/recipes/caca5b5e-309a-4611-b7b5-a122037857c9",
       "image_query_ja": [
-        "鶏肉と野菜の中華うま煮",
-        "八宝菜"
+        "豚の生姜焼き",
+        "生姜焼き"
       ],
-      "search_keyword": "chinese chicken mushroom thick sauce braise",
+      "search_keyword": "pork ginger soy stir fry glazed",
+      "image": "https://live.staticflickr.com/3677/10373815236_8dba3c171c_b.jpg",
+      "image_credit": {
+        "photographer": "Yohei Yamashita",
+        "photographer_url": "https://www.flickr.com/photos/66035780@N00",
+        "unsplash_url": "https://www.flickr.com/photos/66035780@N00/10373815236",
+        "source": "Openverse",
+        "license": "BY-NC 2.0"
+      }
+    },
+    {
+      "name": "長ねぎのとろとろだし煮びたし",
+      "genre": "和",
+      "tool": "ビストロ",
+      "freeze": false,
+      "ingredients": [
+        "長ねぎ",
+        "かつお節",
+        "めんつゆ",
+        "みりん"
+      ],
+      "steps": [
+        "長ねぎ1本を4cm幅のぶつ切りにする",
+        "ビストロの内鍋に長ねぎ・めんつゆ大さじ3・みりん大さじ1・水300mlを入れる",
+        "ビストロ：煮込みモード・かき混ぜなし・15分で加熱する。終了後すぐ蓋を開け、そのまま粗熱を取って味を含ませる",
+        "食べるときに温め直し、かつお節をたっぷりのせる"
+      ],
+      "time_minutes": 20,
+      "storage_note": "冷蔵4日（汁ごと保存）",
+      "storage": {
+        "recommended": "冷蔵",
+        "fridge": "4日",
+        "freezer": "不可",
+        "note": "汁ごと保存。ねぎは冷凍で食感が落ちるため不可"
+      },
+      "source_url": "",
+      "image_query_ja": [
+        "長ねぎの煮びたし",
+        "ねぎの焼き浸し"
+      ],
+      "search_keyword": "japanese leek simmered dashi broth",
       "image": "https://live.staticflickr.com/7854/44730672370_c69ee8f214_b.jpg",
       "image_credit": {
         "photographer": "arty822",
@@ -386,83 +94,463 @@
         "unsplash_url": "https://www.flickr.com/photos/65642063@N04/44730672370",
         "source": "Openverse",
         "license": "BY-NC-SA 2.0"
+      }
+    },
+    {
+      "name": "なすとピーマンの味噌炒め（なべしぎ）",
+      "genre": "和",
+      "tool": "フライパン",
+      "freeze": false,
+      "ingredients": [
+        "なす",
+        "ピーマン",
+        "味噌",
+        "みりん",
+        "砂糖",
+        "醤油",
+        "ごま油"
+      ],
+      "steps": [
+        "なす1.5本（約120g）を乱切りにして5分水にさらし、水気を拭く。ピーマン1個は乱切りにする",
+        "味噌大さじ2・みりん大さじ2・砂糖大さじ1・醤油小さじ1を混ぜ合わせておく",
+        "フライパンにごま油大さじ1.5を強めの中火で熱し、なすを2〜3分炒め、しんなりしたらピーマンを加えて1分炒める",
+        "合わせ味噌だれを回し入れ、中火で全体に絡めて照りが出たら火から下ろす"
+      ],
+      "time_minutes": 15,
+      "storage_note": "冷蔵4日",
+      "storage": {
+        "recommended": "冷蔵",
+        "fridge": "4日",
+        "freezer": "不可",
+        "note": "なすは冷凍で食感が変わるため不可。冷めても美味しい"
       },
+      "source_url": "https://www.sirogohan.com/recipe/nabesigi/",
+      "image_query_ja": [
+        "なすとピーマンの味噌炒め",
+        "なべしぎ"
+      ],
+      "search_keyword": "eggplant green pepper miso stir fry glossy",
+      "image": "https://live.staticflickr.com/827/39748077900_6fc2df51a3.jpg",
+      "image_credit": {
+        "photographer": "lefty1007",
+        "photographer_url": "https://www.flickr.com/photos/28685313@N00",
+        "unsplash_url": "https://www.flickr.com/photos/28685313@N00/39748077900",
+        "source": "Openverse",
+        "license": "BY-NC-ND 2.0"
+      }
+    },
+    {
+      "name": "下味冷凍 ポークケチャップ",
+      "genre": "洋",
+      "tool": "フライパン",
+      "freeze": true,
+      "ingredients": [
+        "豚こま切れ",
+        "ケチャップ",
+        "お好みソース",
+        "酢",
+        "砂糖",
+        "塩こしょう"
+      ],
+      "steps": [
+        "冷凍用保存袋にケチャップ大さじ4・お好みソース大さじ1・酢小さじ2・砂糖小さじ1・塩こしょう少々を入れて混ぜる",
+        "豚こま切れ170gを加えてもみ込み、平らにして空気を抜き冷凍する",
+        "前夜に冷蔵庫へ移して解凍する",
+        "フライパンに油大さじ1/2を中火で熱し、袋の中身を5分ほど炒める。仕上げにケチャップ大さじ1を追い足しして全体になじませる"
+      ],
+      "time_minutes": 12,
+      "storage_note": "下味冷凍3週間（解凍して焼くだけ）",
+      "storage": {
+        "recommended": "冷凍",
+        "fridge": "—",
+        "freezer": "3週間",
+        "note": "ウスターの代わりにお好みソースでコクを出す"
+      },
+      "source_url": "https://www.kurashiru.com/recipes/3f2500fd-94d8-4b3b-811d-c7ea50ba7b5d",
+      "image_query_ja": [
+        "ポークケチャップ",
+        "豚肉のケチャップ炒め"
+      ],
+      "search_keyword": "pork ketchup saute red glossy",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/CNTS-00126349261_%E4%BA%AC%E5%9F%8E%E6%97%A5%E5%A0%B1_1934-12-24.pdf/page1-1280px-CNTS-00126349261_%E4%BA%AC%E5%9F%8E%E6%97%A5%E5%A0%B1_1934-12-24.pdf.jpg",
+      "image_credit": {
+        "photographer": "unknown",
+        "photographer_url": "https://commons.wikimedia.org/wiki/File:CNTS-00126349261_%E4%BA%AC%E5%9F%8E%E6%97%A5%E5%A0%B1_1934-12-24.pdf",
+        "unsplash_url": "https://commons.wikimedia.org/wiki/File:CNTS-00126349261_%E4%BA%AC%E5%9F%8E%E6%97%A5%E5%A0%B1_1934-12-24.pdf",
+        "source": "Wikimedia Commons",
+        "license": "Public domain"
+      }
+    },
+    {
+      "name": "トマトとミルクのまろやかスープ煮",
+      "genre": "洋",
+      "tool": "ビストロ",
+      "freeze": false,
+      "ingredients": [
+        "トマトジュース",
+        "牛乳",
+        "コンソメ",
+        "オリーブオイル"
+      ],
+      "steps": [
+        "ビストロの内鍋にトマトジュース450ml・水150ml・コンソメ小さじ2を入れる",
+        "ビストロ：煮込みモード・かき混ぜあり・10分で加熱する",
+        "終了後すぐに蓋を開けて牛乳300mlを加え、煮込みモード・5分で温める（沸騰させない）",
+        "塩で味を調え、オリーブオイルを数滴たらす。パンにもごはんにも合う"
+      ],
+      "time_minutes": 20,
+      "storage_note": "冷蔵3〜4日",
+      "storage": {
+        "recommended": "冷蔵",
+        "fridge": "3〜4日",
+        "freezer": "不可",
+        "note": "牛乳入りのため冷凍不可。温め直しは弱めの加熱で"
+      },
+      "source_url": "",
+      "image_query_ja": [
+        "トマトクリームスープ",
+        "トマトスープ"
+      ],
+      "search_keyword": "creamy tomato soup bowl orange",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/CNTS-00126308293_%E4%BA%AC%E5%9F%8E%E6%97%A5%E5%A0%B1_1934-07-22.pdf/page1-1280px-CNTS-00126308293_%E4%BA%AC%E5%9F%8E%E6%97%A5%E5%A0%B1_1934-07-22.pdf.jpg",
+      "image_credit": {
+        "photographer": "unknown",
+        "photographer_url": "https://commons.wikimedia.org/wiki/File:CNTS-00126308293_%E4%BA%AC%E5%9F%8E%E6%97%A5%E5%A0%B1_1934-07-22.pdf",
+        "unsplash_url": "https://commons.wikimedia.org/wiki/File:CNTS-00126308293_%E4%BA%AC%E5%9F%8E%E6%97%A5%E5%A0%B1_1934-07-22.pdf",
+        "source": "Wikimedia Commons",
+        "license": "Public domain"
+      }
+    },
+    {
+      "name": "エリンギとピーマンのバター醤油炒め",
+      "genre": "洋",
+      "tool": "フライパン",
+      "freeze": false,
+      "ingredients": [
+        "エリンギ",
+        "ピーマン",
+        "バター",
+        "醤油",
+        "みりん",
+        "黒こしょう"
+      ],
+      "steps": [
+        "エリンギ1/2パック（50g）は長さ半分に切り5mm幅の薄切り、ピーマン1個は1cm幅に切る",
+        "フライパンにバター15gを中火で溶かし、エリンギを焼き色がつくまで炒める",
+        "ピーマンを加えて油が回ったら、醤油大さじ1・みりん大さじ1/2を入れて全体になじませる",
+        "黒こしょうをふって火から下ろす"
+      ],
+      "time_minutes": 10,
+      "storage_note": "冷蔵4日",
       "storage": {
         "recommended": "冷蔵",
         "fridge": "4日",
         "freezer": "2週間",
-        "note": "汁ごと保存。冷凍可だが解凍時に少し離水する"
+        "note": "きのこは冷凍で旨味が増す"
+      },
+      "source_url": "https://www.kurashiru.com/recipes/2277da82-d321-48fb-b77e-ee806399ed66",
+      "image_query_ja": [
+        "エリンギのバター醤油炒め",
+        "きのこのバター炒め"
+      ],
+      "search_keyword": "king oyster mushroom butter soy saute",
+      "image": "https://live.staticflickr.com/7156/6835115469_48d9e52688_b.jpg",
+      "image_credit": {
+        "photographer": "Kakei.R",
+        "photographer_url": "https://www.flickr.com/photos/32539604@N00",
+        "unsplash_url": "https://www.flickr.com/photos/32539604@N00/6835115469",
+        "source": "Openverse",
+        "license": "BY-SA 2.0"
       }
     },
     {
-      "name": "手羽元と野菜のほろほろ甘口カレー",
-      "genre": "エスニック",
+      "name": "麻婆なす",
+      "genre": "中",
       "tool": "ビストロ",
       "freeze": false,
       "ingredients": [
-        "手羽元",
-        "玉ねぎ",
-        "にんじん",
-        "カレールー（甘口）",
+        "なす",
+        "豚こま切れ",
+        "おろししょうが",
         "おろしにんにく",
-        "おろししょうが"
+        "豆板醤",
+        "めんつゆ",
+        "片栗粉",
+        "ごま油"
       ],
       "steps": [
-        "手羽元500gに塩少々をふる。玉ねぎ1個はくし切り、にんじん1本（約150g）は乱切りにする",
-        "ビストロの内鍋に手羽元・野菜・おろしにんにく小さじ1・おろししょうが小さじ1・水600mlを入れる",
-        "ビストロ：圧力調理・高圧・10分 → 加圧終了後、蒸気リリースで圧を逃がしてから蓋を開ける",
-        "バーモントカレー甘口1/2箱（115g）を割り入れて溶かし、煮込みモード・かき混ぜあり・5分でとろみをつける",
-        "肉がほろほろで骨から外れやすく子供も食べやすい。大人はガラムマサラや一味を別添えで"
+        "なす1.5本（約120g）を1cm幅の半月切りにする。豚こま切れ50gは細かく刻む",
+        "ビストロの内鍋にごま油大さじ1・豚こま・なす・おろししょうが小さじ1・おろしにんにく小さじ1を入れる（豆板醤は入れず大人用に別添え）",
+        "水150ml・めんつゆ大さじ3を加え、ビストロ：煮込みモード・かき混ぜあり・12分で加熱する",
+        "水溶き片栗粉（片栗粉大さじ1・水大さじ2）を回し入れ、煮込みモード・3分でとろみをつける",
+        "大人は豆板醤小さじ1〜とラー油を各自加える。子供はそのままで食べられる甘口仕立て"
       ],
-      "time_minutes": 35,
-      "storage_note": "冷蔵4日（汁ごと保存・温め直すだけ）",
-      "image_query_ja": [
-        "チキンカレー",
-        "カレーライス"
-      ],
-      "search_keyword": "mild chicken curry drumstick rice",
-      "image": "https://live.staticflickr.com/2370/2440611806_929f3d016e.jpg",
-      "image_credit": {
-        "photographer": "sozoooo",
-        "photographer_url": "https://www.flickr.com/photos/7897757@N03",
-        "unsplash_url": "https://www.flickr.com/photos/7897757@N03/2440611806",
-        "source": "Openverse",
-        "license": "BY 2.0"
-      },
+      "time_minutes": 25,
+      "storage_note": "冷蔵4日（汁ごと保存）",
       "storage": {
         "recommended": "冷蔵",
         "fridge": "4日",
-        "freezer": "3週間",
-        "note": "汁ごと保存。冷凍にもよく向く（じゃがいも不使用）"
+        "freezer": "不可",
+        "note": "なすの食感が変わるため冷凍不可。辛味は食べる時に各自追加"
+      },
+      "source_url": "https://www.kurashiru.com/recipes/cb5e7745-2306-4e59-9111-058e78928c40",
+      "image_query_ja": [
+        "麻婆茄子"
+      ],
+      "search_keyword": "chinese mapo eggplant spicy glossy sauce",
+      "image": "https://live.staticflickr.com/3515/3703349235_666d0b5ea0_b.jpg",
+      "image_credit": {
+        "photographer": "nipotan",
+        "photographer_url": "https://www.flickr.com/photos/34619662@N00",
+        "unsplash_url": "https://www.flickr.com/photos/34619662@N00/3703349235",
+        "source": "Openverse",
+        "license": "BY-NC-SA 2.0"
       }
     },
     {
-      "name": "鶏もも肉のガパオ風バジル炒め",
-      "genre": "エスニック",
+      "name": "香味だれ油淋鶏",
+      "genre": "中",
       "tool": "フライパン",
       "freeze": false,
       "ingredients": [
         "鶏もも肉",
-        "玉ねぎ",
+        "長ねぎ",
+        "しょうが",
+        "片栗粉",
+        "醤油",
+        "酢",
+        "砂糖",
+        "はちみつ",
+        "ごま油"
+      ],
+      "steps": [
+        "鶏もも肉角切り200gに酒小さじ1・醤油小さじ1をもみ込み15分置く",
+        "長ねぎ1/3本としょうが1片をみじん切りにし、醤油大さじ1.5・酢大さじ2・砂糖大さじ1.5・はちみつ小さじ1・水大さじ1.5・ごま油大さじ1と合わせて香味だれを作る",
+        "肉の水気を拭いて片栗粉大さじ3をまぶし、フライパンに1cmの油を170℃に熱して4分、返して3分揚げ焼きにする",
+        "油を切って保存。香味だれは別容器で保存し、食べる直前にかける"
+      ],
+      "time_minutes": 30,
+      "storage_note": "冷蔵4日（たれ別保存）",
+      "storage": {
+        "recommended": "冷蔵",
+        "fridge": "4日",
+        "freezer": "3週間",
+        "note": "揚げた肉のみ冷凍可。たれは冷蔵で別保存し食べる時にかける"
+      },
+      "source_url": "https://www.kurashiru.com/recipes/1edfd8ab-0afb-4601-9cb6-bfc5f3eee006",
+      "image_query_ja": [
+        "油淋鶏"
+      ],
+      "search_keyword": "chinese fried chicken scallion sauce crispy",
+      "image": "https://live.staticflickr.com/8188/8123997901_080d73dfc3_b.jpg",
+      "image_credit": {
+        "photographer": "jetalone",
+        "photographer_url": "https://www.flickr.com/photos/92203585@N00",
+        "unsplash_url": "https://www.flickr.com/photos/92203585@N00/8123997901",
+        "source": "Openverse",
+        "license": "BY 2.0"
+      }
+    },
+    {
+      "name": "下味冷凍 豚こまの中華オイスター漬け",
+      "genre": "中",
+      "tool": "フライパン",
+      "freeze": true,
+      "ingredients": [
+        "豚こま切れ",
+        "オイスターソース",
+        "醤油",
+        "酒",
+        "おろしにんにく",
+        "ごま油"
+      ],
+      "steps": [
+        "冷凍用保存袋にオイスターソース大さじ2・醤油大さじ1・酒大さじ1・おろしにんにく小さじ1・ごま油小さじ1を入れて混ぜる",
+        "豚こま切れ120gを加えてもみ込み、平らにして冷凍する",
+        "前夜に冷蔵庫へ移して解凍する",
+        "フライパンで中火5分、ほぐしながら炒める。コクのある中華風の照りが出たら完成"
+      ],
+      "time_minutes": 10,
+      "storage_note": "下味冷凍3週間（解凍して炒めるだけ）",
+      "storage": {
+        "recommended": "冷凍",
+        "fridge": "—",
+        "freezer": "3週間",
+        "note": "解凍して炒めるだけ。ごはんが進む中華だれ"
+      },
+      "source_url": "",
+      "image_query_ja": [
+        "豚肉のオイスターソース炒め",
+        "中華炒め"
+      ],
+      "search_keyword": "pork oyster sauce dark stir fry",
+      "image": "https://live.staticflickr.com/7395/8723291130_0cff657b26_b.jpg",
+      "image_credit": {
+        "photographer": "Kakei.R",
+        "photographer_url": "https://www.flickr.com/photos/32539604@N00",
+        "unsplash_url": "https://www.flickr.com/photos/32539604@N00/8723291130",
+        "source": "Openverse",
+        "license": "BY-SA 2.0"
+      }
+    },
+    {
+      "name": "ピーマンのピリ辛細切り炒め",
+      "genre": "中",
+      "tool": "フライパン",
+      "freeze": false,
+      "ingredients": [
+        "ピーマン",
+        "ごま油",
+        "鶏がらスープの素",
+        "醤油",
+        "白ごま"
+      ],
+      "steps": [
+        "ピーマン1.5個分（約60g）を細切りにする",
+        "フライパンにごま油大さじ1を強火で熱し、ピーマンを1〜2分さっと炒める",
+        "鶏がらスープの素小さじ1/2・醤油小さじ1を加えて絡め、白ごまをふる",
+        "大人は食べる時にラー油や豆板醤を少量添える（子供はそのまま）"
+      ],
+      "time_minutes": 8,
+      "storage_note": "冷蔵4日",
+      "storage": {
+        "recommended": "冷蔵",
+        "fridge": "4日",
+        "freezer": "不可",
+        "note": "シャキッと食感を残すため冷凍不可"
+      },
+      "source_url": "",
+      "image_query_ja": [
+        "ピーマン炒め",
+        "青椒肉絲"
+      ],
+      "search_keyword": "green pepper shredded stir fry sesame",
+      "image": "https://live.staticflickr.com/8452/8064222432_804192796f_b.jpg",
+      "image_credit": {
+        "photographer": "amadeusrecord",
+        "photographer_url": "https://www.flickr.com/photos/28023103@N06",
+        "unsplash_url": "https://www.flickr.com/photos/28023103@N06/8064222432",
+        "source": "Openverse",
+        "license": "BY-SA 2.0"
+      }
+    },
+    {
+      "name": "スパイシートマトのチリスープ煮",
+      "genre": "エスニック",
+      "tool": "ビストロ",
+      "freeze": false,
+      "ingredients": [
+        "トマトジュース",
+        "チリパウダー",
+        "コンソメ",
+        "おろしにんにく",
+        "オリーブオイル"
+      ],
+      "steps": [
+        "ビストロの内鍋にトマトジュース450ml・水200ml・コンソメ小さじ2・おろしにんにく小さじ1を入れる",
+        "ビストロ：煮込みモード・かき混ぜあり・12分で加熱する",
+        "チリパウダーを子供用を取り分けた後に小さじ1/2〜1加えて混ぜ、保温5分（子供分は取り分けでマイルドに）",
+        "オリーブオイルをたらして完成。ごはんを入れてリゾット風にも"
+      ],
+      "time_minutes": 20,
+      "storage_note": "冷蔵4日（汁ごと保存）",
+      "storage": {
+        "recommended": "冷蔵",
+        "fridge": "4日",
+        "freezer": "3週間",
+        "note": "スープのみなので冷凍もOK。辛味は取り分け後に追加"
+      },
+      "source_url": "",
+      "image_query_ja": [
+        "トマトスープ",
+        "ミネストローネ"
+      ],
+      "search_keyword": "spicy tomato soup red bowl chili",
+      "image": "https://live.staticflickr.com/5135/5459569452_2659b312c7_b.jpg",
+      "image_credit": {
+        "photographer": "amadeusrecord",
+        "photographer_url": "https://www.flickr.com/photos/28023103@N06",
+        "unsplash_url": "https://www.flickr.com/photos/28023103@N06/5459569452",
+        "source": "Openverse",
+        "license": "BY-SA 2.0"
+      }
+    },
+    {
+      "name": "下味冷凍 スパイシーカレーポーク",
+      "genre": "エスニック",
+      "tool": "フライパン",
+      "freeze": true,
+      "ingredients": [
+        "豚こま切れ",
+        "カレー粉",
+        "チリパウダー",
+        "牛乳",
+        "ケチャップ",
+        "おろしにんにく",
+        "塩"
+      ],
+      "steps": [
+        "冷凍用保存袋にカレー粉大さじ1・チリパウダー小さじ1/2・牛乳大さじ3・ケチャップ大さじ2・おろしにんにく小さじ1・塩小さじ1/2を入れて混ぜる",
+        "豚こま切れ160gを加えてもみ込み、平らにして冷凍する（牛乳効果で肉がやわらかくなる）",
+        "前夜に冷蔵庫へ移して解凍する",
+        "フライパンに油大さじ1/2を中火で熱し、6〜7分焼く。子供が食べる分はチリパウダー抜きの袋を分けて作ると安心"
+      ],
+      "time_minutes": 12,
+      "storage_note": "下味冷凍3週間（解凍して焼くだけ）",
+      "storage": {
+        "recommended": "冷凍",
+        "fridge": "—",
+        "freezer": "3週間",
+        "note": "タンドリー風のミルクカレー漬け。解凍して焼くだけ"
+      },
+      "source_url": "",
+      "image_query_ja": [
+        "タンドリーチキン",
+        "カレー炒め"
+      ],
+      "search_keyword": "spiced curry pork grilled skillet",
+      "image": "https://live.staticflickr.com/10/13383570_ee3855d3fa.jpg",
+      "image_credit": {
+        "photographer": "Matsukin",
+        "photographer_url": "https://www.flickr.com/photos/82044395@N00",
+        "unsplash_url": "https://www.flickr.com/photos/82044395@N00/13383570",
+        "source": "Openverse",
+        "license": "BY 2.0"
+      }
+    },
+    {
+      "name": "ピーマンのガパオ風バジル炒め",
+      "genre": "エスニック",
+      "tool": "フライパン",
+      "freeze": false,
+      "ingredients": [
         "ピーマン",
         "バジル",
         "ナンプラー",
-        "オイスターソース"
+        "オイスターソース",
+        "砂糖",
+        "おろしにんにく"
       ],
       "steps": [
-        "鶏もも肉250gを粗みじんに刻む。玉ねぎ1/2個とピーマン2個も粗みじんにする",
-        "フライパンに油大さじ1を中火で熱し、鶏肉を3分炒めて色が変わったら玉ねぎ・ピーマンを加えて2分炒める",
-        "ナンプラー大さじ1.5・オイスターソース大さじ1・砂糖小さじ1を加えて汁気を飛ばすように炒める",
-        "火を止めて庭のバジル10枚をちぎって混ぜる。子供分はナンプラー控えめに取り分けてから味を強めてもよい",
-        "ご飯にのせ、好みで目玉焼きを添える（卵は当日焼く）"
+        "ピーマン1.5個分（約60g）を粗みじんに切る",
+        "フライパンに油大さじ1/2とおろしにんにく小さじ1/2を中火で熱し、ピーマンを2分炒める",
+        "ナンプラー小さじ2・オイスターソース小さじ1・砂糖小さじ1/2を加えて汁気を飛ばす",
+        "火を止めて庭のバジル8枚をちぎって混ぜる。ごはんにのせて目玉焼きを添えるとガパオ風に"
       ],
-      "time_minutes": 20,
-      "storage_note": "冷蔵4日（そぼろ状で保存）",
+      "time_minutes": 10,
+      "storage_note": "冷蔵4日",
+      "storage": {
+        "recommended": "冷蔵",
+        "fridge": "4日",
+        "freezer": "不可",
+        "note": "バジルの香りが飛ぶため冷凍不可"
+      },
+      "source_url": "",
       "image_query_ja": [
         "ガパオライス",
         "ガパオ"
       ],
-      "search_keyword": "thai basil chicken minced rice",
+      "search_keyword": "thai basil stir fry green pepper rice",
       "image": "https://live.staticflickr.com/4350/37305288896_d09b674dc9_b.jpg",
       "image_credit": {
         "photographer": "Tak H.",
@@ -470,119 +558,120 @@
         "unsplash_url": "https://www.flickr.com/photos/130229276@N07/37305288896",
         "source": "Openverse",
         "license": "BY-SA 2.0"
-      },
-      "storage": {
-        "recommended": "冷蔵",
-        "fridge": "4日",
-        "freezer": "3週間",
-        "note": "そぼろ状で冷凍可。1食分ずつ小分けが便利"
       }
     },
     {
-      "name": "下味冷凍 ヤンニョムチキン",
+      "name": "焼きねぎのナンプラーマリネ",
       "genre": "エスニック",
-      "tool": "フライパン",
-      "freeze": true,
+      "tool": "グリル",
+      "freeze": false,
       "ingredients": [
-        "鶏むね肉",
-        "コチュジャン",
-        "ケチャップ",
-        "醤油",
-        "はちみつ",
-        "にんにく",
-        "白ごま"
+        "長ねぎ",
+        "ナンプラー",
+        "酢",
+        "砂糖",
+        "チリパウダー"
       ],
       "steps": [
-        "鶏むね肉500gを一口大のそぎ切りにする",
-        "冷凍用保存袋にコチュジャン大さじ1・ケチャップ大さじ2・醤油大さじ1・はちみつ大さじ1・おろしにんにく小さじ1を入れて混ぜ、鶏肉を加えてもみ込み、平らにして冷凍",
-        "前夜に冷蔵庫へ移して解凍する",
-        "フライパンに油大さじ1を中火で熱し、袋の中身を並べて片面3分ずつ焼き、白ごまをふる。子供にはコチュジャンの辛味がごく弱い配合だが、心配なら先に取り分けてケチャップを絡める"
+        "長ねぎ2/3本を4cm幅に切り、グリル（またはトースター）で焼き目がつくまで7〜8分焼く",
+        "ナンプラー小さじ2・酢大さじ1.5・砂糖小さじ1・水大さじ1を混ぜたマリネ液に熱いうちに漬ける",
+        "大人はチリパウダー少々をふる。半日置くと味がなじむ"
       ],
-      "time_minutes": 15,
-      "storage_note": "下味冷凍3週間（解凍して焼くだけ）",
-      "image_query_ja": [
-        "ヤンニョムチキン"
-      ],
-      "search_keyword": "korean sweet spicy chicken glazed sesame",
-      "image": "https://live.staticflickr.com/65535/52046305393_5193c16027_b.jpg",
-      "image_credit": {
-        "photographer": "Norisa1",
-        "photographer_url": "https://www.flickr.com/photos/40781985@N08",
-        "unsplash_url": "https://www.flickr.com/photos/40781985@N08/52046305393",
-        "source": "Openverse",
-        "license": "BY 2.0"
-      },
+      "time_minutes": 12,
+      "storage_note": "冷蔵4日（漬けたまま保存）",
       "storage": {
-        "recommended": "冷凍",
-        "fridge": "—",
-        "freezer": "3週間",
-        "note": "下味冷凍。前夜に冷蔵庫で解凍して焼くだけ"
+        "recommended": "冷蔵",
+        "fridge": "4日",
+        "freezer": "不可",
+        "note": "焼きねぎの甘みとナンプラーの旨味。冷たいまま食べられる"
+      },
+      "source_url": "",
+      "image_query_ja": [
+        "焼きねぎのマリネ",
+        "ねぎマリネ"
+      ],
+      "search_keyword": "grilled leek marinated fish sauce",
+      "image": "https://live.staticflickr.com/8172/7927467076_099bf644d5.jpg",
+      "image_credit": {
+        "photographer": "kminiatures",
+        "photographer_url": "https://www.flickr.com/photos/30914129@N04",
+        "unsplash_url": "https://www.flickr.com/photos/30914129@N04/7927467076",
+        "source": "Openverse",
+        "license": "BY-NC-SA 2.0"
       }
     }
   ],
   "side": [
     {
-      "name": "にんじんとピーマンのきんぴら",
-      "tool": "フライパン",
-      "freeze": false,
-      "ingredients": [
-        "にんじん",
-        "ピーマン",
-        "ごま油",
-        "醤油",
-        "みりん",
-        "白ごま"
-      ],
-      "steps": [
-        "にんじん1本（約150g）とピーマン1個を細切りにする（ブレンダーの千切りアタッチメントを使うと早い）",
-        "フライパンにごま油大さじ1を中火で熱し、にんじんを2分、ピーマンを加えて1分炒める",
-        "醤油大さじ1.5・みりん大さじ1.5を加えて汁気がなくなるまで炒め、白ごまをふる"
-      ],
-      "time_minutes": 12,
-      "storage_note": "冷蔵5日",
-      "image_query_ja": [
-        "にんじんのきんぴら",
-        "きんぴら"
-      ],
-      "search_keyword": "julienned carrot soy sesame saute",
-      "image": "https://live.staticflickr.com/3669/10438309396_eb33e0d1e2.jpg",
-      "image_credit": {
-        "photographer": "is_kyoto_jp",
-        "photographer_url": "https://www.flickr.com/photos/47173486@N00",
-        "unsplash_url": "https://www.flickr.com/photos/47173486@N00/10438309396",
-        "source": "Openverse",
-        "license": "BY 2.0"
-      },
-      "storage": {
-        "recommended": "冷蔵",
-        "fridge": "5日",
-        "freezer": "3週間",
-        "note": "冷凍可。弁当用に小分け冷凍も"
-      }
-    },
-    {
-      "name": "自家製なめたけ",
+      "name": "ピーマンのおかか和え",
       "tool": "レンジ",
       "freeze": false,
       "ingredients": [
-        "えのき",
+        "ピーマン",
+        "かつお節",
+        "醤油",
+        "みりん",
+        "ごま油"
+      ],
+      "steps": [
+        "ピーマン1個を細切りにし、耐熱ボウルでラップをして600Wで1分半加熱する",
+        "水気を軽く切り、醤油小さじ2・みりん小さじ1・ごま油小さじ1/2で和える",
+        "かつお節ひとつかみを加えてさっくり混ぜる"
+      ],
+      "time_minutes": 6,
+      "storage_note": "冷蔵3〜4日",
+      "storage": {
+        "recommended": "冷蔵",
+        "fridge": "3〜4日",
+        "freezer": "不可",
+        "note": "かつお節が水気を吸って味がなじむ"
+      },
+      "source_url": "",
+      "image_query_ja": [
+        "ピーマンのおかか和え",
+        "おかか和え"
+      ],
+      "search_keyword": "green pepper bonito flakes tossed",
+      "image": "https://live.staticflickr.com/7347/9713248601_f77ae88ce4_b.jpg",
+      "image_credit": {
+        "photographer": "Kumiko Awa",
+        "photographer_url": "https://www.flickr.com/photos/15782973@N00",
+        "unsplash_url": "https://www.flickr.com/photos/15782973@N00/9713248601",
+        "source": "Openverse",
+        "license": "BY-NC 2.0"
+      }
+    },
+    {
+      "name": "エリンギの甘辛なめたけ風",
+      "tool": "レンジ",
+      "freeze": false,
+      "ingredients": [
+        "エリンギ",
         "醤油",
         "みりん",
         "酒",
         "酢"
       ],
       "steps": [
-        "えのき1袋（150g）の石づきを落とし、3等分に切ってほぐす",
-        "耐熱ボウルにえのき・醤油大さじ2・みりん大さじ2・酒大さじ1を入れ、ふんわりラップをして600Wで4分加熱する",
-        "取り出してよく混ぜ、さらに600Wで2分。とろみが出たら酢小さじ1を加えて混ぜ、冷まして保存瓶へ",
-        "ご飯・豆腐・卵かけご飯のトッピングに"
+        "エリンギ1/2パック（50g）を長さ半分の薄切りにして細く裂く",
+        "耐熱ボウルにエリンギ・醤油大さじ1.5・みりん大さじ1.5・酒大さじ1/2を入れ、ラップをして600Wで3分加熱する",
+        "よく混ぜてさらに600Wで1分半。とろみが出たら酢小さじ1/2を加えて冷ます",
+        "ごはん・冷奴・卵かけごはんのお供に"
       ],
-      "time_minutes": 10,
+      "time_minutes": 8,
       "storage_note": "冷蔵5日",
+      "storage": {
+        "recommended": "冷蔵",
+        "fridge": "5日",
+        "freezer": "3週間",
+        "note": "なめたけの要領でエリンギを甘辛に"
+      },
+      "source_url": "",
       "image_query_ja": [
-        "なめたけ"
+        "なめたけ",
+        "きのこの佃煮"
       ],
-      "search_keyword": "enoki mushroom soy simmered glossy jar",
+      "search_keyword": "mushroom soy simmered glossy jar",
       "image": "https://live.staticflickr.com/2484/3838245075_c077dce8a4_b.jpg",
       "image_credit": {
         "photographer": "giovanniscanavino",
@@ -590,87 +679,45 @@
         "unsplash_url": "https://www.flickr.com/photos/86365166@N00/3838245075",
         "source": "Openverse",
         "license": "BY 2.0"
-      },
-      "storage": {
-        "recommended": "冷蔵",
-        "fridge": "5日",
-        "freezer": "3週間",
-        "note": "冷凍可。使う分だけ取り出せる"
       }
     },
     {
-      "name": "味玉（半熟煮卵）",
-      "tool": "鍋",
+      "name": "自家製おかかふりかけ",
+      "tool": "フライパン",
       "freeze": false,
       "ingredients": [
-        "卵",
+        "かつお節",
+        "白ごま",
         "醤油",
         "みりん",
         "砂糖"
       ],
       "steps": [
-        "卵5個を沸騰した湯で7分ゆで、冷水にとって殻をむく",
-        "醤油大さじ4・みりん大さじ4・砂糖大さじ1・水大さじ4を小鍋でひと煮立ちさせて冷ます",
-        "保存袋に卵と漬けだれを入れ、空気を抜いて冷蔵庫へ。半日後から食べられる"
+        "フライパンにかつお節40gを入れ、弱火で1〜2分乾煎りする",
+        "醤油大さじ2・みりん大さじ1・砂糖大さじ1/2を加え、水分を飛ばしながらパラパラになるまで炒る",
+        "白ごま大さじ2を加えて混ぜ、冷まして保存容器へ。ごはん・おにぎり・和え物に"
       ],
-      "time_minutes": 15,
-      "storage_note": "冷蔵4日（漬けたまま保存）",
-      "image_query_ja": [
-        "味玉",
-        "煮卵"
-      ],
-      "search_keyword": "soft boiled egg soy marinated halved",
-      "image": "https://live.staticflickr.com/8538/8670538127_292e320ba2_b.jpg",
-      "image_credit": {
-        "photographer": "rhosoi",
-        "photographer_url": "https://www.flickr.com/photos/94637630@N00",
-        "unsplash_url": "https://www.flickr.com/photos/94637630@N00/8670538127",
-        "source": "Openverse",
-        "license": "BY 2.0"
-      },
+      "time_minutes": 8,
+      "storage_note": "冷蔵2週間",
       "storage": {
         "recommended": "冷蔵",
-        "fridge": "4日",
-        "freezer": "不可",
-        "note": "漬けたまま保存。卵のため冷凍不可"
-      }
-    },
-    {
-      "name": "蒸しキャベツのごまナムル",
-      "tool": "レンジ",
-      "freeze": false,
-      "ingredients": [
-        "キャベツ",
-        "ごま油",
-        "鶏がらスープの素",
-        "白ごま",
-        "塩"
-      ],
-      "steps": [
-        "キャベツ1/4個（約250g）をざく切りにし、耐熱ボウルに入れてふんわりラップをして600Wで4分加熱する",
-        "水気をしっかり絞り、ごま油大さじ1・鶏がらスープの素小さじ1・塩少々・白ごま大さじ1で和える",
-        "冷めたら保存容器へ。先週の余りキャベツの使い切りに"
-      ],
-      "time_minutes": 10,
-      "storage_note": "冷蔵3〜4日",
+        "fridge": "2週間",
+        "freezer": "1ヶ月",
+        "note": "花かつおの使い切りに。しっとり系ふりかけ"
+      },
+      "source_url": "",
       "image_query_ja": [
-        "キャベツのナムル",
-        "蒸しキャベツ"
+        "おかかふりかけ",
+        "ふりかけ"
       ],
-      "search_keyword": "steamed cabbage sesame tossed pale green",
-      "image": "https://live.staticflickr.com/1732/42135245244_1da91930d2.jpg",
+      "search_keyword": "bonito flakes rice seasoning homemade",
+      "image": "https://live.staticflickr.com/4050/4640942541_fdc36ca008_b.jpg",
       "image_credit": {
-        "photographer": "is_kyoto_jp",
-        "photographer_url": "https://www.flickr.com/photos/47173486@N00",
-        "unsplash_url": "https://www.flickr.com/photos/47173486@N00/42135245244",
+        "photographer": "TANAKA Juuyoh (田中十洋)",
+        "photographer_url": "https://www.flickr.com/photos/13910409@N05",
+        "unsplash_url": "https://www.flickr.com/photos/13910409@N05/4640942541",
         "source": "Openverse",
         "license": "BY 2.0"
-      },
-      "storage": {
-        "recommended": "冷蔵",
-        "fridge": "3〜4日",
-        "freezer": "不可",
-        "note": "加熱野菜で水が出るため冷凍不可"
       }
     }
   ]
