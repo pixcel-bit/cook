@@ -135,6 +135,11 @@ def fetch_wikimedia(query: str, exclude_urls: set | None = None) -> list[dict]:
         pages = (resp.json().get("query") or {}).get("pages") or {}
         results = []
         for p in pages.values():
+            # Commons search is FULL-TEXT (matches OCR text inside old scans,
+            # descriptions, etc.). Require the dish name in the file title so
+            # e.g. 1930s newspaper scans mentioning "ケチャップ" are rejected.
+            if query not in (p.get("title") or ""):
+                continue
             info = (p.get("imageinfo") or [{}])[0]
             url = info.get("thumburl") or info.get("url") or ""
             if not url or not IMG_EXT.search(url.split("?")[0]):
