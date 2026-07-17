@@ -601,94 +601,91 @@
       }
     },
     {
-      "name": "基本の肉じゃが",
+      "name": "豚こまと長ねぎのすき焼き風煮",
       "genre": "和",
       "tool": "ビストロ",
       "freeze": false,
       "ingredients": [
         "豚こま切れ",
-        "じゃがいも",
-        "にんじん",
-        "玉ねぎ",
+        "長ねぎ",
+        "エリンギ",
         "醤油",
         "みりん",
-        "酒",
         "砂糖",
-        "和風だし"
+        "酒"
       ],
       "steps": [
-        "じゃがいも5個（約600g）とにんじん1本（150g）は乱切り、玉ねぎ1個は1cm幅のくし切りにする。豚こま切れ300gは一口大に切る",
-        "ビストロの内鍋に野菜と豚肉を入れ、水200ml・醤油大さじ4・酒大さじ3・みりん大さじ3・砂糖大さじ3・和風だし小さじ2を加える",
-        "ビストロ：煮込みモード・かき混ぜあり・25分で加熱する",
-        "終了後すぐに蓋を開け、10分ほど置いて味を含ませる。煮汁ごと保存容器へ"
+        "長ねぎ1本を斜め切り、エリンギ1/2パック（50g）を薄切りにする。豚こま切れ250gは大きければ切る",
+        "ビストロの内鍋に材料を入れ、醤油大さじ3・みりん大さじ3・砂糖大さじ2・酒大さじ2・水100mlを加える",
+        "ビストロ：煮込みモード・かき混ぜあり・15分で加熱する",
+        "終了後すぐに蓋を開け、煮汁ごと保存容器へ。甘辛だれがねぎに染みて2日目がさらに美味しい"
       ],
-      "time_minutes": 35,
+      "time_minutes": 25,
       "storage_note": "冷蔵4日（汁ごと保存・温め直すだけ）",
       "storage": {
         "recommended": "冷蔵",
         "fridge": "4日",
-        "freezer": "不可",
-        "note": "じゃがいもは冷凍で食感が変わるため不可。味が染みて2日目が美味しい"
+        "freezer": "2週間",
+        "note": "汁ごと保存。溶き卵にくぐらせて食べても（卵がある週に）"
       },
-      "source_url": "https://www.kurashiru.com/recipes/82b3201b-29f4-4db9-9fbb-82a1ce16d247",
+      "source_url": "",
       "image_query_ja": [
-        "肉じゃが"
+        "すき焼き風煮",
+        "肉豆腐"
       ],
-      "search_keyword": "japanese meat potato stew simmered",
-      "image": "https://live.staticflickr.com/8340/8252209292_41df6fd3fd_b.jpg",
+      "search_keyword": "pork leek sweet soy simmered hot pot",
+      "image": "https://live.staticflickr.com/2019/2117326047_60348e0f6b_b.jpg",
       "image_credit": {
-        "photographer": "Mokiko - Bohnenhase",
-        "photographer_url": "https://www.flickr.com/photos/64111077@N08",
-        "unsplash_url": "https://www.flickr.com/photos/64111077@N08/8252209292",
+        "photographer": "ketou-daisuki",
+        "photographer_url": "https://www.flickr.com/photos/28764853@N00",
+        "unsplash_url": "https://www.flickr.com/photos/28764853@N00/2117326047",
         "source": "Openverse",
-        "license": "BY-NC-ND 2.0"
+        "license": "BY-SA 2.0"
       }
     },
     {
-      "name": "デミグラス煮込みハンバーグ",
+      "name": "ポークストロガノフ風トマトクリーム煮",
       "genre": "洋",
       "tool": "フライパン",
-      "freeze": true,
+      "freeze": false,
       "ingredients": [
-        "合いびき肉",
-        "玉ねぎ",
-        "卵",
-        "パン粉",
+        "豚こま切れ",
+        "エリンギ",
+        "小麦粉",
+        "トマトジュース",
         "牛乳",
-        "デミグラスソース",
-        "ケチャップ",
-        "お好みソース",
-        "バター",
-        "ナツメグ"
+        "ウスターソース",
+        "コンソメ",
+        "おろしにんにく",
+        "バター"
       ],
       "steps": [
-        "玉ねぎ1個をみじん切りにする。パン粉大さじ5を牛乳大さじ2.5でふやかす",
-        "合いびき肉500gに玉ねぎ・ふやかしたパン粉・溶き卵1個・塩こしょう・ナツメグ各少々を加え、粘りが出るまでこねて5個の小判型に成形する",
-        "1個ずつラップで包んで冷凍用保存袋へ入れ、成形済みのまま冷凍する（ここまでが作り置き）",
-        "食べる日は冷蔵解凍し、フライパンで両面に焼き色をつけて取り出す。同じフライパンにバター10g・デミグラスソース200g・ケチャップ大さじ4・お好みソース大さじ2・砂糖小さじ1を温め、ハンバーグを戻して中火で7〜8分煮込む",
-        "仕上げに牛乳大さじ1を回しかけるとまろやかになる"
+        "エリンギ1/2パック（50g）を薄切りにする。豚こま切れ250gを用意する",
+        "フライパンにバター20gを中火で溶かし、豚肉を炒め、火が通ったらエリンギを加えて炒める。小麦粉大さじ1.5をふり入れ粉気がなくなるまで炒める",
+        "トマトジュース300ml・水100ml・ウスターソース大さじ1（お好みソースでも可）・コンソメ小さじ2・砂糖小さじ2・おろしにんにく小さじ1を加え、中火で10分煮る",
+        "牛乳100mlを加えて沸騰直前まで温め、塩こしょうで調える。ごはんにかけて食べる"
       ],
-      "time_minutes": 30,
-      "storage_note": "成形冷凍3週間（当日焼いて煮込むだけ）",
+      "time_minutes": 25,
+      "storage_note": "冷蔵3〜4日",
       "storage": {
-        "recommended": "冷凍",
-        "fridge": "—",
-        "freezer": "3週間",
-        "note": "成形済み冷凍。前夜に冷蔵解凍→焼いて煮込む。ソースは当日調理"
+        "recommended": "冷蔵",
+        "fridge": "3〜4日",
+        "freezer": "不可",
+        "note": "牛乳入りのため冷凍不可。温め直しは弱火で"
       },
-      "source_url": "https://www.kurashiru.com/recipes/c7cb73ed-602b-453a-9969-a80465cfbe34",
+      "source_url": "https://www.kurashiru.com/recipes/abcf6a0a-c95f-42cc-97f3-fdb0ac75f1d0",
       "image_query_ja": [
-        "煮込みハンバーグ",
-        "ハンバーグ"
+        "ポークストロガノフ",
+        "ハヤシライス"
       ],
-      "search_keyword": "braised hamburger steak demi glace sauce",
-      "image": "https://live.staticflickr.com/1163/1099167146_26662d6f64_b.jpg",
+      "search_keyword": "pork stroganoff creamy tomato rice",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/CNTS-00130376520_%E9%9B%BB%E6%B0%A3%E5%8C%96%E5%AD%B8%E4%BE%BF%E8%A6%BD.pdf/page1-500px-CNTS-00130376520_%E9%9B%BB%E6%B0%A3%E5%8C%96%E5%AD%B8%E4%BE%BF%E8%A6%BD.pdf.jpg",
       "image_credit": {
-        "photographer": "yuichi.sakuraba",
-        "photographer_url": "https://www.flickr.com/photos/57085156@N00",
-        "unsplash_url": "https://www.flickr.com/photos/57085156@N00/1099167146",
-        "source": "Openverse",
-        "license": "BY-NC 2.0"
+        "photographer": "電氣化學協會 編纂",
+        "photographer_url": "https://commons.wikimedia.org/wiki/File:CNTS-00130376520_%E9%9B%BB%E6%B0%A3%E5%8C%96%E5%AD%B8%E4%BE%BF%E8%A6%BD.pdf",
+        "unsplash_url": "https://commons.wikimedia.org/wiki/File:CNTS-00130376520_%E9%9B%BB%E6%B0%A3%E5%8C%96%E5%AD%B8%E4%BE%BF%E8%A6%BD.pdf",
+        "source": "Wikimedia Commons",
+        "license": "Public domain"
       }
     }
   ],
@@ -812,43 +809,44 @@
       }
     },
     {
-      "name": "やみつき無限もやし",
-      "tool": "レンジ",
+      "name": "なすとピーマンの焼き浸し",
+      "tool": "フライパン",
       "freeze": false,
       "ingredients": [
-        "もやし",
-        "ツナ缶",
-        "ごま油",
-        "鶏がらスープの素",
-        "白ごま",
-        "塩こしょう"
+        "なす",
+        "ピーマン",
+        "めんつゆ",
+        "おろししょうが",
+        "すりごま",
+        "かつお節"
       ],
       "steps": [
-        "もやし1袋（200g）を耐熱ボウルに入れ、ふんわりラップをして600Wで3分加熱する",
-        "しっかり水気を切り、油を切ったツナ缶1缶・ごま油大さじ1・鶏がらスープの素小さじ1・塩こしょう少々で和える",
-        "白ごま大さじ1をふって完成。冷やすと味がなじむ"
+        "なす1本を大きめの乱切り、ピーマン1個も乱切りにする",
+        "フライパンに油大さじ2を中火で熱し、なすをしんなりするまで炒め、ピーマンを加えて塩こしょうしさっと炒める",
+        "めんつゆ50ml・水200ml・おろししょうが小さじ2・白すりごま小さじ1を混ぜた漬け地に熱いうちに漬け、粗熱が取れたら冷蔵庫で30分冷やす",
+        "食べるときにかつお節をのせる。冷たいままで美味しい"
       ],
-      "time_minutes": 6,
-      "storage_note": "冷蔵3〜4日",
+      "time_minutes": 15,
+      "storage_note": "冷蔵4日（漬けたまま保存）",
       "storage": {
         "recommended": "冷蔵",
-        "fridge": "3〜4日",
+        "fridge": "4日",
         "freezer": "不可",
-        "note": "水気をよく切るのが日持ちのコツ"
+        "note": "冷やすほど味が染みる。大人はラー油を少し垂らしても"
       },
-      "source_url": "",
+      "source_url": "https://www.kurashiru.com/recipes/b2dc6156-9ae1-4325-b0f0-3a118ff5d93f",
       "image_query_ja": [
-        "無限もやし",
-        "もやしナムル"
+        "なすとピーマンの焼き浸し",
+        "焼き浸し"
       ],
-      "search_keyword": "bean sprout tuna sesame tossed bowl",
-      "image": "https://live.staticflickr.com/7186/6812719272_3ea78295b5.jpg",
+      "search_keyword": "eggplant green pepper braised dashi chilled",
+      "image": "https://live.staticflickr.com/8174/7943298568_b488df8c30_b.jpg",
       "image_credit": {
-        "photographer": "omoon",
-        "photographer_url": "https://www.flickr.com/photos/94387617@N00",
-        "unsplash_url": "https://www.flickr.com/photos/94387617@N00/6812719272",
+        "photographer": "junkoko",
+        "photographer_url": "https://www.flickr.com/photos/34191106@N00",
+        "unsplash_url": "https://www.flickr.com/photos/34191106@N00/7943298568",
         "source": "Openverse",
-        "license": "BY-ND 2.0"
+        "license": "BY-NC 2.0"
       }
     }
   ]
