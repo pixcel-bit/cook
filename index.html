@@ -347,6 +347,44 @@
   [data-theme="market"] .rl-item, [data-theme="market"] .req-card, [data-theme="market"] .ing-details { border-radius: 20px; border-width: 2px; }
   [data-theme="market"] .meta-chip { border-width: 2px; }
   [data-theme="market"] .toast { background: #2f9e44; }
+
+  /* --- market 視認性チューニング（文字は濃く・装飾は薄く） --- */
+  html[data-theme="market"] { --ink: #20261f; --ink-soft: #4c584a; --ink-faint: #8a9786; --line: #d9e1d3; }
+  [data-theme="market"] .card { box-shadow: 0 2px 0 #e9f0e5; }
+  [data-theme="market"] .card-title { font-weight: 800; }
+  [data-theme="market"] .tag-main { background: #ffddd6; color: #a83218; }
+  [data-theme="market"] .tag-side { background: #d9efdc; color: #1f6b2d; }
+  [data-theme="market"] ol.r-steps li { font-size: 14px; }
+
+  /* ============ MOTION（控えめな遊び・視認性優先） ============ */
+  .card { transition: transform .18s ease-out, box-shadow .18s ease-out; }
+  @media (hover: hover) {
+    .card:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(60,45,25,.10); }
+    [data-theme="night"] .card:hover { box-shadow: 0 8px 22px rgba(0,0,0,.5); }
+  }
+  @keyframes cardIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+  .card.enter { animation: cardIn .38s ease-out backwards; }
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+  .card[open] .card-detail { animation: fadeDown .22s ease-out; }
+  .rl-detail.open { animation: fadeDown .22s ease-out; }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  .tab-content.active { animation: fadeIn .2s ease-out; }
+  .card-chevron, .rl-chev, .ing-chevron { transition: transform .2s ease-out; }
+  .rate-btn, .theme-chip, .mood-chip, .filter-chip, .adj-chip, .rl-act-btn, .btn-primary,
+  .btn-req-save, .btn-comment, .ing-add-btn, .rl-menu-btn, .hide-btn, .sr-lock, .rl-pri { transition: transform .12s ease-out, background .15s, border-color .15s, color .15s; }
+  .rate-btn:active, .theme-chip:active, .mood-chip:active, .filter-chip:active, .adj-chip:active,
+  .rl-act-btn:active, .btn-primary:active, .btn-req-save:active, .btn-comment:active,
+  .ing-add-btn:active, .rl-menu-btn:active, .sr-lock:active { transform: scale(.94); }
+  .rl-pri:active { transform: scale(1.25); }
+  @keyframes pop { 0% { transform: scale(1); } 45% { transform: scale(1.6); } 100% { transform: scale(1); } }
+  .rate-count.pop { display: inline-block; animation: pop .35s ease-out; }
+  .toast { transform: translateX(-50%) translateY(10px); transition: opacity .25s, transform .25s ease-out; }
+  .toast.show { transform: translateX(-50%) translateY(0); }
+  body { transition: background-color .3s ease, color .3s ease; }
+  .card, .rl-item, .req-card, .ing-details, .memo, .meta-chip, .tag, .tool, .stchip { transition-property: background-color, border-color, color, transform, box-shadow; transition-duration: .25s; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
 </style>
 <script>try{document.documentElement.dataset.theme=localStorage.getItem('app_theme')||'craft';}catch(e){document.documentElement.dataset.theme='craft';}</script>
 </head>
@@ -1121,6 +1159,11 @@ function rateRecipe(name, type) {
   }
   if (type==='good') { r.good_count++; captureRecipeDetail(r, name); } else r.bad_count++;
   updateRatingCounts();
+  document.querySelectorAll('.card[data-recipe]').forEach(card => {
+    if (card.dataset.recipe !== name) return;
+    const el = card.querySelector(type === 'good' ? '.good-count' : '.bad-count');
+    if (el) { el.classList.remove('pop'); void el.offsetWidth; el.classList.add('pop'); }
+  });
   renderRecipeList();
   queueSave();
 }
@@ -1335,6 +1378,11 @@ function renderMenu() {
       html += '</section>';
     }
     recipesEl.innerHTML = html;
+    // 控えめな時間差入場（初回描画のみ）
+    recipesEl.querySelectorAll('.card').forEach((c, i) => {
+      c.classList.add('enter');
+      c.style.animationDelay = Math.min(i * 45, 600) + 'ms';
+    });
   }
 
 
