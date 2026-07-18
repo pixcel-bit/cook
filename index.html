@@ -756,7 +756,6 @@ async function loadPrefs() {
     }
   } catch(e) { showToast('設定の読み込みに失敗しました'); }
   renderRecipeList();
-  updateRatingCounts();
   refreshAdjustBars();
   renderMenuExtras();
   initRequest();
@@ -954,8 +953,6 @@ function renderRecipeList() {
             : `<div class="rl-name">${esc(r.name)}</div>`
           }
           <div class="rl-sub">
-            <span class="rl-chip rl-good">👍 ${r.good_count}</span>
-            ${(r.super_count || 0) > 0 ? `<span class="rl-chip rl-super">🌟 ${r.super_count}</span>` : ''}
             ${badge}
           </div>
         </div>
@@ -1056,7 +1053,6 @@ function renderMenuExtras() {
   extras.forEach(it => { html += renderRecipeCard(it, it.type || 'main'); });
   html += '</section>';
   el.innerHTML = html;
-  updateRatingCounts();
   applyHiddenRecipes();
   refreshAdjustBars();
 }
@@ -1167,15 +1163,9 @@ function rateRecipe(name, type) {
     r = { id:uid(), name, priority:false, good_count:0, bad_count:0, comments:[], added_at:new Date().toISOString().slice(0,10), done_count:0, last_adopted_at:null };
     prefs.recipes.push(r);
   }
-  if (type==='good') { r.good_count++; captureRecipeDetail(r, name); }
+  if (type==='good') { r.good_count++; captureRecipeDetail(r, name); showToast('👍 いいねしました'); }
   else if (type==='super') { r.super_count = (r.super_count || 0) + 1; captureRecipeDetail(r, name); showToast('🌟 殿堂入りしました！'); }
   else r.bad_count++;
-  updateRatingCounts();
-  document.querySelectorAll('.card[data-recipe]').forEach(card => {
-    if (card.dataset.recipe !== name) return;
-    const el = card.querySelector(type === 'good' ? '.good-count' : type === 'super' ? '.super-count' : '.bad-count');
-    if (el) { el.classList.remove('pop'); void el.offsetWidth; el.classList.add('pop'); }
-  });
   renderRecipeList();
   queueSave();
 }
@@ -1268,17 +1258,6 @@ function updateAdjustDisplay(name) {
   renderRecipeList();
 }
 
-function updateRatingCounts() {
-  document.querySelectorAll('.card[data-recipe]').forEach(card => {
-    const r = prefs.recipes.find(x=>x.name===card.dataset.recipe);
-    if (r) {
-      const g = card.querySelector('.good-count');
-      if (g) g.textContent = r.good_count;
-      const s = card.querySelector('.super-count');
-      if (s) s.textContent = r.super_count || 0;
-    }
-  });
-}
 
 /* --- MENU DYNAMIC LOADING --- */
 async function loadMenu() {
@@ -1406,7 +1385,6 @@ function renderMenu() {
   if (footerEl) footerEl.textContent = `グリーンビーンズ ${dateLabel}配達分の食材で作成 ・ 週次作り置き献立`;
 
   // Apply rating counts and re-init leftovers
-  updateRatingCounts();
   applyHiddenRecipes();
   initLeftovers();
   renderMenuExtras();
@@ -1512,8 +1490,8 @@ function renderRecipeCard(r, type) {
       ${storageDetailHtml(r)}
       <div class="rating-bar">
         <span class="rating-label">RATING</span>
-        <button class="rate-btn good" onclick="rateRecipe('${nameEsc}','good')">👍 <span class="rate-count good-count">0</span></button>
-        <button class="rate-btn super" onclick="rateRecipe('${nameEsc}','super')" title="超いいね！殿堂入り">🌟 <span class="rate-count super-count">0</span></button>
+        <button class="rate-btn good" onclick="rateRecipe('${nameEsc}','good')">👍 いいね</button>
+        <button class="rate-btn super" onclick="rateRecipe('${nameEsc}','super')" title="超いいね！殿堂入り">🌟 超いいね</button>
       </div>
       ${popularityDetailHtml(r)}
       ${renderAdjustBar(r.name, adjs)}
