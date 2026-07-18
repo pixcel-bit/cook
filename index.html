@@ -668,6 +668,7 @@
   <div class="filter-row">
     <button class="filter-chip active" data-filter="all" onclick="setFilter('all',this)">すべて</button>
     <button class="filter-chip" data-filter="priority" onclick="setFilter('priority',this)">🔥 今週作りたい</button>
+    <button class="filter-chip" data-filter="super" onclick="setFilter('super',this)">🌟 殿堂入り</button>
     <button class="filter-chip" data-filter="new" onclick="setFilter('new',this)">未採用のみ</button>
   </div>
   <div class="rl-list" id="rl-list"></div>
@@ -919,7 +920,8 @@ function setFilter(f, btn) {
 
 function getFiltered() {
   if (activeFilter === 'priority') return prefs.recipes.filter(r => r.priority);
-  if (activeFilter === 'new') return prefs.recipes.filter(r => r.done_count === 0);
+  if (activeFilter === 'super') return prefs.recipes.filter(r => (r.super_count || 0) > 0);
+  if (activeFilter === 'new') return prefs.recipes.filter(r => !r.done_count);
   return prefs.recipes;
 }
 
@@ -953,6 +955,7 @@ function renderRecipeList() {
             : `<div class="rl-name">${esc(r.name)}</div>`
           }
           <div class="rl-sub">
+            ${(r.super_count || 0) > 0 ? '<span class="rl-chip rl-super">🌟 殿堂入り</span>' : ''}
             ${badge}
           </div>
         </div>
