@@ -378,6 +378,48 @@
         "saved_at": "2026-07-17",
         "lock": true
       }
+    },
+    {
+      "id": "mrq7ar6k01ig",
+      "name": "下味冷凍 豚の生姜焼き",
+      "priority": false,
+      "good_count": 1,
+      "bad_count": 0,
+      "comments": [],
+      "added_at": "2026-07-18",
+      "done_count": 0,
+      "last_adopted_at": null,
+      "recipe": {
+        "genre": "和",
+        "tool": "フライパン",
+        "freeze": true,
+        "ingredients": [
+          "豚こま切れ",
+          "おろししょうが",
+          "醤油",
+          "砂糖",
+          "酒",
+          "ごま油"
+        ],
+        "steps": [
+          "冷凍用保存袋におろししょうが大さじ2・醤油大さじ2.5・砂糖大さじ1.5・酒大さじ1.5を入れて混ぜる",
+          "豚こま切れ200gを加えてよくもみ込み、平らにならして空気を抜き冷凍する",
+          "前夜に冷蔵庫へ移して解凍する",
+          "フライパンにごま油大さじ1を中火で熱し、袋の中身をほぐしながら8〜10分、肉に火が通り照りが出るまで炒める"
+        ],
+        "time_minutes": 15,
+        "storage_note": "下味冷凍3週間（解凍して焼くだけ）",
+        "storage": {
+          "recommended": "冷凍",
+          "fridge": "—",
+          "freezer": "3週間",
+          "note": "前夜に冷蔵庫で解凍して焼くだけ"
+        },
+        "search_keyword": "pork ginger soy stir fry glazed",
+        "source_url": "https://www.kurashiru.com/recipes/caca5b5e-309a-4611-b7b5-a122037857c9",
+        "saved_at": "2026-07-18",
+        "lock": true
+      }
     }
   ],
   "weekly_request": {
