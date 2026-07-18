@@ -420,6 +420,51 @@
         "saved_at": "2026-07-18",
         "lock": true
       }
+    },
+    {
+      "id": "mrq8zypo2b58",
+      "name": "香味だれ油淋鶏",
+      "priority": false,
+      "good_count": 1,
+      "bad_count": 0,
+      "comments": [],
+      "added_at": "2026-07-18",
+      "done_count": 0,
+      "last_adopted_at": null,
+      "recipe": {
+        "genre": "中",
+        "tool": "フライパン",
+        "freeze": false,
+        "ingredients": [
+          "鶏もも肉",
+          "長ねぎ",
+          "しょうが",
+          "片栗粉",
+          "醤油",
+          "酢",
+          "砂糖",
+          "はちみつ",
+          "ごま油"
+        ],
+        "steps": [
+          "鶏もも肉角切り200gに酒小さじ1・醤油小さじ1をもみ込み15分置く",
+          "長ねぎ1/3本としょうが1片をみじん切りにし、醤油大さじ1.5・酢大さじ2・砂糖大さじ1.5・はちみつ小さじ1・水大さじ1.5・ごま油大さじ1と合わせて香味だれを作る",
+          "肉の水気を拭いて片栗粉大さじ3をまぶし、フライパンに1cmの油を170℃に熱して4分、返して3分揚げ焼きにする",
+          "油を切って保存。香味だれは別容器で保存し、食べる直前にかける"
+        ],
+        "time_minutes": 30,
+        "storage_note": "冷蔵4日（たれ別保存）",
+        "storage": {
+          "recommended": "冷蔵",
+          "fridge": "4日",
+          "freezer": "3週間",
+          "note": "揚げた肉のみ冷凍可。たれは冷蔵で別保存し食べる時にかける"
+        },
+        "search_keyword": "chinese fried chicken scallion sauce crispy",
+        "source_url": "https://www.kurashiru.com/recipes/1edfd8ab-0afb-4601-9cb6-bfc5f3eee006",
+        "saved_at": "2026-07-18",
+        "lock": true
+      }
     }
   ],
   "weekly_request": {
