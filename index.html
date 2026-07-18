@@ -88,6 +88,11 @@
   .storage-chips { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px; }
   .stchip { font-size: 11.5px; font-weight: 700; border: 1px solid var(--line); border-radius: 6px; padding: 2px 8px; color: var(--ink-soft); background: var(--paper); white-space: nowrap; }
   .stchip.rec { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .stchip.pop { background: #fdeef0; border-color: #f2c6cd; color: #c2445c; }
+  [data-theme="night"] .stchip.pop { background: #362026; border-color: #5c3540; color: #e8899c; }
+  [data-theme="editorial"] .stchip.pop { background: #fff; border: 1px solid #c2445c; border-radius: 0; }
+  .pop-detail { font-size: 12px; color: #c2445c; margin-top: 10px; font-weight: 700; }
+  [data-theme="night"] .pop-detail { color: #e8899c; }
   .storage-box { margin-top: 12px; background: var(--paper); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; }
   .stor-row { display: flex; align-items: center; gap: 8px; font-size: 13px; padding: 3px 0; color: var(--ink-soft); }
   .stor-row.rec { color: var(--ink); font-weight: 700; }
@@ -1406,16 +1411,33 @@ function getRecipeCredit(r) {
   return null;
 }
 
+// クラシル保存数のコンパクト表記（102345 → 10.2万）
+function fmtPop(n) {
+  if (n >= 10000) { const v = n / 10000; return (v >= 10 ? Math.round(v) : v.toFixed(1)) + '万'; }
+  return n.toLocaleString();
+}
+
 // Compact fridge/freezer badges shown under the dish name (always visible).
 // Recommended method is filled with the accent colour.
 function storageChipHtml(r) {
+  const pop = r.popularity && r.popularity.bookmark_count
+    ? `<span class="stchip pop">❤️ ${fmtPop(r.popularity.bookmark_count)}</span>` : '';
   const s = r.storage;
-  if (!s) return `<div class="card-desc">${esc(r.storage_note || '')}</div>`;
+  if (!s) return `<div class="card-desc">${esc(r.storage_note || '')}</div>` + (pop ? `<div class="storage-chips">${pop}</div>` : '');
   const recFridge = s.recommended === '冷蔵';
   return `<div class="storage-chips">
     <span class="stchip${recFridge ? ' rec' : ''}">🧊 冷蔵${esc(s.fridge || '—')}</span>
     <span class="stchip${!recFridge ? ' rec' : ''}">❄️ 冷凍${esc(s.freezer || '—')}</span>
+    ${pop}
   </div>`;
+}
+
+// 展開時の人気度詳細（保存数・星・評価数）
+function popularityDetailHtml(r) {
+  const p = r.popularity;
+  if (!p || !p.bookmark_count) return '';
+  const star = p.rating_value ? ` ・ ⭐${p.rating_value}${p.rating_count ? `（${p.rating_count.toLocaleString()}件）` : ''}` : '';
+  return `<div class="pop-detail">❤️ クラシルで${fmtPop(p.bookmark_count)}人が保存${star}</div>`;
 }
 
 // Full storage block in the expanded detail, with an explicit 推奨 badge.
@@ -1482,6 +1504,7 @@ function renderRecipeCard(r, type) {
         <span class="rating-label">RATING</span>
         <button class="rate-btn good" onclick="rateRecipe('${nameEsc}','good')">👍 <span class="rate-count good-count">0</span></button>
       </div>
+      ${popularityDetailHtml(r)}
       ${renderAdjustBar(r.name, adjs)}
       ${sourceHtml}${creditHtml}
     </div>

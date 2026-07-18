@@ -302,6 +302,7 @@ WebSearch で **クラシル（kurashiru.com）** と **白ごはん.com（sirog
    python3 scripts/kurashiru_rank.py <URL1> <URL2> ...
    ```
    → 各レシピの `bookmark_count`（保存数）・`rating_value`（星）・`rating_count`（評価数）を**保存数の多い順**で返す
+   ※ **採用した料理の数値は menu.json の `popularity` フィールドにそのまま記録する**（アプリがカードに「❤️保存数・⭐星」を表示する）。クラシル以外の料理は `popularity` を付けない
 2. 各枠は原則、**保存数の多い候補から選ぶ**（人気メニューを定量的に優先）
 3. **品質ゲート**：`rating_value < 4.2` は人気でも避ける。`rating_count` が極端に少ない（例：30未満）ものは数値の信頼性が低いので過信しない
 4. **バリエーション優先**：Step4の「調理法が偏らない」要件は人気度より優先。保存数が拮抗したら調理法・食材が被らない方を選ぶ
@@ -433,6 +434,7 @@ python3 scripts/kurashiru_recipe.py <レシピURL>
       "time_minutes": 20,
       "storage": { "recommended": "冷蔵", "fridge": "3日", "freezer": "2週間", "note": "" },
       "source_url": "https://www.kurashiru.com/recipes/...（出典・選定段階で控えたURL。無ければ空）",
+      "popularity": { "bookmark_count": 99624, "rating_value": 4.41, "rating_count": 1896 },
       "image_query_ja": "日本語の一般料理名（Openverse/Wikimedia検索用）",
       "search_keyword": "英語の料理検索キーワード（Unsplashフォールバック用）",
       "image": "（fetch_pexels.pyが設定）",
@@ -449,6 +451,7 @@ python3 scripts/kurashiru_recipe.py <レシピURL>
       "time_minutes": 10,
       "storage": { "recommended": "冷蔵", "fridge": "4日", "freezer": "不可", "note": "" },
       "source_url": "https://www.kurashiru.com/recipes/...（出典・選定段階で控えたURL。無ければ空）",
+      "popularity": { "bookmark_count": 99624, "rating_value": 4.41, "rating_count": 1896 },
       "image_query_ja": "日本語の一般料理名（Openverse/Wikimedia検索用）",
       "search_keyword": "英語の料理検索キーワード（Unsplashフォールバック用）",
       "image": "（fetch_pexels.pyが設定）",

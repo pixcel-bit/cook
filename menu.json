@@ -54,6 +54,11 @@
         "unsplash_url": "https://www.flickr.com/photos/66035780@N00/10373815236",
         "source": "Openverse",
         "license": "BY-NC 2.0"
+      },
+      "popularity": {
+        "bookmark_count": 28690,
+        "rating_value": 4.54,
+        "rating_count": 466
       }
     },
     {
@@ -179,6 +184,11 @@
         "unsplash_url": "https://unsplash.com/photos/a-plate-of-food-89Hen-akO2Y",
         "source": "Unsplash",
         "license": ""
+      },
+      "popularity": {
+        "bookmark_count": 9955,
+        "rating_value": 4.29,
+        "rating_count": 173
       }
     },
     {
@@ -261,6 +271,11 @@
         "unsplash_url": "https://www.flickr.com/photos/32539604@N00/6835115469",
         "source": "Openverse",
         "license": "BY-SA 2.0"
+      },
+      "popularity": {
+        "bookmark_count": 2687,
+        "rating_value": 4.28,
+        "rating_count": 72
       }
     },
     {
@@ -305,6 +320,11 @@
         "unsplash_url": "https://www.flickr.com/photos/34619662@N00/3703349235",
         "source": "Openverse",
         "license": "BY-NC-SA 2.0"
+      },
+      "popularity": {
+        "bookmark_count": 99624,
+        "rating_value": 4.41,
+        "rating_count": 1896
       }
     },
     {
@@ -349,6 +369,11 @@
         "unsplash_url": "https://www.flickr.com/photos/92203585@N00/8123997901",
         "source": "Openverse",
         "license": "BY 2.0"
+      },
+      "popularity": {
+        "bookmark_count": 52526,
+        "rating_value": 4.68,
+        "rating_count": 1016
       }
     },
     {
@@ -686,6 +711,11 @@
         "unsplash_url": "https://www.flickr.com/photos/76626958@N00/3037133451",
         "source": "Openverse",
         "license": "BY-NC-SA 2.0"
+      },
+      "popularity": {
+        "bookmark_count": 781,
+        "rating_value": 4.48,
+        "rating_count": 34
       }
     },
     {
@@ -730,6 +760,11 @@
         "unsplash_url": "https://www.flickr.com/photos/64111077@N08/8252209292",
         "source": "Openverse",
         "license": "BY-NC-ND 2.0"
+      },
+      "popularity": {
+        "bookmark_count": 90344,
+        "rating_value": 4.59,
+        "rating_count": 1767
       }
     }
   ],
@@ -891,6 +926,11 @@
         "unsplash_url": "https://www.flickr.com/photos/34191106@N00/7943298568",
         "source": "Openverse",
         "license": "BY-NC 2.0"
+      },
+      "popularity": {
+        "bookmark_count": 32890,
+        "rating_value": 4.37,
+        "rating_count": 703
       }
     }
   ]
