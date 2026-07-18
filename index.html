@@ -126,6 +126,10 @@
   .rate-btn { display: flex; align-items: center; gap: 5px; background: var(--paper); border: 1px solid var(--line); border-radius: 20px; padding: 5px 14px; font-size: 13px; cursor: pointer; font-family: inherit; color: var(--ink-soft); transition: all 0.15s; }
   .rate-btn:hover { border-color: var(--accent); }
   .rate-btn.good:hover { background: #eef4e8; border-color: #5a8a3a; color: #3a6a1a; }
+  .rate-btn.super:hover { background: #fdf6e0; border-color: #d4a017; color: #a07408; }
+  .rl-super { background: #fdf6e0; color: #a07408; }
+  [data-theme="night"] .rate-btn.super:hover { background: #332c18; border-color: #8a6d1f; color: #e8c96a; }
+  [data-theme="night"] .rl-super { background: #332c18; color: #e8c96a; }
   .rate-btn.bad:hover { background: #f4e8e8; border-color: #a03a3a; color: #7a2020; }
   .rate-count { font-size: 12px; font-weight: 700; }
   .memo { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 17px 19px; }
@@ -951,6 +955,7 @@ function renderRecipeList() {
           }
           <div class="rl-sub">
             <span class="rl-chip rl-good">👍 ${r.good_count}</span>
+            ${(r.super_count || 0) > 0 ? `<span class="rl-chip rl-super">🌟 ${r.super_count}</span>` : ''}
             ${badge}
           </div>
         </div>
@@ -1162,11 +1167,13 @@ function rateRecipe(name, type) {
     r = { id:uid(), name, priority:false, good_count:0, bad_count:0, comments:[], added_at:new Date().toISOString().slice(0,10), done_count:0, last_adopted_at:null };
     prefs.recipes.push(r);
   }
-  if (type==='good') { r.good_count++; captureRecipeDetail(r, name); } else r.bad_count++;
+  if (type==='good') { r.good_count++; captureRecipeDetail(r, name); }
+  else if (type==='super') { r.super_count = (r.super_count || 0) + 1; captureRecipeDetail(r, name); showToast('🌟 殿堂入りしました！'); }
+  else r.bad_count++;
   updateRatingCounts();
   document.querySelectorAll('.card[data-recipe]').forEach(card => {
     if (card.dataset.recipe !== name) return;
-    const el = card.querySelector(type === 'good' ? '.good-count' : '.bad-count');
+    const el = card.querySelector(type === 'good' ? '.good-count' : type === 'super' ? '.super-count' : '.bad-count');
     if (el) { el.classList.remove('pop'); void el.offsetWidth; el.classList.add('pop'); }
   });
   renderRecipeList();
@@ -1265,7 +1272,10 @@ function updateRatingCounts() {
   document.querySelectorAll('.card[data-recipe]').forEach(card => {
     const r = prefs.recipes.find(x=>x.name===card.dataset.recipe);
     if (r) {
-      card.querySelector('.good-count').textContent = r.good_count;
+      const g = card.querySelector('.good-count');
+      if (g) g.textContent = r.good_count;
+      const s = card.querySelector('.super-count');
+      if (s) s.textContent = r.super_count || 0;
     }
   });
 }
@@ -1503,6 +1513,7 @@ function renderRecipeCard(r, type) {
       <div class="rating-bar">
         <span class="rating-label">RATING</span>
         <button class="rate-btn good" onclick="rateRecipe('${nameEsc}','good')">👍 <span class="rate-count good-count">0</span></button>
+        <button class="rate-btn super" onclick="rateRecipe('${nameEsc}','super')" title="超いいね！殿堂入り">🌟 <span class="rate-count super-count">0</span></button>
       </div>
       ${popularityDetailHtml(r)}
       ${renderAdjustBar(r.name, adjs)}

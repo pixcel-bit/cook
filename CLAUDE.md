@@ -85,6 +85,7 @@
 - `weekly_request.moods`・`weekly_request.note`：今週のリクエスト
 - `recipes[]` で `bad_count > 0`：除外メニュー
 - `recipes[]` で `priority === true`：優先メニュー
+- `recipes[]` で `super_count > 0`：**殿堂入り（超いいね）**。家族の特別なお気に入り。食材が合う週は**積極的に候補へ入れて再登場させてよい**（ただし前週との意味的重複除外は通常どおり適用。優先度は priority > 殿堂入り > 通常）
 - `family.child_birthdate`：子供の生年月日（実行時点で月齢を自動計算）
 
 ### 4. 常備ハーブ
