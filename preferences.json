@@ -8,25 +8,6 @@
   ],
   "recipes": [
     {
-      "id": "mqaglsjf9tom",
-      "name": "豚こまと野菜の生姜焼き",
-      "priority": false,
-      "good_count": 1,
-      "bad_count": 0,
-      "comments": [],
-      "added_at": "2026-06-12",
-      "done_count": 1,
-      "last_adopted_at": null,
-      "photo_url": "https://live.staticflickr.com/7854/44730672370_c69ee8f214_b.jpg",
-      "photo_credit": {
-        "photographer": "arty822",
-        "photographer_url": "https://www.flickr.com/photos/65642063@N04",
-        "unsplash_url": "https://www.flickr.com/photos/65642063@N04/44730672370",
-        "source": "Openverse",
-        "license": "BY-NC-SA 2.0"
-      }
-    },
-    {
       "id": "mqbx2hlyin4u",
       "name": "鶏むねのトマト煮込み",
       "priority": false,
