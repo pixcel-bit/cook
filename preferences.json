@@ -185,58 +185,6 @@
       }
     },
     {
-      "id": "mrahpl4bqfpb",
-      "name": "鶏もも肉とキャベツのスパイシーカレースープ煮",
-      "priority": false,
-      "good_count": 1,
-      "bad_count": 0,
-      "comments": [],
-      "added_at": "2026-07-07",
-      "done_count": 1,
-      "last_adopted_at": null,
-      "recipe": {
-        "genre": "エスニック",
-        "tool": "ビストロ",
-        "freeze": false,
-        "ingredients": [
-          "鶏もも肉",
-          "キャベツ",
-          "玉ねぎ",
-          "にんにく",
-          "しょうが",
-          "カレー粉",
-          "トマトジュース",
-          "コンソメ",
-          "塩"
-        ],
-        "steps": [
-          "鶏もも肉500gを一口大に切り、キャベツ1/4個（約250g）をざく切り、玉ねぎ1個をくし切り、にんにく2片・しょうが1片をみじん切りにする",
-          "ビストロに鶏もも肉・玉ねぎ・にんにく・しょうが・カレー粉大さじ1.5・トマトジュース200ml・水200ml・コンソメ1個・塩小さじ1/2を入れる",
-          "圧力調理・高圧・20分 → 加圧終了後10分自然放置してから蓋を開ける",
-          "キャベツを加え、煮込みモード・10分で仕上げる"
-        ],
-        "time_minutes": 45,
-        "storage_note": "冷蔵4日",
-        "search_keyword": "indian chicken cabbage curry soup pot spiced",
-        "saved_at": "2026-07-07",
-        "lock": false
-      },
-      "adjustments": [
-        {
-          "text": "もっと濃く",
-          "created_at": "2026-07-07"
-        }
-      ],
-      "photo_url": "https://images.unsplash.com/photo-1631292784640-2b24be784d5d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjBjaGlja2VuJTIwY2FiYmFnZSUyMGN1cnJ5JTIwc291cCUyMHBvdCUyMHNwaWNlZHxlbnwwfDJ8fHwxNzgzNTg0NDEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "photo_credit": {
-        "photographer": "Sushmita Chatterjee",
-        "photographer_url": "https://unsplash.com/@sheclicks",
-        "unsplash_url": "https://unsplash.com/photos/black-ceramic-bowl-with-vegetable-dish-Xnb826JWdDI",
-        "source": "Unsplash",
-        "license": ""
-      }
-    },
-    {
       "id": "19f5125f269a93e",
       "name": "ささみとトマトの南蛮漬け",
       "priority": false,
