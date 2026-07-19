@@ -1033,6 +1033,9 @@ function addToMenu(name) {
     image: r.photo_url || '', image_credit: r.photo_credit || {},
     type: ['和','洋','中','エスニック'].includes(genre) ? 'main' : 'side'
   }];
+  // 今週の献立入り＝採用として記録（配達日ごとに冪等）
+  const dd = (menuData && menuData.delivery_date) || new Date().toISOString().slice(0, 10);
+  if (r.last_adopted_at !== dd) { r.last_adopted_at = dd; r.done_count = (r.done_count || 0) + 1; }
   queueSave();
   renderMenuExtras();
   renderRecipeList();
@@ -1169,10 +1172,11 @@ function rateRecipe(name, type) {
   if (type==='good') { r.good_count++; captureRecipeDetail(r, name); showToast('👍 いいねしました'); }
   else if (type==='super') { r.super_count = (r.super_count || 0) + 1; captureRecipeDetail(r, name); showToast('🌟 殿堂入りしました！'); }
   else r.bad_count++;
-  // 生成後に👍された料理は update_prefs の採用記録に乗らないため、
-  // 今週の献立にある料理ならここで採用を刻む（配達日ごとに冪等）
-  const dd = menuData && menuData.delivery_date;
-  if (type !== 'bad' && dd && isInThisWeek(name) && r.last_adopted_at !== dd) {
+  // 👍/🌟はメニューカード上でしか押せない＝押した時点でその料理は献立に
+  // 採用されている。生成後のいいねはupdate_prefsの採用記録に乗らないため、
+  // ここで必ず採用を刻む（配達日ごとに冪等）
+  const dd = (menuData && menuData.delivery_date) || new Date().toISOString().slice(0, 10);
+  if (type !== 'bad' && r.last_adopted_at !== dd) {
     r.last_adopted_at = dd;
     r.done_count = (r.done_count || 0) + 1;
   }

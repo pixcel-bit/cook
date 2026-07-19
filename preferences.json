@@ -15,7 +15,7 @@
       "bad_count": 0,
       "comments": [],
       "added_at": "2026-06-12",
-      "done_count": 0,
+      "done_count": 1,
       "last_adopted_at": null,
       "photo_url": "https://live.staticflickr.com/7854/44730672370_c69ee8f214_b.jpg",
       "photo_credit": {
@@ -34,7 +34,7 @@
       "bad_count": 0,
       "comments": [],
       "added_at": "2026-06-13",
-      "done_count": 0,
+      "done_count": 1,
       "last_adopted_at": null,
       "photo_url": "https://images.unsplash.com/photo-1708782344071-35ed44b849a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHwlRTklQjYlOEYlRTMlODIlODAlRTMlODElQUQlRTMlODElQUUlRTMlODMlODglRTMlODMlOUUlRTMlODMlODglRTclODUlQUUlRTglQkUlQkMlRTMlODElQkZ8ZW58MHwyfHx8MTc4MzU4NDYxNnww&ixlib=rb-4.1.0&q=80&w=1080",
       "photo_credit": {
@@ -72,7 +72,7 @@
       "bad_count": 0,
       "comments": [],
       "added_at": "2026-06-22",
-      "done_count": 0,
+      "done_count": 1,
       "last_adopted_at": null,
       "photo_url": "https://images.unsplash.com/photo-1733139496834-0c5da2d1aa59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHwlRTYlODklOEIlRTclQkUlQkQlRTUlODUlODMlRTMlODElQTglRTUlOEQlQjUlRTMlODElQUUlRTMlODElOTUlRTMlODElQTMlRTMlODElQjElRTMlODIlOEElRTclODUlQUV8ZW58MHwyfHx8MTc4MzU4NDYyMHww&ixlib=rb-4.1.0&q=80&w=1080",
       "photo_credit": {
@@ -91,7 +91,7 @@
       "bad_count": 0,
       "comments": [],
       "added_at": "2026-06-27",
-      "done_count": 0,
+      "done_count": 1,
       "last_adopted_at": null,
       "photo_url": "https://images.unsplash.com/photo-1739785938383-c1b22b702c3a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxtdXNocm9vbSUyMHRyaW8lMjBtYXJpbmF0ZWQlMjBzaGlzbyUyMGhlcmIlMjBzZXNhbWUlMjBkYXJrfGVufDB8Mnx8fDE3ODI2MDQ2ODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "photo_credit": {
@@ -108,8 +108,8 @@
       "bad_count": 0,
       "comments": [],
       "added_at": "2026-06-28",
-      "done_count": 0,
-      "last_adopted_at": null,
+      "done_count": 1,
+      "last_adopted_at": "2026-07-02",
       "photo_url": "https://live.staticflickr.com/3532/3217081785_1da16e3297_b.jpg",
       "photo_credit": {
         "photographer": "avlxyz",
@@ -127,7 +127,7 @@
       "bad_count": 0,
       "comments": [],
       "added_at": "2026-06-28",
-      "done_count": 0,
+      "done_count": 1,
       "last_adopted_at": null,
       "photo_url": "https://images.unsplash.com/photo-1736283236938-46741e97a016?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODUyNTJ8MHwxfHNlYXJjaHwxfHxjaGlja2VuJTIwbWVhdGJhbGwlMjBza2V3ZXIlMjBncmlsbGVkJTIwZ2xhemVkJTIwY2FyYW1lbGl6ZWR8ZW58MHwyfHx8MTc4Mjk2Mzg2NXww&ixlib=rb-4.1.0&q=80&w=1080",
       "photo_credit": {
@@ -144,7 +144,7 @@
       "bad_count": 0,
       "comments": [],
       "added_at": "2026-07-07",
-      "done_count": 0,
+      "done_count": 1,
       "last_adopted_at": null,
       "recipe": {
         "genre": "中",
@@ -192,7 +192,7 @@
       "bad_count": 0,
       "comments": [],
       "added_at": "2026-07-07",
-      "done_count": 0,
+      "done_count": 1,
       "last_adopted_at": null,
       "recipe": {
         "genre": "エスニック",
@@ -244,8 +244,8 @@
       "bad_count": 0,
       "comments": [],
       "added_at": "2026-07-11",
-      "done_count": 0,
-      "last_adopted_at": null,
+      "done_count": 1,
+      "last_adopted_at": "2026-07-11",
       "recipe": {
         "genre": "和",
         "tool": "フライパン",
@@ -301,7 +301,7 @@
       "bad_count": 0,
       "comments": [],
       "added_at": "2026-07-17",
-      "done_count": 0,
+      "done_count": 1,
       "last_adopted_at": null,
       "recipe": {
         "genre": "中",
@@ -344,7 +344,7 @@
       "bad_count": 0,
       "comments": [],
       "added_at": "2026-07-17",
-      "done_count": 0,
+      "done_count": 1,
       "last_adopted_at": null,
       "recipe": {
         "genre": "エスニック",
