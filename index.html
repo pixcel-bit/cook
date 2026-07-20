@@ -1419,11 +1419,19 @@ function fmtPop(n) {
   return n.toLocaleString();
 }
 
+// 人気度チップを出す下限（保存数）。これ未満は「人気の裏付けが弱い」ため非表示にし、
+// カード間の数字のブレ（10万と200が並ぶ等）をなくす。生成側(CLAUDE.md B)と揃える。
+const POP_MIN = 5000;
+function popCount(r) {
+  const n = r && r.popularity && r.popularity.bookmark_count;
+  return (typeof n === 'number' && n >= POP_MIN) ? n : 0;
+}
+
 // Compact fridge/freezer badges shown under the dish name (always visible).
 // Recommended method is filled with the accent colour.
 function storageChipHtml(r) {
-  const pop = r.popularity && r.popularity.bookmark_count
-    ? `<span class="stchip pop">❤️ ${fmtPop(r.popularity.bookmark_count)}</span>` : '';
+  const pc = popCount(r);
+  const pop = pc ? `<span class="stchip pop">❤️ ${fmtPop(pc)}</span>` : '';
   const s = r.storage;
   if (!s) return `<div class="card-desc">${esc(r.storage_note || '')}</div>` + (pop ? `<div class="storage-chips">${pop}</div>` : '');
   const recFridge = s.recommended === '冷蔵';
@@ -1437,9 +1445,10 @@ function storageChipHtml(r) {
 // 展開時の人気度詳細（保存数・星・評価数）
 function popularityDetailHtml(r) {
   const p = r.popularity;
-  if (!p || !p.bookmark_count) return '';
+  const pc = popCount(r);
+  if (!pc) return '';
   const star = p.rating_value ? ` ・ ⭐${p.rating_value}${p.rating_count ? `（${p.rating_count.toLocaleString()}件）` : ''}` : '';
-  return `<div class="pop-detail">❤️ クラシルで${fmtPop(p.bookmark_count)}人が保存${star}</div>`;
+  return `<div class="pop-detail">❤️ クラシルで${fmtPop(pc)}人が保存${star}</div>`;
 }
 
 // Full storage block in the expanded detail, with an explicit 推奨 badge.
