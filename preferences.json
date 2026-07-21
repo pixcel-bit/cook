@@ -398,7 +398,7 @@
     },
     {
       "id": "mrxnanban0417",
-      "name": "鶏むねの甘酢だれチキン（タルタルなし）",
+      "name": "鶏むねの甘酢だれ焼き",
       "priority": false,
       "good_count": 1,
       "bad_count": 0,
@@ -441,6 +441,14 @@
         "source_url": "https://oceans-nadia.com/user/484627/recipe/417875",
         "saved_at": "2026-07-21",
         "lock": true
+      },
+      "photo_url": "https://live.staticflickr.com/8519/8607977221_b8216dea56_b.jpg",
+      "photo_credit": {
+        "photographer": "tatsuya.fukata",
+        "photographer_url": "https://www.flickr.com/photos/45259648@N06",
+        "unsplash_url": "https://www.flickr.com/photos/45259648@N06/8607977221",
+        "source": "Openverse",
+        "license": "BY-NC-ND 2.0"
       }
     }
   ],
