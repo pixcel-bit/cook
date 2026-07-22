@@ -234,6 +234,7 @@
   .adj-cur-del { background: none; border: none; cursor: pointer; color: var(--accent); font-size: 12px; padding: 0 3px; line-height: 1; }
   .rl-act-btn { flex: 1; padding: 11px 8px; border: 1px solid var(--line); border-radius: 10px; background: var(--card); font-size: 13px; font-weight: 700; cursor: pointer; font-family: inherit; color: var(--ink-soft); text-align: center; }
   .rl-act-btn.pri-on { background: #fff8f5; border-color: var(--accent-soft); color: var(--accent); }
+  .rl-act-btn.super-on { background: #fffdf3; border-color: #ecd98a; color: #a8811b; }
   .rl-act-btn.danger { color: #a03a3a; border-color: #f4e8e8; background: #fdf4f4; }
   .comments-list { list-style: none; display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; }
   .comment-row { display: flex; align-items: flex-start; gap: 8px; background: var(--paper); border-radius: 8px; padding: 8px 12px; font-size: 13px; color: var(--ink-soft); }
@@ -990,6 +991,7 @@ function renderRecipeList() {
         })()}
         <div class="rl-detail-actions">
           <button class="rl-act-btn${r.priority?' pri-on':''}" onclick="togglePriority('${r.id}')">🔥 ${r.priority?'今週外す':'今週作る'}</button>
+          <button class="rl-act-btn${(r.super_count||0)>0?' super-on':''}" onclick="event.stopPropagation();toggleSuper('${r.id}')">🌟 ${(r.super_count||0)>0?'殿堂入り解除':'殿堂入り'}</button>
           <button class="rl-act-btn" onclick="event.stopPropagation();startEdit('${r.id}')">✏️ 名前変更</button>
           <button class="rl-act-btn danger" onclick="deleteRecipe('${r.id}')">🗑️ 削除</button>
         </div>
@@ -1066,6 +1068,16 @@ function renderMenuExtras() {
 function togglePriority(id) {
   const r = prefs.recipes.find(x => x.id===id);
   if (r) { r.priority=!r.priority; renderRecipeList(); queueSave(); }
+}
+
+// レシピリストから殿堂入り（超いいね）をON/OFFする。
+// メニューカードの🌟と違い採用メタデータは触らない（既にリスト入りの料理のため）。
+function toggleSuper(id) {
+  const r = prefs.recipes.find(x => x.id===id);
+  if (!r) return;
+  if ((r.super_count||0) > 0) { r.super_count = 0; showToast('殿堂入りを解除しました'); }
+  else { r.super_count = 1; showToast('🌟 殿堂入りにしました！'); }
+  renderRecipeList(); queueSave();
 }
 
 // 固定(🔒): reproduce the saved cooking method verbatim next time.
