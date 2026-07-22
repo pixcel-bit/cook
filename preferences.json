@@ -404,8 +404,8 @@
       "bad_count": 0,
       "comments": [],
       "added_at": "2026-07-21",
-      "done_count": 0,
-      "last_adopted_at": null,
+      "done_count": 1,
+      "last_adopted_at": "2026-07-18",
       "recipe": {
         "genre": "和",
         "tool": "フライパン",
@@ -436,7 +436,10 @@
           "freezer": "2週間",
           "note": "たれごと保存。冷凍も可（食べる前夜に冷蔵解凍してレンジ温め）"
         },
-        "image_query_ja": ["チキン南蛮", "鶏の甘酢炒め"],
+        "image_query_ja": [
+          "チキン南蛮",
+          "鶏の甘酢炒め"
+        ],
         "search_keyword": "japanese sweet vinegar chicken glazed golden fried",
         "source_url": "https://oceans-nadia.com/user/484627/recipe/417875",
         "saved_at": "2026-07-21",
@@ -462,5 +465,47 @@
     "extra": "",
     "updated_at": "2026-07-10"
   },
-  "menu_extra": []
+  "menu_extra": [
+    {
+      "name": "鶏むねの甘酢だれ焼き",
+      "genre": "和",
+      "tool": "フライパン",
+      "freeze": false,
+      "ingredients": [
+        "鶏むね肉 約600g",
+        "片栗粉 大さじ3",
+        "サラダ油 大さじ1",
+        "(A)酒 大さじ1.5",
+        "(A)醤油 大さじ1.5",
+        "(A)マヨネーズ 大さじ2.5",
+        "(B)醤油 大さじ2.5",
+        "(B)酢 大さじ2.5",
+        "(B)砂糖 大さじ2.5"
+      ],
+      "steps": [
+        "鶏むね肉約600gを一口大のそぎ切りにしてポリ袋に入れ、(A)【酒大さじ1.5・醤油大さじ1.5・マヨネーズ大さじ2.5】を揉み込み10分置く。焼く直前に片栗粉大さじ3を加えてさらに揉み込む",
+        "フライパンにサラダ油大さじ1をひき、鶏肉を並べて中火にかけ6〜7分こんがり焼く",
+        "弱火にして、合わせた(B)【醤油大さじ2.5・酢大さじ2.5・砂糖大さじ2.5】を回し入れ、全体に絡めながら軽く煮詰める",
+        "保存容器に取り出す（タルタルソースはかけない）。粗熱が取れてから冷蔵保存し、食べる時はレンジで温める"
+      ],
+      "time_minutes": 20,
+      "storage_note": "冷蔵4日（甘酢だれごと保存・温め直すだけ）",
+      "storage": {
+        "recommended": "冷蔵",
+        "fridge": "4日",
+        "freezer": "2週間",
+        "note": "たれごと保存。冷凍も可（食べる前夜に冷蔵解凍してレンジ温め）"
+      },
+      "source_url": "https://oceans-nadia.com/user/484627/recipe/417875",
+      "image": "https://live.staticflickr.com/3339/3280686153_b3f352ab07_b.jpg",
+      "image_credit": {
+        "photographer": "hanawa",
+        "photographer_url": "https://www.flickr.com/photos/50691894@N00",
+        "unsplash_url": "https://www.flickr.com/photos/50691894@N00/3280686153",
+        "source": "Openverse",
+        "license": "BY 2.0"
+      },
+      "type": "main"
+    }
+  ]
 }
