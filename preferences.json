@@ -466,6 +466,60 @@
         "source": "Openverse",
         "license": "BY 2.0"
       }
+    },
+    {
+      "id": "mrxokonomi0725",
+      "name": "お好み焼き",
+      "priority": false,
+      "good_count": 1,
+      "bad_count": 0,
+      "comments": [],
+      "added_at": "2026-07-25",
+      "done_count": 0,
+      "last_adopted_at": null,
+      "recipe": {
+        "genre": "和",
+        "tool": "フライパン",
+        "freeze": false,
+        "servings": "3人前",
+        "ingredients": [
+          "小麦粉 100g",
+          "水 120ml",
+          "和風だしの粉 小さじ1",
+          "卵 1個",
+          "鰹節 適量",
+          "キャベツ 1/4個（約250g）",
+          "豚こま切れ 150g",
+          "お好み焼きソース・マヨネーズ・青のり 適量"
+        ],
+        "steps": [
+          "ボウルに小麦粉100g・和風だしの粉小さじ1・水120ml・卵1個を入れ、なめらかになるまで混ぜて生地を作る。鰹節ひとつかみも加える",
+          "キャベツ1/4個（約250g）を粗みじん切りにして生地に加え、切るようにさっくり混ぜる",
+          "フライパンに油を熱し、豚こま切れ150gを1/3量ずつ広げて焼き、上から生地を流し入れる（3枚）。中火で3〜4分、焼き色がついたら裏返す",
+          "蓋をして弱めの中火で4〜5分蒸し焼きにし、中まで火を通す。お好み焼きソース・マヨネーズ・青のり・鰹節をかける"
+        ],
+        "time_minutes": 25,
+        "storage_note": "焼きたてが一番。冷蔵2日／冷凍は1枚ずつ包んで2週間",
+        "storage": {
+          "recommended": "冷蔵",
+          "fridge": "2日",
+          "freezer": "2週間",
+          "note": "作り置き向きではなく焼きたてが美味しい。冷凍する場合は1枚ずつ包み、レンジ加熱後トースターで温め直す"
+        },
+        "image_query_ja": "お好み焼き",
+        "search_keyword": "okonomiyaki savory pancake cabbage pork sauce",
+        "source_url": "",
+        "saved_at": "2026-07-25",
+        "lock": true
+      },
+      "photo_url": "https://live.staticflickr.com/1098/1442925765_78c969041e_b.jpg",
+      "photo_credit": {
+        "photographer": "austinevan",
+        "photographer_url": "https://www.flickr.com/photos/19762676@N00",
+        "unsplash_url": "https://www.flickr.com/photos/19762676@N00/1442925765",
+        "source": "Openverse",
+        "license": "BY 2.0"
+      }
     }
   ],
   "weekly_request": {
