@@ -531,6 +531,46 @@
       "added_at": "2026-07-27",
       "done_count": 0,
       "last_adopted_at": null
+    },
+    {
+      "id": "ms43glvyl9kn",
+      "name": "合い挽き肉の2色そぼろ",
+      "priority": false,
+      "good_count": 1,
+      "bad_count": 0,
+      "comments": [],
+      "added_at": "2026-07-28",
+      "done_count": 1,
+      "last_adopted_at": "2026-07-25",
+      "recipe": {
+        "genre": "和",
+        "tool": "フライパン",
+        "freeze": false,
+        "ingredients": [
+          "合い挽き肉",
+          "卵",
+          "醤油",
+          "みりん",
+          "砂糖"
+        ],
+        "steps": [
+          "フライパンに合い挽き肉210gを入れ、酒大さじ1・醤油大さじ2・みりん大さじ1・砂糖小さじ2を加え、菜箸4本で混ぜながら中火で炒り煮にして肉そぼろを作る",
+          "別のフライパンに卵2個を割り入れ、砂糖小さじ2・塩ひとつまみを加えてよく混ぜ、弱火で菜箸をこまめに動かしながら細かくほぐれた炒り卵を作る",
+          "それぞれ冷ましてから保存容器に入れる。分けておくと盛り付けしやすい"
+        ],
+        "time_minutes": 20,
+        "storage_note": "",
+        "storage": {
+          "recommended": "冷蔵",
+          "fridge": "4日",
+          "freezer": "3週間",
+          "note": "そぼろと炒り卵は別々に保存がおすすめ"
+        },
+        "search_keyword": "ground meat egg soboro rice bowl two color",
+        "source_url": "https://www.kurashiru.com/recipes/e80338d5-b3a1-4c67-b4f9-83d54299c196",
+        "saved_at": "2026-07-28",
+        "lock": true
+      }
     }
   ],
   "weekly_request": {
