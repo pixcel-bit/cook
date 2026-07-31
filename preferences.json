@@ -283,8 +283,8 @@
       "bad_count": 0,
       "comments": [],
       "added_at": "2026-07-17",
-      "done_count": 1,
-      "last_adopted_at": null,
+      "done_count": 2,
+      "last_adopted_at": "2026-08-01",
       "recipe": {
         "genre": "エスニック",
         "tool": "ビストロ",
@@ -317,6 +317,14 @@
         "source_url": "",
         "saved_at": "2026-07-17",
         "lock": true
+      },
+      "photo_url": "https://live.staticflickr.com/2370/2440611806_929f3d016e.jpg",
+      "photo_credit": {
+        "photographer": "sozoooo",
+        "photographer_url": "https://www.flickr.com/photos/7897757@N03",
+        "unsplash_url": "https://www.flickr.com/photos/7897757@N03/2440611806",
+        "source": "Openverse",
+        "license": "BY 2.0"
       }
     },
     {
@@ -327,8 +335,8 @@
       "bad_count": 0,
       "comments": [],
       "added_at": "2026-07-18",
-      "done_count": 1,
-      "last_adopted_at": "2026-07-18",
+      "done_count": 2,
+      "last_adopted_at": "2026-08-01",
       "recipe": {
         "genre": "和",
         "tool": "フライパン",
@@ -360,6 +368,14 @@
         "source_url": "https://www.kurashiru.com/recipes/caca5b5e-309a-4611-b7b5-a122037857c9",
         "saved_at": "2026-07-18",
         "lock": true
+      },
+      "photo_url": "https://live.staticflickr.com/3677/10373815236_8dba3c171c_b.jpg",
+      "photo_credit": {
+        "photographer": "Yohei Yamashita",
+        "photographer_url": "https://www.flickr.com/photos/66035780@N00",
+        "unsplash_url": "https://www.flickr.com/photos/66035780@N00/10373815236",
+        "source": "Openverse",
+        "license": "BY-NC 2.0"
       }
     },
     {
