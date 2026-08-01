@@ -386,8 +386,8 @@
       "bad_count": 0,
       "comments": [],
       "added_at": "2026-07-18",
-      "done_count": 1,
-      "last_adopted_at": "2026-07-18",
+      "done_count": 2,
+      "last_adopted_at": "2026-08-01",
       "recipe": {
         "genre": "中",
         "tool": "フライパン",
@@ -638,6 +638,41 @@
         "source": "Openverse",
         "license": "BY 2.0"
       },
+      "type": "main"
+    },
+    {
+      "name": "香味だれ油淋鶏",
+      "genre": "中",
+      "tool": "フライパン",
+      "freeze": false,
+      "ingredients": [
+        "鶏もも肉",
+        "長ねぎ",
+        "しょうが",
+        "片栗粉",
+        "醤油",
+        "酢",
+        "砂糖",
+        "はちみつ",
+        "ごま油"
+      ],
+      "steps": [
+        "鶏もも肉角切り120gに酒小さじ2/3・醤油小さじ2/3をもみ込み15分置く",
+        "長ねぎ1/4本としょうが1片をみじん切りにし、醤油大さじ1・酢大さじ1・砂糖大さじ1・はちみつ小さじ2/3・水大さじ1・ごま油小さじ2と合わせて香味だれを作る",
+        "肉の水気を拭いて片栗粉大さじ2をまぶし、フライパンに1cmの油を170℃に熱して4分、返して3分揚げ焼きにする",
+        "油を切って保存。香味だれは別容器で保存し、食べる直前にかける"
+      ],
+      "time_minutes": 30,
+      "storage_note": "冷蔵4日（たれ別保存）",
+      "storage": {
+        "recommended": "冷蔵",
+        "fridge": "4日",
+        "freezer": "3週間",
+        "note": "揚げた肉のみ冷凍可。たれは冷蔵で別保存し食べる時にかける"
+      },
+      "source_url": "https://www.kurashiru.com/recipes/1edfd8ab-0afb-4601-9cb6-bfc5f3eee006",
+      "image": "",
+      "image_credit": {},
       "type": "main"
     }
   ]
