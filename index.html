@@ -939,7 +939,7 @@ function renderRecipeList() {
     const badge = r.done_count > 0 ? `<span class="done-badge">採用${r.done_count}回</span>` : '';
     const listImg = RECIPE_IMAGES[r.name] || r.photo_url || '';
     const svgHtml = listImg
-      ? `<div class="rl-svg"><img src="${esc(listImg)}" alt="${esc(r.name)}" style="width:36px;height:36px;object-fit:cover;border-radius:6px;" onerror="this.parentElement.remove()"></div>`
+      ? `<div class="rl-svg"><img src="${esc(listImg)}" alt="${esc(r.name)}" style="width:36px;height:36px;object-fit:cover;border-radius:6px;" onerror="this.outerHTML='<span style=&quot;font-size:22px&quot;>🍽️</span>'"></div>`
       : RECIPE_SVGS[r.name] ? `<div class="rl-svg">${RECIPE_SVGS[r.name]}</div>` : '';
     return `
     <div class="rl-item${r.priority?' rl-priority':''}" id="rli-${r.id}">
@@ -1217,6 +1217,12 @@ function captureRecipeDetail(r, name) {
     saved_at: new Date().toISOString().slice(0, 10),
     lock: prevLock !== false
   };
+  // 👍時にその週の写真もお気に入りへ保存する。これをしないと photo_url が空のまま
+  // でレシピリストに画像が出ず、次の土曜ルーティン(fetch_pexels)まで反映されない。
+  if (mr.image && !r.photo_url) {
+    r.photo_url = mr.image;
+    r.photo_credit = mr.image_credit || {};
+  }
   // 👍 = "this version is good": consume any adjustment requests that were
   // actually applied to this generation (stamped in menu.json by
   // apply_saved_recipes.js). Newer, not-yet-applied requests are kept.
