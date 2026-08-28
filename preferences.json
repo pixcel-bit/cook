@@ -89,8 +89,8 @@
       "bad_count": 0,
       "comments": [],
       "added_at": "2026-06-28",
-      "done_count": 2,
-      "last_adopted_at": "2026-07-25",
+      "done_count": 3,
+      "last_adopted_at": "2026-08-29",
       "photo_url": "https://live.staticflickr.com/3532/3217081785_1da16e3297_b.jpg",
       "photo_credit": {
         "photographer": "avlxyz",
@@ -599,81 +599,5 @@
     "extra": "",
     "updated_at": "2026-07-10"
   },
-  "menu_extra": [
-    {
-      "name": "お好み焼き",
-      "genre": "和",
-      "tool": "フライパン",
-      "freeze": false,
-      "ingredients": [
-        "小麦粉 100g",
-        "水 120ml",
-        "和風だしの粉 小さじ1",
-        "卵 1個",
-        "鰹節 適量",
-        "キャベツ 1/4個（約250g）",
-        "豚こま切れ 150g",
-        "お好み焼きソース・マヨネーズ・青のり 適量"
-      ],
-      "steps": [
-        "ボウルに小麦粉100g・和風だしの粉小さじ1・水120ml・卵1個を入れ、なめらかになるまで混ぜて生地を作る。鰹節ひとつかみも加える",
-        "キャベツ1/4個（約250g）を粗みじん切りにして生地に加え、切るようにさっくり混ぜる",
-        "フライパンに油を熱し、豚こま切れ150gを1/3量ずつ広げて焼き、上から生地を流し入れる（3枚）。中火で3〜4分、焼き色がついたら裏返す",
-        "蓋をして弱めの中火で4〜5分蒸し焼きにし、中まで火を通す。お好み焼きソース・マヨネーズ・青のり・鰹節をかける"
-      ],
-      "time_minutes": 25,
-      "storage_note": "焼きたてが一番。冷蔵2日／冷凍は1枚ずつ包んで2週間",
-      "storage": {
-        "recommended": "冷蔵",
-        "fridge": "2日",
-        "freezer": "2週間",
-        "note": "作り置き向きではなく焼きたてが美味しい。冷凍する場合は1枚ずつ包み、レンジ加熱後トースターで温め直す"
-      },
-      "source_url": "",
-      "image": "https://live.staticflickr.com/1098/1442925765_78c969041e_b.jpg",
-      "image_credit": {
-        "photographer": "austinevan",
-        "photographer_url": "https://www.flickr.com/photos/19762676@N00",
-        "unsplash_url": "https://www.flickr.com/photos/19762676@N00/1442925765",
-        "source": "Openverse",
-        "license": "BY 2.0"
-      },
-      "type": "main"
-    },
-    {
-      "name": "香味だれ油淋鶏",
-      "genre": "中",
-      "tool": "フライパン",
-      "freeze": false,
-      "ingredients": [
-        "鶏もも肉",
-        "長ねぎ",
-        "しょうが",
-        "片栗粉",
-        "醤油",
-        "酢",
-        "砂糖",
-        "はちみつ",
-        "ごま油"
-      ],
-      "steps": [
-        "鶏もも肉角切り120gに酒小さじ2/3・醤油小さじ2/3をもみ込み15分置く",
-        "長ねぎ1/4本としょうが1片をみじん切りにし、醤油大さじ1・酢大さじ1・砂糖大さじ1・はちみつ小さじ2/3・水大さじ1・ごま油小さじ2と合わせて香味だれを作る",
-        "肉の水気を拭いて片栗粉大さじ2をまぶし、フライパンに1cmの油を170℃に熱して4分、返して3分揚げ焼きにする",
-        "油を切って保存。香味だれは別容器で保存し、食べる直前にかける"
-      ],
-      "time_minutes": 30,
-      "storage_note": "冷蔵4日（たれ別保存）",
-      "storage": {
-        "recommended": "冷蔵",
-        "fridge": "4日",
-        "freezer": "3週間",
-        "note": "揚げた肉のみ冷凍可。たれは冷蔵で別保存し食べる時にかける"
-      },
-      "source_url": "https://www.kurashiru.com/recipes/1edfd8ab-0afb-4601-9cb6-bfc5f3eee006",
-      "image": "",
-      "image_credit": {},
-      "type": "main"
-    }
-  ]
+  "menu_extra": []
 }
